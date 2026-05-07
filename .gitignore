@@ -16,6 +16,7 @@ reports/
 *.log
 
 # Font tooling caches and generated intermediates.
+.venv/
 .fontbakery/
 .pytest_cache/
 __pycache__/

@@ -1,0 +1,16 @@
+# Google Fonts production config.
+#
+# SquareBot Sans keeps a continuous ital axis in the local/GitHub VF, but the
+# Google Fonts build must be split into Roman and Italic variable fonts.
+# The production source files named below should be exported/generated from
+# sources/SquareBotSans.glyphspackage via Glyphs or Glyphs MCP before running
+# gftools builder.
+sources:
+  - SquareBotSans.glyphs
+  - SquareBotSans-Italic.glyphs
+axisOrder:
+  - wdth
+  - wght
+  - ital
+familyName: "SquareBot Sans"
+buildOTF: false

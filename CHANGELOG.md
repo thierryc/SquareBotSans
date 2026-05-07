@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+- Added a Google Fonts candidate workflow with split Roman/Italic variable TTF targets.
+- Added a local/GitHub continuous italic-axis variable font target.
+- Added build scaffolding, Google Fonts notes, requirements, and description metadata.
+- Updated public license posture to remove SquareBot Sans Reserved Font Names.
 - Reorganized repository for public GitHub publication.
 - Added public documentation, contribution guide, issue guide, OFL license text, and issue templates.
 - Moved current source to `sources/SquareBotSans.glyphspackage`.

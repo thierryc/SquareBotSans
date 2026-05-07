@@ -1,0 +1,8 @@
+branch: main
+files:
+  OFL.txt: OFL.txt
+  documentation/DESCRIPTION.en_us.html: DESCRIPTION.en_us.html
+  fonts/googlefonts/SquareBotSans[wdth,wght].ttf: SquareBotSans[wdth,wght].ttf
+  fonts/googlefonts/SquareBotSans-Italic[wdth,wght].ttf: SquareBotSans-Italic[wdth,wght].ttf
+  fonts/googlefonts/METADATA.pb: METADATA.pb
+repository_url: https://github.com/thierryc/SquareBotSans

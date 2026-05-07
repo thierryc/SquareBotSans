@@ -9,8 +9,10 @@ This repository contains the public source package, installable release fonts, w
 - `sources/SquareBotSans.glyphspackage` is the Glyphs source.
 - `fonts/otf/` contains static desktop OTF exports.
 - `fonts/webfonts/` contains static WOFF2 webfont exports.
-- `fonts/variable/` contains the variable TTF and WOFF2 exports.
+- `fonts/variable/` contains the local/GitHub variable TTF and WOFF2 exports, including the continuous italic-axis build.
+- `fonts/googlefonts/` contains the Google Fonts candidate TTF exports, split into Roman and Italic variable fonts.
 - `docs/` contains publication notes, coverage notes, and release-readiness review material.
+- `documentation/` contains Google Fonts-style family description material.
 
 ## Install
 
@@ -32,17 +34,37 @@ Variable font example:
 
 ```css
 @font-face {
-  font-family: "SquareBot Sans VF";
-  src: url("./fonts/variable/SquareBotSansVF-Regular.woff2") format("woff2-variations");
+  font-family: "SquareBot Sans";
+  src: url("./fonts/variable/SquareBotSans[ital,wdth,wght].woff2") format("woff2-variations");
   font-weight: 200 900;
-  font-stretch: 75% 125%;
-  font-style: oblique 0deg 12deg;
+  font-stretch: 80% 120%;
+  font-style: normal;
   font-display: swap;
 }
 
 .sample {
-  font-family: "SquareBot Sans VF", sans-serif;
-  font-variation-settings: "wdth" 100, "wght" 500, "ital" 0;
+  font-family: "SquareBot Sans", sans-serif;
+  font-variation-settings: "ital" 0.35, "wdth" 100, "wght" 500;
+}
+```
+
+Google Fonts candidate CSS uses separate Roman and Italic files:
+
+```css
+@font-face {
+  font-family: "SquareBot Sans";
+  src: url("./fonts/googlefonts/SquareBotSans[wdth,wght].ttf") format("truetype-variations");
+  font-weight: 200 900;
+  font-stretch: 80% 120%;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SquareBot Sans";
+  src: url("./fonts/googlefonts/SquareBotSans-Italic[wdth,wght].ttf") format("truetype-variations");
+  font-weight: 200 900;
+  font-stretch: 80% 120%;
+  font-style: italic;
 }
 ```
 
@@ -55,6 +77,8 @@ The checked-in static release assets currently include upright OTF and WOFF2 exp
 - `SquareBotSansExpanded`: ExtraLight, Light, Regular, Medium, SemiBold, Bold, ExtraBold, Black
 
 The Glyphs source has additional italic instances. Re-export from the source before tagging a full public release.
+
+The local/GitHub variable release keeps continuous interpolation across `ital`, `wdth`, and `wght`. The Google Fonts candidate build follows Google Fonts practice by splitting Roman and Italic variable TTFs and using `ital` only for STAT/style linking.
 
 ## Source
 
@@ -75,7 +99,9 @@ Current live source inventory:
 Recommended checks before release:
 
 ```sh
-fontbakery check-universal --skip-network fonts/otf/*.otf fonts/variable/*.ttf
+make build
+fontbakery check-universal --skip-network fonts/otf/*.otf fonts/variable/*.ttf fonts/googlefonts/*.ttf
+fontbakery check-googlefonts --skip-network fonts/googlefonts/*.ttf
 ```
 
 Also confirm that the README snippets reference files that exist and that all release fonts parse with fontTools.
@@ -84,6 +110,4 @@ Also confirm that the README snippets reference files that exist and that all re
 
 SquareBot Sans is licensed under the SIL Open Font License, Version 1.1. See `OFL.txt`.
 
-Reserved Font Names for this project are `SquareBot Sans` and `SquareBot Sans VF`.
-
-SquareBot Sans is derived from Hubot Sans. The Hubot Sans Reserved Font Name remains `Hubot Sans`; derivatives of this project must not use that name.
+SquareBot Sans is derived from Hubot Sans. The public SquareBot Sans distribution does not reserve SquareBot Sans as a Reserved Font Name.

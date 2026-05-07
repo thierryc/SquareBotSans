@@ -1,0 +1,5 @@
+fontbakery[googlefonts]
+fonttools[woff]
+gftools
+fontmake
+glyphsLib

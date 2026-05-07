@@ -47,8 +47,13 @@ Public license files now preserve:
 
 - Thierry Charbonnel copyright for SquareBot Sans.
 - Hubot Sans Project Authors attribution.
-- Upstream Reserved Font Name: `Hubot Sans`.
-- Project Reserved Font Names: `SquareBot Sans` and `SquareBot Sans VF`.
+- No project Reserved Font Names for the SquareBot Sans public distribution.
+
+Google Fonts posture:
+
+- The repository is prepared for an RFN-free SquareBot Sans submission.
+- The local/GitHub distribution may keep a continuous `ital` axis.
+- The Google Fonts candidate distribution must use split Roman and Italic variable TTFs.
 
 Practical name check:
 
@@ -96,6 +101,36 @@ Observed blockers:
 - Variable font OTS failure.
 - Duplicate transformed components in the variable font.
 - FontBakery single-directory failure because the checked public release separates OTF and variable directories.
+- Google Fonts production build still needs `gftools builder` output from Glyphs-derived Roman and Italic sources rather than a font-editor binary export.
+
+Google Fonts candidate snapshot after two-track implementation:
+
+```sh
+.venv/bin/fontbakery check-googlefonts --skip-network --succinct --no-progress --loglevel WARN --loglevel-messages WARN fonts/googlefonts/*.ttf
+```
+
+Result: 0 fatal, 0 error, 16 fail, 21 warn, 17 info, 85 skip, 316 pass.
+
+Resolved during staging:
+
+- Split Roman and Italic candidate variable TTFs.
+- RFN-free OFL and generated binary name metadata.
+- STAT Boolean italic style-linking.
+- Italic post table angle.
+- TTX roundtrip failure from unreadable `ij.sc` gvar data.
+- Exact duplicate composite components.
+- Name ID 25 restricted-character failure.
+- Google metadata parse, license, source URL, description URL, full-name/PostScript targeted checks.
+
+Remaining candidate blockers:
+
+- Google family name compliance flags `SquareBot` camelcase.
+- Family plus STAT style names exceed Google length limits.
+- Nested components remain in generated binaries.
+- Smart dropout still fails even with a generated `gasp` table.
+- Width-axis coordinates are 80/100/120; Google axis registry check rejects them.
+- Generated VFs lack HVAR.
+- The repo-local `fonts/googlefonts/` path is not the final `ofl/squarebotsans/` PR directory.
 
 Observed warnings:
 
