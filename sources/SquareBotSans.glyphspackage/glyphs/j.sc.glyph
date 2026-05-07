@@ -1,0 +1,377 @@
+{
+glyphname = j.sc;
+layers = (
+{
+anchors = (
+{
+name = bottom;
+pos = (136,0);
+},
+{
+name = top;
+pos = (158,515);
+}
+);
+background = {
+shapes = (
+{
+alignment = -1;
+ref = J;
+}
+);
+};
+layerId = "6932EABA-00D8-4526-96D6-87ADD7AC589E";
+shapes = (
+{
+ref = uni0237.sc;
+}
+);
+width = 245;
+},
+{
+anchors = (
+{
+name = bottom;
+pos = (143,0);
+},
+{
+name = top;
+pos = (167,524);
+}
+);
+background = {
+shapes = (
+{
+alignment = -1;
+ref = J;
+}
+);
+};
+layerId = "5CD2F84A-2568-4CD8-B351-D9C938FC152A";
+shapes = (
+{
+ref = uni0237.sc;
+}
+);
+width = 263;
+},
+{
+anchors = (
+{
+name = bottom;
+pos = (160,0);
+},
+{
+name = top;
+pos = (191,546);
+}
+);
+background = {
+shapes = (
+{
+alignment = -1;
+ref = J;
+}
+);
+};
+layerId = "C27438A8-196C-4C9A-B899-94A1193B83E6";
+shapes = (
+{
+ref = uni0237.sc;
+}
+);
+width = 311;
+},
+{
+anchors = (
+{
+name = bottom;
+pos = (201,0);
+},
+{
+name = top;
+pos = (305,516);
+}
+);
+background = {
+shapes = (
+{
+alignment = -1;
+ref = J;
+}
+);
+};
+layerId = "5908592F-1119-4296-AF9E-8219C1C10A44";
+shapes = (
+{
+ref = uni0237.sc;
+}
+);
+width = 404;
+},
+{
+anchors = (
+{
+name = bottom;
+pos = (229,0);
+},
+{
+name = top;
+pos = (326,525);
+}
+);
+background = {
+shapes = (
+{
+alignment = -1;
+ref = J;
+}
+);
+};
+layerId = "AE48F426-5A06-4069-851E-B29A4CF5AB7C";
+shapes = (
+{
+ref = uni0237.sc;
+}
+);
+width = 444;
+},
+{
+anchors = (
+{
+name = bottom;
+pos = (287,0);
+},
+{
+name = top;
+pos = (369,545);
+}
+);
+background = {
+shapes = (
+{
+alignment = -1;
+ref = J;
+}
+);
+};
+layerId = "B2A2C094-0A8E-4CD4-B0FB-CC77B76A82B9";
+shapes = (
+{
+ref = uni0237.sc;
+}
+);
+width = 546;
+},
+{
+anchors = (
+{
+name = bottom;
+pos = (110,0);
+},
+{
+name = top;
+pos = (211,515);
+}
+);
+background = {
+shapes = (
+{
+alignment = -1;
+ref = J;
+}
+);
+};
+layerId = "CF2D9F7C-A313-4B1D-9A0D-3EFAA90186C4";
+shapes = (
+{
+ref = uni0237.sc;
+}
+);
+userData = {
+scSlantAdjusted = {
+angle_deg = -5.04752;
+k_apply = -0.08832;
+originY = 0;
+scaleY_used = 0.70645;
+};
+};
+width = 244;
+},
+{
+anchors = (
+{
+name = bottom;
+pos = (109,0);
+},
+{
+name = top;
+pos = (253,523);
+}
+);
+background = {
+shapes = (
+{
+alignment = -1;
+ref = J;
+}
+);
+};
+layerId = "DE16639F-02D9-40F6-995B-45753FE85645";
+shapes = (
+{
+ref = uni0237.sc;
+}
+);
+userData = {
+scSlantAdjusted = {
+angle_deg = -4.78576;
+k_apply = -0.08372;
+originY = 0;
+scaleY_used = 0.71742;
+};
+};
+width = 293;
+},
+{
+anchors = (
+{
+name = bottom;
+pos = (113,0);
+},
+{
+name = top;
+pos = (251,545);
+}
+);
+background = {
+shapes = (
+{
+alignment = -1;
+ref = J;
+}
+);
+};
+layerId = "3997DD6A-B1DD-4C8E-8076-A32381C7B82F";
+shapes = (
+{
+ref = uni0237.sc;
+}
+);
+userData = {
+scSlantAdjusted = {
+angle_deg = -4.10464;
+k_apply = -0.07176;
+originY = 0;
+scaleY_used = 0.7476;
+};
+};
+width = 311;
+},
+{
+anchors = (
+{
+name = bottom;
+pos = (159,0);
+},
+{
+name = top;
+pos = (364,516);
+}
+);
+background = {
+shapes = (
+{
+alignment = -1;
+ref = J;
+}
+);
+};
+layerId = "83818878-ED40-419E-99CD-108DAFFBE778";
+shapes = (
+{
+ref = uni0237.sc;
+}
+);
+userData = {
+scSlantAdjusted = {
+angle_deg = -5.01437;
+k_apply = -0.08774;
+originY = 0;
+scaleY_used = 0.70782;
+};
+};
+width = 409;
+},
+{
+anchors = (
+{
+name = bottom;
+pos = (187,0);
+},
+{
+name = top;
+pos = (386,525);
+}
+);
+background = {
+shapes = (
+{
+alignment = -1;
+ref = J;
+}
+);
+};
+layerId = "60C8C1A3-75DB-4AA2-AA92-15A0C8BC52E3";
+shapes = (
+{
+ref = uni0237.sc;
+}
+);
+userData = {
+scSlantAdjusted = {
+angle_deg = -4.72154;
+k_apply = -0.08259;
+originY = 0;
+scaleY_used = 0.72016;
+};
+};
+width = 450;
+},
+{
+anchors = (
+{
+name = bottom;
+pos = (245,0);
+},
+{
+name = top;
+pos = (433,545);
+}
+);
+background = {
+shapes = (
+{
+alignment = -1;
+ref = J;
+}
+);
+};
+layerId = "FFB0BD1F-7FAC-4F91-A9E1-473A5D606C71";
+shapes = (
+{
+ref = uni0237.sc;
+}
+);
+userData = {
+scSlantAdjusted = {
+angle_deg = -4.10464;
+k_apply = -0.07176;
+originY = 0;
+scaleY_used = 0.7476;
+};
+};
+width = 555;
+}
+);
+}

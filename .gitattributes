@@ -1,0 +1,8 @@
+*.otf binary
+*.ttf binary
+*.woff2 binary
+*.glyph text
+*.plist text
+*.md text eol=lf
+*.txt text eol=lf
+*.yml text eol=lf

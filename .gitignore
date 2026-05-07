@@ -1,0 +1,34 @@
+.DS_Store
+Thumbs.db
+
+# Local-only Codex/Glyphs instructions and private material.
+AGENTS.md
+.private-archive/
+
+# Build and export scratch areas.
+export/
+build/
+dist/
+out/
+tmp/
+temp/
+reports/
+*.log
+
+# Font tooling caches and generated intermediates.
+.fontbakery/
+.pytest_cache/
+__pycache__/
+*.pyc
+*.ufoz
+*.designspace
+
+# Glyphs local backups and autosaves.
+*.backup
+*.bak
+*.autosave
+*.glyphs~
+*.glyphspackage~
+
+# Legacy webfont format. WOFF2 is the public web release format here.
+*.woff

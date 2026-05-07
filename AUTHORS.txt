@@ -1,0 +1,11 @@
+SquareBot Sans
+
+Copyright (c) 2024-2026 Thierry Charbonnel (https://ap.cx),
+with Reserved Font Names "SquareBot Sans" and "SquareBot Sans VF".
+
+SquareBot Sans is derived from Hubot Sans.
+
+Hubot Sans
+
+Copyright (c) 2021 The Hubot Sans Project Authors (https://github.com/github/hubot-sans),
+with Reserved Font Name "Hubot Sans".

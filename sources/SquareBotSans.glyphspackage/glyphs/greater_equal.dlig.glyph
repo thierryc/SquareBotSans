@@ -1,0 +1,199 @@
+{
+glyphname = greater_equal.dlig;
+layers = (
+{
+anchors = (
+{
+name = center;
+pos = (700,361);
+}
+);
+layerId = "6932EABA-00D8-4526-96D6-87ADD7AC589E";
+shapes = (
+{
+pos = (-50,0);
+ref = greaterequal;
+}
+);
+width = 500;
+},
+{
+anchors = (
+{
+name = center;
+pos = (727,361);
+}
+);
+layerId = "5CD2F84A-2568-4CD8-B351-D9C938FC152A";
+shapes = (
+{
+pos = (-23,0);
+ref = greaterequal;
+}
+);
+width = 512;
+},
+{
+anchors = (
+{
+name = center;
+pos = (746,361);
+}
+);
+layerId = "C27438A8-196C-4C9A-B899-94A1193B83E6";
+shapes = (
+{
+pos = (-4,0);
+ref = greaterequal;
+}
+);
+width = 500;
+},
+{
+anchors = (
+{
+name = center;
+pos = (1129,361);
+}
+);
+layerId = "5908592F-1119-4296-AF9E-8219C1C10A44";
+shapes = (
+{
+pos = (49,0);
+ref = greaterequal;
+}
+);
+width = 720;
+},
+{
+anchors = (
+{
+name = center;
+pos = (1119,361);
+}
+);
+layerId = "AE48F426-5A06-4069-851E-B29A4CF5AB7C";
+shapes = (
+{
+pos = (39,0);
+ref = greaterequal;
+}
+);
+width = 720;
+},
+{
+anchors = (
+{
+name = center;
+pos = (1133,361);
+}
+);
+layerId = "B2A2C094-0A8E-4CD4-B0FB-CC77B76A82B9";
+shapes = (
+{
+pos = (51,0);
+ref = greaterequal;
+}
+);
+width = 704;
+},
+{
+anchors = (
+{
+name = center;
+pos = (723,361);
+}
+);
+layerId = "CF2D9F7C-A313-4B1D-9A0D-3EFAA90186C4";
+shapes = (
+{
+pos = (-49,0);
+ref = greaterequal;
+}
+);
+width = 499;
+},
+{
+anchors = (
+{
+name = center;
+pos = (741,361);
+}
+);
+layerId = "DE16639F-02D9-40F6-995B-45753FE85645";
+shapes = (
+{
+pos = (-31,0);
+ref = greaterequal;
+}
+);
+width = 502;
+},
+{
+anchors = (
+{
+name = center;
+pos = (767,361);
+}
+);
+layerId = "3997DD6A-B1DD-4C8E-8076-A32381C7B82F";
+shapes = (
+{
+pos = (-2,0);
+ref = greaterequal;
+}
+);
+width = 508;
+},
+{
+anchors = (
+{
+name = center;
+pos = (1153,361);
+}
+);
+layerId = "83818878-ED40-419E-99CD-108DAFFBE778";
+shapes = (
+{
+pos = (51,0);
+ref = greaterequal;
+}
+);
+width = 722;
+},
+{
+anchors = (
+{
+name = center;
+pos = (1142,361);
+}
+);
+layerId = "60C8C1A3-75DB-4AA2-AA92-15A0C8BC52E3";
+shapes = (
+{
+pos = (40,0);
+ref = greaterequal;
+}
+);
+width = 723;
+},
+{
+anchors = (
+{
+name = center;
+pos = (1150,361);
+}
+);
+layerId = "FFB0BD1F-7FAC-4F91-A9E1-473A5D606C71";
+shapes = (
+{
+pos = (52,0);
+ref = greaterequal;
+}
+);
+width = 705;
+}
+);
+metricLeft = "=greater";
+metricRight = "=greater";
+}

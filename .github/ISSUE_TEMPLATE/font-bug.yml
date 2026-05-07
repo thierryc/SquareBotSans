@@ -1,0 +1,41 @@
+name: Font bug
+description: Report a rendering, outline, spacing, kerning, or OpenType behavior bug.
+title: "[Font bug]: "
+labels: ["bug"]
+body:
+  - type: input
+    id: font-file
+    attributes:
+      label: Font file
+      description: Exact file name, version, or axis location.
+      placeholder: SquareBotSans-Regular.woff2, version 2.000
+    validations:
+      required: true
+  - type: textarea
+    id: sample
+    attributes:
+      label: Text sample or glyphs
+      description: Include the exact text, glyph names, or pairs involved.
+      placeholder: UA, To, Aacute, wdth=100 wght=700 ital=0
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected result
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual result
+      description: Attach screenshots or PDFs if possible.
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: App, browser, or OS
+      placeholder: Chrome 124 on macOS, Figma, Adobe Illustrator, Glyphs 3
+    validations:
+      required: true

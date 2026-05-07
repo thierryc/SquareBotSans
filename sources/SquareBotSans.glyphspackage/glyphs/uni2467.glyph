@@ -1,0 +1,357 @@
+{
+color = 6;
+glyphname = uni2467;
+layers = (
+{
+background = {
+shapes = (
+{
+alignment = -1;
+ref = circle;
+},
+{
+alignment = -1;
+pos = (150,164);
+ref = eight.dnom;
+}
+);
+};
+layerId = "6932EABA-00D8-4526-96D6-87ADD7AC589E";
+shapes = (
+{
+alignment = 1;
+attr = {
+identifier = E338DC5A;
+};
+ref = circle;
+},
+{
+pos = (132,164);
+ref = eight.dnom;
+}
+);
+userData = {
+RMXScaler = {
+height = 62;
+weight = -10;
+width = 62;
+};
+};
+width = 531;
+},
+{
+background = {
+shapes = (
+{
+alignment = -1;
+ref = circle;
+},
+{
+alignment = -1;
+pos = (158,164);
+ref = eight.dnom;
+}
+);
+};
+layerId = "5CD2F84A-2568-4CD8-B351-D9C938FC152A";
+shapes = (
+{
+alignment = 1;
+attr = {
+identifier = 4A7E0325;
+};
+ref = circle;
+},
+{
+pos = (130,164);
+ref = eight.dnom;
+}
+);
+width = 563;
+},
+{
+background = {
+shapes = (
+{
+alignment = -1;
+ref = circle;
+},
+{
+alignment = -1;
+pos = (162,164);
+ref = eight.dnom;
+}
+);
+};
+layerId = "C27438A8-196C-4C9A-B899-94A1193B83E6";
+shapes = (
+{
+alignment = 1;
+attr = {
+identifier = 0FCDFEE7;
+};
+ref = circle;
+},
+{
+pos = (143,164);
+ref = eight.dnom;
+}
+);
+width = 608;
+},
+{
+background = {
+shapes = (
+{
+alignment = -1;
+pos = (-1,0);
+ref = circle;
+},
+{
+alignment = -1;
+pos = (293,164);
+ref = eight.dnom;
+}
+);
+};
+layerId = "5908592F-1119-4296-AF9E-8219C1C10A44";
+shapes = (
+{
+alignment = 1;
+attr = {
+identifier = "91594294";
+};
+ref = circle;
+},
+{
+pos = (266,164);
+ref = eight.dnom;
+}
+);
+width = 932;
+},
+{
+background = {
+shapes = (
+{
+alignment = -1;
+pos = (-1,0);
+ref = circle;
+},
+{
+alignment = -1;
+pos = (263,164);
+ref = eight.dnom;
+}
+);
+};
+layerId = "AE48F426-5A06-4069-851E-B29A4CF5AB7C";
+shapes = (
+{
+alignment = 1;
+attr = {
+identifier = 7F1C6B33;
+};
+ref = circle;
+},
+{
+pos = (244,164);
+ref = eight.dnom;
+}
+);
+width = 907;
+},
+{
+background = {
+shapes = (
+{
+alignment = -1;
+ref = circle;
+},
+{
+alignment = -1;
+pos = (200,164);
+ref = eight.dnom;
+}
+);
+};
+layerId = "3997DD6A-B1DD-4C8E-8076-A32381C7B82F";
+shapes = (
+{
+alignment = 1;
+attr = {
+identifier = 07E07C43;
+};
+ref = circle;
+},
+{
+pos = (183,164);
+ref = eight.dnom;
+}
+);
+width = 618;
+},
+{
+background = {
+shapes = (
+{
+alignment = -1;
+pos = (-1,0);
+ref = circle;
+},
+{
+alignment = -1;
+pos = (340,164);
+ref = eight.dnom;
+}
+);
+};
+layerId = "83818878-ED40-419E-99CD-108DAFFBE778";
+shapes = (
+{
+alignment = 1;
+attr = {
+identifier = 1F46D295;
+};
+ref = circle;
+},
+{
+pos = (315,164);
+ref = eight.dnom;
+}
+);
+width = 968;
+},
+{
+background = {
+shapes = (
+{
+alignment = -1;
+pos = (-1,0);
+ref = circle;
+},
+{
+alignment = -1;
+pos = (309,164);
+ref = eight.dnom;
+}
+);
+};
+layerId = "60C8C1A3-75DB-4AA2-AA92-15A0C8BC52E3";
+shapes = (
+{
+alignment = 1;
+attr = {
+identifier = B2DE238E;
+};
+ref = circle;
+},
+{
+pos = (292,164);
+ref = eight.dnom;
+}
+);
+width = 948;
+},
+{
+background = {
+shapes = (
+{
+alignment = -1;
+ref = circle;
+},
+{
+alignment = -1;
+pos = (195,164);
+ref = eight.dnom;
+}
+);
+};
+layerId = "DE16639F-02D9-40F6-995B-45753FE85645";
+shapes = (
+{
+alignment = 1;
+attr = {
+identifier = 7A578B09;
+};
+ref = circle;
+},
+{
+pos = (173,164);
+ref = eight.dnom;
+}
+);
+width = 581;
+},
+{
+background = {
+shapes = (
+{
+alignment = -1;
+ref = circle;
+},
+{
+alignment = -1;
+pos = (189,164);
+ref = eight.dnom;
+}
+);
+};
+layerId = "CF2D9F7C-A313-4B1D-9A0D-3EFAA90186C4";
+shapes = (
+{
+alignment = 1;
+attr = {
+identifier = D34D316A;
+};
+ref = circle;
+},
+{
+pos = (174,164);
+ref = eight.dnom;
+}
+);
+width = 554;
+},
+{
+layerId = "B2A2C094-0A8E-4CD4-B0FB-CC77B76A82B9";
+shapes = (
+{
+alignment = 1;
+attr = {
+identifier = 1189A010;
+};
+ref = circle;
+},
+{
+pos = (241,164);
+ref = eight.dnom;
+}
+);
+width = 918;
+},
+{
+layerId = "FFB0BD1F-7FAC-4F91-A9E1-473A5D606C71";
+shapes = (
+{
+alignment = 1;
+attr = {
+identifier = 02ECE5C0;
+};
+ref = circle;
+},
+{
+pos = (273,164);
+ref = eight.dnom;
+}
+);
+width = 929;
+}
+);
+unicode = 9319;
+userData = {
+RMXScaler = {
+source = eight;
+};
+};
+}

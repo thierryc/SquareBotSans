@@ -1,0 +1,32 @@
+name: Release or package issue
+description: Report install, packaging, webfont, or release asset problems.
+title: "[Release]: "
+labels: ["release"]
+body:
+  - type: input
+    id: file
+    attributes:
+      label: File
+      placeholder: fonts/variable/SquareBotSansVF-Regular.woff2
+    validations:
+      required: true
+  - type: input
+    id: target
+    attributes:
+      label: Install or runtime target
+      placeholder: macOS Font Book, CSS @font-face, Android, Windows
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: Include error messages, screenshots, or browser console output.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected result
+    validations:
+      required: true

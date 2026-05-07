@@ -1,0 +1,375 @@
+{
+glyphname = multiply;
+layers = (
+{
+background = {
+shapes = (
+{
+closed = 1;
+nodes = (
+(250,340,l),
+(376,214,l),
+(397,235,l),
+(271,361,l),
+(397,487,l),
+(376,508,l),
+(250,382,l),
+(124,508,l),
+(103,487,l),
+(229,361,l),
+(103,235,l),
+(124,214,l)
+);
+}
+);
+};
+layerId = "6932EABA-00D8-4526-96D6-87ADD7AC589E";
+shapes = (
+{
+closed = 1;
+nodes = (
+(443,539,l),
+(424,558,l),
+(57,191,l),
+(76,172,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(443,191,l),
+(76,558,l),
+(57,539,l),
+(424,172,l)
+);
+}
+);
+width = 500;
+},
+{
+layerId = "5CD2F84A-2568-4CD8-B351-D9C938FC152A";
+shapes = (
+{
+closed = 1;
+nodes = (
+(450,519,l),
+(404,565,l),
+(50,211,l),
+(96,165,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(450,211,l),
+(96,565,l),
+(50,519,l),
+(404,165,l)
+);
+}
+);
+width = 500;
+},
+{
+hints = (
+{
+horizontal = 1;
+origin = (1,3);
+target = (1,1);
+type = Stem;
+},
+{
+origin = (1,2);
+target = (1,0);
+type = Stem;
+}
+);
+layerId = "C27438A8-196C-4C9A-B899-94A1193B83E6";
+shapes = (
+{
+closed = 1;
+nodes = (
+(469,486,l),
+(370,584,l),
+(31,246,l),
+(130,146,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(469,246,l),
+(130,584,l),
+(31,486,l),
+(370,146,l)
+);
+}
+);
+width = 500;
+},
+{
+layerId = "5908592F-1119-4296-AF9E-8219C1C10A44";
+shapes = (
+{
+closed = 1;
+nodes = (
+(607,587,l),
+(582,612,l),
+(113,141,l),
+(136,118,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(607,141,l),
+(137,612,l),
+(113,587,l),
+(583,118,l)
+);
+}
+);
+width = 720;
+},
+{
+layerId = "AE48F426-5A06-4069-851E-B29A4CF5AB7C";
+shapes = (
+{
+closed = 1;
+nodes = (
+(609,556,l),
+(551,614,l),
+(111,173,l),
+(168,116,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(609,173,l),
+(168,614,l),
+(111,556,l),
+(551,116,l)
+);
+}
+);
+width = 720;
+},
+{
+hints = (
+{
+horizontal = 1;
+origin = (0,3);
+target = (0,1);
+type = Stem;
+},
+{
+origin = (0,2);
+target = (0,0);
+type = Stem;
+}
+);
+layerId = "3997DD6A-B1DD-4C8E-8076-A32381C7B82F";
+shapes = (
+{
+closed = 1;
+nodes = (
+(516,480,l),
+(433,582,l),
+(22,244,l),
+(103,140,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(458,238,l),
+(191,577,l),
+(79,486,l),
+(345,146,l)
+);
+}
+);
+width = 500;
+},
+{
+layerId = "83818878-ED40-419E-99CD-108DAFFBE778";
+shapes = (
+{
+closed = 1;
+nodes = (
+(676,582,l),
+(655,608,l),
+(88,140,l),
+(108,114,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(580,138,l),
+(210,606,l),
+(183,584,l),
+(553,116,l)
+);
+}
+);
+width = 720;
+},
+{
+layerId = "60C8C1A3-75DB-4AA2-AA92-15A0C8BC52E3";
+shapes = (
+{
+closed = 1;
+nodes = (
+(670,549,l),
+(622,608,l),
+(93,173,l),
+(140,113,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(585,169,l),
+(240,607,l),
+(177,555,l),
+(522,116,l)
+);
+}
+);
+width = 721;
+},
+{
+layerId = "DE16639F-02D9-40F6-995B-45753FE85645";
+shapes = (
+{
+closed = 1;
+nodes = (
+(506,515,l),
+(468,561,l),
+(40,208,l),
+(76,161,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(437,205,l),
+(158,558,l),
+(108,516,l),
+(386,164,l)
+);
+}
+);
+width = 502;
+},
+{
+layerId = "CF2D9F7C-A313-4B1D-9A0D-3EFAA90186C4";
+shapes = (
+{
+closed = 1;
+nodes = (
+(504,538,l),
+(487,558,l),
+(42,192,l),
+(59,171,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(429,191,l),
+(139,557,l),
+(117,539,l),
+(407,173,l)
+);
+}
+);
+width = 500;
+},
+{
+hints = (
+{
+horizontal = 1;
+origin = (1,3);
+target = (1,1);
+type = Stem;
+},
+{
+origin = (1,2);
+target = (1,0);
+type = Stem;
+}
+);
+layerId = "B2A2C094-0A8E-4CD4-B0FB-CC77B76A82B9";
+shapes = (
+{
+closed = 1;
+nodes = (
+(625,504,l),
+(499,631,l),
+(96,226,l),
+(221,99,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(625,226,l),
+(221,631,l),
+(96,504,l),
+(499,99,l)
+);
+}
+);
+width = 721;
+},
+{
+hints = (
+{
+horizontal = 1;
+origin = (0,3);
+target = (0,1);
+type = Stem;
+},
+{
+origin = (0,2);
+target = (0,0);
+type = Stem;
+}
+);
+layerId = "FFB0BD1F-7FAC-4F91-A9E1-473A5D606C71";
+shapes = (
+{
+closed = 1;
+nodes = (
+(675,498,l),
+(573,628,l),
+(83,224,l),
+(184,94,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(610,220,l),
+(293,624,l),
+(147,503,l),
+(466,98,l)
+);
+}
+);
+width = 720;
+}
+);
+metricRight = "=|";
+metricWidth = plus;
+unicode = 215;
+userData = {
+KernOnSpecialSpacing = {
+L = math;
+R = math;
+};
+};
+}

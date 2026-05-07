@@ -1,0 +1,7 @@
+SquareBot Sans contributors
+
+- Thierry Charbonnel
+
+Upstream project
+
+- The Hubot Sans Project Authors

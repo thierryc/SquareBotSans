@@ -1,0 +1,31 @@
+name: Glyph request
+description: Request a missing glyph or language coverage improvement.
+title: "[Glyph]: "
+labels: ["glyph request"]
+body:
+  - type: input
+    id: glyph
+    attributes:
+      label: Glyph or codepoint
+      placeholder: U+1E9E LATIN CAPITAL LETTER SHARP S
+    validations:
+      required: true
+  - type: input
+    id: language
+    attributes:
+      label: Language or use case
+      placeholder: Vietnamese, Polish, UI symbols
+    validations:
+      required: true
+  - type: textarea
+    id: sample
+    attributes:
+      label: Sample text
+      description: Include words or sentences where the glyph is needed.
+    validations:
+      required: true
+  - type: textarea
+    id: references
+    attributes:
+      label: References
+      description: Add Unicode, CLDR, language, or design references if available.
