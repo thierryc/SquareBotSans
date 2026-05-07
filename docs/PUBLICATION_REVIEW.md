@@ -21,7 +21,8 @@ Glyphs MCP reported one open font before cleanup:
 
 - Family: SquareBot Sans
 - Source path: `/Users/thierryc/Documents/fonts/SquareBotSans/SquareBotSans-003.glyphspackage`
-- Version: 2.000
+- Release target: 2.001
+- Glyphs source version: 2.000 currently reported by Glyphs; save as 2.001 before tagging.
 - UPM: 1000
 - Masters: 12
 - Instances: 49
@@ -53,7 +54,7 @@ Google Fonts posture:
 
 - The repository is prepared for an RFN-free SquareBot Sans submission.
 - The local/GitHub distribution may keep a continuous `ital` axis.
-- The Google Fonts candidate distribution must use split Roman and Italic variable TTFs.
+- The Google Fonts candidate distribution uses the GF-compliant family name `Square Bot Sans` with split Roman and Italic variable TTFs.
 
 Practical name check:
 
@@ -83,33 +84,59 @@ Result: both README example paths exist.
 
 ## FontBakery Snapshot
 
-Full public OTF plus variable TTF check after cleanup:
+Full public OTF plus variable TTF check after 2.001 prep:
 
 ```sh
-fontbakery check-universal --skip-network --succinct --no-progress --loglevel WARN --loglevel-messages WARN fonts/otf/*.otf fonts/variable/*.ttf
+make test-universal
 ```
 
-Result: 0 errors, 0 fatal, 37 fail, 52 warn, 51 info, 1000 skip, 1195 pass.
+Result: 0 errors, 0 fatal, 48 fail, 70 warn, 85 info, 1159 skip, 1870 pass.
 
-Observed blockers:
+Observed blockers in the mixed public tree:
 
-- Inconsistent family names across representative static and variable fonts.
+- `check-universal` is currently checking OTFs, local continuous-italic VFs, legacy source VFs, and GF candidate VFs as one family.
+- Inconsistent family names across static, local variable, legacy variable, and GF candidate fonts.
 - Family name / full font name mismatches in Condensed and Expanded ExtraLight, SemiBold, and ExtraBold OTFs.
-- Variable family axis range mismatch.
-- Missing STAT axis value tables in the variable font.
+- Variable family axis range mismatch between local `ital,wdth,wght` and GF `wdth,wght` files.
+- Continuous `ital` axis is intentionally preserved in the local/GitHub VF and fails the universal Google/Chrome-oriented unsupported-axis check.
 - Name-table trailing spaces across all checked OTFs and the variable TTF.
-- Variable font OTS failure.
-- Duplicate transformed components in the variable font.
-- FontBakery single-directory failure because the checked public release separates OTF and variable directories.
-- Google Fonts production build still needs `gftools builder` output from Glyphs-derived Roman and Italic sources rather than a font-editor binary export.
+- Legacy/source variable font issues remain in `fonts/variable/SquareBotSansVF-Regular.ttf`: OTS failure, nested components, duplicate components, and missing smart dropout.
+- FontBakery single-directory failure because the checked public release separates OTF, variable, and GF directories.
+- Static OTFs remain at source version 2.000 while regenerated VFs are 2.001.
 
-Google Fonts candidate snapshot after two-track implementation:
+Google Fonts candidate snapshot after GF blocker cleanup:
 
 ```sh
-.venv/bin/fontbakery check-googlefonts --skip-network --succinct --no-progress --loglevel WARN --loglevel-messages WARN fonts/googlefonts/*.ttf
+.venv/bin/fontbakery check-googlefonts --skip-network build/googlefonts/squarebotsans/*.ttf
 ```
 
-Result: 0 fatal, 0 error, 16 fail, 21 warn, 17 info, 85 skip, 316 pass.
+Result: 0 fatal, 0 error, 0 fail, 20 warn, 17 info, 83 skip, 335 pass.
+
+Local engineering snapshot with the legacy CamelCase policy check excluded:
+
+```sh
+make test-googlefonts-local
+```
+
+Result: 0 fatal, 0 error, 0 fail, 20 warn, 17 info, 85 skip, 333 pass.
+
+OTS snapshot for the staged Google Fonts package:
+
+```sh
+.venv/bin/gftools ots build/googlefonts/squarebotsans
+```
+
+Result: both staged GF TTFs sanitized successfully.
+
+Direct table checks confirmed:
+
+- GF name ID 1 is `Square Bot Sans`; local variable name ID 1 remains `SquareBot Sans`.
+- GF name ID 5 and `head.fontRevision` report 2.001.
+- GF `wdth` axis range is 75/100/125.
+- GF Roman and Italic VFs include `HVAR`.
+- GF STAT exposes `wdth`, `wght`, and Boolean `ital`; width exposes only elidable `Normal`.
+- GF fvar instances are weight-only at default width.
+- GF name IDs 16/17 are absent.
 
 Resolved during staging:
 
@@ -121,16 +148,17 @@ Resolved during staging:
 - Exact duplicate composite components.
 - Name ID 25 restricted-character failure.
 - Google metadata parse, license, source URL, description URL, full-name/PostScript targeted checks.
+- GF CamelCase family-name failure by using `Square Bot Sans` for the GF candidate while retaining `SquareBot Sans` for the local/GitHub release.
+- Family plus STAT style-name length failures by exposing only elidable `Normal` width in GF STAT.
+- Nested component failures by building the GF source VF with `fontmake --flatten-components`.
+- Smart dropout failure by applying `gftools fix-nonhinting`.
+- Width-axis registry failure by using 75/100/125 in the GF candidate.
+- Missing HVAR by deriving GF VFs from the fontmake variable build.
+- GF directory-name failure by validating in `build/googlefonts/squarebotsans/`.
 
-Remaining candidate blockers:
+Remaining candidate blocker:
 
-- Google family name compliance flags `SquareBot` camelcase.
-- Family plus STAT style names exceed Google length limits.
-- Nested components remain in generated binaries.
-- Smart dropout still fails even with a generated `gasp` table.
-- Width-axis coordinates are 80/100/120; Google axis registry check rejects them.
-- Generated VFs lack HVAR.
-- The repo-local `fonts/googlefonts/` path is not the final `ofl/squarebotsans/` PR directory.
+- None for the staged Google Fonts package in `check-googlefonts`; only WARN-level items remain.
 
 Observed warnings:
 

@@ -52,18 +52,18 @@ Google Fonts candidate CSS uses separate Roman and Italic files:
 
 ```css
 @font-face {
-  font-family: "SquareBot Sans";
+  font-family: "Square Bot Sans";
   src: url("./fonts/googlefonts/SquareBotSans[wdth,wght].ttf") format("truetype-variations");
   font-weight: 200 900;
-  font-stretch: 80% 120%;
+  font-stretch: 75% 125%;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "SquareBot Sans";
+  font-family: "Square Bot Sans";
   src: url("./fonts/googlefonts/SquareBotSans-Italic[wdth,wght].ttf") format("truetype-variations");
   font-weight: 200 900;
-  font-stretch: 80% 120%;
+  font-stretch: 75% 125%;
   font-style: italic;
 }
 ```
@@ -86,7 +86,8 @@ Open `sources/SquareBotSans.glyphspackage` in Glyphs 3. Do not edit package file
 
 Current live source inventory:
 
-- Version: 2.000
+- Release target: 2.001
+- Glyphs source version: 2.000 currently reported by Glyphs; save as 2.001 before tagging the release.
 - UPM: 1000
 - Axes: `wdth`, `wght`, `ital`
 - Masters: 12
@@ -101,8 +102,11 @@ Recommended checks before release:
 ```sh
 make build
 fontbakery check-universal --skip-network fonts/otf/*.otf fonts/variable/*.ttf fonts/googlefonts/*.ttf
-fontbakery check-googlefonts --skip-network fonts/googlefonts/*.ttf
+make test-googlefonts
+make test-googlefonts-local
 ```
+
+`make test-googlefonts` runs the official Google Fonts profile against the ignored `build/googlefonts/squarebotsans/` staging directory. The Google Fonts candidate uses the GF-compliant family name `Square Bot Sans`; the local/GitHub release remains `SquareBot Sans`.
 
 Also confirm that the README snippets reference files that exist and that all release fonts parse with fontTools.
 

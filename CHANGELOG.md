@@ -2,7 +2,13 @@
 
 ## Unreleased
 
+- No changes yet.
+
+## 2.001 - 2026-05-07
+
+- Renamed the Google Fonts candidate family to `Square Bot Sans` while keeping the local/GitHub family as `SquareBot Sans`.
 - Added a Google Fonts candidate workflow with split Roman/Italic variable TTF targets.
+- Rebuilt the Google Fonts candidate path from the Glyphs source with `fontmake`, GF-specific STAT cleanup, nonhinting, HVAR preservation, and `squarebotsans` QA staging.
 - Added a local/GitHub continuous italic-axis variable font target.
 - Added build scaffolding, Google Fonts notes, requirements, and description metadata.
 - Updated public license posture to remove SquareBot Sans Reserved Font Names.

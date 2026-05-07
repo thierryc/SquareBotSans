@@ -18,14 +18,18 @@ This writes:
 - `fonts/variable/SquareBotSans[ital,wdth,wght].woff2`
 - `fonts/googlefonts/SquareBotSans[wdth,wght].ttf`
 - `fonts/googlefonts/SquareBotSans-Italic[wdth,wght].ttf`
+- `build/googlefonts/squarebotsans/` for Google Fonts QA staging
 
-6. For a final Google Fonts submission, replace the provisional helper build with a `gftools builder sources/config.yaml` build from Glyphs-derived Roman and Italic production sources.
+6. The Google Fonts helper build derives the GF candidate from `sources/SquareBotSans.glyphspackage` with `fontmake`, then applies the GF-specific Roman/Italic split, STAT cleanup, nonhinting fix, and staging copy.
 7. Run FontBakery:
 
 ```sh
 fontbakery check-universal --skip-network fonts/otf/*.otf fonts/variable/*.ttf fonts/googlefonts/*.ttf
-fontbakery check-googlefonts --skip-network fonts/googlefonts/*.ttf
+make test-googlefonts
+make test-googlefonts-local
 ```
+
+`make test-googlefonts` is the official GF profile. The Google Fonts candidate uses the GF-compliant family name `Square Bot Sans`; the local/GitHub release remains `SquareBot Sans`. `make test-googlefonts-local` is kept as a diagnostic fallback.
 
 8. Confirm all README examples reference files that exist.
 9. Update `CHANGELOG.md`.

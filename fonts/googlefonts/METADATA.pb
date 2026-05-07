@@ -1,24 +1,24 @@
-name: "SquareBot Sans"
+name: "Square Bot Sans"
 designer: "Thierry Charbonnel"
 license: "OFL"
 category: "SANS_SERIF"
 date_added: "2026-05-07"
 fonts {
-  name: "SquareBot Sans"
+  name: "Square Bot Sans"
   style: "normal"
   weight: 400
   filename: "SquareBotSans[wdth,wght].ttf"
   post_script_name: "SquareBotSans-Regular"
-  full_name: "SquareBot Sans Regular"
+  full_name: "Square Bot Sans Regular"
   copyright: "Copyright 2024 The SquareBot Sans Project Authors (https://github.com/thierryc/SquareBotSans)"
 }
 fonts {
-  name: "SquareBot Sans"
+  name: "Square Bot Sans"
   style: "italic"
   weight: 400
   filename: "SquareBotSans-Italic[wdth,wght].ttf"
   post_script_name: "SquareBotSans-Italic"
-  full_name: "SquareBot Sans Italic"
+  full_name: "Square Bot Sans Italic"
   copyright: "Copyright 2024 The SquareBot Sans Project Authors (https://github.com/thierryc/SquareBotSans)"
 }
 subsets: "latin"
@@ -27,8 +27,8 @@ subsets: "menu"
 subsets: "vietnamese"
 axes {
   tag: "wdth"
-  min_value: 80.0
-  max_value: 120.0
+  min_value: 75.0
+  max_value: 125.0
 }
 axes {
   tag: "wght"

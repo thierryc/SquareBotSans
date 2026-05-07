@@ -1,37 +1,47 @@
 #!/usr/bin/env python3
-"""Build SquareBot Sans distribution VFs from the current source export.
+"""Build SquareBot Sans distribution VFs.
 
 This script creates the two public distribution tracks used by this repo:
 
 1. A local/GitHub VF that keeps the continuous italic axis.
 2. Google Fonts candidate VFs split into Roman and Italic files.
-
-The current implementation starts from the checked-in Glyphs export at
-fonts/variable/SquareBotSansVF-Regular.ttf. The long-term Google Fonts path is
-to build from sources/config.yaml with gftools builder after the Glyphs source
-has been split/exported for Roman and Italic production sources.
 """
 
 from __future__ import annotations
 
 from copy import deepcopy
 from pathlib import Path
+from shutil import copy2
+import math
+import shutil
+import subprocess
+import sys
 
 from fontTools.otlLib.builder import buildStatTable
+from fontTools.ttLib.tables._f_v_a_r import NamedInstance
 from fontTools.ttLib import TTFont, newTable
 from fontTools.varLib.instancer import instantiateVariableFont
 
 
 ROOT = Path(__file__).resolve().parents[1]
-SOURCE_VF = ROOT / "fonts" / "variable" / "SquareBotSansVF-Regular.ttf"
+SOURCE_GLYPHS = ROOT / "sources" / "SquareBotSans.glyphspackage"
+LOCAL_SOURCE_VF = ROOT / "fonts" / "variable" / "SquareBotSansVF-Regular.ttf"
+GF_SOURCE_DIR = ROOT / "build" / "googlefonts-source"
+GF_SOURCE_VF = GF_SOURCE_DIR / "SquareBotSansVF-Regular.ttf"
+GF_STAGING_DIR = ROOT / "build" / "googlefonts" / "squarebotsans"
 
 LOCAL_TTF = ROOT / "fonts" / "variable" / "SquareBotSans[ital,wdth,wght].ttf"
 LOCAL_WOFF2 = ROOT / "fonts" / "variable" / "SquareBotSans[ital,wdth,wght].woff2"
 
 GF_ROMAN_TTF = ROOT / "fonts" / "googlefonts" / "SquareBotSans[wdth,wght].ttf"
 GF_ITALIC_TTF = ROOT / "fonts" / "googlefonts" / "SquareBotSans-Italic[wdth,wght].ttf"
+GF_STAGING_ROMAN_TTF = GF_STAGING_DIR / GF_ROMAN_TTF.name
+GF_STAGING_ITALIC_TTF = GF_STAGING_DIR / GF_ITALIC_TTF.name
 
-VERSION = "2.000"
+VERSION = "2.001"
+LOCAL_FAMILY = "SquareBot Sans"
+GF_FAMILY = "Square Bot Sans"
+PS_FAMILY = "SquareBotSans"
 COPYRIGHT = "Copyright 2024 The SquareBot Sans Project Authors (https://github.com/thierryc/SquareBotSans)"
 LICENSE = (
     "This Font Software is licensed under the SIL Open Font License, "
@@ -39,11 +49,13 @@ LICENSE = (
     "https://openfontlicense.org"
 )
 
-WIDTH_VALUES = [
+LOCAL_WIDTH_VALUES = [
     (80, "Condensed", 0),
     (100, "Normal", 0x2),
     (120, "Expanded", 0),
 ]
+GF_WIDTH_RANGE = (75, 100, 125)
+GF_WIDTH_VALUES = [(100, "Normal", 0x2)]
 WEIGHT_VALUES = [
     (200, "ExtraLight"),
     (300, "Light"),
@@ -54,6 +66,49 @@ WEIGHT_VALUES = [
     (800, "ExtraBold"),
     (900, "Black"),
 ]
+GF_SUPPORT_FILES = [
+    ROOT / "fonts" / "googlefonts" / "METADATA.pb",
+    ROOT / "fonts" / "googlefonts" / "OFL.txt",
+    ROOT / "fonts" / "googlefonts" / "DESCRIPTION.en_us.html",
+    ROOT / "fonts" / "googlefonts" / "upstream.yaml",
+]
+
+
+def _tool(name: str) -> str:
+    sibling = Path(sys.executable).with_name(name)
+    if sibling.exists():
+        return str(sibling)
+    resolved = shutil.which(name)
+    if resolved:
+        return resolved
+    raise SystemExit(f"Required tool not found: {name}")
+
+
+def _run(args: list[str]) -> None:
+    subprocess.run(args, cwd=ROOT, check=True)
+
+
+def _build_gf_source_vf() -> None:
+    if not SOURCE_GLYPHS.exists():
+        raise SystemExit(f"Glyphs source not found: {SOURCE_GLYPHS}")
+    GF_SOURCE_DIR.mkdir(parents=True, exist_ok=True)
+    _run(
+        [
+            _tool("fontmake"),
+            "-g",
+            str(SOURCE_GLYPHS),
+            "-o",
+            "variable",
+            "--output-dir",
+            str(GF_SOURCE_DIR),
+            "--flatten-components",
+            "--no-check-compatibility",
+            "--verbose",
+            "WARNING",
+        ]
+    )
+    if not GF_SOURCE_VF.exists():
+        raise SystemExit(f"fontmake did not produce expected VF: {GF_SOURCE_VF}")
 
 
 def _clean_gdef_varstore(font: TTFont) -> None:
@@ -78,8 +133,10 @@ def _strip_reserved_names(font: TTFont) -> None:
     replacements = [
         (', with Reserved Font Name "Hubot Sans"', ""),
         (', with Reserved Font Names "SquareBot Sans" and "SquareBot Sans VF"', ""),
+        (', with Reserved Font Names "Square Bot Sans" and "Square Bot Sans VF"', ""),
         ('with Reserved Font Name "Hubot Sans"', ""),
         ('with Reserved Font Names "SquareBot Sans" and "SquareBot Sans VF"', ""),
+        ('with Reserved Font Names "Square Bot Sans" and "Square Bot Sans VF"', ""),
     ]
     for record in name.names:
         text = record.toUnicode().strip()
@@ -93,12 +150,21 @@ def _set_name(font: TTFont, name_id: int, value: str) -> None:
     name.setName(value, name_id, 3, 1, 0x409)
 
 
+def _set_head_version(font: TTFont) -> None:
+    if "head" in font:
+        font["head"].fontRevision = float(VERSION)
+
+
 def _add_name(font: TTFont, value: str) -> int:
     return font["name"].addMultilingualName({"en": value}, windows=True, mac=False)
 
 
 def _drop_mac_name_records(font: TTFont) -> None:
     font["name"].names = [record for record in font["name"].names if record.platformID != 1]
+
+
+def _drop_name_ids(font: TTFont, name_ids: set[int]) -> None:
+    font["name"].names = [record for record in font["name"].names if record.nameID not in name_ids]
 
 
 def _set_axis_names(font: TTFont) -> None:
@@ -125,12 +191,18 @@ def _normalize_avar(font: TTFont) -> None:
         segments[tag] = dict(sorted(mapping.items()))
 
 
-def _set_basic_names(font: TTFont, style: str, postscript_suffix: str) -> None:
-    family = "SquareBot Sans"
+def _set_basic_names(
+    font: TTFont,
+    style: str,
+    postscript_suffix: str,
+    *,
+    family: str = LOCAL_FAMILY,
+) -> None:
     full_name = f"{family} {style}"
-    ps_name = f"SquareBotSans-{postscript_suffix}"
+    ps_name = f"{PS_FAMILY}-{postscript_suffix}"
 
     _set_name(font, 0, COPYRIGHT)
+    _set_head_version(font)
     _set_name(font, 1, family)
     _set_name(font, 2, style)
     _set_name(font, 3, f"{VERSION};APCX;{ps_name}")
@@ -144,7 +216,7 @@ def _set_basic_names(font: TTFont, style: str, postscript_suffix: str) -> None:
     _set_name(font, 14, "https://openfontlicense.org")
     _set_name(font, 16, family)
     _set_name(font, 17, style)
-    _set_name(font, 25, "SquareBotSans" if style == "Regular" else f"SquareBotSans{style}")
+    _set_name(font, 25, PS_FAMILY if style == "Regular" else f"{PS_FAMILY}{style}")
 
 
 def _set_style_bits(font: TTFont, italic: bool) -> None:
@@ -164,13 +236,30 @@ def _set_style_bits(font: TTFont, italic: bool) -> None:
         font["post"].italicAngle = -12 if italic else 0
 
 
+def _set_italic_caret_slope(font: TTFont, italic: bool) -> None:
+    if "hhea" not in font or "head" not in font:
+        return
+    if not italic:
+        font["hhea"].caretSlopeRise = 1
+        font["hhea"].caretSlopeRun = 0
+        return
+    angle = -1 * font["post"].italicAngle if "post" in font else 12
+    font["hhea"].caretSlopeRise = font["head"].unitsPerEm
+    font["hhea"].caretSlopeRun = round(math.tan(math.radians(angle)) * font["head"].unitsPerEm)
+
+
 def _set_gasp(font: TTFont) -> None:
     gasp = newTable("gasp")
     gasp.gaspRange = {65535: 0x000F}
     font["gasp"] = gasp
 
 
-def _stat_axes(include_italic_axis: bool, italic_value: int | None) -> list[dict]:
+def _stat_axes(
+    include_italic_axis: bool,
+    italic_value: int | None,
+    *,
+    width_values: list[tuple[int, str, int]],
+) -> list[dict]:
     axes: list[dict] = [
         {
             "tag": "wdth",
@@ -178,7 +267,7 @@ def _stat_axes(include_italic_axis: bool, italic_value: int | None) -> list[dict
             "ordering": 0,
             "values": [
                 {"value": value, "name": name, "flags": flags}
-                for value, name, flags in WIDTH_VALUES
+                for value, name, flags in width_values
             ],
         },
         {
@@ -209,10 +298,20 @@ def _stat_axes(include_italic_axis: bool, italic_value: int | None) -> list[dict
     return axes
 
 
-def _rebuild_stat(font: TTFont, include_italic_axis: bool, italic_value: int | None) -> None:
+def _rebuild_stat(
+    font: TTFont,
+    include_italic_axis: bool,
+    italic_value: int | None,
+    *,
+    width_values: list[tuple[int, str, int]],
+) -> None:
     if "STAT" in font:
         del font["STAT"]
-    buildStatTable(font, _stat_axes(include_italic_axis, italic_value), macNames=False)
+    buildStatTable(
+        font,
+        _stat_axes(include_italic_axis, italic_value, width_values=width_values),
+        macNames=False,
+    )
 
 
 def _filter_gf_instances(font: TTFont, italic: bool) -> None:
@@ -227,13 +326,22 @@ def _filter_gf_instances(font: TTFont, italic: bool) -> None:
                 match = deepcopy(instance)
                 break
         if match is None:
-            continue
+            match = NamedInstance()
+            match.flags = 0
         style_name = "Italic" if italic and weight == 400 else f"{name} Italic" if italic else name
         match.subfamilyNameID = _add_name(font, style_name)
         match.postscriptNameID = 0xFFFF
-        match.coordinates = {"wdth": 100, "wght": weight}
+        match.coordinates = {"wdth": 100.0, "wght": float(weight)}
         instances.append(match)
     font["fvar"].instances = instances
+
+
+def _normalize_gf_width_axis(font: TTFont) -> None:
+    if "fvar" not in font:
+        return
+    for axis in font["fvar"].axes:
+        if axis.axisTag == "wdth":
+            axis.minValue, axis.defaultValue, axis.maxValue = GF_WIDTH_RANGE
 
 
 def _dedupe_composite_components(font: TTFont) -> None:
@@ -290,16 +398,30 @@ def _rename_local_instances(font: TTFont) -> None:
         instance.postscriptNameID = 0xFFFF
 
 
-def _prepare_font(font: TTFont, style: str, postscript_suffix: str, *, italic: bool) -> None:
+def _prepare_font(
+    font: TTFont,
+    style: str,
+    postscript_suffix: str,
+    *,
+    italic: bool,
+    family: str = LOCAL_FAMILY,
+) -> None:
     _normalize_avar(font)
     _dedupe_composite_components(font)
     _drop_unreadable_gvar_entries(font)
     _strip_reserved_names(font)
-    _set_basic_names(font, style, postscript_suffix)
+    _set_basic_names(font, style, postscript_suffix, family=family)
     _set_axis_names(font)
     _set_style_bits(font, italic)
+    _set_italic_caret_slope(font, italic)
     _set_gasp(font)
     _drop_mac_name_records(font)
+
+
+def _prepare_google_font(font: TTFont, style: str, postscript_suffix: str, *, italic: bool) -> None:
+    _prepare_font(font, style, postscript_suffix, italic=italic, family=GF_FAMILY)
+    _normalize_gf_width_axis(font)
+    _drop_name_ids(font, {16, 17})
 
 
 def _save_ttf(font: TTFont, path: Path) -> None:
@@ -324,14 +446,29 @@ def _sanitize_saved_gvar(path: Path) -> None:
         font.save(path)
 
 
+def _fix_nonhinting(path: Path) -> None:
+    tmp_path = path.with_suffix(".nonhinting.ttf")
+    _run([_tool("gftools"), "fix-nonhinting", "--no-backup", "-q", str(path), str(tmp_path)])
+    tmp_path.replace(path)
+    _sanitize_saved_gvar(path)
+
+
 def _save_woff2(ttf_path: Path, woff2_path: Path) -> None:
     font = TTFont(ttf_path)
     font.flavor = "woff2"
     font.save(woff2_path)
 
 
-def _source_font() -> TTFont:
-    font = TTFont(SOURCE_VF)
+def _local_source_font() -> TTFont:
+    font = TTFont(LOCAL_SOURCE_VF)
+    _clean_gdef_varstore(font)
+    if "avar" in font:
+        del font["avar"]
+    return font
+
+
+def _gf_source_font() -> TTFont:
+    font = TTFont(GF_SOURCE_VF)
     _clean_gdef_varstore(font)
     if "avar" in font:
         del font["avar"]
@@ -339,41 +476,71 @@ def _source_font() -> TTFont:
 
 
 def build_local() -> None:
-    font = instantiateVariableFont(_source_font(), {"wdth": (80, 100, 120)}, inplace=False)
+    font = instantiateVariableFont(_local_source_font(), {"wdth": (80, 100, 120)}, inplace=False)
     _prepare_font(font, "Regular", "Regular", italic=False)
     _rename_local_instances(font)
-    _rebuild_stat(font, include_italic_axis=True, italic_value=None)
+    _rebuild_stat(
+        font,
+        include_italic_axis=True,
+        italic_value=None,
+        width_values=LOCAL_WIDTH_VALUES,
+    )
     _save_ttf(font, LOCAL_TTF)
     _save_woff2(LOCAL_TTF, LOCAL_WOFF2)
 
 
 def build_googlefonts() -> None:
+    _build_gf_source_vf()
     roman = instantiateVariableFont(
-        _source_font(), {"ital": 0, "wdth": (80, 100, 120)}, inplace=False
+        _gf_source_font(), {"ital": 0, "wdth": GF_WIDTH_RANGE}, inplace=False
     )
-    _prepare_font(roman, "Regular", "Regular", italic=False)
+    _prepare_google_font(roman, "Regular", "Regular", italic=False)
     _filter_gf_instances(roman, italic=False)
-    _rebuild_stat(roman, include_italic_axis=True, italic_value=0)
+    _rebuild_stat(
+        roman,
+        include_italic_axis=True,
+        italic_value=0,
+        width_values=GF_WIDTH_VALUES,
+    )
     _save_ttf(roman, GF_ROMAN_TTF)
+    _fix_nonhinting(GF_ROMAN_TTF)
 
     italic = instantiateVariableFont(
-        _source_font(), {"ital": 1, "wdth": (80, 100, 120)}, inplace=False
+        _gf_source_font(), {"ital": 12, "wdth": GF_WIDTH_RANGE}, inplace=False
     )
-    _prepare_font(italic, "Italic", "Italic", italic=True)
+    _prepare_google_font(italic, "Italic", "Italic", italic=True)
     _filter_gf_instances(italic, italic=True)
-    _rebuild_stat(italic, include_italic_axis=True, italic_value=1)
+    _rebuild_stat(
+        italic,
+        include_italic_axis=True,
+        italic_value=1,
+        width_values=GF_WIDTH_VALUES,
+    )
     _save_ttf(italic, GF_ITALIC_TTF)
+    _fix_nonhinting(GF_ITALIC_TTF)
+
+    stage_googlefonts()
+
+
+def stage_googlefonts() -> None:
+    GF_STAGING_DIR.mkdir(parents=True, exist_ok=True)
+    copy2(GF_ROMAN_TTF, GF_STAGING_ROMAN_TTF)
+    copy2(GF_ITALIC_TTF, GF_STAGING_ITALIC_TTF)
+    for support_file in GF_SUPPORT_FILES:
+        if support_file.exists():
+            copy2(support_file, GF_STAGING_DIR / support_file.name)
 
 
 def main() -> None:
-    if not SOURCE_VF.exists():
-        raise SystemExit(f"Source VF not found: {SOURCE_VF}")
+    if not LOCAL_SOURCE_VF.exists():
+        raise SystemExit(f"Local source VF not found: {LOCAL_SOURCE_VF}")
     build_local()
     build_googlefonts()
     print(f"Built {LOCAL_TTF.relative_to(ROOT)}")
     print(f"Built {LOCAL_WOFF2.relative_to(ROOT)}")
     print(f"Built {GF_ROMAN_TTF.relative_to(ROOT)}")
     print(f"Built {GF_ITALIC_TTF.relative_to(ROOT)}")
+    print(f"Staged Google Fonts QA files in {GF_STAGING_DIR.relative_to(ROOT)}")
 
 
 if __name__ == "__main__":
