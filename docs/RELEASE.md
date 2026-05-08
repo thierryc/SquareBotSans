@@ -29,7 +29,7 @@ make test-googlefonts
 make test-googlefonts-local
 ```
 
-`make test-googlefonts` is the official GF profile. The Google Fonts candidate uses the GF-compliant family name `Square Bot Sans`; the local/GitHub release remains `SquareBot Sans`. `make test-googlefonts-local` is kept as a diagnostic fallback.
+`make test-googlefonts` is the official GF profile. Both the local/GitHub variable release and the Google Fonts candidate use the family name `Square Bot Sans`. `make test-googlefonts-local` is kept as a diagnostic fallback.
 
 8. Confirm all README examples reference files that exist.
 9. Update `CHANGELOG.md`.

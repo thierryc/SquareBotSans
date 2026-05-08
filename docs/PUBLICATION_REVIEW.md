@@ -1,4 +1,4 @@
-# SquareBot Sans Publication Review
+# Square Bot Sans Publication Review
 
 Date: 2026-05-07
 
@@ -42,25 +42,26 @@ Note: the source package was moved after the live MCP inventory. Reopen `sources
 
 ## License And Name Review
 
-The exported fonts declare SIL Open Font License 1.1 metadata and credit SquareBot Sans as derived from Hubot Sans.
+The exported fonts declare SIL Open Font License 1.1 metadata and credit Square Bot Sans as derived from Hubot Sans.
 
 Public license files now preserve:
 
-- Thierry Charbonnel copyright for SquareBot Sans.
+- Thierry Charbonnel copyright for Square Bot Sans.
 - Hubot Sans Project Authors attribution.
-- No project Reserved Font Names for the SquareBot Sans public distribution.
+- No project Reserved Font Names for the Square Bot Sans public distribution.
 
 Google Fonts posture:
 
-- The repository is prepared for an RFN-free SquareBot Sans submission.
+- The repository is prepared for an RFN-free Square Bot Sans submission.
 - The local/GitHub distribution may keep a continuous `ital` axis.
-- The Google Fonts candidate distribution uses the GF-compliant family name `Square Bot Sans` with split Roman and Italic variable TTFs.
+- The local/GitHub variable release and Google Fonts candidate both use the family name `Square Bot Sans`.
+- The Google Fonts candidate distribution uses split Roman and Italic variable TTFs.
 
 Practical name check:
 
 - No exact `SquareBot Sans` or `Square Bot Sans` match was found in the USPTO-indexed search checked during planning.
 - One unrelated stale `SQUAREBOT` appearance was found inside a long educational-material mark, not as a font/typeface mark.
-- No exact public typeface match for `SquareBot Sans` was found during planning.
+- No exact public typeface match for `Square Bot Sans` was found during planning.
 - This is not legal advice. Use legal review before trademark registration or commercial brand enforcement.
 
 ## Validation Snapshot
@@ -130,8 +131,9 @@ Result: both staged GF TTFs sanitized successfully.
 
 Direct table checks confirmed:
 
-- GF name ID 1 is `Square Bot Sans`; local variable name ID 1 remains `SquareBot Sans`.
-- GF name ID 5 and `head.fontRevision` report 2.001.
+- GF and local variable name ID 1 are `Square Bot Sans`.
+- GF and local variable name ID 5 and `head.fontRevision` report 2.001.
+- The local variable font keeps the continuous `ital` axis.
 - GF `wdth` axis range is 75/100/125.
 - GF Roman and Italic VFs include `HVAR`.
 - GF STAT exposes `wdth`, `wght`, and Boolean `ital`; width exposes only elidable `Normal`.
@@ -148,7 +150,7 @@ Resolved during staging:
 - Exact duplicate composite components.
 - Name ID 25 restricted-character failure.
 - Google metadata parse, license, source URL, description URL, full-name/PostScript targeted checks.
-- GF CamelCase family-name failure by using `Square Bot Sans` for the GF candidate while retaining `SquareBot Sans` for the local/GitHub release.
+- GF CamelCase family-name failure by using `Square Bot Sans` for the GF candidate; the local/GitHub variable release now uses the same public family name.
 - Family plus STAT style-name length failures by exposing only elidable `Normal` width in GF STAT.
 - Nested component failures by building the GF source VF with `fontmake --flatten-components`.
 - Smart dropout failure by applying `gftools fix-nonhinting`.

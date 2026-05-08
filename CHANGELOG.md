@@ -6,7 +6,7 @@
 
 ## 2.001 - 2026-05-07
 
-- Renamed the Google Fonts candidate family to `Square Bot Sans` while keeping the local/GitHub family as `SquareBot Sans`.
+- Unified the public family name as `Square Bot Sans` for both the local/GitHub variable release and Google Fonts candidate.
 - Added a Google Fonts candidate workflow with split Roman/Italic variable TTF targets.
 - Rebuilt the Google Fonts candidate path from the Glyphs source with `fontmake`, GF-specific STAT cleanup, nonhinting, HVAR preservation, and `squarebotsans` QA staging.
 - Added a local/GitHub continuous italic-axis variable font target.

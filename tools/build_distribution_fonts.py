@@ -39,8 +39,9 @@ GF_STAGING_ROMAN_TTF = GF_STAGING_DIR / GF_ROMAN_TTF.name
 GF_STAGING_ITALIC_TTF = GF_STAGING_DIR / GF_ITALIC_TTF.name
 
 VERSION = "2.001"
-LOCAL_FAMILY = "SquareBot Sans"
-GF_FAMILY = "Square Bot Sans"
+FAMILY = "Square Bot Sans"
+LOCAL_FAMILY = FAMILY
+GF_FAMILY = FAMILY
 PS_FAMILY = "SquareBotSans"
 COPYRIGHT = "Copyright 2024 The SquareBot Sans Project Authors (https://github.com/thierryc/SquareBotSans)"
 LICENSE = (

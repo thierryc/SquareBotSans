@@ -1,6 +1,6 @@
 # Coverage Notes
 
-SquareBot Sans focuses on Latin-script typography with broad pan-European and Vietnamese coverage.
+Square Bot Sans focuses on Latin-script typography with broad pan-European and Vietnamese coverage.
 
 Current source inventory from Glyphs MCP:
 

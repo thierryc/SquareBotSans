@@ -1,6 +1,6 @@
 # Google Fonts source config.
 #
-# SquareBot Sans keeps a continuous ital axis in the local/GitHub VF, but the
+# Square Bot Sans keeps a continuous ital axis in the local/GitHub VF, but the
 # Google Fonts build must be split into Roman and Italic variable fonts.
 # The repo helper build uses this checked-in Glyphs package as the source,
 # then post-processes the generated VF into separate Roman and Italic GF VFs.

@@ -1,6 +1,6 @@
-# SquareBot Sans
+# Square Bot Sans
 
-SquareBot Sans is a squared, technical sans serif type family derived from Hubot Sans and extended as a multi-axis Glyphs source. The current source supports width, weight, and italic axes, with static Condensed, Normal, and Expanded families plus a variable font build.
+Square Bot Sans is a squared, technical sans serif type family derived from Hubot Sans and extended as a multi-axis Glyphs source. The current source supports width, weight, and italic axes, with static Condensed, Normal, and Expanded families plus a variable font build.
 
 This repository contains the public source package, installable release fonts, webfonts, project documentation, and contribution templates.
 
@@ -22,7 +22,7 @@ For web use, copy the WOFF2 files from `fonts/webfonts/` or `fonts/variable/` in
 
 ```css
 @font-face {
-  font-family: "SquareBot Sans";
+  font-family: "Square Bot Sans";
   src: url("./fonts/webfonts/SquareBotSans-Regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
@@ -34,7 +34,7 @@ Variable font example:
 
 ```css
 @font-face {
-  font-family: "SquareBot Sans";
+  font-family: "Square Bot Sans";
   src: url("./fonts/variable/SquareBotSans[ital,wdth,wght].woff2") format("woff2-variations");
   font-weight: 200 900;
   font-stretch: 80% 120%;
@@ -43,7 +43,7 @@ Variable font example:
 }
 
 .sample {
-  font-family: "SquareBot Sans", sans-serif;
+  font-family: "Square Bot Sans", sans-serif;
   font-variation-settings: "ital" 0.35, "wdth" 100, "wght" 500;
 }
 ```
@@ -106,12 +106,12 @@ make test-googlefonts
 make test-googlefonts-local
 ```
 
-`make test-googlefonts` runs the official Google Fonts profile against the ignored `build/googlefonts/squarebotsans/` staging directory. The Google Fonts candidate uses the GF-compliant family name `Square Bot Sans`; the local/GitHub release remains `SquareBot Sans`.
+`make test-googlefonts` runs the official Google Fonts profile against the ignored `build/googlefonts/squarebotsans/` staging directory. Both the local/GitHub variable release and the Google Fonts candidate use the family name `Square Bot Sans`.
 
 Also confirm that the README snippets reference files that exist and that all release fonts parse with fontTools.
 
 ## License
 
-SquareBot Sans is licensed under the SIL Open Font License, Version 1.1. See `OFL.txt`.
+Square Bot Sans is licensed under the SIL Open Font License, Version 1.1. See `OFL.txt`.
 
-SquareBot Sans is derived from Hubot Sans. The public SquareBot Sans distribution does not reserve SquareBot Sans as a Reserved Font Name.
+Square Bot Sans is derived from Hubot Sans. The public Square Bot Sans distribution does not reserve Square Bot Sans as a Reserved Font Name.
