@@ -214,7 +214,7 @@ pos = (338,0);
 ref = periodcentered.loclCAT.case.ss01;
 }
 );
-width = 405;
+width = 558;
 },
 {
 background = {
@@ -569,7 +569,7 @@ pos = (334,0);
 ref = periodcentered.loclCAT.case.ss01;
 }
 );
-width = 404;
+width = 554;
 },
 {
 background = {

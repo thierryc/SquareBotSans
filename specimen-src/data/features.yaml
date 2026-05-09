@@ -1,0 +1,22 @@
+groups:
+  - name: Core Typography
+    tags: [kern, liga, calt, case]
+  - name: Numerals
+    tags: [tnum, pnum, lnum, frac]
+  - name: Position
+    tags: [sups, subs, ordn]
+  - name: Stylistic Sets
+    tags: [ss01, ss02, ss03, ss04]
+  - name: Symbols
+    tags: [arrows, math, separators, technical marks]
+comparisons:
+  - {label: Tabular figures, off: '1000000', on: '1,000,000', tag: tnum}
+  - {label: Automatic fractions, off: '5/32 kg', on: '5/32 kg', tag: frac}
+  - {label: Case punctuation, off: '{[(HEIGHT)]}', on: '{[(HEIGHT)]}', tag: case}
+  - {label: Superscript, off: 'Note1', on: 'Note¹', tag: sups}
+  - {label: Subscript, off: 'H2O', on: 'H₂O', tag: subs}
+stylistic_sets:
+  - {tag: SS01, name: Rounded punctuation, before: 'Grid: [sector 07]?', after: 'Grid: [sector 07]?'}
+  - {tag: SS02, name: Alternate lowercase a, before: 'analog data / area alarm', after: 'analog data / area alarm'}
+  - {tag: SS03, name: Compact r forms, before: 'rare reactor corridor', after: 'rare reactor corridor'}
+  - {tag: SS04, name: Technical i/j forms, before: 'IJ / JIG / INDEX', after: 'IJ / JIG / INDEX'}

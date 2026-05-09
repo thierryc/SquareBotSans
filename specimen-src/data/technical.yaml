@@ -1,0 +1,71 @@
+metrics:
+  ascender: 729
+  cap_height: 729
+  descender: -167
+  x_height: 515-546
+counts:
+  glyphs: 937
+  exporting_glyphs: 898
+  non_exporting_glyphs: 39
+  unicode_encoded_glyphs: 569
+  masters: 12
+  instances: 49
+formats:
+  desktop: OTF
+  web: WOFF2
+  app: OTF / TTF
+licensing:
+  - Desktop
+  - Web
+  - App
+  - Logo
+  - Trial
+languages:
+  - Afrikaans
+  - Albanian
+  - Asturian
+  - Basque
+  - Bosnian
+  - Breton
+  - Catalan
+  - Croatian
+  - Czech
+  - Danish
+  - Dutch
+  - English
+  - Esperanto
+  - Estonian
+  - Faroese
+  - Finnish
+  - French
+  - Friulian
+  - Galician
+  - German
+  - Greenlandic
+  - Hungarian
+  - Icelandic
+  - Indonesian
+  - Irish
+  - Italian
+  - Javanese
+  - Kurdish
+  - Latvian
+  - Lithuanian
+  - Luxembourgish
+  - Malay
+  - Maltese
+  - Norwegian
+  - Occitan
+  - Polish
+  - Portuguese
+  - Romanian
+  - Romansch
+  - Serbian
+  - Slovak
+  - Slovenian
+  - Spanish
+  - Swahili
+  - Swedish
+  - Turkish
+  - Welsh
+  - Zulu

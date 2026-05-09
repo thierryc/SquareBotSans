@@ -20,15 +20,16 @@ Public cleanup performed:
 Glyphs MCP reported one open font before cleanup:
 
 - Family: SquareBot Sans
-- Source path: `/Users/thierryc/Documents/fonts/SquareBotSans/SquareBotSans-003.glyphspackage`
+- Source path: `/Users/thierryc/Documents/fonts/SquareBotSans/sources/SquareBotSans.glyphspackage`
 - Release target: 2.001
 - Glyphs source version: 2.000 currently reported by Glyphs; save as 2.001 before tagging.
 - UPM: 1000
 - Masters: 12
 - Instances: 49
-- Glyphs: 937 total, 898 exporting, 569 encoded
+- Glyphs: 939 total, 901 exporting, 569 encoded
 - Axes: Width (`wdth`), Weight (`wght`), Italic (`ital`)
 - Features: `aalt`, `ccmp`, `locl`, `numr`, `dnom`, `frac`, `ordn`, `pnum`, `tnum`, `c2sc`, `smcp`, `case`, `dlig`, `liga`, `ss01`, `ss02`, `ss03`, `ss04`
+- Discretionary ligatures verified in live Glyphs source include `<-`, `->`, `=>`, `=<`, `!=`, `>=`, `<=`, `<>`, `<|`, and `|>`.
 - Kerning: about 10,288 to 10,295 pairs per master
 
 Master coverage:
@@ -38,7 +39,7 @@ Master coverage:
 - Condensed ExtraLight Italic, Regular Italic, Black Italic
 - Expanded ExtraLight Italic, Regular Italic, Black Italic
 
-Note: the source package was moved after the live MCP inventory. Reopen `sources/SquareBotSans.glyphspackage` in Glyphs before saving or exporting a final release.
+Note: the live MCP inventory is based on `sources/SquareBotSans.glyphspackage`. Save the source in Glyphs and rebuild release binaries before publishing updated web or PDF specimens.
 
 ## License And Name Review
 

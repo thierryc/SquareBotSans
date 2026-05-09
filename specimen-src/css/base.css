@@ -1,0 +1,174 @@
+/* DEV_FONT_FACE_START */
+@font-face {
+  font-family: "SquareBot Sans";
+  src: url("../../fonts/variable/SquareBotSans[ital,wdth,wght].woff2") format("woff2-variations");
+  font-weight: 200 900;
+  font-stretch: 80% 120%;
+  font-style: normal;
+  font-display: block;
+}
+/* DEV_FONT_FACE_END */
+
+    :root {
+      --paper: #fff;
+      --ink: #000;
+      --muted: #000;
+      --line: #000;
+      --accent: #d43f2f;
+      --soft: #000;
+      --faint: #000;
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      background: #fff;
+      color: var(--ink);
+      font-family: "SquareBot Sans", "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
+      font-synthesis: none;
+    }
+
+    body {
+      margin: 0;
+      background: #fff;
+    }
+
+    .page {
+      position: relative;
+      width: var(--page-width);
+      height: var(--page-height);
+      margin: 18px auto;
+      padding: var(--pad-y) var(--pad-x);
+      overflow: hidden;
+      background: var(--paper);
+      box-shadow: none;
+      page-break-after: always;
+      break-after: page;
+    }
+
+    .page:last-child {
+      page-break-after: auto;
+      break-after: auto;
+    }
+
+    .running-header,
+    .page-footer {
+      position: absolute;
+      left: var(--pad-x);
+      right: var(--pad-x);
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      gap: var(--gutter);
+      color: var(--muted);
+      font-size: 7.5pt;
+      line-height: 1;
+      letter-spacing: .08em;
+      font-variation-settings: "wdth" 90, "wght" 520, "ital" 0;
+    }
+
+    .running-header {
+      top: 5.3mm;
+      border-bottom: .35mm solid var(--line);
+      padding-bottom: 2.2mm;
+    }
+
+    .page-footer {
+      bottom: 5.2mm;
+      border-top: .25mm solid var(--line);
+      padding-top: 2.2mm;
+    }
+
+    .running-header span:nth-child(2),
+    .page-footer span:nth-child(2) {
+      justify-self: center;
+      text-align: center;
+    }
+
+    .running-header span:last-child,
+    .page-footer span:last-child {
+      justify-self: end;
+      text-align: right;
+    }
+
+    .page-body {
+      position: relative;
+      height: 100%;
+      padding: 12mm 0 11mm;
+    }
+
+    .back-cover-page {
+      padding: 0;
+      display: grid;
+      place-items: center;
+      background: var(--accent);
+      color: var(--ink);
+    }
+
+    .back-cover-mark {
+      font-size: 88pt;
+      line-height: .9;
+      letter-spacing: 0;
+      font-variation-settings: "wdth" 100, "wght" 900, "ital" 0;
+    }
+
+    .format-letter .back-cover-mark {
+      font-size: 82pt;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(12, minmax(0, 1fr));
+      gap: var(--gutter);
+    }
+
+    .col-1-5 { grid-column: 1 / 6; }
+    .col-6-12 { grid-column: 6 / 13; }
+    .col-1-12 { grid-column: 1 / 13; }
+
+    .label {
+      color: var(--muted);
+      font-size: 7.3pt;
+      line-height: 1.1;
+      text-transform: uppercase;
+      letter-spacing: .095em;
+      font-variation-settings: "wdth" 90, "wght" 620, "ital" 0;
+    }
+
+    .value {
+      margin-top: 2mm;
+      font-size: 18pt;
+      line-height: .98;
+      font-variation-settings: "wdth" 96, "wght" 780, "ital" 0;
+    }
+
+    .note {
+      margin-top: 1.8mm;
+      color: var(--muted);
+      font-size: 7.6pt;
+      line-height: 1.25;
+    }
+
+    .section-title h2 {
+      margin: 2.5mm 0 7mm;
+      max-width: 70%;
+      font-size: 30pt;
+      line-height: .92;
+      font-weight: normal;
+      font-variation-settings: "wdth" 96, "wght" 760, "ital" 0;
+    }
+
+    .identity-grid .section-title h2 {
+      max-width: 96%;
+      font-size: 26pt;
+      line-height: .94;
+    }
+
+    .identity-grid .intro-copy p {
+      font-size: 21pt;
+      line-height: 1.08;
+    }
+
+    .compact-title h2 {
+      margin-bottom: 4.5mm;
+      font-size: 25pt;
+    }

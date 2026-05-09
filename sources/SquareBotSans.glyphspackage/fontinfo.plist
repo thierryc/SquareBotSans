@@ -1,5 +1,5 @@
 {
-.appVersion = "3522";
+.appVersion = "3525";
 .formatVersion = 3;
 axes = (
 {
@@ -553,6 +553,9 @@ automatic = 1;
 code = "lookupflag IgnoreMarks;
 sub hyphen hyphen hyphen by hyphen_hyphen_hyphen.dlig;
 sub bar greater by bar_greater.dlig;
+sub equal greater by equal_greater.dlig;
+sub equal less by equal_less.dlig;
+sub exclam equal by exclam_equal.dlig;
 sub greater equal by greater_equal.dlig;
 sub hyphen greater by hyphen_greater.dlig;
 sub hyphen hyphen by hyphen_hyphen.dlig;
@@ -143118,5 +143121,5 @@ value = 1.3;
 };
 };
 versionMajor = 2;
-versionMinor = 0;
+versionMinor = 2;
 }

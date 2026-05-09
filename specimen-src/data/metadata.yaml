@@ -1,0 +1,24 @@
+family: Square Bot Sans
+display_name: SQUARE BOT SANS
+title: SquareBot Sans Specimen
+letter_title: SquareBot Sans Specimen - Letter
+version: v2.001
+foundry: Another Planet Creative Experience
+site: ap.cx
+handle: '@ap.cx'
+header:
+  left: SQUARE BOT SANS
+  center: '@ap.cx'
+footer:
+  left: Another Planet Creative Experience
+  center: v2.001
+cover:
+  kicker: Another Planet Creative Experience / Version 2.001 / Variable Display Font
+  title: Square Bot Sans
+  wordmark: R2BOT
+  axis_strip:
+    - Width 80-120
+    - Weight 200-900
+    - Italic 0 / 1
+back_cover:
+  mark: AP.CX

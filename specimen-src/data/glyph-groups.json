@@ -1,0 +1,1906 @@
+{
+  "uppercase": [
+    {
+      "mark": "A",
+      "name": "A"
+    },
+    {
+      "mark": "B",
+      "name": "B"
+    },
+    {
+      "mark": "C",
+      "name": "C"
+    },
+    {
+      "mark": "D",
+      "name": "D"
+    },
+    {
+      "mark": "E",
+      "name": "E"
+    },
+    {
+      "mark": "F",
+      "name": "F"
+    },
+    {
+      "mark": "G",
+      "name": "G"
+    },
+    {
+      "mark": "H",
+      "name": "H"
+    },
+    {
+      "mark": "I",
+      "name": "I"
+    },
+    {
+      "mark": "J",
+      "name": "J"
+    },
+    {
+      "mark": "K",
+      "name": "K"
+    },
+    {
+      "mark": "L",
+      "name": "L"
+    },
+    {
+      "mark": "M",
+      "name": "M"
+    },
+    {
+      "mark": "N",
+      "name": "N"
+    },
+    {
+      "mark": "O",
+      "name": "O"
+    },
+    {
+      "mark": "P",
+      "name": "P"
+    },
+    {
+      "mark": "Q",
+      "name": "Q"
+    },
+    {
+      "mark": "R",
+      "name": "R"
+    },
+    {
+      "mark": "S",
+      "name": "S"
+    },
+    {
+      "mark": "T",
+      "name": "T"
+    },
+    {
+      "mark": "U",
+      "name": "U"
+    },
+    {
+      "mark": "V",
+      "name": "V"
+    },
+    {
+      "mark": "W",
+      "name": "W"
+    },
+    {
+      "mark": "X",
+      "name": "X"
+    },
+    {
+      "mark": "Y",
+      "name": "Y"
+    },
+    {
+      "mark": "Z",
+      "name": "Z"
+    },
+    {
+      "mark": "Á",
+      "name": "Aacute"
+    },
+    {
+      "mark": "Ă",
+      "name": "Abreve"
+    },
+    {
+      "mark": "Â",
+      "name": "Acircumflex"
+    },
+    {
+      "mark": "Ä",
+      "name": "Adieresis"
+    },
+    {
+      "mark": "À",
+      "name": "Agrave"
+    },
+    {
+      "mark": "Ā",
+      "name": "Amacron"
+    },
+    {
+      "mark": "Ą",
+      "name": "Aogonek"
+    },
+    {
+      "mark": "Å",
+      "name": "Aring"
+    },
+    {
+      "mark": "Ã",
+      "name": "Atilde"
+    },
+    {
+      "mark": "Æ",
+      "name": "AE"
+    },
+    {
+      "mark": "Ć",
+      "name": "Cacute"
+    },
+    {
+      "mark": "Č",
+      "name": "Ccaron"
+    },
+    {
+      "mark": "Ç",
+      "name": "Ccedilla"
+    },
+    {
+      "mark": "Ĉ",
+      "name": "Ccircumflex"
+    },
+    {
+      "mark": "Ċ",
+      "name": "Cdotaccent"
+    },
+    {
+      "mark": "Ð",
+      "name": "Eth"
+    },
+    {
+      "mark": "Ď",
+      "name": "Dcaron"
+    },
+    {
+      "mark": "Đ",
+      "name": "Dcroat"
+    },
+    {
+      "mark": "É",
+      "name": "Eacute"
+    },
+    {
+      "mark": "Ě",
+      "name": "Ecaron"
+    },
+    {
+      "mark": "Ê",
+      "name": "Ecircumflex"
+    },
+    {
+      "mark": "Ë",
+      "name": "Edieresis"
+    },
+    {
+      "mark": "Ė",
+      "name": "Edotaccent"
+    },
+    {
+      "mark": "È",
+      "name": "Egrave"
+    },
+    {
+      "mark": "Ē",
+      "name": "Emacron"
+    },
+    {
+      "mark": "Ę",
+      "name": "Eogonek"
+    },
+    {
+      "mark": "Ğ",
+      "name": "Gbreve"
+    },
+    {
+      "mark": "Ĝ",
+      "name": "Gcircumflex"
+    },
+    {
+      "mark": "Ģ",
+      "name": "Gcommaaccent"
+    },
+    {
+      "mark": "Ġ",
+      "name": "Gdotaccent"
+    },
+    {
+      "mark": "Ħ",
+      "name": "Hbar"
+    },
+    {
+      "mark": "Ĥ",
+      "name": "Hcircumflex"
+    },
+    {
+      "mark": "Í",
+      "name": "Iacute"
+    },
+    {
+      "mark": "Ĭ",
+      "name": "Ibreve"
+    },
+    {
+      "mark": "Î",
+      "name": "Icircumflex"
+    },
+    {
+      "mark": "Ï",
+      "name": "Idieresis"
+    },
+    {
+      "mark": "İ",
+      "name": "Idotaccent"
+    },
+    {
+      "mark": "Ì",
+      "name": "Igrave"
+    },
+    {
+      "mark": "Ĳ",
+      "name": "IJ"
+    },
+    {
+      "mark": "Ī",
+      "name": "Imacron"
+    },
+    {
+      "mark": "Į",
+      "name": "Iogonek"
+    },
+    {
+      "mark": "Ĩ",
+      "name": "Itilde"
+    },
+    {
+      "mark": "Ĵ",
+      "name": "Jcircumflex"
+    },
+    {
+      "mark": "Ķ",
+      "name": "Kcommaaccent"
+    },
+    {
+      "mark": "Ĺ",
+      "name": "Lacute"
+    },
+    {
+      "mark": "Ľ",
+      "name": "Lcaron"
+    },
+    {
+      "mark": "Ļ",
+      "name": "Lcommaaccent"
+    },
+    {
+      "mark": "Ł",
+      "name": "Lslash"
+    },
+    {
+      "mark": "Ń",
+      "name": "Nacute"
+    },
+    {
+      "mark": "Ň",
+      "name": "Ncaron"
+    },
+    {
+      "mark": "Ņ",
+      "name": "Ncommaaccent"
+    },
+    {
+      "mark": "Ñ",
+      "name": "Ntilde"
+    },
+    {
+      "mark": "Ŋ",
+      "name": "Eng"
+    },
+    {
+      "mark": "Ó",
+      "name": "Oacute"
+    },
+    {
+      "mark": "Ŏ",
+      "name": "Obreve"
+    },
+    {
+      "mark": "Ô",
+      "name": "Ocircumflex"
+    },
+    {
+      "mark": "Ö",
+      "name": "Odieresis"
+    },
+    {
+      "mark": "Œ",
+      "name": "OE"
+    },
+    {
+      "mark": "Ò",
+      "name": "Ograve"
+    },
+    {
+      "mark": "Ő",
+      "name": "Ohungarumlaut"
+    },
+    {
+      "mark": "Ō",
+      "name": "Omacron"
+    },
+    {
+      "mark": "Ø",
+      "name": "Oslash"
+    },
+    {
+      "mark": "Õ",
+      "name": "Otilde"
+    },
+    {
+      "mark": "Ŕ",
+      "name": "Racute"
+    },
+    {
+      "mark": "Ř",
+      "name": "Rcaron"
+    },
+    {
+      "mark": "Ŗ",
+      "name": "Rcommaaccent"
+    },
+    {
+      "mark": "Ś",
+      "name": "Sacute"
+    },
+    {
+      "mark": "Š",
+      "name": "Scaron"
+    },
+    {
+      "mark": "Ş",
+      "name": "Scedilla"
+    },
+    {
+      "mark": "Ŝ",
+      "name": "Scircumflex"
+    },
+    {
+      "mark": "Ș",
+      "name": "Scommaaccent"
+    },
+    {
+      "mark": "Ŧ",
+      "name": "Tbar"
+    },
+    {
+      "mark": "Ť",
+      "name": "Tcaron"
+    },
+    {
+      "mark": "Ţ",
+      "name": "Tcedilla"
+    },
+    {
+      "mark": "Ț",
+      "name": "Tcommaaccent"
+    },
+    {
+      "mark": "Þ",
+      "name": "Thorn"
+    },
+    {
+      "mark": "Ú",
+      "name": "Uacute"
+    },
+    {
+      "mark": "Ŭ",
+      "name": "Ubreve"
+    },
+    {
+      "mark": "Û",
+      "name": "Ucircumflex"
+    },
+    {
+      "mark": "Ü",
+      "name": "Udieresis"
+    },
+    {
+      "mark": "Ù",
+      "name": "Ugrave"
+    },
+    {
+      "mark": "Ű",
+      "name": "Uhungarumlaut"
+    },
+    {
+      "mark": "Ū",
+      "name": "Umacron"
+    },
+    {
+      "mark": "Ų",
+      "name": "Uogonek"
+    },
+    {
+      "mark": "Ů",
+      "name": "Uring"
+    },
+    {
+      "mark": "Ũ",
+      "name": "Utilde"
+    },
+    {
+      "mark": "Ŵ",
+      "name": "Wcircumflex"
+    },
+    {
+      "mark": "Ẅ",
+      "name": "Wdieresis"
+    },
+    {
+      "mark": "Ẁ",
+      "name": "Wgrave"
+    },
+    {
+      "mark": "Ý",
+      "name": "Yacute"
+    },
+    {
+      "mark": "Ŷ",
+      "name": "Ycircumflex"
+    },
+    {
+      "mark": "Ÿ",
+      "name": "Ydieresis"
+    },
+    {
+      "mark": "Ỳ",
+      "name": "Ygrave"
+    },
+    {
+      "mark": "Ź",
+      "name": "Zacute"
+    },
+    {
+      "mark": "Ž",
+      "name": "Zcaron"
+    },
+    {
+      "mark": "Ż",
+      "name": "Zdotaccent"
+    },
+    {
+      "mark": "ẞ",
+      "name": "Germandbls"
+    }
+  ],
+  "lowercase": [
+    {
+      "mark": "a",
+      "name": "a"
+    },
+    {
+      "mark": "b",
+      "name": "b"
+    },
+    {
+      "mark": "c",
+      "name": "c"
+    },
+    {
+      "mark": "d",
+      "name": "d"
+    },
+    {
+      "mark": "e",
+      "name": "e"
+    },
+    {
+      "mark": "f",
+      "name": "f"
+    },
+    {
+      "mark": "g",
+      "name": "g"
+    },
+    {
+      "mark": "h",
+      "name": "h"
+    },
+    {
+      "mark": "i",
+      "name": "i"
+    },
+    {
+      "mark": "j",
+      "name": "j"
+    },
+    {
+      "mark": "k",
+      "name": "k"
+    },
+    {
+      "mark": "l",
+      "name": "l"
+    },
+    {
+      "mark": "m",
+      "name": "m"
+    },
+    {
+      "mark": "n",
+      "name": "n"
+    },
+    {
+      "mark": "o",
+      "name": "o"
+    },
+    {
+      "mark": "p",
+      "name": "p"
+    },
+    {
+      "mark": "q",
+      "name": "q"
+    },
+    {
+      "mark": "r",
+      "name": "r"
+    },
+    {
+      "mark": "s",
+      "name": "s"
+    },
+    {
+      "mark": "t",
+      "name": "t"
+    },
+    {
+      "mark": "u",
+      "name": "u"
+    },
+    {
+      "mark": "v",
+      "name": "v"
+    },
+    {
+      "mark": "w",
+      "name": "w"
+    },
+    {
+      "mark": "x",
+      "name": "x"
+    },
+    {
+      "mark": "y",
+      "name": "y"
+    },
+    {
+      "mark": "z",
+      "name": "z"
+    },
+    {
+      "mark": "á",
+      "name": "aacute"
+    },
+    {
+      "mark": "ă",
+      "name": "abreve"
+    },
+    {
+      "mark": "â",
+      "name": "acircumflex"
+    },
+    {
+      "mark": "ä",
+      "name": "adieresis"
+    },
+    {
+      "mark": "à",
+      "name": "agrave"
+    },
+    {
+      "mark": "ā",
+      "name": "amacron"
+    },
+    {
+      "mark": "ą",
+      "name": "aogonek"
+    },
+    {
+      "mark": "å",
+      "name": "aring"
+    },
+    {
+      "mark": "ã",
+      "name": "atilde"
+    },
+    {
+      "mark": "æ",
+      "name": "ae"
+    },
+    {
+      "mark": "ć",
+      "name": "cacute"
+    },
+    {
+      "mark": "č",
+      "name": "ccaron"
+    },
+    {
+      "mark": "ç",
+      "name": "ccedilla"
+    },
+    {
+      "mark": "ĉ",
+      "name": "ccircumflex"
+    },
+    {
+      "mark": "ċ",
+      "name": "cdotaccent"
+    },
+    {
+      "mark": "ď",
+      "name": "dcaron"
+    },
+    {
+      "mark": "đ",
+      "name": "dcroat"
+    },
+    {
+      "mark": "ð",
+      "name": "eth"
+    },
+    {
+      "mark": "é",
+      "name": "eacute"
+    },
+    {
+      "mark": "ě",
+      "name": "ecaron"
+    },
+    {
+      "mark": "ê",
+      "name": "ecircumflex"
+    },
+    {
+      "mark": "ë",
+      "name": "edieresis"
+    },
+    {
+      "mark": "ė",
+      "name": "edotaccent"
+    },
+    {
+      "mark": "è",
+      "name": "egrave"
+    },
+    {
+      "mark": "ē",
+      "name": "emacron"
+    },
+    {
+      "mark": "ę",
+      "name": "eogonek"
+    },
+    {
+      "mark": "ğ",
+      "name": "gbreve"
+    },
+    {
+      "mark": "ĝ",
+      "name": "gcircumflex"
+    },
+    {
+      "mark": "ģ",
+      "name": "gcommaaccent"
+    },
+    {
+      "mark": "ġ",
+      "name": "gdotaccent"
+    },
+    {
+      "mark": "ĥ",
+      "name": "hcircumflex"
+    },
+    {
+      "mark": "ħ",
+      "name": "hbar"
+    },
+    {
+      "mark": "í",
+      "name": "iacute"
+    },
+    {
+      "mark": "ĭ",
+      "name": "ibreve"
+    },
+    {
+      "mark": "î",
+      "name": "icircumflex"
+    },
+    {
+      "mark": "ï",
+      "name": "idieresis"
+    },
+    {
+      "mark": "ı",
+      "name": "idotless"
+    },
+    {
+      "mark": "ì",
+      "name": "igrave"
+    },
+    {
+      "mark": "ĳ",
+      "name": "ij"
+    },
+    {
+      "mark": "ī",
+      "name": "imacron"
+    },
+    {
+      "mark": "į",
+      "name": "iogonek"
+    },
+    {
+      "mark": "ĩ",
+      "name": "itilde"
+    },
+    {
+      "mark": "ĵ",
+      "name": "jcircumflex"
+    },
+    {
+      "mark": "ķ",
+      "name": "kcommaaccent"
+    },
+    {
+      "mark": "ĸ",
+      "name": "kgreenlandic"
+    },
+    {
+      "mark": "ĺ",
+      "name": "lacute"
+    },
+    {
+      "mark": "ľ",
+      "name": "lcaron"
+    },
+    {
+      "mark": "ļ",
+      "name": "lcommaaccent"
+    },
+    {
+      "mark": "ł",
+      "name": "lslash"
+    },
+    {
+      "mark": "ń",
+      "name": "nacute"
+    },
+    {
+      "mark": "ň",
+      "name": "ncaron"
+    },
+    {
+      "mark": "ņ",
+      "name": "ncommaaccent"
+    },
+    {
+      "mark": "ñ",
+      "name": "ntilde"
+    },
+    {
+      "mark": "ŋ",
+      "name": "eng"
+    },
+    {
+      "mark": "ó",
+      "name": "oacute"
+    },
+    {
+      "mark": "ŏ",
+      "name": "obreve"
+    },
+    {
+      "mark": "ô",
+      "name": "ocircumflex"
+    },
+    {
+      "mark": "ö",
+      "name": "odieresis"
+    },
+    {
+      "mark": "œ",
+      "name": "oe"
+    },
+    {
+      "mark": "ò",
+      "name": "ograve"
+    },
+    {
+      "mark": "ő",
+      "name": "ohungarumlaut"
+    },
+    {
+      "mark": "ō",
+      "name": "omacron"
+    },
+    {
+      "mark": "ø",
+      "name": "oslash"
+    },
+    {
+      "mark": "õ",
+      "name": "otilde"
+    },
+    {
+      "mark": "ŕ",
+      "name": "racute"
+    },
+    {
+      "mark": "ř",
+      "name": "rcaron"
+    },
+    {
+      "mark": "ŗ",
+      "name": "rcommaaccent"
+    },
+    {
+      "mark": "ś",
+      "name": "sacute"
+    },
+    {
+      "mark": "š",
+      "name": "scaron"
+    },
+    {
+      "mark": "ş",
+      "name": "scedilla"
+    },
+    {
+      "mark": "ŝ",
+      "name": "scircumflex"
+    },
+    {
+      "mark": "ș",
+      "name": "scommaaccent"
+    },
+    {
+      "mark": "ß",
+      "name": "germandbls"
+    },
+    {
+      "mark": "ŧ",
+      "name": "tbar"
+    },
+    {
+      "mark": "ť",
+      "name": "tcaron"
+    },
+    {
+      "mark": "ţ",
+      "name": "tcedilla"
+    },
+    {
+      "mark": "ț",
+      "name": "tcommaaccent"
+    },
+    {
+      "mark": "þ",
+      "name": "thorn"
+    },
+    {
+      "mark": "ú",
+      "name": "uacute"
+    },
+    {
+      "mark": "ŭ",
+      "name": "ubreve"
+    },
+    {
+      "mark": "û",
+      "name": "ucircumflex"
+    },
+    {
+      "mark": "ü",
+      "name": "udieresis"
+    },
+    {
+      "mark": "ù",
+      "name": "ugrave"
+    },
+    {
+      "mark": "ű",
+      "name": "uhungarumlaut"
+    },
+    {
+      "mark": "ū",
+      "name": "umacron"
+    },
+    {
+      "mark": "ų",
+      "name": "uogonek"
+    },
+    {
+      "mark": "ů",
+      "name": "uring"
+    },
+    {
+      "mark": "ũ",
+      "name": "utilde"
+    },
+    {
+      "mark": "ŵ",
+      "name": "wcircumflex"
+    },
+    {
+      "mark": "ẅ",
+      "name": "wdieresis"
+    },
+    {
+      "mark": "ẁ",
+      "name": "wgrave"
+    },
+    {
+      "mark": "ý",
+      "name": "yacute"
+    },
+    {
+      "mark": "ŷ",
+      "name": "ycircumflex"
+    },
+    {
+      "mark": "ÿ",
+      "name": "ydieresis"
+    },
+    {
+      "mark": "ỳ",
+      "name": "ygrave"
+    },
+    {
+      "mark": "ź",
+      "name": "zacute"
+    },
+    {
+      "mark": "ž",
+      "name": "zcaron"
+    },
+    {
+      "mark": "ż",
+      "name": "zdotaccent"
+    }
+  ],
+  "symbols": [
+    {
+      "mark": "`",
+      "name": "grave"
+    },
+    {
+      "mark": "´",
+      "name": "acute"
+    },
+    {
+      "mark": "ˆ",
+      "name": "circumflex"
+    },
+    {
+      "mark": "˜",
+      "name": "tilde"
+    },
+    {
+      "mark": "ˇ",
+      "name": "caron"
+    },
+    {
+      "mark": "¨",
+      "name": "dieresis"
+    },
+    {
+      "mark": "¯",
+      "name": "macron"
+    },
+    {
+      "mark": "˘",
+      "name": "breve"
+    },
+    {
+      "mark": "˚",
+      "name": "ring"
+    },
+    {
+      "mark": "˝",
+      "name": "hungarumlaut"
+    },
+    {
+      "mark": "˙",
+      "name": "dotaccent"
+    },
+    {
+      "mark": ",",
+      "name": "comma"
+    },
+    {
+      "mark": ";",
+      "name": "semicolon"
+    },
+    {
+      "mark": ":",
+      "name": "colon"
+    },
+    {
+      "mark": ".",
+      "name": "period"
+    },
+    {
+      "mark": "…",
+      "name": "ellipsis"
+    },
+    {
+      "mark": "-",
+      "name": "hyphen"
+    },
+    {
+      "mark": "–",
+      "name": "endash"
+    },
+    {
+      "mark": "—",
+      "name": "emdash"
+    },
+    {
+      "mark": "_",
+      "name": "underscore"
+    },
+    {
+      "mark": "!",
+      "name": "exclam"
+    },
+    {
+      "mark": "¡",
+      "name": "exclamdown"
+    },
+    {
+      "mark": "?",
+      "name": "question"
+    },
+    {
+      "mark": "¿",
+      "name": "questiondown"
+    },
+    {
+      "mark": "'",
+      "name": "quotesingle"
+    },
+    {
+      "mark": "\"",
+      "name": "quotedbl"
+    },
+    {
+      "mark": "“",
+      "name": "quotedblleft"
+    },
+    {
+      "mark": "”",
+      "name": "quotedblright"
+    },
+    {
+      "mark": "‘",
+      "name": "quoteleft"
+    },
+    {
+      "mark": "’",
+      "name": "quoteright"
+    },
+    {
+      "mark": "/",
+      "name": "slash"
+    },
+    {
+      "mark": "\\",
+      "name": "backslash"
+    },
+    {
+      "mark": "|",
+      "name": "bar"
+    },
+    {
+      "mark": "(",
+      "name": "parenleft"
+    },
+    {
+      "mark": ")",
+      "name": "parenright"
+    },
+    {
+      "mark": "[",
+      "name": "bracketleft"
+    },
+    {
+      "mark": "]",
+      "name": "bracketright"
+    },
+    {
+      "mark": "{",
+      "name": "braceleft"
+    },
+    {
+      "mark": "}",
+      "name": "braceright"
+    },
+    {
+      "mark": "@",
+      "name": "at"
+    },
+    {
+      "mark": "&",
+      "name": "ampersand"
+    },
+    {
+      "mark": "#",
+      "name": "numbersign"
+    },
+    {
+      "mark": "%",
+      "name": "percent"
+    },
+    {
+      "mark": "‰",
+      "name": "perthousand"
+    },
+    {
+      "mark": "№",
+      "name": "numero"
+    },
+    {
+      "mark": "0",
+      "name": "zero"
+    },
+    {
+      "mark": "1",
+      "name": "one"
+    },
+    {
+      "mark": "2",
+      "name": "two"
+    },
+    {
+      "mark": "3",
+      "name": "three"
+    },
+    {
+      "mark": "4",
+      "name": "four"
+    },
+    {
+      "mark": "5",
+      "name": "five"
+    },
+    {
+      "mark": "6",
+      "name": "six"
+    },
+    {
+      "mark": "7",
+      "name": "seven"
+    },
+    {
+      "mark": "8",
+      "name": "eight"
+    },
+    {
+      "mark": "9",
+      "name": "nine"
+    },
+    {
+      "mark": "¼",
+      "name": "onequarter"
+    },
+    {
+      "mark": "½",
+      "name": "onehalf"
+    },
+    {
+      "mark": "¾",
+      "name": "threequarters"
+    },
+    {
+      "mark": "⅓",
+      "name": "onethird"
+    },
+    {
+      "mark": "⅔",
+      "name": "twothirds"
+    },
+    {
+      "mark": "$",
+      "name": "dollar"
+    },
+    {
+      "mark": "¢",
+      "name": "cent"
+    },
+    {
+      "mark": "£",
+      "name": "sterling"
+    },
+    {
+      "mark": "¥",
+      "name": "yen"
+    },
+    {
+      "mark": "€",
+      "name": "euro"
+    },
+    {
+      "mark": "₩",
+      "name": "won"
+    },
+    {
+      "mark": "₽",
+      "name": "ruble"
+    },
+    {
+      "mark": "₹",
+      "name": "rupee"
+    },
+    {
+      "mark": "₺",
+      "name": "lira"
+    },
+    {
+      "mark": "₿",
+      "name": "bitcoin"
+    },
+    {
+      "mark": "©",
+      "name": "copyright"
+    },
+    {
+      "mark": "®",
+      "name": "registered"
+    },
+    {
+      "mark": "™",
+      "name": "trademark"
+    },
+    {
+      "mark": "§",
+      "name": "section"
+    },
+    {
+      "mark": "¶",
+      "name": "paragraph"
+    },
+    {
+      "mark": "+",
+      "name": "plus"
+    },
+    {
+      "mark": "−",
+      "name": "minus"
+    },
+    {
+      "mark": "×",
+      "name": "multiply"
+    },
+    {
+      "mark": "÷",
+      "name": "divide"
+    },
+    {
+      "mark": "=",
+      "name": "equal"
+    },
+    {
+      "mark": "≠",
+      "name": "notequal"
+    },
+    {
+      "mark": "<",
+      "name": "less"
+    },
+    {
+      "mark": ">",
+      "name": "greater"
+    },
+    {
+      "mark": "≤",
+      "name": "lessequal"
+    },
+    {
+      "mark": "≥",
+      "name": "greaterequal"
+    },
+    {
+      "mark": "±",
+      "name": "plusminus"
+    },
+    {
+      "mark": "≈",
+      "name": "approxequal"
+    },
+    {
+      "mark": "∞",
+      "name": "infinity"
+    },
+    {
+      "mark": "√",
+      "name": "radical"
+    },
+    {
+      "mark": "∑",
+      "name": "summation"
+    },
+    {
+      "mark": "∆",
+      "name": "increment"
+    },
+    {
+      "mark": "Ω",
+      "name": "Omega"
+    },
+    {
+      "mark": "π",
+      "name": "pi"
+    },
+    {
+      "mark": "µ",
+      "name": "micro"
+    },
+    {
+      "mark": "●",
+      "name": "blackcircle"
+    },
+    {
+      "mark": "○",
+      "name": "whitecircle"
+    },
+    {
+      "mark": "◊",
+      "name": "lozenge"
+    },
+    {
+      "mark": "•",
+      "name": "bullet"
+    },
+    {
+      "mark": "*",
+      "name": "asterisk"
+    },
+    {
+      "mark": "←",
+      "name": "leftarrow"
+    },
+    {
+      "mark": "↑",
+      "name": "uparrow"
+    },
+    {
+      "mark": "→",
+      "name": "rightarrow"
+    },
+    {
+      "mark": "↓",
+      "name": "downarrow"
+    },
+    {
+      "mark": "↔",
+      "name": "leftrightarrow"
+    },
+    {
+      "mark": "↕",
+      "name": "updownarrow"
+    },
+    {
+      "mark": "↖",
+      "name": "northwest"
+    },
+    {
+      "mark": "↗",
+      "name": "northeast"
+    },
+    {
+      "mark": "↘",
+      "name": "southeast"
+    },
+    {
+      "mark": "↙",
+      "name": "southwest"
+    }
+  ],
+  "stylistic_sets": {
+    "ss01": [
+      {
+        "mark": "Ặ",
+        "name": "uni1EB6.ss01"
+      },
+      {
+        "mark": "Ậ",
+        "name": "uni1EAC.ss01"
+      },
+      {
+        "mark": "Ä",
+        "name": "Adieresis.ss01"
+      },
+      {
+        "mark": "Ạ",
+        "name": "uni1EA0.ss01"
+      },
+      {
+        "mark": "Ċ",
+        "name": "Cdotaccent.ss01"
+      },
+      {
+        "mark": "Ệ",
+        "name": "uni1EC6.ss01"
+      },
+      {
+        "mark": "Ë",
+        "name": "Edieresis.ss01"
+      },
+      {
+        "mark": "Ė",
+        "name": "Edotaccent.ss01"
+      },
+      {
+        "mark": "Ẹ",
+        "name": "uni1EB8.ss01"
+      },
+      {
+        "mark": "Ġ",
+        "name": "Gdotaccent.ss01"
+      },
+      {
+        "mark": "Ï",
+        "name": "Idieresis.ss01"
+      },
+      {
+        "mark": "İ",
+        "name": "Idotaccent.ss01"
+      },
+      {
+        "mark": "Ị",
+        "name": "uni1ECA.ss01"
+      },
+      {
+        "mark": "Ŀ",
+        "name": "Ldot.ss01"
+      },
+      {
+        "mark": "Ộ",
+        "name": "uni1ED8.ss01"
+      },
+      {
+        "mark": "Ö",
+        "name": "Odieresis.ss01"
+      },
+      {
+        "mark": "Ọ",
+        "name": "uni1ECC.ss01"
+      },
+      {
+        "mark": "Ợ",
+        "name": "uni1EE2.ss01"
+      },
+      {
+        "mark": "Q",
+        "name": "Q.ss01"
+      },
+      {
+        "mark": "Ü",
+        "name": "Udieresis.ss01"
+      },
+      {
+        "mark": "Ụ",
+        "name": "uni1EE4.ss01"
+      },
+      {
+        "mark": "Ừ",
+        "name": "uni1EF0.ss01"
+      },
+      {
+        "mark": "Ẅ",
+        "name": "Wdieresis.ss01"
+      },
+      {
+        "mark": "Ÿ",
+        "name": "Ydieresis.ss01"
+      },
+      {
+        "mark": "Ỵ",
+        "name": "uni1EF4.ss01"
+      },
+      {
+        "mark": "Ż",
+        "name": "Zdotaccent.ss01"
+      },
+      {
+        "mark": "a",
+        "name": "a.ss01"
+      },
+      {
+        "mark": "á",
+        "name": "aacute.ss01"
+      },
+      {
+        "mark": "ă",
+        "name": "abreve.ss01"
+      },
+      {
+        "mark": "ắ",
+        "name": "uni1EAF.ss01"
+      },
+      {
+        "mark": "ặ",
+        "name": "uni1EB7.ss01"
+      },
+      {
+        "mark": "ằ",
+        "name": "uni1EB1.ss01"
+      },
+      {
+        "mark": "ẳ",
+        "name": "uni1EB3.ss01"
+      },
+      {
+        "mark": "ẵ",
+        "name": "uni1EB5.ss01"
+      },
+      {
+        "mark": "â",
+        "name": "acircumflex.ss01"
+      },
+      {
+        "mark": "ấ",
+        "name": "uni1EA5.ss01"
+      },
+      {
+        "mark": "ậ",
+        "name": "uni1EAD.ss01"
+      },
+      {
+        "mark": "ầ",
+        "name": "uni1EA7.ss01"
+      },
+      {
+        "mark": "ẩ",
+        "name": "uni1EA9.ss01"
+      },
+      {
+        "mark": "ẫ",
+        "name": "uni1EAB.ss01"
+      },
+      {
+        "mark": "ä",
+        "name": "adieresis.ss01"
+      },
+      {
+        "mark": "ạ",
+        "name": "uni1EA1.ss01"
+      },
+      {
+        "mark": "à",
+        "name": "agrave.ss01"
+      },
+      {
+        "mark": "ả",
+        "name": "uni1EA3.ss01"
+      },
+      {
+        "mark": "ā",
+        "name": "amacron.ss01"
+      },
+      {
+        "mark": "ą",
+        "name": "aogonek.ss01"
+      },
+      {
+        "mark": "å",
+        "name": "aring.ss01"
+      },
+      {
+        "mark": "ã",
+        "name": "atilde.ss01"
+      },
+      {
+        "mark": "ċ",
+        "name": "cdotaccent.ss01"
+      },
+      {
+        "mark": "ệ",
+        "name": "uni1EC7.ss01"
+      },
+      {
+        "mark": "ë",
+        "name": "edieresis.ss01"
+      },
+      {
+        "mark": "ė",
+        "name": "edotaccent.ss01"
+      },
+      {
+        "mark": "ẹ",
+        "name": "uni1EB9.ss01"
+      },
+      {
+        "mark": "ġ",
+        "name": "gdotaccent.ss01"
+      },
+      {
+        "mark": "i",
+        "name": "i.ss01"
+      },
+      {
+        "mark": "ï",
+        "name": "idieresis.ss01"
+      },
+      {
+        "mark": "ị",
+        "name": "uni1ECB.ss01"
+      },
+      {
+        "mark": "j",
+        "name": "j.ss01"
+      },
+      {
+        "mark": "ŀ",
+        "name": "ldot.ss01"
+      },
+      {
+        "mark": "ộ",
+        "name": "uni1ED9.ss01"
+      },
+      {
+        "mark": "ö",
+        "name": "odieresis.ss01"
+      },
+      {
+        "mark": "ọ",
+        "name": "uni1ECD.ss01"
+      },
+      {
+        "mark": "ợ",
+        "name": "uni1EE3.ss01"
+      },
+      {
+        "mark": "ü",
+        "name": "udieresis.ss01"
+      },
+      {
+        "mark": "ụ",
+        "name": "uni1EE5.ss01"
+      },
+      {
+        "mark": "ừ",
+        "name": "uni1EF1.ss01"
+      },
+      {
+        "mark": "ẅ",
+        "name": "wdieresis.ss01"
+      },
+      {
+        "mark": "y",
+        "name": "y.ss01"
+      },
+      {
+        "mark": "ý",
+        "name": "yacute.ss01"
+      },
+      {
+        "mark": "ŷ",
+        "name": "ycircumflex.ss01"
+      },
+      {
+        "mark": "ÿ",
+        "name": "ydieresis.ss01"
+      },
+      {
+        "mark": "ỵ",
+        "name": "uni1EF5.ss01"
+      },
+      {
+        "mark": "ỳ",
+        "name": "ygrave.ss01"
+      },
+      {
+        "mark": "ż",
+        "name": "zdotaccent.ss01"
+      },
+      {
+        "mark": ".",
+        "name": "period.ss01"
+      },
+      {
+        "mark": ",",
+        "name": "comma.ss01"
+      },
+      {
+        "mark": ":",
+        "name": "colon.ss01"
+      },
+      {
+        "mark": ";",
+        "name": "semicolon.ss01"
+      },
+      {
+        "mark": "…",
+        "name": "ellipsis.ss01"
+      },
+      {
+        "mark": "!",
+        "name": "exclam.ss01"
+      },
+      {
+        "mark": "¡",
+        "name": "exclamdown.ss01"
+      },
+      {
+        "mark": "?",
+        "name": "question.ss01"
+      },
+      {
+        "mark": "¿",
+        "name": "questiondown.ss01"
+      },
+      {
+        "mark": "·",
+        "name": "periodcentered.ss01"
+      },
+      {
+        "mark": "‚",
+        "name": "quotesinglbase.ss01"
+      },
+      {
+        "mark": "„",
+        "name": "quotedblbase.ss01"
+      },
+      {
+        "mark": "“",
+        "name": "quotedblleft.ss01"
+      },
+      {
+        "mark": "”",
+        "name": "quotedblright.ss01"
+      },
+      {
+        "mark": "‘",
+        "name": "quoteleft.ss01"
+      },
+      {
+        "mark": "’",
+        "name": "quoteright.ss01"
+      },
+      {
+        "mark": "÷",
+        "name": "divide.ss01"
+      }
+    ],
+    "ss02": [
+      {
+        "mark": "l",
+        "name": "l.ss02"
+      },
+      {
+        "mark": "ĺ",
+        "name": "lacute.ss02"
+      },
+      {
+        "mark": "ľ",
+        "name": "lcaron.ss02"
+      },
+      {
+        "mark": "ļ",
+        "name": "uni013C.ss02"
+      },
+      {
+        "mark": "ŀ",
+        "name": "ldot.ss02"
+      },
+      {
+        "mark": "ł",
+        "name": "lslash.ss02"
+      },
+      {
+        "mark": "ﬂ",
+        "name": "fl.ss02"
+      },
+      {
+        "mark": "ffl",
+        "name": "f_f_l.liga.ss02"
+      }
+    ],
+    "ss03": [
+      {
+        "mark": "r",
+        "name": "r.ss03"
+      },
+      {
+        "mark": "ŕ",
+        "name": "racute.ss03"
+      },
+      {
+        "mark": "ř",
+        "name": "rcaron.ss03"
+      },
+      {
+        "mark": "ŗ",
+        "name": "uni0157.ss03"
+      }
+    ],
+    "ss04": [
+      {
+        "mark": "I",
+        "name": "I.ss04"
+      },
+      {
+        "mark": "Ĳ",
+        "name": "IJ.ss04"
+      },
+      {
+        "mark": "Í",
+        "name": "Iacute.ss04"
+      },
+      {
+        "mark": "Ĭ",
+        "name": "Ibreve.ss04"
+      },
+      {
+        "mark": "Î",
+        "name": "Icircumflex.ss04"
+      },
+      {
+        "mark": "Ï",
+        "name": "Idieresis.ss04"
+      },
+      {
+        "mark": "İ",
+        "name": "Idotaccent.ss04"
+      },
+      {
+        "mark": "Ị",
+        "name": "uni1ECA.ss04"
+      },
+      {
+        "mark": "Ì",
+        "name": "Igrave.ss04"
+      },
+      {
+        "mark": "Ỉ",
+        "name": "uni1EC8.ss04"
+      },
+      {
+        "mark": "Ī",
+        "name": "Imacron.ss04"
+      },
+      {
+        "mark": "Į",
+        "name": "Iogonek.ss04"
+      },
+      {
+        "mark": "Ĩ",
+        "name": "Itilde.ss04"
+      }
+    ]
+  }
+}

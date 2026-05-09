@@ -1,0 +1,25 @@
+width:
+  title: External width range 80-120.
+  sample: LOW ORBIT RELAY
+  rows:
+    - {label: wdth 80, value: 80, text: LOW ORBIT RELAY, note: CONSTANT WGHT 700}
+    - {label: wdth 90, value: 90, text: LOW ORBIT RELAY, note: CONSTANT WGHT 700}
+    - {label: wdth 100, value: 100, text: LOW ORBIT RELAY, note: CONSTANT WGHT 700}
+    - {label: wdth 110, value: 110, text: LOW ORBIT RELAY, note: CONSTANT WGHT 700}
+    - {label: wdth 120, value: 120, text: LOW ORBIT RELAY, note: CONSTANT WGHT 700}
+weight:
+  title: Weight range from ExtraLight to Black.
+  sample: ORBITAL DOCKING VECTOR
+  rows:
+    - {label: wght 200, value: 200, text: ORBITAL DOCKING VECTOR, note: CONSTANT WDTH 100}
+    - {label: wght 300, value: 300, text: ORBITAL DOCKING VECTOR, note: CONSTANT WDTH 100}
+    - {label: wght 400, value: 400, text: ORBITAL DOCKING VECTOR, note: CONSTANT WDTH 100}
+    - {label: wght 500, value: 500, text: ORBITAL DOCKING VECTOR, note: CONSTANT WDTH 100}
+    - {label: wght 700, value: 700, text: ORBITAL DOCKING VECTOR, note: CONSTANT WDTH 100}
+    - {label: wght 900, value: 900, text: ORBITAL DOCKING VECTOR, note: CONSTANT WDTH 100}
+italic:
+  title: "Italic positions: roman and italic."
+  sample: Signal crossing sector seven
+  rows:
+    - {label: ital 0, value: 0, text: Signal crossing sector seven, note: CONSTANT WDTH 105 / WGHT 520}
+    - {label: ital 1, value: 1, text: Signal crossing sector seven, note: CONSTANT WDTH 105 / WGHT 520}

@@ -1,0 +1,30 @@
+# Page order for the generated specimen. Bespoke page bodies are rendered by Python
+# components and editable HTML partials in specimen-src/templates/pages.
+pages:
+  - cover
+  - identity
+  - data-card
+  - design-space
+  - roman-instances
+  - italic-instances
+  - width-axis
+  - weight-axis
+  - italic-positions
+  - opentype-overview
+  - opentype-comparisons
+  - stylistic-sets
+  - feature-story
+  - numerals
+  - signage
+  - text-settings
+  - character-overview
+  - uppercase-glyph-board
+  - lowercase-glyph-board
+  - symbol-glyph-board
+  - stylistic-alternates-ss01
+  - stylistic-alternates-ss02-ss04
+  - languages
+  - categories
+  - technical-specifications
+  - final-technical
+  - back-cover

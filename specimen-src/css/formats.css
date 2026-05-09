@@ -1,0 +1,33 @@
+html.format-a4 {
+  --page-width: 297mm;
+  --page-height: 210mm;
+  --page-margin-x: 12mm;
+  --page-margin-top: 8mm;
+  --page-margin-bottom: 8mm;
+  --pad-x: 12mm;
+  --pad-y: 8mm;
+  --gutter: 4.2mm;
+  --cover-title: 51pt;
+  --hero-glyph: 96pt;
+  --display-large: 54pt;
+  --specimen-xl: 45pt;
+  --axis-sample: 35pt;
+  --glyph-features: "kern" 1, "liga" 1;
+}
+
+html.format-letter {
+  --page-width: 11in;
+  --page-height: 8.5in;
+  --page-margin-x: 0.45in;
+  --page-margin-top: 0.32in;
+  --page-margin-bottom: 0.32in;
+  --pad-x: 0.45in;
+  --pad-y: 0.32in;
+  --gutter: 0.16in;
+  --cover-title: 47pt;
+  --hero-glyph: 88pt;
+  --display-large: 49pt;
+  --specimen-xl: 40pt;
+  --axis-sample: 32pt;
+  --glyph-features: "kern" 1, "liga" 1;
+}

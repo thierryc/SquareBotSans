@@ -3,7 +3,7 @@
 
 This script creates the two public distribution tracks used by this repo:
 
-1. A local/GitHub VF that keeps the continuous italic axis.
+1. A local/GitHub VF that exposes roman and italic positions on the italic axis.
 2. Google Fonts candidate VFs split into Roman and Italic files.
 """
 
@@ -20,14 +20,12 @@ import sys
 from fontTools.otlLib.builder import buildStatTable
 from fontTools.ttLib.tables._f_v_a_r import NamedInstance
 from fontTools.ttLib import TTFont, newTable
+from fontTools.varLib.hvar import add_HVAR
 from fontTools.varLib.instancer import instantiateVariableFont
 
 
 ROOT = Path(__file__).resolve().parents[1]
-SOURCE_GLYPHS = ROOT / "sources" / "SquareBotSans.glyphspackage"
 LOCAL_SOURCE_VF = ROOT / "fonts" / "variable" / "SquareBotSansVF-Regular.ttf"
-GF_SOURCE_DIR = ROOT / "build" / "googlefonts-source"
-GF_SOURCE_VF = GF_SOURCE_DIR / "SquareBotSansVF-Regular.ttf"
 GF_STAGING_DIR = ROOT / "build" / "googlefonts" / "squarebotsans"
 
 LOCAL_TTF = ROOT / "fonts" / "variable" / "SquareBotSans[ital,wdth,wght].ttf"
@@ -87,29 +85,6 @@ def _tool(name: str) -> str:
 
 def _run(args: list[str]) -> None:
     subprocess.run(args, cwd=ROOT, check=True)
-
-
-def _build_gf_source_vf() -> None:
-    if not SOURCE_GLYPHS.exists():
-        raise SystemExit(f"Glyphs source not found: {SOURCE_GLYPHS}")
-    GF_SOURCE_DIR.mkdir(parents=True, exist_ok=True)
-    _run(
-        [
-            _tool("fontmake"),
-            "-g",
-            str(SOURCE_GLYPHS),
-            "-o",
-            "variable",
-            "--output-dir",
-            str(GF_SOURCE_DIR),
-            "--flatten-components",
-            "--no-check-compatibility",
-            "--verbose",
-            "WARNING",
-        ]
-    )
-    if not GF_SOURCE_VF.exists():
-        raise SystemExit(f"fontmake did not produce expected VF: {GF_SOURCE_VF}")
 
 
 def _clean_gdef_varstore(font: TTFont) -> None:
@@ -376,6 +351,12 @@ def _drop_unreadable_gvar_entries(font: TTFont) -> None:
             gvar.variations[glyph_name] = []
 
 
+def _add_hvar(font: TTFont) -> None:
+    if "fvar" not in font or "gvar" not in font:
+        return
+    add_HVAR(font)
+
+
 def _local_instance_name(coords: dict) -> str:
     weight = int(round(float(coords.get("wght", 400))))
     width = int(round(float(coords.get("wdth", 100))))
@@ -416,6 +397,7 @@ def _prepare_font(
     _set_style_bits(font, italic)
     _set_italic_caret_slope(font, italic)
     _set_gasp(font)
+    _add_hvar(font)
     _drop_mac_name_records(font)
 
 
@@ -469,11 +451,10 @@ def _local_source_font() -> TTFont:
 
 
 def _gf_source_font() -> TTFont:
-    font = TTFont(GF_SOURCE_VF)
-    _clean_gdef_varstore(font)
-    if "avar" in font:
-        del font["avar"]
-    return font
+    # Use the Glyphs-exported source VF for both distribution tracks. The
+    # fontmake-generated VF keeps the axis metadata but currently drops the
+    # italic outline deltas for this Glyphs package.
+    return _local_source_font()
 
 
 def build_local() -> None:
@@ -491,7 +472,6 @@ def build_local() -> None:
 
 
 def build_googlefonts() -> None:
-    _build_gf_source_vf()
     roman = instantiateVariableFont(
         _gf_source_font(), {"ital": 0, "wdth": GF_WIDTH_RANGE}, inplace=False
     )
