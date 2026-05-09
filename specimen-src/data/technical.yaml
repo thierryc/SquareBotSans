@@ -4,22 +4,16 @@ metrics:
   descender: -167
   x_height: 515-546
 counts:
-  glyphs: 937
-  exporting_glyphs: 898
-  non_exporting_glyphs: 39
-  unicode_encoded_glyphs: 569
+  glyphs: 946
+  exporting_glyphs: 908
+  non_exporting_glyphs: 38
+  unicode_encoded_glyphs: 574
   masters: 12
   instances: 49
 formats:
   desktop: OTF
   web: WOFF2
   app: OTF / TTF
-licensing:
-  - Desktop
-  - Web
-  - App
-  - Logo
-  - Trial
 languages:
   - Afrikaans
   - Albanian

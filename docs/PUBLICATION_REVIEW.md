@@ -21,14 +21,14 @@ Glyphs MCP reported one open font before cleanup:
 
 - Family: SquareBot Sans
 - Source path: `/Users/thierryc/Documents/fonts/SquareBotSans/sources/SquareBotSans.glyphspackage`
-- Release target: 2.001
-- Glyphs source version: 2.000 currently reported by Glyphs; save as 2.001 before tagging.
+- Release target: 2.002
+- Glyphs source version: 2.002 currently reported by Glyphs.
 - UPM: 1000
 - Masters: 12
 - Instances: 49
-- Glyphs: 939 total, 901 exporting, 569 encoded
+- Glyphs: 946 total, 908 exporting, 574 encoded
 - Axes: Width (`wdth`), Weight (`wght`), Italic (`ital`)
-- Features: `aalt`, `ccmp`, `locl`, `numr`, `dnom`, `frac`, `ordn`, `pnum`, `tnum`, `c2sc`, `smcp`, `case`, `dlig`, `liga`, `ss01`, `ss02`, `ss03`, `ss04`
+- Features: `aalt`, `ccmp`, `locl`, `numr`, `dnom`, `frac`, `ordn`, `pnum`, `tnum`, `zero`, `c2sc`, `smcp`, `case`, `dlig`, `liga`, `ss01`, `ss02`, `ss03`, `ss04`
 - Discretionary ligatures verified in live Glyphs source include `<-`, `->`, `=>`, `=<`, `!=`, `>=`, `<=`, `<>`, `<|`, and `|>`.
 - Kerning: about 10,288 to 10,295 pairs per master
 
@@ -73,7 +73,7 @@ fontTools parse check after cleanup:
 /Library/Frameworks/Python.framework/Versions/3.12/bin/python3 <parse check>
 ```
 
-Result: 50 public binaries parsed successfully, with 0 errors. This covered OTF, WOFF2, TTF, and variable WOFF2 files in `fonts/`.
+Result: 102 public binaries parsed successfully, with 0 errors. This covered OTF, WOFF2, TTF, and variable WOFF2 files in `fonts/`.
 
 README release path check after cleanup:
 
@@ -86,7 +86,7 @@ Result: both README example paths exist.
 
 ## FontBakery Snapshot
 
-Full public OTF plus variable TTF check after 2.001 prep:
+Full public OTF plus variable TTF check after 2.002 prep:
 
 ```sh
 make test-universal
@@ -102,9 +102,9 @@ Observed blockers in the mixed public tree:
 - Variable family axis range mismatch between local `ital,wdth,wght` and GF `wdth,wght` files.
 - Continuous `ital` axis is intentionally preserved in the local/GitHub VF and fails the universal Google/Chrome-oriented unsupported-axis check.
 - Name-table trailing spaces across all checked OTFs and the variable TTF.
-- Legacy/source variable font issues remain in `fonts/variable/SquareBotSansVF-Regular.ttf`: OTS failure, nested components, duplicate components, and missing smart dropout.
+- Source variable font issues may remain in `fonts/variable/SquareBotSansVF-Regular.ttf`; use the local/GitHub and Google Fonts distribution VFs for release QA.
 - FontBakery single-directory failure because the checked public release separates OTF, variable, and GF directories.
-- Static OTFs remain at source version 2.000 while regenerated VFs are 2.001.
+- Static OTFs and regenerated distribution VFs should be checked for version consistency before tagging.
 
 Google Fonts candidate snapshot after GF blocker cleanup:
 
@@ -112,7 +112,7 @@ Google Fonts candidate snapshot after GF blocker cleanup:
 .venv/bin/fontbakery check-googlefonts --skip-network build/googlefonts/squarebotsans/*.ttf
 ```
 
-Result: 0 fatal, 0 error, 0 fail, 20 warn, 17 info, 83 skip, 335 pass.
+Result: 0 fatal, 0 error, 0 fail, 19 warn, 13 info, 89 skip, 334 pass.
 
 Local engineering snapshot with the legacy CamelCase policy check excluded:
 
@@ -120,7 +120,7 @@ Local engineering snapshot with the legacy CamelCase policy check excluded:
 make test-googlefonts-local
 ```
 
-Result: 0 fatal, 0 error, 0 fail, 20 warn, 17 info, 85 skip, 333 pass.
+Result: 0 fatal, 0 error, 0 fail, 19 warn, 13 info, 89 skip, 332 pass.
 
 OTS snapshot for the staged Google Fonts package:
 
@@ -133,10 +133,13 @@ Result: both staged GF TTFs sanitized successfully.
 Direct table checks confirmed:
 
 - GF and local variable name ID 1 are `Square Bot Sans`.
-- GF and local variable name ID 5 and `head.fontRevision` report 2.001.
+- GF and local variable name ID 5 and `head.fontRevision` report the release version.
 - The local variable font keeps the continuous `ital` axis.
 - GF `wdth` axis range is 75/100/125.
 - GF Roman and Italic VFs include `HVAR`.
+- GF Roman and Italic VFs have no nested composite glyphs after the distribution build flattening pass.
+- All 102 exported font files include U+2195 through U+2199.
+- README and the Google Fonts article package include the 1600x900 Square Bot Sans poster exported from the Figma frame.
 - GF STAT exposes `wdth`, `wght`, and Boolean `ital`; width exposes only elidable `Normal`.
 - GF fvar instances are weight-only at default width.
 - GF name IDs 16/17 are absent.
@@ -153,10 +156,10 @@ Resolved during staging:
 - Google metadata parse, license, source URL, description URL, full-name/PostScript targeted checks.
 - GF CamelCase family-name failure by using `Square Bot Sans` for the GF candidate; the local/GitHub variable release now uses the same public family name.
 - Family plus STAT style-name length failures by exposing only elidable `Normal` width in GF STAT.
-- Nested component failures by building the GF source VF with `fontmake --flatten-components`.
+- Nested component failures by deduplicating and cleaning composites in the distribution build.
 - Smart dropout failure by applying `gftools fix-nonhinting`.
 - Width-axis registry failure by using 75/100/125 in the GF candidate.
-- Missing HVAR by deriving GF VFs from the fontmake variable build.
+- Missing HVAR by adding HVAR during the distribution build.
 - GF directory-name failure by validating in `build/googlefonts/squarebotsans/`.
 
 Remaining candidate blocker:
@@ -186,7 +189,7 @@ Projects reviewed during planning:
 
 - Reopen `sources/SquareBotSans.glyphspackage` in Glyphs.
 - Re-export the complete intended release set from the current source.
-- Confirm whether italic exports should be included in this public release.
+- Confirm that the checked-in italic OTF and WOFF2 exports are intended for this public release.
 - Run FontBakery on the full release set.
 - Confirm all release fonts parse with fontTools.
 - Confirm README file references still match actual release filenames.

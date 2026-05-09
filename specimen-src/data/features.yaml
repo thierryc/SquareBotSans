@@ -1,22 +1,21 @@
 groups:
   - name: Core Typography
-    tags: [kern, liga, calt, case]
+    tags: [kern, liga, dlig, case]
   - name: Numerals
-    tags: [tnum, pnum, lnum, frac]
+    tags: [tnum, pnum, zero, frac]
   - name: Position
-    tags: [sups, subs, ordn]
+    tags: [numr, dnom, ordn]
   - name: Stylistic Sets
     tags: [ss01, ss02, ss03, ss04]
   - name: Symbols
     tags: [arrows, math, separators, technical marks]
 comparisons:
   - {label: Tabular figures, off: '1000000', on: '1,000,000', tag: tnum}
+  - {label: Slashed zero, off: 'O0 1000', on: 'O0 1000', tag: zero}
   - {label: Automatic fractions, off: '5/32 kg', on: '5/32 kg', tag: frac}
   - {label: Case punctuation, off: '{[(HEIGHT)]}', on: '{[(HEIGHT)]}', tag: case}
-  - {label: Superscript, off: 'Note1', on: 'Note¹', tag: sups}
-  - {label: Subscript, off: 'H2O', on: 'H₂O', tag: subs}
 stylistic_sets:
-  - {tag: SS01, name: Rounded punctuation, before: 'Grid: [sector 07]?', after: 'Grid: [sector 07]?'}
-  - {tag: SS02, name: Alternate lowercase a, before: 'analog data / area alarm', after: 'analog data / area alarm'}
+  - {tag: SS01, name: Alternate a + rounded punctuation, before: 'area grid: [a07]?', after: 'area grid: [a07]?'}
+  - {tag: SS02, name: Alternate l / fl forms, before: 'low orbital flight', after: 'low orbital flight'}
   - {tag: SS03, name: Compact r forms, before: 'rare reactor corridor', after: 'rare reactor corridor'}
-  - {tag: SS04, name: Technical i/j forms, before: 'IJ / JIG / INDEX', after: 'IJ / JIG / INDEX'}
+  - {tag: SS04, name: Code zero + technical I/J, before: 'O0 I1 / JIG / INDEX', after: 'O0 I1 / JIG / INDEX'}

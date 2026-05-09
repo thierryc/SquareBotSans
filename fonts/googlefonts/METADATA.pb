@@ -52,7 +52,11 @@ source {
     dest_file: "OFL.txt"
   }
   files {
-    source_file: "documentation/DESCRIPTION.en_us.html"
-    dest_file: "DESCRIPTION.en_us.html"
+    source_file: "fonts/googlefonts/article/ARTICLE.en_us.html"
+    dest_file: "article/ARTICLE.en_us.html"
+  }
+  files {
+    source_file: "fonts/googlefonts/article/squarebot-sans-poster.png"
+    dest_file: "article/squarebot-sans-poster.png"
   }
 }

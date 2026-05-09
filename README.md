@@ -4,6 +4,8 @@ Square Bot Sans is a squared, technical sans serif type family derived from Hubo
 
 This repository contains the public source package, installable release fonts, webfonts, project documentation, and contribution templates.
 
+![Square Bot Sans poster](documentation/article/squarebot-sans-poster.png)
+
 ## Files
 
 - `sources/SquareBotSans.glyphspackage` is the Glyphs source.
@@ -13,6 +15,7 @@ This repository contains the public source package, installable release fonts, w
 - `fonts/googlefonts/` contains the Google Fonts candidate TTF exports, split into Roman and Italic variable fonts.
 - `docs/` contains publication notes, coverage notes, and release-readiness review material.
 - `documentation/` contains Google Fonts-style family description material.
+- `documentation/article/` contains the poster asset used by the README and Google Fonts article package.
 
 ## Install
 
@@ -70,13 +73,11 @@ Google Fonts candidate CSS uses separate Roman and Italic files:
 
 ## Current Release Fonts
 
-The checked-in static release assets currently include upright OTF and WOFF2 exports:
+The checked-in static release assets currently include upright and italic OTF and WOFF2 exports:
 
-- `SquareBotSans`: ExtraLight, Light, Regular, Medium, SemiBold, Bold, ExtraBold, Black
-- `SquareBotSansCondensed`: ExtraLight, Light, Regular, Medium, SemiBold, Bold, ExtraBold, Black
-- `SquareBotSansExpanded`: ExtraLight, Light, Regular, Medium, SemiBold, Bold, ExtraBold, Black
-
-The Glyphs source has additional italic instances. Re-export from the source before tagging a full public release.
+- `SquareBotSans`: ExtraLight, Light, Regular, Medium, SemiBold, Bold, ExtraBold, Black, plus matching Italics
+- `SquareBotSansCondensed`: ExtraLight, Light, Regular, Medium, SemiBold, Bold, ExtraBold, Black, plus matching Italics
+- `SquareBotSansExpanded`: ExtraLight, Light, Regular, Medium, SemiBold, Bold, ExtraBold, Black, plus matching Italics
 
 The local/GitHub variable release keeps width and weight interpolation, with italic presented as the two available positions: `ital` 0 and `ital` 1. The Google Fonts candidate build follows Google Fonts practice by splitting Roman and Italic variable TTFs and using `ital` only for STAT/style linking.
 
@@ -86,14 +87,14 @@ Open `sources/SquareBotSans.glyphspackage` in Glyphs 3. Do not edit package file
 
 Current live source inventory:
 
-- Release target: 2.001
-- Glyphs source version: 2.000 currently reported by Glyphs; save as 2.001 before tagging the release.
+- Release target: 2.002
+- Glyphs source version: 2.002 currently reported by Glyphs.
 - UPM: 1000
 - Axes: `wdth`, `wght`, `ital`
 - Masters: 12
 - Instances: 49
-- Glyphs: 939 total, 901 exporting
-- OpenType features: `aalt`, `ccmp`, `locl`, `numr`, `dnom`, `frac`, `ordn`, `pnum`, `tnum`, `c2sc`, `smcp`, `case`, `dlig`, `liga`, `ss01`, `ss02`, `ss03`, `ss04`
+- Glyphs: 946 total, 908 exporting, 574 encoded
+- OpenType features: `aalt`, `ccmp`, `locl`, `numr`, `dnom`, `frac`, `ordn`, `pnum`, `tnum`, `zero`, `c2sc`, `smcp`, `case`, `dlig`, `liga`, `ss01`, `ss02`, `ss03`, `ss04`
 - Discretionary ligatures include technical/code operators such as `<-`, `->`, `=>`, `=<`, `!=`, `>=`, `<=`, `<>`, `<|`, and `|>`.
 
 ## Validation

@@ -767,7 +767,7 @@
 
     .glyph-cell {
       min-width: 0;
-      height: 16.2mm;
+      height: 18.0mm;
       display: grid;
       grid-template-rows: minmax(0, 1fr) 3.9mm;
       border-right: .24mm solid var(--line);
@@ -778,8 +778,8 @@
     .glyph-mark {
       display: grid;
       place-items: center;
-      padding: .45mm .35mm 1.45mm;
-      font-size: 27pt;
+      padding: .4mm .35mm;
+      font-size: 26pt;
       line-height: .86;
       font-feature-settings: var(--glyph-features, "kern" 1, "liga" 1);
       font-variation-settings: "wdth" 98, "wght" 620, "ital" 0;
@@ -809,6 +809,46 @@
       font-size: 25pt;
       line-height: .9;
       font-variation-settings: "wdth" 100, "wght" 650, "ital" 0;
+    }
+
+    .alternate-focus {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: var(--gutter);
+      margin: 0 0 4mm;
+    }
+
+    .alternate-focus-cell {
+      min-width: 0;
+      border-top: .28mm solid var(--line);
+      border-bottom: .28mm solid var(--line);
+      padding: 2mm 0 2.6mm;
+      display: grid;
+      grid-template-columns: 24mm 1fr;
+      grid-template-rows: auto auto;
+      gap: 1.5mm var(--gutter);
+      align-items: end;
+    }
+
+    .alternate-focus-cell .label {
+      grid-column: 1 / 2;
+      align-self: start;
+    }
+
+    .alternate-focus .focus-mark {
+      grid-column: 2 / 3;
+      grid-row: 1 / 3;
+      font-size: 70pt;
+      line-height: .82;
+      font-feature-settings: var(--glyph-features, "kern" 1, "liga" 1);
+      font-variation-settings: "wdth" 105, "wght" 740, "ital" 0;
+    }
+
+    .alternate-focus .focus-name {
+      grid-column: 1 / 2;
+      font-size: 8pt;
+      line-height: 1;
+      font-variation-settings: "wdth" 94, "wght" 520, "ital" 0;
     }
 
     .ss01-board .glyph-cell {
@@ -872,6 +912,19 @@
 
     .format-letter .ss01-board .glyph-mark {
       font-size: 20.5pt;
+    }
+
+    .format-letter .alternate-focus {
+      margin-bottom: 3mm;
+    }
+
+    .format-letter .alternate-focus-cell {
+      grid-template-columns: 23mm 1fr;
+      padding: 1.5mm 0 2mm;
+    }
+
+    .format-letter .alternate-focus .focus-mark {
+      font-size: 58pt;
     }
 
     .format-letter .alternate-combo {
@@ -1007,6 +1060,14 @@
       font-size: 10.5pt;
       line-height: 1.22;
       font-variation-settings: "wdth" 98, "wght" 460, "ital" 0;
+    }
+
+    .tech-copy a,
+    .final-row a {
+      color: inherit;
+      text-decoration: underline;
+      text-decoration-thickness: .18mm;
+      text-underline-offset: .75mm;
     }
 
     .format-letter .technical-specs {

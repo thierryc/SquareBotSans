@@ -1410,23 +1410,23 @@
     },
     {
       "mark": "↕",
-      "name": "updownarrow"
+      "name": "upDownArrow"
     },
     {
       "mark": "↖",
-      "name": "northwest"
+      "name": "northWestArrow"
     },
     {
       "mark": "↗",
-      "name": "northeast"
+      "name": "northEastArrow"
     },
     {
       "mark": "↘",
-      "name": "southeast"
+      "name": "southEastArrow"
     },
     {
       "mark": "↙",
-      "name": "southwest"
+      "name": "southWestArrow"
     }
   ],
   "stylistic_sets": {
@@ -1849,6 +1849,10 @@
       }
     ],
     "ss04": [
+      {
+        "mark": "0",
+        "name": "zero.ss04"
+      },
       {
         "mark": "I",
         "name": "I.ss04"

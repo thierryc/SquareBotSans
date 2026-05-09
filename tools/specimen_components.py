@@ -80,7 +80,7 @@ def page_shell(number: int, title: str, content: str, classes: str = "") -> str:
             "header_center": header.get("center", metadata.get("handle", "@ap.cx")),
             "content": content,
             "footer_left": footer.get("left", metadata.get("foundry", "Another Planet Creative Experience")),
-            "footer_center": footer.get("center", metadata.get("version", "v2.001")),
+            "footer_center": footer.get("center", metadata.get("version", "v2.002")),
             "page_number": "__PAGE_NUMBER__",
             "total_pages": "__TOTAL_PAGES__",
         },
@@ -147,12 +147,17 @@ def feature_row(name: str, tag: str, off: str, on: str, on_css: str, note: str =
 
 
 def specimen_row(label: str, text: str, css: str = "", sub: str = "") -> str:
-    sub_html = f"<small>{e(sub)}</small>" if sub else ""
+    if sub:
+        return f"""
+      <div class="specimen-row">
+        <div class="label">{e(label)}</div>
+        <div class="specimen-line" style='{css}'>{e(text)}</div>
+        <small>{e(sub)}</small>
+      </div>"""
     return f"""
       <div class="specimen-row">
         <div class="label">{e(label)}</div>
         <div class="specimen-line" style='{css}'>{e(text)}</div>
-        {sub_html}
       </div>"""
 
 
@@ -224,6 +229,24 @@ def alternate_board(items: list[tuple[str, str]], feature_tags: tuple[str, ...],
     return f"""
       <div class="{board_class}">
         {"".join(alternate_cell(mark, name, feature_tags) for mark, name in items)}
+      </div>"""
+
+
+def alternate_focus(mark: str, default_name: str, alternate_name: str, feature_tags: tuple[str, ...], classes: str = "") -> str:
+    features = '"kern" 1, "liga" 1, ' + ", ".join(f'"{tag}" 1' for tag in feature_tags)
+    focus_class = f"alternate-focus {classes}".strip()
+    return f"""
+      <div class="{focus_class}">
+        <div class="alternate-focus-cell">
+          <div class="label">OFF / default</div>
+          <div class="focus-mark">{e(mark)}</div>
+          <div class="focus-name">{e(default_name)}</div>
+        </div>
+        <div class="alternate-focus-cell is-on" style='--glyph-features: {features};'>
+          <div class="label">ON / ss01 alternate</div>
+          <div class="focus-mark">{e(mark)}</div>
+          <div class="focus-name">{e(alternate_name)}</div>
+        </div>
       </div>"""
 
 
@@ -376,7 +399,6 @@ def technical_specs_content() -> str:
     metrics = technical.get("metrics", {})
     counts = technical.get("counts", {})
     formats = technical.get("formats", {})
-    licensing = technical.get("licensing", [])
     language_list = ", ".join(str(language) for language in technical.get("languages", []))
     sections = [
         tech_block(
@@ -393,22 +415,22 @@ def technical_specs_content() -> str:
         ),
         tech_block(
             "Glyph production",
-            f"<p>{e(counts.get('glyphs', 937))} glyphs total<br>{e(counts.get('exporting_glyphs', 898))} exporting / {e(counts.get('non_exporting_glyphs', 39))} non-exporting<br>{e(counts.get('unicode_encoded_glyphs', 569))} Unicode-encoded glyphs<br>All glyphs include 12 production layers</p>",
+            f"<p>{e(counts.get('glyphs', 946))} glyphs total<br>{e(counts.get('exporting_glyphs', 908))} exporting / {e(counts.get('non_exporting_glyphs', 38))} non-exporting<br>{e(counts.get('unicode_encoded_glyphs', 574))} Unicode-encoded glyphs<br>All glyphs include 12 production layers</p>",
         ),
         tech_block(
-            "Licensing",
-            f"<p>{'<br>'.join(e(item) for item in licensing)}</p>",
+            "SIL Font",
+            '<p>SIL Open Font License<br><a href="https://ap.cx">ap.cx</a></p>',
         ),
         tech_block(
             "About",
             f"<p>{e(metadata.get('foundry', 'Another Planet Creative Experience'))} develops type systems for display typography, interface density, technical signage, and speculative visual identities.</p>",
         ),
-        tech_block("Contact", f"<p>{e(metadata.get('handle', '@ap.cx'))}<br>{e(metadata.get('site', 'ap.cx'))}</p>"),
+        tech_block("Contact", '<p><a href="mailto:hello@ap.cx">hello@ap.cx</a></p>'),
     ]
     return current_templates().render(
         "pages/technical-specifications.html",
         {
-            "technical_title": f"{metadata.get('family', 'Square Bot Sans')} {metadata.get('version', 'v2.001')}",
+            "technical_title": f"{metadata.get('family', 'Square Bot Sans')} {metadata.get('version', 'v2.002')}",
             "language_list": e(language_list),
             "technical_sections": "".join(sections),
         },
@@ -446,7 +468,7 @@ def build_pages(data: dict | None = None, templates: TemplateStore | None = None
             label_value("Designed for", "Sci-fi display", "Title systems, signage, and identity scale")
             + label_value("Masters", "12", "Condensed and expanded extremes across three weights and two styles")
             + label_value("Instances", "49 exporting", "Static family map for production delivery")
-            + label_value("Glyph system", "937 glyphs", "Latin, symbols, numerals, marks, and technical punctuation")
+            + label_value("Glyph system", "946 glyphs", "Latin, symbols, numerals, marks, and technical punctuation")
             + """
               </div>
             </div>
@@ -467,13 +489,13 @@ def build_pages(data: dict | None = None, templates: TemplateStore | None = None
               <div class="diagnostic-grid">
                 """
             + stat_card("Family", "SquareBot Sans", "Squared technical sans")
-            + stat_card("Version", current_metadata().get("version", "v2.001").lstrip("v"), "UPM 1000")
+            + stat_card("Version", current_metadata().get("version", "v2.002").lstrip("v"), "UPM 1000")
             + stat_card("Production", "49 instances", "Active/exporting")
             + stat_card("Design Space", "3 axes", "wdth / wght / ital")
             + stat_card("Metrics", "729 / 729 / -167", "Ascender / cap height / descender")
-            + stat_card("Glyph System", "937 total", "898 exporting / 39 non-exporting")
-            + stat_card("Unicode", "569 encoded", "Latin plus marks and symbols")
-            + stat_card("Layers", "11,244", "937 glyphs x 12 masters")
+            + stat_card("Glyph System", "946 total", "908 exporting / 38 non-exporting")
+            + stat_card("Unicode", "574 encoded", "Latin plus marks and symbols")
+            + stat_card("Layers", "11,352", "946 glyphs x 12 masters")
             + """
               </div>
             </div>
@@ -619,7 +641,7 @@ def build_pages(data: dict | None = None, templates: TemplateStore | None = None
 
     feature_groups = [
         ("Core Typography", "kern, liga, case", "Implemented in the current export. calt is not present."),
-        ("Numerals", "tnum, pnum, frac, numr, dnom, ordn", "Implemented numeral features. zero, lnum, and onum are not present in current export."),
+        ("Numerals", "tnum, pnum, zero, frac, numr, dnom, ordn", "Implemented numeral features. zero maps zero to zero.slash; lnum and onum are not present in current export."),
         ("Position", "numr, dnom, ordn", "Used for fractions and ordinals. sups/subs are not present in current export."),
         ("Stylistic Sets", "ss01-ss04", "Functional in the current variable font export."),
         ("Symbols", "arrows, math, separators, marks", "Glyph coverage plus mark/mkmk positioning in GPOS."),
@@ -647,7 +669,7 @@ def build_pages(data: dict | None = None, templates: TemplateStore | None = None
             + """
               <div class="feature-card muted-card">
                 <div class="label">Not presented as active features</div>
-                <div class="feature-tags">ss05-ss16 / zero / lnum / onum / sups / subs</div>
+                <div class="feature-tags">ss05-ss16 / lnum / onum / sups / subs</div>
                 <p>These labels appeared in the creative brief, but are not functional tags in the inspected variable WOFF2.</p>
               </div>
             </div>
@@ -668,6 +690,7 @@ def build_pages(data: dict | None = None, templates: TemplateStore | None = None
               """
             + feature_row("Tabular figures", "tnum", "1,000,000", "1,000,000", 'font-feature-settings:"tnum" 1, "pnum" 0;')
             + feature_row("Proportional figures", "pnum", "$1,204.89", "$1,204.89", 'font-feature-settings:"pnum" 1, "tnum" 0;')
+            + feature_row("Slashed zero", "zero", "O0 1000", "O0 1000", 'font-feature-settings:"zero" 1;', "GSUB maps zero to zero.slash.")
             + feature_row("Automatic fractions", "frac", "5/32 kg", "5/32 kg", 'font-feature-settings:"frac" 1;')
             + feature_row("Case-sensitive punctuation", "case", "{[(HEIGHT)]}", "{[(HEIGHT)]}", 'font-feature-settings:"case" 1;')
             + feature_row("Ordinal indicators", "ordn", "Station 1a", "Station 1a", 'font-feature-settings:"ordn" 1;')
@@ -679,10 +702,10 @@ def build_pages(data: dict | None = None, templates: TemplateStore | None = None
     )
 
     ss_cards = [
-        ("SS01", "Rounded punctuation", "Data grid, fracture.", "Data grid, fracture.", '"ss01" 1', "OFF / square punctuation", "ON / rounded punctuation"),
-        ("SS02", "Alternate lowercase a", "analog data / area alarm", "analog data / area alarm", '"ss02" 1', "OFF / default a", "ON / alternate a"),
+        ("SS01", "Alternate a + rounded punctuation", "area grid: [a07]?", "area grid: [a07]?", '"ss01" 1', "OFF / default a", "ON / ss01 a"),
+        ("SS02", "Alternate l / fl forms", "low orbital flight", "low orbital flight", '"ss02" 1', "OFF / default l", "ON / ss02 l"),
         ("SS03", "Compact r forms", "rare reactor corridor", "rare reactor corridor", '"ss03" 1', "OFF / default r", "ON / compact r"),
-        ("SS04", "Technical I/J", "IJ / JIG / INDEX JOIN", "IJ / JIG / INDEX JOIN", '"ss04" 1', "OFF / default I/J", "ON / technical I/J"),
+        ("SS04", "Code zero + technical I/J", "O0 I1 / JIG / INDEX", "O0 I1 / JIG / INDEX", '"ss04" 1', "OFF / default zero/I/J", "ON / ss04 zero/I/J"),
     ]
     pages.append(
         page_shell(
@@ -716,12 +739,12 @@ def build_pages(data: dict | None = None, templates: TemplateStore | None = None
                 <strong>Orbital index</strong>
               </div>
               <div class="story-row" style='font-feature-settings:"ss01" 1; font-variation-settings:"wdth" 90, "wght" 900, "ital" 0;'>
-                <span class="label">SS01 ROUNDED PUNCT.</span>
-                <strong>Grid: [07]?</strong>
+                <span class="label">SS01 ALT A / ROUND PUNCT.</span>
+                <strong>Area: [a07]?</strong>
               </div>
               <div class="story-row" style='font-feature-settings:"ss02" 1; font-variation-settings:"wdth" 120, "wght" 760, "ital" 0;'>
-                <span class="label">SS02 ALT A</span>
-                <strong>Lunar array</strong>
+                <span class="label">SS02 ALT L / FL</span>
+                <strong>Low orbital flight</strong>
               </div>
               <div class="story-row" style='font-feature-settings:"ss03" 1, "ss04" 1; font-variation-settings:"wdth" 100, "wght" 420, "ital" 1;'>
                 <span class="label">SS03 COMPACT R / SS04 I/J</span>
@@ -749,7 +772,8 @@ def build_pages(data: dict | None = None, templates: TemplateStore | None = None
             + specimen_row("Date", "2026-05-08  /  ID 000742", 'font-feature-settings:"tnum" 1;')
             + specimen_row("Fractions", "5/32  7/16  13/64", 'font-feature-settings:"frac" 1;')
             + specimen_row("Constants", "3.14159 / 2.71828 / 1.61803", 'font-feature-settings:"tnum" 1;')
-            + specimen_row("Unavailable", "oldstyle / slashed zero", "font-size:22pt; white-space:normal; line-height:1.05;", "onum and zero tags are not present in the current export")
+            + specimen_row("Slashed zero", "O0 / 1000 / 2026", 'font-feature-settings:"zero" 1;')
+            + specimen_row("Not in current export", "oldstyle figures", "font-size:22pt; white-space:normal; line-height:1.05;", "onum is not present")
             + """
             </div>
             """,
@@ -940,6 +964,7 @@ def build_pages(data: dict | None = None, templates: TemplateStore | None = None
               <h2>Alternates - Stylistic Set 01</h2>
             </div>
             """
+            + alternate_focus("a", "a", "a.ss01", ("ss01",), "ss01-focus")
             + alternate_board(ss01_alternates, ("ss01",), "ss01-board"),
             "glyph-page alternate-page",
         )
@@ -954,7 +979,7 @@ def build_pages(data: dict | None = None, templates: TemplateStore | None = None
     ]
     ss03_alternates = stylistic_set_group("ss03", ss03_alternates)
     ss04_alternates = [
-        ("I", "I.ss04"), ("Ĳ", "IJ.ss04"), ("Í", "Iacute.ss04"), ("Ĭ", "Ibreve.ss04"), ("Î", "Icircumflex.ss04"), ("Ï", "Idieresis.ss04"), ("İ", "Idotaccent.ss04"), ("Ị", "uni1ECA.ss04"), ("Ì", "Igrave.ss04"), ("Ỉ", "uni1EC8.ss04"), ("Ī", "Imacron.ss04"), ("Į", "Iogonek.ss04"), ("Ĩ", "Itilde.ss04"),
+        ("0", "zero.ss04"), ("I", "I.ss04"), ("Ĳ", "IJ.ss04"), ("Í", "Iacute.ss04"), ("Ĭ", "Ibreve.ss04"), ("Î", "Icircumflex.ss04"), ("Ï", "Idieresis.ss04"), ("İ", "Idotaccent.ss04"), ("Ị", "uni1ECA.ss04"), ("Ì", "Igrave.ss04"), ("Ỉ", "uni1EC8.ss04"), ("Ī", "Imacron.ss04"), ("Į", "Iogonek.ss04"), ("Ĩ", "Itilde.ss04"),
     ]
     ss04_alternates = stylistic_set_group("ss04", ss04_alternates)
     pages.append(
@@ -1023,9 +1048,9 @@ def build_pages(data: dict | None = None, templates: TemplateStore | None = None
 
     categories = [
         ("Letter", 612),
-        ("Symbol", 90),
-        ("Number", 88),
-        ("Punctuation", 79),
+        ("Symbol", 98),
+        ("Number", 90),
+        ("Punctuation", 78),
         ("Mark", 53),
         ("Separator", 3),
         ("Uncategorized / components", 12),
@@ -1038,7 +1063,7 @@ def build_pages(data: dict | None = None, templates: TemplateStore | None = None
             """
             <div class="section-title">
               <div class="label">Glyph Category Data</div>
-              <h2>937 glyphs organized by production category.</h2>
+              <h2>946 glyphs organized by production category.</h2>
             </div>
             <div class="bar-chart">
               """
@@ -1073,8 +1098,8 @@ def build_pages(data: dict | None = None, templates: TemplateStore | None = None
             f"""
             <div class="final-grid">
               <div class="final-title">
-                <div class="label">Final Technical / Licensing</div>
-                <h2>{e(current_metadata().get("family", "Square Bot Sans"))} {e(current_metadata().get("version", "v2.001"))}</h2>
+                <div class="label">Final Technical / SIL Font</div>
+                <h2>{e(current_metadata().get("family", "Square Bot Sans"))} {e(current_metadata().get("version", "v2.002"))}</h2>
               </div>
               <div class="final-table">
                 <div class="final-row">
@@ -1082,12 +1107,12 @@ def build_pages(data: dict | None = None, templates: TemplateStore | None = None
                   <p>Variable TTF / Static OTF / Web WOFF2</p>
                 </div>
                 <div class="final-row">
-                  <div class="label">Use</div>
-                  <p>Desktop / Web / App / Logo / Trial</p>
+                  <div class="label">License</div>
+                  <p>SIL Open Font License / <a href="https://ap.cx">ap.cx</a></p>
                 </div>
                 <div class="final-row">
                   <div class="label">Export State</div>
-                  <p>12 masters / 49 active instances / 901 exporting glyphs / OpenType features verified against the live Glyphs source.</p>
+                  <p>12 masters / 49 active instances / 908 exporting glyphs / OpenType features verified against the live Glyphs source.</p>
                 </div>
                 <div class="final-row">
                   <div class="label">Foundry</div>
@@ -1095,7 +1120,7 @@ def build_pages(data: dict | None = None, templates: TemplateStore | None = None
                 </div>
                 <div class="final-row">
                   <div class="label">Contact</div>
-                  <p>@ap.cx / ap.cx</p>
+                  <p><a href="mailto:hello@ap.cx">hello@ap.cx</a></p>
                 </div>
               </div>
             </div>

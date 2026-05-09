@@ -19,6 +19,16 @@ import sys
 
 from fontTools.otlLib.builder import buildStatTable
 from fontTools.ttLib.tables._f_v_a_r import NamedInstance
+from fontTools.ttLib.tables._g_l_y_f import (
+    GlyphComponent,
+    NON_OVERLAPPING,
+    OVERLAP_COMPOUND,
+    ROUND_XY_TO_GRID,
+    SCALED_COMPONENT_OFFSET,
+    UNSCALED_COMPONENT_OFFSET,
+    USE_MY_METRICS,
+)
+from fontTools.misc.transform import Transform
 from fontTools.ttLib import TTFont, newTable
 from fontTools.varLib.hvar import add_HVAR
 from fontTools.varLib.instancer import instantiateVariableFont
@@ -36,7 +46,7 @@ GF_ITALIC_TTF = ROOT / "fonts" / "googlefonts" / "SquareBotSans-Italic[wdth,wght
 GF_STAGING_ROMAN_TTF = GF_STAGING_DIR / GF_ROMAN_TTF.name
 GF_STAGING_ITALIC_TTF = GF_STAGING_DIR / GF_ITALIC_TTF.name
 
-VERSION = "2.001"
+VERSION = "2.002"
 FAMILY = "Square Bot Sans"
 LOCAL_FAMILY = FAMILY
 GF_FAMILY = FAMILY
@@ -68,8 +78,10 @@ WEIGHT_VALUES = [
 GF_SUPPORT_FILES = [
     ROOT / "fonts" / "googlefonts" / "METADATA.pb",
     ROOT / "fonts" / "googlefonts" / "OFL.txt",
-    ROOT / "fonts" / "googlefonts" / "DESCRIPTION.en_us.html",
     ROOT / "fonts" / "googlefonts" / "upstream.yaml",
+]
+GF_SUPPORT_DIRS = [
+    ROOT / "fonts" / "googlefonts" / "article",
 ]
 
 
@@ -340,6 +352,89 @@ def _dedupe_composite_components(font: TTFont) -> None:
             glyph.components = components
 
 
+def _component_from_transform(
+    glyph_name: str,
+    transform: Transform,
+    flags: int,
+) -> GlyphComponent:
+    xx, xy, yx, yy, dx, dy = transform
+    component = GlyphComponent()
+    component.glyphName = glyph_name
+    component.x = round(dx)
+    component.y = round(dy)
+    component.flags = flags & (
+        ROUND_XY_TO_GRID
+        | USE_MY_METRICS
+        | SCALED_COMPONENT_OFFSET
+        | UNSCALED_COMPONENT_OFFSET
+        | OVERLAP_COMPOUND
+        | NON_OVERLAPPING
+    )
+    if (round(xx, 10), round(xy, 10), round(yx, 10), round(yy, 10)) != (1, 0, 0, 1):
+        component.transform = [[xx, xy], [yx, yy]]
+    return component
+
+
+def _flatten_nested_components(font: TTFont) -> None:
+    """Flatten composite references whose components are also composites.
+
+    Google Fonts rejects nested TrueType composites. Rewriting those references
+    changes the composite point model, so any glyph-level gvar deltas for the
+    rewritten composites must be dropped; their child components still carry the
+    outline interpolation.
+    """
+
+    if "glyf" not in font:
+        return
+
+    glyf = font["glyf"]
+    changed: list[str] = []
+
+    def flatten_component(
+        component,
+        parent_transform: Transform = Transform(),
+        inherited_flags: int = 0,
+    ) -> list[GlyphComponent]:
+        child_name, child_transform = component.getComponentInfo()
+        combined_transform = parent_transform.transform(child_transform)
+        child = glyf[child_name]
+        if not child.isComposite():
+            return [
+                _component_from_transform(
+                    child_name,
+                    combined_transform,
+                    component.flags | inherited_flags,
+                )
+            ]
+
+        flattened: list[GlyphComponent] = []
+        for index, child_component in enumerate(child.components):
+            flags = inherited_flags
+            if index == 0 and component.flags & USE_MY_METRICS:
+                flags |= USE_MY_METRICS
+            flattened.extend(flatten_component(child_component, combined_transform, flags))
+        return flattened
+
+    for glyph_name in font.getGlyphOrder():
+        glyph = glyf[glyph_name]
+        if not glyph.isComposite():
+            continue
+        if not any(glyf[c.glyphName].isComposite() for c in glyph.components if c.glyphName in glyf.glyphs):
+            continue
+        glyph.components = [
+            flattened
+            for component in glyph.components
+            for flattened in flatten_component(component)
+        ]
+        changed.append(glyph_name)
+
+    if "gvar" in font:
+        for glyph_name in changed:
+            font["gvar"].variations[glyph_name] = []
+    if "maxp" in font and changed:
+        font["maxp"].maxComponentDepth = 1
+
+
 def _drop_unreadable_gvar_entries(font: TTFont) -> None:
     if "gvar" not in font:
         return
@@ -387,6 +482,7 @@ def _prepare_font(
     *,
     italic: bool,
     family: str = LOCAL_FAMILY,
+    flatten_nested_components: bool = False,
 ) -> None:
     _normalize_avar(font)
     _dedupe_composite_components(font)
@@ -397,12 +493,21 @@ def _prepare_font(
     _set_style_bits(font, italic)
     _set_italic_caret_slope(font, italic)
     _set_gasp(font)
+    if flatten_nested_components:
+        _flatten_nested_components(font)
     _add_hvar(font)
     _drop_mac_name_records(font)
 
 
 def _prepare_google_font(font: TTFont, style: str, postscript_suffix: str, *, italic: bool) -> None:
-    _prepare_font(font, style, postscript_suffix, italic=italic, family=GF_FAMILY)
+    _prepare_font(
+        font,
+        style,
+        postscript_suffix,
+        italic=italic,
+        family=GF_FAMILY,
+        flatten_nested_components=True,
+    )
     _normalize_gf_width_axis(font)
     _drop_name_ids(font, {16, 17})
 
@@ -451,9 +556,8 @@ def _local_source_font() -> TTFont:
 
 
 def _gf_source_font() -> TTFont:
-    # Use the Glyphs-exported source VF for both distribution tracks. The
-    # fontmake-generated VF keeps the axis metadata but currently drops the
-    # italic outline deltas for this Glyphs package.
+    # Use the Glyphs-exported source VF for both distribution tracks so the
+    # Google Fonts split keeps the same outline deltas as the local VF.
     return _local_source_font()
 
 
@@ -504,12 +608,20 @@ def build_googlefonts() -> None:
 
 
 def stage_googlefonts() -> None:
+    if GF_STAGING_DIR.exists():
+        shutil.rmtree(GF_STAGING_DIR)
     GF_STAGING_DIR.mkdir(parents=True, exist_ok=True)
     copy2(GF_ROMAN_TTF, GF_STAGING_ROMAN_TTF)
     copy2(GF_ITALIC_TTF, GF_STAGING_ITALIC_TTF)
     for support_file in GF_SUPPORT_FILES:
         if support_file.exists():
             copy2(support_file, GF_STAGING_DIR / support_file.name)
+    for support_dir in GF_SUPPORT_DIRS:
+        if support_dir.exists():
+            target = GF_STAGING_DIR / support_dir.name
+            if target.exists():
+                shutil.rmtree(target)
+            shutil.copytree(support_dir, target)
 
 
 def main() -> None:

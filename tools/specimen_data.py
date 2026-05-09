@@ -94,7 +94,7 @@ def load_data(root: Path = ROOT) -> dict[str, Any]:
     _require_keys("metadata.yaml", data["metadata"], ["family", "version", "header", "footer", "cover"])
     _require_keys("axes.yaml", data["axes"], ["width", "weight", "italic"])
     _require_keys("features.yaml", data["features"], ["groups", "comparisons", "stylistic_sets"])
-    _require_keys("technical.yaml", data["technical"], ["metrics", "counts", "formats", "licensing", "languages"])
+    _require_keys("technical.yaml", data["technical"], ["metrics", "counts", "formats", "languages"])
     _require_keys("pages.yaml", data["pages"], ["pages"])
     _require_keys("instances.json", data["instances"], ["weights", "widths"])
     _validate_italic_positions(data["axes"])

@@ -118,6 +118,7 @@ feature frac;
 feature ordn;
 feature pnum;
 feature tnum;
+feature zero;
 feature c2sc;
 feature smcp;
 feature case;
@@ -269,6 +270,11 @@ sub eight by eight.tf;
 sub nine by nine.tf;
 ";
 tag = tnum;
+},
+{
+code = "sub zero by zero.slash;
+";
+tag = zero;
 },
 {
 automatic = 1;
@@ -741,6 +747,7 @@ sub Itilde by Itilde.ss04;
 sub Idieresis.ss01 by Idieresis.ss01.ss04;
 sub Idotaccent.ss01 by Idotaccent.ss01.ss04;
 sub uni1ECA.ss01 by uni1ECA.ss01.ss04;
+sub zero by zero.ss04;
 ";
 labels = (
 {
@@ -831,23 +838,6 @@ value = 308;
 {
 name = paramDepth;
 value = 7;
-}
-);
-guides = (
-{
-pos = (-43,306);
-},
-{
-pos = (-3,252);
-},
-{
-pos = (-5,280);
-},
-{
-pos = (0,31);
-},
-{
-pos = (0,487);
 }
 );
 iconName = Light_Condensed;
