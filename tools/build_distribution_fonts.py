@@ -46,12 +46,12 @@ GF_ITALIC_TTF = ROOT / "fonts" / "googlefonts" / "SquareBotSans-Italic[wdth,wght
 GF_STAGING_ROMAN_TTF = GF_STAGING_DIR / GF_ROMAN_TTF.name
 GF_STAGING_ITALIC_TTF = GF_STAGING_DIR / GF_ITALIC_TTF.name
 
-VERSION = "2.002"
+VERSION = "2.003"
 FAMILY = "Square Bot Sans"
 LOCAL_FAMILY = FAMILY
 GF_FAMILY = FAMILY
 PS_FAMILY = "SquareBotSans"
-COPYRIGHT = "Copyright 2024 The SquareBot Sans Project Authors (https://github.com/thierryc/SquareBotSans)"
+COPYRIGHT = "Copyright 2024 The Square Bot Sans Project Authors (https://github.com/thierryc/SquareBotSans)"
 LICENSE = (
     "This Font Software is licensed under the SIL Open Font License, "
     "Version 1.1. This license is available with a FAQ at: "
@@ -120,11 +120,7 @@ def _strip_reserved_names(font: TTFont) -> None:
     name = font["name"]
     replacements = [
         (', with Reserved Font Name "Hubot Sans"', ""),
-        (', with Reserved Font Names "SquareBot Sans" and "SquareBot Sans VF"', ""),
-        (', with Reserved Font Names "Square Bot Sans" and "Square Bot Sans VF"', ""),
         ('with Reserved Font Name "Hubot Sans"', ""),
-        ('with Reserved Font Names "SquareBot Sans" and "SquareBot Sans VF"', ""),
-        ('with Reserved Font Names "Square Bot Sans" and "Square Bot Sans VF"', ""),
     ]
     for record in name.names:
         text = record.toUnicode().strip()
@@ -177,6 +173,29 @@ def _normalize_avar(font: TTFont) -> None:
         mapping.setdefault(0.0, 0.0)
         mapping.setdefault(1.0, 1.0)
         segments[tag] = dict(sorted(mapping.items()))
+
+
+def _ensure_identity_avar(font: TTFont) -> None:
+    if "fvar" not in font:
+        return
+    if "avar" not in font:
+        font["avar"] = newTable("avar")
+        font["avar"].segments = {}
+    for axis in font["fvar"].axes:
+        font["avar"].segments.setdefault(
+            axis.axisTag,
+            {-1.0: -1.0, 0.0: 0.0, 1.0: 1.0},
+        )
+    _normalize_avar(font)
+
+
+def _set_meta_script_lang_tags(font: TTFont) -> None:
+    meta = newTable("meta")
+    meta.data = {
+        "dlng": "Latn",
+        "slng": "Latn",
+    }
+    font["meta"] = meta
 
 
 def _set_basic_names(
@@ -485,6 +504,7 @@ def _prepare_font(
     flatten_nested_components: bool = False,
 ) -> None:
     _normalize_avar(font)
+    _ensure_identity_avar(font)
     _dedupe_composite_components(font)
     _drop_unreadable_gvar_entries(font)
     _strip_reserved_names(font)
@@ -508,6 +528,7 @@ def _prepare_google_font(font: TTFont, style: str, postscript_suffix: str, *, it
         family=GF_FAMILY,
         flatten_nested_components=True,
     )
+    _set_meta_script_lang_tags(font)
     _normalize_gf_width_axis(font)
     _drop_name_ids(font, {16, 17})
 
@@ -534,11 +555,54 @@ def _sanitize_saved_gvar(path: Path) -> None:
         font.save(path)
 
 
+def _expand_glyf_bounds(path: Path) -> None:
+    font = TTFont(path, recalcBBoxes=False)
+    if "glyf" not in font:
+        return
+    glyf = font["glyf"]
+    changed = False
+    font_x_min = font_y_min = math.inf
+    font_x_max = font_y_max = -math.inf
+
+    for glyph_name in font.getGlyphOrder():
+        glyph = glyf[glyph_name]
+        if glyph.numberOfContours == 0 and not glyph.isComposite():
+            continue
+        coords, _, _ = glyph.getCoordinates(glyf)
+        if not coords:
+            continue
+        xs = [point[0] for point in coords]
+        ys = [point[1] for point in coords]
+        x_min = math.floor(min(xs))
+        y_min = math.floor(min(ys))
+        x_max = math.ceil(max(xs))
+        y_max = math.ceil(max(ys))
+        font_x_min = min(font_x_min, x_min)
+        font_y_min = min(font_y_min, y_min)
+        font_x_max = max(font_x_max, x_max)
+        font_y_max = max(font_y_max, y_max)
+        if (glyph.xMin, glyph.yMin, glyph.xMax, glyph.yMax) != (x_min, y_min, x_max, y_max):
+            glyph.xMin, glyph.yMin, glyph.xMax, glyph.yMax = x_min, y_min, x_max, y_max
+            changed = True
+
+    if "head" in font and font_x_min != math.inf:
+        head = font["head"]
+        head_bounds = (font_x_min, font_y_min, font_x_max, font_y_max)
+        if (head.xMin, head.yMin, head.xMax, head.yMax) != head_bounds:
+            head.xMin, head.yMin, head.xMax, head.yMax = head_bounds
+            changed = True
+
+    if changed:
+        font.recalcBBoxes = False
+        font.save(path, reorderTables=False)
+
+
 def _fix_nonhinting(path: Path) -> None:
     tmp_path = path.with_suffix(".nonhinting.ttf")
     _run([_tool("gftools"), "fix-nonhinting", "--no-backup", "-q", str(path), str(tmp_path)])
     tmp_path.replace(path)
     _sanitize_saved_gvar(path)
+    _expand_glyf_bounds(path)
 
 
 def _save_woff2(ttf_path: Path, woff2_path: Path) -> None:

@@ -87,13 +87,13 @@ Open `sources/SquareBotSans.glyphspackage` in Glyphs 3. Do not edit package file
 
 Current live source inventory:
 
-- Release target: 2.002
-- Glyphs source version: 2.002 currently reported by Glyphs.
+- Release target: 2.003
+- Glyphs source version: 2.003 currently reported by Glyphs.
 - UPM: 1000
 - Axes: `wdth`, `wght`, `ital`
 - Masters: 12
 - Instances: 49
-- Glyphs: 946 total, 908 exporting, 574 encoded
+- Glyphs: 947 total, 909 exporting, 574 encoded
 - OpenType features: `aalt`, `ccmp`, `locl`, `numr`, `dnom`, `frac`, `ordn`, `pnum`, `tnum`, `zero`, `c2sc`, `smcp`, `case`, `dlig`, `liga`, `ss01`, `ss02`, `ss03`, `ss04`
 - Discretionary ligatures include technical/code operators such as `<-`, `->`, `=>`, `=<`, `!=`, `>=`, `<=`, `<>`, `<|`, and `|>`.
 

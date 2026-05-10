@@ -7,7 +7,7 @@ Use the latest release/specimen assets from the SquareBotSans repository after t
 Key content changes:
 
 - Present the family as `Square Bot Sans`, a squared technical sans derived from Hubot Sans and extended with `wdth`, `wght`, and `ital` axes.
-- Update the source inventory to `12 masters`, `49 active instances`, `946 total glyphs`, and `908 exporting glyphs`.
+- Update the source inventory to `12 masters`, `49 active instances`, `947 total glyphs`, and `909 exporting glyphs`.
 - List active OpenType features: `aalt`, `ccmp`, `locl`, `numr`, `dnom`, `frac`, `ordn`, `pnum`, `tnum`, `zero`, `c2sc`, `smcp`, `case`, `dlig`, `liga`, `ss01`, `ss02`, `ss03`, and `ss04`.
 - Update the discretionary ligature showcase to include `<-`, `->`, `=>`, `=<`, `!=`, `>=`, `<=`, `<>`, `<|`, and `|>`.
 - Show `!=` as the not-equal symbol design. Show `=>` and `=<` as arrow-form ligatures, matching the existing arrow component style.

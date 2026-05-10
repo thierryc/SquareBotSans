@@ -10,7 +10,7 @@ fonts {
   filename: "SquareBotSans[wdth,wght].ttf"
   post_script_name: "SquareBotSans-Regular"
   full_name: "Square Bot Sans Regular"
-  copyright: "Copyright 2024 The SquareBot Sans Project Authors (https://github.com/thierryc/SquareBotSans)"
+  copyright: "Copyright 2024 The Square Bot Sans Project Authors (https://github.com/thierryc/SquareBotSans)"
 }
 fonts {
   name: "Square Bot Sans"
@@ -19,7 +19,7 @@ fonts {
   filename: "SquareBotSans-Italic[wdth,wght].ttf"
   post_script_name: "SquareBotSans-Italic"
   full_name: "Square Bot Sans Italic"
-  copyright: "Copyright 2024 The SquareBot Sans Project Authors (https://github.com/thierryc/SquareBotSans)"
+  copyright: "Copyright 2024 The Square Bot Sans Project Authors (https://github.com/thierryc/SquareBotSans)"
 }
 subsets: "latin"
 subsets: "latin-ext"

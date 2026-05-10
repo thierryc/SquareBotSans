@@ -4,8 +4,8 @@ metrics:
   descender: -167
   x_height: 515-546
 counts:
-  glyphs: 946
-  exporting_glyphs: 908
+  glyphs: 947
+  exporting_glyphs: 909
   non_exporting_glyphs: 38
   unicode_encoded_glyphs: 574
   masters: 12

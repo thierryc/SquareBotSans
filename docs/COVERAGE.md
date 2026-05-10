@@ -4,8 +4,8 @@ Square Bot Sans focuses on Latin-script typography with broad pan-European and V
 
 Current source inventory from Glyphs MCP:
 
-- 946 glyphs total
-- 908 exporting glyphs
+- 947 glyphs total
+- 909 exporting glyphs
 - 574 encoded glyphs
 - Uppercase, lowercase, accents, small caps, punctuation, figures, currency symbols, math symbols, arrows, marks, stylistic alternates, and ligatures
 

@@ -1,16 +1,17 @@
-SquareBot Sans
+Square Bot Sans
 
-Copyright 2024 The SquareBot Sans Project Authors (https://github.com/thierryc/SquareBotSans)
+Copyright 2024 The Square Bot Sans Project Authors (https://github.com/thierryc/SquareBotSans)
 
-The SquareBot Sans public distribution does not reserve SquareBot Sans as a
+The Square Bot Sans public distribution does not reserve Square Bot Sans as a
 Reserved Font Name.
 
 Project author:
 
 - Thierry Charbonnel (https://ap.cx)
 
-SquareBot Sans is derived from Hubot Sans.
+Square Bot Sans is derived from Hubot Sans.
 
 Hubot Sans
 
-Copyright (c) 2021 The Hubot Sans Project Authors (https://github.com/github/hubot-sans).
+Copyright 2021 The Hubot Sans Project Authors (https://github.com/github/hubot-sans),
+with Reserved Font Name "Hubot".

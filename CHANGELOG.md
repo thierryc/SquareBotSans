@@ -2,10 +2,12 @@
 
 ## Unreleased
 
+## 2.003 - 2026-05-10
+
 - Added U+2195 through U+2199 arrow glyphs: up/down, northwest, northeast, southeast, and southwest.
 - Added slashed-zero support through the `zero` feature and the `ss04` password/code zero alternate.
 - Added the Figma poster image to the README and Google Fonts article package.
-- Installed the 2.002 local variable font for user-level macOS testing before regenerating PDF specimens.
+- Installed the 2.003 local variable font for user-level macOS testing before regenerating PDF specimens.
 - Refreshed static OTF/WOFF2 exports, local variable exports, Google Fonts candidate exports, and specimen documentation from the current Glyphs source.
 
 ## 2.001 - 2026-05-07

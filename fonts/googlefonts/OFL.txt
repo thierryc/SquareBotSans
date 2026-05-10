@@ -1,4 +1,4 @@
-Copyright 2024 The SquareBot Sans Project Authors (https://github.com/thierryc/SquareBotSans)
+Copyright 2024 The Square Bot Sans Project Authors (https://github.com/thierryc/SquareBotSans); Copyright 2021 The Hubot Sans Project Authors (https://github.com/github/hubot-sans), with Reserved Font Name "Hubot".
 
 This Font Software is licensed under the SIL Open Font License, Version 1.1.
 This license is copied below, and is also available with a FAQ at:

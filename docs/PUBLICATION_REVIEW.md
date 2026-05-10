@@ -21,12 +21,12 @@ Glyphs MCP reported one open font before cleanup:
 
 - Family: SquareBot Sans
 - Source path: `/Users/thierryc/Documents/fonts/SquareBotSans/sources/SquareBotSans.glyphspackage`
-- Release target: 2.002
-- Glyphs source version: 2.002 currently reported by Glyphs.
+- Release target: 2.003
+- Glyphs source version: 2.003 currently reported by Glyphs.
 - UPM: 1000
 - Masters: 12
 - Instances: 49
-- Glyphs: 946 total, 908 exporting, 574 encoded
+- Glyphs: 947 total, 909 exporting, 574 encoded
 - Axes: Width (`wdth`), Weight (`wght`), Italic (`ital`)
 - Features: `aalt`, `ccmp`, `locl`, `numr`, `dnom`, `frac`, `ordn`, `pnum`, `tnum`, `zero`, `c2sc`, `smcp`, `case`, `dlig`, `liga`, `ss01`, `ss02`, `ss03`, `ss04`
 - Discretionary ligatures verified in live Glyphs source include `<-`, `->`, `=>`, `=<`, `!=`, `>=`, `<=`, `<>`, `<|`, and `|>`.
@@ -86,7 +86,7 @@ Result: both README example paths exist.
 
 ## FontBakery Snapshot
 
-Full public OTF plus variable TTF check after 2.002 prep:
+Full public OTF plus variable TTF check after 2.003 prep:
 
 ```sh
 make test-universal

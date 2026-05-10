@@ -80,7 +80,7 @@ def page_shell(number: int, title: str, content: str, classes: str = "") -> str:
             "header_center": header.get("center", metadata.get("handle", "@ap.cx")),
             "content": content,
             "footer_left": footer.get("left", metadata.get("foundry", "Another Planet Creative Experience")),
-            "footer_center": footer.get("center", metadata.get("version", "v2.002")),
+            "footer_center": footer.get("center", metadata.get("version", "v2.003")),
             "page_number": "__PAGE_NUMBER__",
             "total_pages": "__TOTAL_PAGES__",
         },
@@ -415,7 +415,7 @@ def technical_specs_content() -> str:
         ),
         tech_block(
             "Glyph production",
-            f"<p>{e(counts.get('glyphs', 946))} glyphs total<br>{e(counts.get('exporting_glyphs', 908))} exporting / {e(counts.get('non_exporting_glyphs', 38))} non-exporting<br>{e(counts.get('unicode_encoded_glyphs', 574))} Unicode-encoded glyphs<br>All glyphs include 12 production layers</p>",
+            f"<p>{e(counts.get('glyphs', 947))} glyphs total<br>{e(counts.get('exporting_glyphs', 909))} exporting / {e(counts.get('non_exporting_glyphs', 38))} non-exporting<br>{e(counts.get('unicode_encoded_glyphs', 574))} Unicode-encoded glyphs<br>All glyphs include 12 production layers</p>",
         ),
         tech_block(
             "SIL Font",
@@ -430,7 +430,7 @@ def technical_specs_content() -> str:
     return current_templates().render(
         "pages/technical-specifications.html",
         {
-            "technical_title": f"{metadata.get('family', 'Square Bot Sans')} {metadata.get('version', 'v2.002')}",
+            "technical_title": f"{metadata.get('family', 'Square Bot Sans')} {metadata.get('version', 'v2.003')}",
             "language_list": e(language_list),
             "technical_sections": "".join(sections),
         },
@@ -468,7 +468,7 @@ def build_pages(data: dict | None = None, templates: TemplateStore | None = None
             label_value("Designed for", "Sci-fi display", "Title systems, signage, and identity scale")
             + label_value("Masters", "12", "Condensed and expanded extremes across three weights and two styles")
             + label_value("Instances", "49 exporting", "Static family map for production delivery")
-            + label_value("Glyph system", "946 glyphs", "Latin, symbols, numerals, marks, and technical punctuation")
+            + label_value("Glyph system", "947 glyphs", "Latin, symbols, numerals, marks, and technical punctuation")
             + """
               </div>
             </div>
@@ -489,13 +489,13 @@ def build_pages(data: dict | None = None, templates: TemplateStore | None = None
               <div class="diagnostic-grid">
                 """
             + stat_card("Family", "SquareBot Sans", "Squared technical sans")
-            + stat_card("Version", current_metadata().get("version", "v2.002").lstrip("v"), "UPM 1000")
+            + stat_card("Version", current_metadata().get("version", "v2.003").lstrip("v"), "UPM 1000")
             + stat_card("Production", "49 instances", "Active/exporting")
             + stat_card("Design Space", "3 axes", "wdth / wght / ital")
             + stat_card("Metrics", "729 / 729 / -167", "Ascender / cap height / descender")
-            + stat_card("Glyph System", "946 total", "908 exporting / 38 non-exporting")
+            + stat_card("Glyph System", "947 total", "909 exporting / 38 non-exporting")
             + stat_card("Unicode", "574 encoded", "Latin plus marks and symbols")
-            + stat_card("Layers", "11,352", "946 glyphs x 12 masters")
+            + stat_card("Layers", "11,364", "947 glyphs x 12 masters")
             + """
               </div>
             </div>
@@ -1063,7 +1063,7 @@ def build_pages(data: dict | None = None, templates: TemplateStore | None = None
             """
             <div class="section-title">
               <div class="label">Glyph Category Data</div>
-              <h2>946 glyphs organized by production category.</h2>
+              <h2>947 glyphs organized by production category.</h2>
             </div>
             <div class="bar-chart">
               """
@@ -1099,7 +1099,7 @@ def build_pages(data: dict | None = None, templates: TemplateStore | None = None
             <div class="final-grid">
               <div class="final-title">
                 <div class="label">Final Technical / SIL Font</div>
-                <h2>{e(current_metadata().get("family", "Square Bot Sans"))} {e(current_metadata().get("version", "v2.002"))}</h2>
+                <h2>{e(current_metadata().get("family", "Square Bot Sans"))} {e(current_metadata().get("version", "v2.003"))}</h2>
               </div>
               <div class="final-table">
                 <div class="final-row">
@@ -1112,7 +1112,7 @@ def build_pages(data: dict | None = None, templates: TemplateStore | None = None
                 </div>
                 <div class="final-row">
                   <div class="label">Export State</div>
-                  <p>12 masters / 49 active instances / 908 exporting glyphs / OpenType features verified against the live Glyphs source.</p>
+                  <p>12 masters / 49 active instances / 909 exporting glyphs / OpenType features verified against the live Glyphs source.</p>
                 </div>
                 <div class="final-row">
                   <div class="label">Foundry</div>
