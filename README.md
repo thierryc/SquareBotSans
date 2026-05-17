@@ -87,8 +87,8 @@ Open `sources/SquareBotSans.glyphspackage` in Glyphs 3. Do not edit package file
 
 Current live source inventory:
 
-- Release target: 2.003
-- Glyphs source version: 2.003 currently reported by Glyphs.
+- Release target: 2.004
+- Glyphs source version: 2.004 currently reported by Glyphs.
 - UPM: 1000
 - Axes: `wdth`, `wght`, `ital`
 - Masters: 12

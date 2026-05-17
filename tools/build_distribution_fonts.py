@@ -36,6 +36,7 @@ from fontTools.varLib.instancer import instantiateVariableFont
 
 ROOT = Path(__file__).resolve().parents[1]
 LOCAL_SOURCE_VF = ROOT / "fonts" / "variable" / "SquareBotSansVF-Regular.ttf"
+LOCAL_SOURCE_WOFF2 = ROOT / "fonts" / "variable" / "SquareBotSansVF-Regular.woff2"
 GF_STAGING_DIR = ROOT / "build" / "googlefonts" / "squarebotsans"
 
 LOCAL_TTF = ROOT / "fonts" / "variable" / "SquareBotSans[ital,wdth,wght].ttf"
@@ -46,7 +47,7 @@ GF_ITALIC_TTF = ROOT / "fonts" / "googlefonts" / "SquareBotSans-Italic[wdth,wght
 GF_STAGING_ROMAN_TTF = GF_STAGING_DIR / GF_ROMAN_TTF.name
 GF_STAGING_ITALIC_TTF = GF_STAGING_DIR / GF_ITALIC_TTF.name
 
-VERSION = "2.003"
+VERSION = "2.004"
 FAMILY = "Square Bot Sans"
 LOCAL_FAMILY = FAMILY
 GF_FAMILY = FAMILY
@@ -180,13 +181,10 @@ def _ensure_identity_avar(font: TTFont) -> None:
         return
     if "avar" not in font:
         font["avar"] = newTable("avar")
-        font["avar"].segments = {}
-    for axis in font["fvar"].axes:
-        font["avar"].segments.setdefault(
-            axis.axisTag,
-            {-1.0: -1.0, 0.0: 0.0, 1.0: 1.0},
-        )
-    _normalize_avar(font)
+    font["avar"].segments = {
+        axis.axisTag: {-1.0: -1.0, 0.0: 0.0, 1.0: 1.0}
+        for axis in font["fvar"].axes
+    }
 
 
 def _set_meta_script_lang_tags(font: TTFont) -> None:
@@ -625,6 +623,13 @@ def _gf_source_font() -> TTFont:
     return _local_source_font()
 
 
+def normalize_source_exports() -> None:
+    font = TTFont(LOCAL_SOURCE_VF)
+    _ensure_identity_avar(font)
+    font.save(LOCAL_SOURCE_VF)
+    _save_woff2(LOCAL_SOURCE_VF, LOCAL_SOURCE_WOFF2)
+
+
 def build_local() -> None:
     font = instantiateVariableFont(_local_source_font(), {"wdth": (80, 100, 120)}, inplace=False)
     _prepare_font(font, "Regular", "Regular", italic=False)
@@ -691,6 +696,7 @@ def stage_googlefonts() -> None:
 def main() -> None:
     if not LOCAL_SOURCE_VF.exists():
         raise SystemExit(f"Local source VF not found: {LOCAL_SOURCE_VF}")
+    normalize_source_exports()
     build_local()
     build_googlefonts()
     print(f"Built {LOCAL_TTF.relative_to(ROOT)}")

@@ -80,7 +80,7 @@ def page_shell(number: int, title: str, content: str, classes: str = "") -> str:
             "header_center": header.get("center", metadata.get("handle", "@ap.cx")),
             "content": content,
             "footer_left": footer.get("left", metadata.get("foundry", "Another Planet Creative Experience")),
-            "footer_center": footer.get("center", metadata.get("version", "v2.003")),
+            "footer_center": footer.get("center", metadata.get("version", "v2.004")),
             "page_number": "__PAGE_NUMBER__",
             "total_pages": "__TOTAL_PAGES__",
         },
@@ -430,7 +430,7 @@ def technical_specs_content() -> str:
     return current_templates().render(
         "pages/technical-specifications.html",
         {
-            "technical_title": f"{metadata.get('family', 'Square Bot Sans')} {metadata.get('version', 'v2.003')}",
+            "technical_title": f"{metadata.get('family', 'Square Bot Sans')} {metadata.get('version', 'v2.004')}",
             "language_list": e(language_list),
             "technical_sections": "".join(sections),
         },
@@ -489,7 +489,7 @@ def build_pages(data: dict | None = None, templates: TemplateStore | None = None
               <div class="diagnostic-grid">
                 """
             + stat_card("Family", "SquareBot Sans", "Squared technical sans")
-            + stat_card("Version", current_metadata().get("version", "v2.003").lstrip("v"), "UPM 1000")
+            + stat_card("Version", current_metadata().get("version", "v2.004").lstrip("v"), "UPM 1000")
             + stat_card("Production", "49 instances", "Active/exporting")
             + stat_card("Design Space", "3 axes", "wdth / wght / ital")
             + stat_card("Metrics", "729 / 729 / -167", "Ascender / cap height / descender")
@@ -1099,7 +1099,7 @@ def build_pages(data: dict | None = None, templates: TemplateStore | None = None
             <div class="final-grid">
               <div class="final-title">
                 <div class="label">Final Technical / SIL Font</div>
-                <h2>{e(current_metadata().get("family", "Square Bot Sans"))} {e(current_metadata().get("version", "v2.003"))}</h2>
+                <h2>{e(current_metadata().get("family", "Square Bot Sans"))} {e(current_metadata().get("version", "v2.004"))}</h2>
               </div>
               <div class="final-table">
                 <div class="final-row">

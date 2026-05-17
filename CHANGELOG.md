@@ -2,6 +2,15 @@
 
 ## Unreleased
 
+## 2.004 - 2026-05-17
+
+- Incorporated the revised `y` design and refreshed dependent accented glyphs.
+- Fixed duplicate overlapping Euro bar path segments in the variable font source.
+- Normalized variable font `avar` tables for OTS compatibility.
+- Updated the README and Google Fonts article poster from the Figma export frame.
+- Bumped the Glyphs source and distribution build version to 2.004.
+- Refreshed static, variable, Google Fonts candidate, and specimen release outputs.
+
 ## 2.003 - 2026-05-10
 
 - Added U+2195 through U+2199 arrow glyphs: up/down, northwest, northeast, southeast, and southwest.

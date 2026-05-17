@@ -21,8 +21,8 @@ Glyphs MCP reported one open font before cleanup:
 
 - Family: SquareBot Sans
 - Source path: `/Users/thierryc/Documents/fonts/SquareBotSans/sources/SquareBotSans.glyphspackage`
-- Release target: 2.003
-- Glyphs source version: 2.003 currently reported by Glyphs.
+- Release target: 2.004
+- Glyphs source version: 2.004 currently reported by Glyphs.
 - UPM: 1000
 - Masters: 12
 - Instances: 49
@@ -86,7 +86,7 @@ Result: both README example paths exist.
 
 ## FontBakery Snapshot
 
-Full public OTF plus variable TTF check after 2.003 prep:
+Full public OTF plus variable TTF check after 2.004 prep:
 
 ```sh
 make test-universal
@@ -139,7 +139,7 @@ Direct table checks confirmed:
 - GF Roman and Italic VFs include `HVAR`.
 - GF Roman and Italic VFs have no nested composite glyphs after the distribution build flattening pass.
 - All 102 exported font files include U+2195 through U+2199.
-- README and the Google Fonts article package include the 1600x900 Square Bot Sans poster exported from the Figma frame.
+- README and the Google Fonts article package include the Square Bot Sans poster exported from the 1600x900 Figma frame. The current connector PNG is 1024x576.
 - GF STAT exposes `wdth`, `wght`, and Boolean `ital`; width exposes only elidable `Normal`.
 - GF fvar instances are weight-only at default width.
 - GF name IDs 16/17 are absent.
