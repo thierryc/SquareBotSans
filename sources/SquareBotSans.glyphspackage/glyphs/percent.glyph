@@ -1170,11 +1170,11 @@ nodes = (
 );
 },
 {
-pos = (292,-2);
+pos = (71,362);
 ref = _percent.zero;
 },
 {
-pos = (71,362);
+pos = (292,-2);
 ref = _percent.zero;
 }
 );
