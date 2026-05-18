@@ -81,6 +81,8 @@ The checked-in static release assets currently include upright and italic OTF an
 
 The local/GitHub variable release keeps width and weight interpolation, with italic presented as the two available positions: `ital` 0 and `ital` 1. The Google Fonts candidate build follows Google Fonts practice by splitting Roman and Italic variable TTFs and using `ital` only for STAT/style linking.
 
+Note: the italic version of Square Bot Sans is in heavy development, and modifications may occur.
+
 ## Source
 
 Open `sources/SquareBotSans.glyphspackage` in Glyphs 3. Do not edit package files by hand. Make outline, spacing, kerning, feature, and instance changes in Glyphs so generated package data stays consistent.
