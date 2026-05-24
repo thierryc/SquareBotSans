@@ -89,8 +89,8 @@ Open `sources/SquareBotSans.glyphspackage` in Glyphs 3. Do not edit package file
 
 Current live source inventory:
 
-- Release target: 2.004
-- Glyphs source version: 2.004 currently reported by Glyphs.
+- Release target: 2.008
+- Glyphs source version: 2.008 currently reported by Glyphs.
 - UPM: 1000
 - Axes: `wdth`, `wght`, `ital`
 - Masters: 12
@@ -117,6 +117,8 @@ Also confirm that the README snippets reference files that exist and that all re
 ## Specimen PDF Document
 
 The print specimen is generated from editable source files in `specimen-src/`.
+
+Note: the reusable specimen-generation tool is not published yet. Until it is released, regenerate the Square Bot Sans specimen with the local scripts checked into this repository rather than installing `font-specimen` from a package registry.
 
 - Edit `specimen-src/css/base.css` for tokens, page shell, running headers, footers, and shared type styles.
 - Edit `specimen-src/css/pages.css` for page-specific composition: cover, axes, instances, glyph boards, feature pages, final page, and back cover.

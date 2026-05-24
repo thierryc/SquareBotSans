@@ -7,11 +7,11 @@ layers = (
 background = {
 shapes = (
 {
-pos = (49,469);
+pos = (52,469);
 ref = period.ss01;
 },
 {
-pos = (48,0);
+pos = (51,0);
 ref = comma.ss01;
 }
 );
@@ -41,11 +41,11 @@ width = 130;
 background = {
 shapes = (
 {
-pos = (113,424);
+pos = (120,424);
 ref = period.ss01;
 },
 {
-pos = (112,0);
+pos = (119,0);
 ref = comma.ss01;
 }
 );
@@ -75,11 +75,11 @@ width = 171;
 background = {
 shapes = (
 {
-pos = (161,369);
+pos = (171,369);
 ref = period.ss01;
 },
 {
-pos = (160,0);
+pos = (170,0);
 ref = comma.ss01;
 }
 );
@@ -109,11 +109,11 @@ width = 226;
 background = {
 shapes = (
 {
-pos = (65,462);
+pos = (69,462);
 ref = period.ss01;
 },
 {
-pos = (64,0);
+pos = (68,0);
 ref = comma.ss01;
 }
 );
@@ -144,12 +144,12 @@ background = {
 shapes = (
 {
 alignment = -1;
-pos = (113,426);
+pos = (120,426);
 ref = period.ss01;
 },
 {
 alignment = -1;
-pos = (112,0);
+pos = (119,0);
 ref = comma.ss01;
 }
 );
@@ -180,12 +180,12 @@ background = {
 shapes = (
 {
 alignment = -1;
-pos = (253,369);
+pos = (267,369);
 ref = period.ss01;
 },
 {
 alignment = -1;
-pos = (174,0);
+pos = (188,0);
 ref = comma.ss01;
 }
 );
@@ -216,12 +216,12 @@ background = {
 shapes = (
 {
 alignment = -1;
-pos = (179,462);
+pos = (185,462);
 ref = period.ss01;
 },
 {
 alignment = -1;
-pos = (83,0);
+pos = (89,0);
 ref = comma.ss01;
 }
 );
@@ -252,12 +252,12 @@ background = {
 shapes = (
 {
 alignment = -1;
-pos = (237,426);
+pos = (247,426);
 ref = period.ss01;
 },
 {
 alignment = -1;
-pos = (147,0);
+pos = (157,0);
 ref = comma.ss01;
 }
 );
@@ -288,12 +288,12 @@ background = {
 shapes = (
 {
 alignment = -1;
-pos = (220,424);
+pos = (229,424);
 ref = period.ss01;
 },
 {
 alignment = -1;
-pos = (131,0);
+pos = (140,0);
 ref = comma.ss01;
 }
 );
@@ -324,12 +324,12 @@ background = {
 shapes = (
 {
 alignment = -1;
-pos = (183,469);
+pos = (189,469);
 ref = period.ss01;
 },
 {
 alignment = -1;
-pos = (83,0);
+pos = (89,0);
 ref = comma.ss01;
 }
 );

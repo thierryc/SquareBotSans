@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+## 2.008 - 2026-05-24
+
+- Bumped the Glyphs source and distribution build version to 2.008.
+- Refreshed the specimen metadata for the 2.008 release target.
+
 ## 2.004 - 2026-05-17
 
 - Incorporated the revised `y` design and refreshed dependent accented glyphs.

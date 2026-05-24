@@ -50,11 +50,11 @@ shapes = (
 ref = G;
 },
 {
-pos = (397,213);
+pos = (398,213);
 ref = uni0307.ss01;
 }
 );
-width = 919;
+width = 920;
 },
 {
 layerId = "AE48F426-5A06-4069-851E-B29A4CF5AB7C";

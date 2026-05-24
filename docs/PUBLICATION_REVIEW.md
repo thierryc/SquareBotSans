@@ -21,8 +21,8 @@ Glyphs MCP reported one open font before cleanup:
 
 - Family: SquareBot Sans
 - Source path: `/Users/thierryc/Documents/fonts/SquareBotSans/sources/SquareBotSans.glyphspackage`
-- Release target: 2.004
-- Glyphs source version: 2.004 currently reported by Glyphs.
+- Release target: 2.008
+- Glyphs source version: 2.008 currently reported by Glyphs.
 - UPM: 1000
 - Masters: 12
 - Instances: 49
@@ -86,7 +86,7 @@ Result: both README example paths exist.
 
 ## FontBakery Snapshot
 
-Full public OTF plus variable TTF check after 2.004 prep:
+Full public OTF plus variable TTF check after 2.008 prep:
 
 ```sh
 make test-universal
