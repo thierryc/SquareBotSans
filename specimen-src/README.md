@@ -2,6 +2,8 @@
 
 This folder contains the editable source for the generated print specimen.
 
+Note: the reusable specimen-generation tool is not published yet. For now, build this specimen with the local scripts in the repository root instead of installing `font-specimen` from a package registry.
+
 ## Preview
 
 Run the live preview server from the repository root:
