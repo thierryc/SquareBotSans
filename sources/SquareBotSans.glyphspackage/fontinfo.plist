@@ -584,7 +584,6 @@ sub f l by fl;
 tag = liga;
 },
 {
-automatic = 1;
 code = "sub uni1EB6 by uni1EB6.ss01;
 sub uni1EAC by uni1EAC.ss01;
 sub Adieresis by Adieresis.ss01;
@@ -603,7 +602,6 @@ sub uni1ED8 by uni1ED8.ss01;
 sub Odieresis by Odieresis.ss01;
 sub uni1ECC by uni1ECC.ss01;
 sub uni1EE2 by uni1EE2.ss01;
-sub Q by Q.ss01;
 sub Udieresis by Udieresis.ss01;
 sub uni1EE4 by uni1EE4.ss01;
 sub uni1EF0 by uni1EF0.ss01;
@@ -611,28 +609,10 @@ sub Wdieresis by Wdieresis.ss01;
 sub Ydieresis by Ydieresis.ss01;
 sub uni1EF4 by uni1EF4.ss01;
 sub Zdotaccent by Zdotaccent.ss01;
-sub a by a.ss01;
-sub aacute by aacute.ss01;
-sub abreve by abreve.ss01;
-sub uni1EAF by uni1EAF.ss01;
 sub uni1EB7 by uni1EB7.ss01;
-sub uni1EB1 by uni1EB1.ss01;
-sub uni1EB3 by uni1EB3.ss01;
-sub uni1EB5 by uni1EB5.ss01;
-sub acircumflex by acircumflex.ss01;
-sub uni1EA5 by uni1EA5.ss01;
 sub uni1EAD by uni1EAD.ss01;
-sub uni1EA7 by uni1EA7.ss01;
-sub uni1EA9 by uni1EA9.ss01;
-sub uni1EAB by uni1EAB.ss01;
 sub adieresis by adieresis.ss01;
 sub uni1EA1 by uni1EA1.ss01;
-sub agrave by agrave.ss01;
-sub uni1EA3 by uni1EA3.ss01;
-sub amacron by amacron.ss01;
-sub aogonek by aogonek.ss01;
-sub aring by aring.ss01;
-sub atilde by atilde.ss01;
 sub cdotaccent by cdotaccent.ss01;
 sub uni1EC7 by uni1EC7.ss01;
 sub edieresis by edieresis.ss01;
@@ -653,12 +633,8 @@ sub udieresis by udieresis.ss01;
 sub uni1EE5 by uni1EE5.ss01;
 sub uni1EF1 by uni1EF1.ss01;
 sub wdieresis by wdieresis.ss01;
-sub y by y.ss01;
-sub yacute by yacute.ss01;
-sub ycircumflex by ycircumflex.ss01;
 sub ydieresis by ydieresis.ss01;
 sub uni1EF5 by uni1EF5.ss01;
-sub ygrave by ygrave.ss01;
 sub zdotaccent by zdotaccent.ss01;
 sub uni1ECB.dotless by uni1ECB.dotless.ss01;
 sub period by period.ss01;
@@ -689,22 +665,76 @@ sub dotbelowcomb by dotbelowcomb.ss01;
 labels = (
 {
 language = dflt;
-value = "Rounded dots";
+value = "Round Dots";
 }
 );
 tag = ss01;
 },
 {
-automatic = 1;
-code = "sub l by l.ss02;
-sub lacute by lacute.ss02;
-sub lcaron by lcaron.ss02;
-sub uni013C by uni013C.ss02;
-sub ldot by ldot.ss02;
-sub lslash by lslash.ss02;
-sub ldot.ss01 by ldot.ss01.ss02;
-sub fl by fl.ss02;
-sub f_f_l.liga by f_f_l.liga.ss02;
+code = "sub a by a.ss02;
+sub aacute by aacute.ss02;
+sub abreve by abreve.ss02;
+sub uni1EAF by uni1EAF.ss02;
+sub uni1EB7 by uni1EB7.ss02;
+sub uni1EB7.ss01 by uni1EB7.ss01.ss02;
+sub uni1EB1 by uni1EB1.ss02;
+sub uni1EB3 by uni1EB3.ss02;
+sub uni1EB5 by uni1EB5.ss02;
+sub acircumflex by acircumflex.ss02;
+sub uni1EA5 by uni1EA5.ss02;
+sub uni1EAD by uni1EAD.ss02;
+sub uni1EAD.ss01 by uni1EAD.ss01.ss02;
+sub uni1EA7 by uni1EA7.ss02;
+sub uni1EA9 by uni1EA9.ss02;
+sub uni1EAB by uni1EAB.ss02;
+sub adieresis by adieresis.ss02;
+sub adieresis.ss01 by adieresis.ss01.ss02;
+sub uni1EA1 by uni1EA1.ss02;
+sub uni1EA1.ss01 by uni1EA1.ss01.ss02;
+sub agrave by agrave.ss02;
+sub uni1EA3 by uni1EA3.ss02;
+sub amacron by amacron.ss02;
+sub aogonek by aogonek.ss02;
+sub aring by aring.ss02;
+sub atilde by atilde.ss02;
+sub y by y.ss02;
+sub yacute by yacute.ss02;
+sub ycircumflex by ycircumflex.ss02;
+sub ydieresis by ydieresis.ss02;
+sub ydieresis.ss01 by ydieresis.ss01.ss02;
+sub uni1EF5 by uni1EF5.ss02;
+sub uni1EF5.ss01 by uni1EF5.ss01.ss02;
+sub ygrave by ygrave.ss02;
+";
+labels = (
+{
+language = dflt;
+value = "Alternate Lowercase";
+}
+);
+tag = ss02;
+},
+{
+code = "sub Q by Q.ss03;
+";
+labels = (
+{
+language = dflt;
+value = "Alternate Q Tail";
+}
+);
+tag = ss03;
+},
+{
+code = "sub l by l.ss04;
+sub lacute by lacute.ss04;
+sub lcaron by lcaron.ss04;
+sub uni013C by uni013C.ss04;
+sub ldot by ldot.ss04;
+sub lslash by lslash.ss04;
+sub ldot.ss01 by ldot.ss01.ss04;
+sub fl by fl.ss04;
+sub f_f_l.liga by f_f_l.liga.ss04;
 ";
 labels = (
 {
@@ -712,14 +742,13 @@ language = dflt;
 value = "Alternate lowercase l";
 }
 );
-tag = ss02;
+tag = ss04;
 },
 {
-automatic = 1;
-code = "sub r by r.ss03;
-sub racute by racute.ss03;
-sub rcaron by rcaron.ss03;
-sub uni0157 by uni0157.ss03;
+code = "sub r by r.ss05;
+sub racute by racute.ss05;
+sub rcaron by rcaron.ss05;
+sub uni0157 by uni0157.ss05;
 ";
 labels = (
 {
@@ -727,28 +756,27 @@ language = dflt;
 value = "Alternate r";
 }
 );
-tag = ss03;
+tag = ss05;
 },
 {
-automatic = 1;
-code = "sub I by I.ss04;
-sub IJ by IJ.ss04;
-sub Iacute by Iacute.ss04;
-sub Ibreve by Ibreve.ss04;
-sub Icircumflex by Icircumflex.ss04;
-sub Idieresis by Idieresis.ss04;
-sub Idotaccent by Idotaccent.ss04;
-sub uni1ECA by uni1ECA.ss04;
-sub Igrave by Igrave.ss04;
-sub uni1EC8 by uni1EC8.ss04;
-sub Imacron by Imacron.ss04;
-sub Iogonek by Iogonek.ss04;
-sub Itilde by Itilde.ss04;
-sub Idieresis.ss01 by Idieresis.ss01.ss04;
-sub Idotaccent.ss01 by Idotaccent.ss01.ss04;
-sub uni1ECA.ss01 by uni1ECA.ss01.ss04;
-sub zero by zero.ss04;
-sub zero.tf by zero.tf.ss04;
+code = "sub I by I.ss06;
+sub IJ by IJ.ss06;
+sub Iacute by Iacute.ss06;
+sub Ibreve by Ibreve.ss06;
+sub Icircumflex by Icircumflex.ss06;
+sub Idieresis by Idieresis.ss06;
+sub Idotaccent by Idotaccent.ss06;
+sub uni1ECA by uni1ECA.ss06;
+sub Igrave by Igrave.ss06;
+sub uni1EC8 by uni1EC8.ss06;
+sub Imacron by Imacron.ss06;
+sub Iogonek by Iogonek.ss06;
+sub Itilde by Itilde.ss06;
+sub Idieresis.ss01 by Idieresis.ss01.ss06;
+sub Idotaccent.ss01 by Idotaccent.ss01.ss06;
+sub uni1ECA.ss01 by uni1ECA.ss01.ss06;
+sub zero by zero.ss06;
+sub zero.tf by zero.tf.ss06;
 ";
 labels = (
 {
@@ -756,7 +784,7 @@ language = dflt;
 value = "Serifless uppercase I";
 }
 );
-tag = ss04;
+tag = ss06;
 }
 );
 fontMaster = (
@@ -14567,10 +14595,10 @@ dollar = -13;
 equal = -18;
 germandbls = -36;
 idieresis = 2;
-l.ss02 = 0;
+l.ss04 = 0;
 less = -66;
 logicalnot = 0;
-lslash.ss02 = -15;
+lslash.ss04 = -15;
 minus = -23;
 notequal = -27;
 numbersign = -12;
@@ -14619,8 +14647,8 @@ v = -29;
 Aacute = {
 Lslash = -18;
 Tbar = -78;
-l.ss02 = 0;
-lslash.ss02 = -15;
+l.ss04 = 0;
+lslash.ss04 = -15;
 registered = -66;
 };
 Abreve = {
@@ -14716,7 +14744,7 @@ i.ss01 = -10;
 idieresis = 50;
 idieresis.ss01 = 2;
 jcircumflex = 6;
-l.ss02 = -5;
+l.ss04 = -5;
 less = -59;
 logicalnot = 0;
 minus = -16;
@@ -14767,7 +14795,7 @@ slash = -17;
 };
 F = {
 Oslash = -21;
-adieresis.ss01 = -27;
+adieresis.ss01.ss02 = -27;
 ampersand = -49;
 ellipsis.ss01 = -139;
 i.ss01 = -15;
@@ -14775,7 +14803,7 @@ iacute = -30;
 idieresis = 45;
 numbersign = -53;
 parenleft = -22;
-r.ss03 = -30;
+r.ss05 = -30;
 uni2083 = -29;
 uni2084 = -82;
 uni2085 = -33;
@@ -14820,7 +14848,7 @@ Hbar = 18;
 J = -17;
 T = -16;
 a = -13;
-a.ss01 = -18;
+a.ss02 = -18;
 d = -13;
 e = -13;
 o = -13;
@@ -14839,7 +14867,7 @@ at = -24;
 equal = -41;
 germandbls = -43;
 jcircumflex = 2;
-l.ss02 = 0;
+l.ss04 = 0;
 less = -77;
 logicalnot = -8;
 minus = -35;
@@ -14847,26 +14875,26 @@ numbersign = -48;
 parenleft = -20;
 registered = -42;
 };
-I.ss04 = {
+I.ss06 = {
 jcircumflex = 20;
 };
 Iacute = {
 Lslash = -19;
 thorn = -6;
 };
-Iacute.ss04 = {
+Iacute.ss06 = {
 Eth = 25;
 };
 Icircumflex = {
-l.ss02 = 0;
+l.ss04 = 0;
 };
-Icircumflex.ss04 = {
+Icircumflex.ss06 = {
 parenright = 10;
 };
 Idieresis = {
 idieresis = 42;
 };
-Imacron.ss04 = {
+Imacron.ss06 = {
 imacron = 37;
 parenright = 7;
 };
@@ -14911,9 +14939,9 @@ G = -19;
 Lslash = -18;
 OE = -21;
 Oslash = 0;
-adieresis.ss01 = -6;
+adieresis.ss01.ss02 = -6;
 amacron = -11;
-amacron.ss01 = -6;
+amacron.ss02 = -6;
 ampersand = -15;
 asciitilde = -85;
 at = -28;
@@ -14928,7 +14956,7 @@ equal = -45;
 i.ss01 = 0;
 less = -104;
 logicalnot = -39;
-lslash.ss02 = -14;
+lslash.ss04 = -14;
 minus = -61;
 notequal = -54;
 numbersign = -42;
@@ -14942,7 +14970,7 @@ udieresis = -17;
 umacron = -17;
 uni1EF9 = -22;
 ygrave = -28;
-ygrave.ss01 = -26;
+ygrave.ss02 = -26;
 };
 L = {
 Ecircumflex = -15;
@@ -15008,7 +15036,7 @@ U = -20;
 Uacute = -20;
 V = -13;
 a = -38;
-a.ss01 = -26;
+a.ss02 = -26;
 hyphen = -120;
 hyphen.case = -87;
 parenright = -14;
@@ -15050,7 +15078,7 @@ W = -38;
 Y = -81;
 Zdotaccent = 22;
 a = -12;
-a.ss01 = -6;
+a.ss02 = -6;
 aacute = -12;
 aogonek = -12;
 comma = 27;
@@ -15096,7 +15124,7 @@ j = 0;
 jcircumflex = 24;
 k = 3;
 l = 3;
-l.ss02 = 3;
+l.ss04 = 3;
 parenleft = 6;
 };
 Oacute = {
@@ -15141,7 +15169,7 @@ bracketright = -30;
 parenright = -28;
 u = 3;
 };
-Q.ss01 = {
+Q.ss03 = {
 Edieresis.ss01 = 6;
 };
 R = {
@@ -15176,17 +15204,17 @@ Hbar = -16;
 Lslash = -19;
 OE = -36;
 Oslash = -38;
-a.ss01 = -86;
-aacute.ss01 = -86;
+a.ss02 = -86;
+aacute.ss02 = -86;
 abreve = -41;
 acircumflex = -61;
 adieresis = -38;
 agrave = -43;
-agrave.ss01 = -39;
+agrave.ss02 = -39;
 amacron = -40;
-amacron.ss01 = -39;
+amacron.ss02 = -39;
 ampersand = -46;
-aogonek.ss01 = -86;
+aogonek.ss02 = -86;
 aring = -53;
 asciitilde = -92;
 at = -61;
@@ -15218,9 +15246,9 @@ ohungarumlaut = -70;
 omacron = -40;
 otilde = -46;
 parenleft = -48;
-r.ss03 = -90;
+r.ss05 = -90;
 racute = -54;
-racute.ss03 = -68;
+racute.ss05 = -68;
 rcaron = 7;
 registered = -40;
 scaron = -26;
@@ -15232,9 +15260,9 @@ udieresis.ss01 = -59;
 ugrave = -52;
 uhungarumlaut = -77;
 umacron = -48;
-uni1EA1.ss01 = -86;
+uni1EA1.ss01.ss02 = -86;
 uni1EA3 = -62;
-uni1EA3.ss01 = -62;
+uni1EA3.ss02 = -62;
 uni1EA5 = -66;
 uni1EA7 = -66;
 uni1EA9 = -67;
@@ -15258,9 +15286,9 @@ uni2082 = -78;
 uring = -59;
 utilde = -49;
 ycircumflex = -55;
-ycircumflex.ss01 = -56;
+ycircumflex.ss02 = -56;
 ygrave = -29;
-ygrave.ss01 = -29;
+ygrave.ss02 = -29;
 zcaron = -22;
 };
 Tbar = {
@@ -15278,7 +15306,7 @@ slash = -74;
 tbar = -46;
 };
 Tcaron = {
-a.ss01 = -86;
+a.ss02 = -86;
 udieresis = -43;
 };
 U = {
@@ -15303,13 +15331,13 @@ V = {
 OE = -7;
 Oslash = -14;
 abreve = -30;
-abreve.ss01 = -30;
+abreve.ss02 = -30;
 acircumflex = -39;
 adieresis = -23;
-adieresis.ss01 = -40;
+adieresis.ss01.ss02 = -40;
 agrave = -34;
 amacron = -10;
-amacron.ss01 = -9;
+amacron.ss02 = -9;
 ampersand = -28;
 aring = -37;
 at = -21;
@@ -15329,8 +15357,8 @@ odieresis = -23;
 ograve = -34;
 otilde = -19;
 parenleft = -19;
-r.ss03 = -33;
-racute.ss03 = -33;
+r.ss05 = -33;
+racute.ss05 = -33;
 rcaron = 18;
 registered = -13;
 scaron = -8;
@@ -15342,15 +15370,15 @@ zcaron = -5;
 W = {
 Lslash = -13;
 adieresis = -12;
-adieresis.ss01 = -25;
+adieresis.ss01.ss02 = -25;
 ampersand = -21;
 asciitilde = -29;
 i.ss01 = 0;
 idieresis = 71;
 less = -48;
-lslash.ss02 = -11;
+lslash.ss04 = -11;
 minus = -10;
-r.ss03 = -20;
+r.ss05 = -20;
 scaron = -5;
 uni2083 = -28;
 };
@@ -15374,11 +15402,11 @@ Lslash = -17;
 Oslash = -26;
 acircumflex = -59;
 adieresis = -25;
-adieresis.ss01 = -53;
+adieresis.ss01.ss02 = -53;
 agrave = -40;
-agrave.ss01 = -38;
+agrave.ss02 = -38;
 amacron = -22;
-amacron.ss01 = -21;
+amacron.ss02 = -21;
 ampersand = -33;
 asciitilde = -80;
 at = -51;
@@ -15397,7 +15425,7 @@ odieresis = -25;
 ograve = -40;
 omacron = -23;
 parenleft = -44;
-r.ss03 = -56;
+r.ss05 = -56;
 registered = -21;
 scaron = -8;
 udieresis = -36;
@@ -15435,7 +15463,7 @@ jcircumflex = 0;
 logicalnot = 46;
 notequal = -7;
 };
-a.ss01 = {
+a.ss02 = {
 T = -90;
 exclam.ss01 = -9;
 germandbls = -11;
@@ -15452,7 +15480,7 @@ parenright = -33;
 adieresis = {
 parenright = -30;
 };
-adieresis.ss01 = {
+adieresis.ss01.ss02 = {
 germandbls = -11;
 };
 amacron = {
@@ -15464,7 +15492,7 @@ comma = 0;
 j = 0;
 parenright = 0;
 };
-aogonek.ss01 = {
+aogonek.ss02 = {
 comma.ss01 = 0;
 parenright = 0;
 };
@@ -15660,9 +15688,9 @@ rcaron = 2;
 dcaron = {
 H = 94;
 a = 15;
-a.ss01 = 11;
+a.ss02 = 11;
 aacute = 15;
-aacute.ss01 = 13;
+aacute.ss02 = 13;
 colon = 41;
 comma = 0;
 comma.ss01 = -17;
@@ -15747,7 +15775,7 @@ exclam = -7;
 exclam.ss01 = -7;
 germandbls = -4;
 logicalnot = 62;
-lslash.ss02 = 10;
+lslash.ss04 = 10;
 parenleft = 8;
 quotedblleft = -55;
 registered = -15;
@@ -15828,7 +15856,7 @@ bracketright = 0;
 parenright = 0;
 };
 eogonek = {
-lslash.ss02 = 11;
+lslash.ss04 = 11;
 parenright = -7;
 };
 equal = {
@@ -15864,7 +15892,7 @@ t = -2;
 u = 2;
 v = -4;
 y = -5;
-y.ss01 = -4;
+y.ss02 = -4;
 yacute = -5;
 };
 exclam = {
@@ -15899,13 +15927,13 @@ idieresis = 3;
 l = 0;
 n = 0;
 ordmasculine = 13;
-r.ss03 = -3;
+r.ss05 = -3;
 };
 f_f.liga = {
 exclam = -2;
 idieresis = 3;
 ordmasculine = 13;
-r.ss03 = -3;
+r.ss05 = -3;
 };
 f_f_i.liga = {
 asciitilde = -18;
@@ -15922,7 +15950,7 @@ idieresis = 15;
 jcircumflex = 4;
 periodcentered.loclCAT = 0;
 };
-f_f_l.liga.ss02 = {
+f_f_l.liga.ss04 = {
 periodcentered.loclCAT = -32;
 periodcentered.loclCAT.ss01 = -34;
 };
@@ -15955,7 +15983,7 @@ idieresis = 15;
 jcircumflex = 4;
 periodcentered.loclCAT = 0;
 };
-fl.ss02 = {
+fl.ss04 = {
 periodcentered.loclCAT = -32;
 periodcentered.loclCAT.ss01 = -34;
 };
@@ -16024,10 +16052,10 @@ f = -3;
 f_f.liga = -3;
 f_f_i.liga = -3;
 f_f_l.liga = -3;
-f_f_l.liga.ss02 = -3;
+f_f_l.liga.ss04 = -3;
 fi = -3;
 fl = -3;
-fl.ss02 = -3;
+fl.ss04 = -3;
 g = 12;
 o = 11;
 parenright = -45;
@@ -16077,7 +16105,7 @@ h = {
 asciitilde = -16;
 exclam = -8;
 registered = -22;
-uni1EB3.ss01 = 0;
+uni1EB3.ss02 = 0;
 };
 hyphen = {
 Hbar = -14;
@@ -16168,7 +16196,7 @@ idieresis = 17;
 j = 14;
 k = 15;
 l = 15;
-l.ss02 = 14;
+l.ss04 = 14;
 parenright = 37;
 question = 43;
 quotedbl = 51;
@@ -16188,7 +16216,7 @@ idieresis.ss01 = {
 b = 2;
 k = 2;
 l = 2;
-l.ss02 = 0;
+l.ss04 = 0;
 t = 0;
 };
 igrave = {
@@ -16198,7 +16226,7 @@ parenright = -40;
 imacron = {
 G = 29;
 I = 15;
-I.ss04 = 37;
+I.ss06 = 37;
 N = 37;
 P = 37;
 S = 27;
@@ -16217,7 +16245,7 @@ j = 2;
 j.ss01 = 0;
 k = 2;
 l = 2;
-l.ss02 = 0;
+l.ss04 = 0;
 parenright = 23;
 period.ss01 = -34;
 question = 54;
@@ -16238,7 +16266,7 @@ uni00B3 = 51;
 uni00B9 = 19;
 uni0137 = 2;
 uni013C = 2;
-uni013C.ss02 = 0;
+uni013C.ss04 = 0;
 uni2074 = 8;
 uni2075 = 41;
 uni2076 = 46;
@@ -16255,7 +16283,7 @@ parenright.case = -46;
 integral = {
 A = -61;
 a = -65;
-a.ss01 = -62;
+a.ss02 = -62;
 d = -65;
 e = -65;
 integral = -67;
@@ -16318,7 +16346,7 @@ iogonek = 0;
 lacute = 0;
 less = -67;
 logicalnot = -13;
-lslash.ss02 = -18;
+lslash.ss04 = -18;
 minus = -25;
 parenleft = -12;
 rcaron = 0;
@@ -16349,7 +16377,7 @@ quoteright = 0;
 slash = 0;
 underscore = 0;
 };
-l.ss02 = {
+l.ss04 = {
 periodcentered.loclCAT = -32;
 periodcentered.loclCAT.ss01 = -34;
 };
@@ -16358,9 +16386,9 @@ exclam = 84;
 exclam.ss01 = 84;
 scaron = 24;
 };
-lcaron.ss02 = {
+lcaron.ss04 = {
 a = 0;
-a.ss01 = -2;
+a.ss02 = -2;
 b = 30;
 ccaron = 2;
 comma = 12;
@@ -16371,7 +16399,7 @@ h = 30;
 i = 19;
 j = 19;
 k = 30;
-l.ss02 = 30;
+l.ss04 = 30;
 m = 7;
 n = 7;
 ncaron = 7;
@@ -16438,7 +16466,7 @@ w = 8;
 y = 0;
 zdotaccent = -9;
 };
-lslash.ss02 = {
+lslash.ss04 = {
 comma = 9;
 period = 9;
 zdotaccent = 0;
@@ -16536,7 +16564,7 @@ exclam = -9;
 exclam.ss01 = -9;
 germandbls = -7;
 logicalnot = 55;
-lslash.ss02 = 10;
+lslash.ss04 = 10;
 n = 0;
 parenleft = 4;
 question = -47;
@@ -16547,7 +16575,7 @@ registered = -20;
 tbar = 0;
 };
 oacute = {
-lslash.ss02 = 10;
+lslash.ss04 = 10;
 };
 odieresis = {
 germandbls = -7;
@@ -16633,7 +16661,7 @@ parenright = -48;
 period = -10;
 period.ss01 = -50;
 r = 0;
-r.ss03 = 0;
+r.ss05 = 0;
 s = 0;
 slash = -8;
 t = 6;
@@ -16642,19 +16670,19 @@ y = 7;
 };
 p = {
 exclam = -9;
-lslash.ss02 = 9;
+lslash.ss04 = 9;
 registered = -19;
 };
 parenleft = {
 Euro = -72;
 H = 0;
 Hbar = -14;
-Icircumflex.ss04 = 10;
+Icircumflex.ss06 = 10;
 Lslash = -24;
 OE = -37;
 Odieresis = -31;
 Oslash = -18;
-a.ss01 = -48;
+a.ss02 = -48;
 adieresis = -28;
 agrave = -41;
 ampersand = -47;
@@ -16688,7 +16716,7 @@ l = 0;
 less = -94;
 lessequal = -2;
 logicalnot = -13;
-lslash.ss02 = -19;
+lslash.ss04 = -19;
 minus = -40;
 multiply = -20;
 notequal = -52;
@@ -16720,7 +16748,7 @@ zcaron = -12;
 };
 parenleft.case = {
 Euro = -56;
-Icircumflex.ss04 = 30;
+Icircumflex.ss06 = 30;
 Lslash = -16;
 OE = -33;
 Oslash = 10;
@@ -16855,14 +16883,14 @@ G = -57;
 O = -57;
 Oacute = -57;
 P = -42;
-Q.ss01 = -57;
+Q.ss03 = -57;
 S = -52;
 T = -115;
 U = -59;
 V = -97;
 W = -74;
 Y = -117;
-a.ss01 = -53;
+a.ss02 = -53;
 c = -51;
 d = -50;
 e = -51;
@@ -16876,7 +16904,7 @@ s = -51;
 t = -57;
 v = -68;
 w = -65;
-y.ss01 = -43;
+y.ss02 = -43;
 };
 quotedbl = {
 A = -61;
@@ -16898,7 +16926,7 @@ period.ss01 = -73;
 questiondown = -75;
 questiondown.case = -59;
 questiondown.ss01 = -74;
-r.ss03 = -23;
+r.ss05 = -23;
 underscore = -119;
 uni1EA2 = -61;
 uni1EA4 = -61;
@@ -16976,7 +17004,7 @@ idieresis = 52;
 itilde = 49;
 questiondown = -66;
 quotedblbase = -66;
-r.ss03 = -63;
+r.ss05 = -63;
 };
 quoteright.ss01 = {
 quotedblbase.ss01 = -65;
@@ -17016,7 +17044,7 @@ period = -61;
 questiondown = -61;
 questiondown.case = -59;
 questiondown.ss01 = -61;
-r.ss03 = -23;
+r.ss05 = -23;
 slash = -61;
 };
 r = {
@@ -17025,7 +17053,7 @@ asciitilde = -47;
 germandbls = 0;
 jcircumflex = 0;
 logicalnot = -19;
-lslash.ss02 = -17;
+lslash.ss04 = -17;
 n = 0;
 uni2081 = -57;
 uni2082 = -57;
@@ -17034,8 +17062,8 @@ uni2084 = -55;
 uni2085 = -54;
 uni2086 = -59;
 };
-r.ss03 = {
-r.ss03 = 0;
+r.ss05 = {
+r.ss05 = 0;
 uni2084 = -35;
 };
 racute = {
@@ -17048,7 +17076,7 @@ period = -52;
 period.ss01 = -73;
 t = 0;
 };
-racute.ss03 = {
+racute.ss05 = {
 comma = -33;
 period = -32;
 t = 18;
@@ -17070,7 +17098,7 @@ parenright = 0;
 uni00B9 = -7;
 uni2077 = -11;
 };
-rcaron.ss03 = {
+rcaron.ss05 = {
 a = -4;
 aacute = -4;
 b = 0;
@@ -17101,7 +17129,7 @@ l = 0;
 logicalnot = 0;
 parenleft = 3;
 registered = -15;
-uni1EB5.ss01 = 12;
+uni1EB5.ss02 = 12;
 wacute = 0;
 };
 scaron = {
@@ -17351,7 +17379,7 @@ uni0145 = {
 imacron = 37;
 };
 uni0162 = {
-a.ss01 = -86;
+a.ss02 = -86;
 abreve = -41;
 acircumflex = -60;
 amacron = -40;
@@ -17362,9 +17390,9 @@ comma = 46;
 parenright = 29;
 };
 uni021A = {
-a.ss01 = -86;
+a.ss02 = -86;
 abreve = -41;
-abreve.ss01 = -36;
+abreve.ss02 = -36;
 acircumflex = -61;
 amacron = -40;
 };
@@ -17398,12 +17426,12 @@ uni00B9 = -30;
 uni1EA8 = {
 Y = -93;
 };
-uni1EA9.ss01 = {
-y.ss01 = -6;
+uni1EA9.ss02 = {
+y.ss02 = -6;
 };
-uni1EAB.ss01 = {
+uni1EAB.ss02 = {
 n = 0;
-y.ss01 = -6;
+y.ss02 = -6;
 };
 uni1EAF = {
 uni00B9 = -24;
@@ -17414,13 +17442,13 @@ uni00B9 = -24;
 uni1EB3 = {
 uni00B9 = -24;
 };
-uni1EB3.ss01 = {
+uni1EB3.ss02 = {
 n = 0;
 };
 uni1EB5 = {
 uni00B9 = -22;
 };
-uni1EB5.ss01 = {
+uni1EB5.ss02 = {
 n = 0;
 };
 uni1EB7 = {
@@ -17526,7 +17554,7 @@ period = -27;
 uni1EC7 = -5;
 uni2077 = -29;
 };
-uni1EF5.ss01 = {
+uni1EF5.ss01.ss02 = {
 comma.ss01 = -8;
 parenright = 0;
 period.ss01 = -67;
@@ -17684,12 +17712,12 @@ parenright = 0;
 v = {
 ampersand = -16;
 n = 0;
-r.ss03 = -2;
+r.ss05 = -2;
 };
 w = {
 ampersand = -15;
 asciitilde = -16;
-r.ss03 = 0;
+r.ss05 = 0;
 };
 x = {
 ampersand = -16;
@@ -17701,22 +17729,22 @@ ampersand = -18;
 asciitilde = -20;
 germandbls = 2;
 logicalnot = 36;
-lslash.ss02 = -6;
-r.ss03 = -2;
-rcaron.ss03 = -2;
+lslash.ss04 = -6;
+r.ss05 = -2;
+rcaron.ss05 = -2;
 uni2080 = -27;
 uni2082 = -18;
 };
-y.ss01 = {
+y.ss02 = {
 asciitilde = -21;
 o = -6;
-r.ss03 = -2;
+r.ss05 = -2;
 };
 yacute = {
-r.ss03 = -2;
+r.ss05 = -2;
 };
 ycircumflex = {
-r.ss03 = -2;
+r.ss05 = -2;
 };
 yen = {
 colon = -56;
@@ -17735,7 +17763,7 @@ uni2074 = -35;
 };
 z = {
 asciitilde = -29;
-lslash.ss02 = -15;
+lslash.ss04 = -15;
 };
 zcaron = {
 T = -23;
@@ -25768,10 +25796,10 @@ dollar = -12;
 equal = -16;
 germandbls = -33;
 idieresis = 6;
-l.ss02 = -2;
+l.ss04 = -2;
 less = -53;
 logicalnot = -4;
-lslash.ss02 = -14;
+lslash.ss04 = -14;
 minus = -23;
 notequal = -25;
 numbersign = -10;
@@ -25820,8 +25848,8 @@ v = -27;
 Aacute = {
 Lslash = -16;
 Tbar = -67;
-l.ss02 = -2;
-lslash.ss02 = -14;
+l.ss04 = -2;
+lslash.ss04 = -14;
 registered = -56;
 };
 Abreve = {
@@ -25917,7 +25945,7 @@ i.ss01 = -6;
 idieresis = 61;
 idieresis.ss01 = 24;
 jcircumflex = 22;
-l.ss02 = -4;
+l.ss04 = -4;
 less = -53;
 logicalnot = -9;
 minus = -22;
@@ -25968,7 +25996,7 @@ slash = -18;
 };
 F = {
 Oslash = -17;
-adieresis.ss01 = -23;
+adieresis.ss01.ss02 = -23;
 ampersand = -42;
 ellipsis.ss01 = -127;
 i.ss01 = -8;
@@ -25976,7 +26004,7 @@ iacute = -23;
 idieresis = 60;
 numbersign = -38;
 parenleft = -18;
-r.ss03 = -26;
+r.ss05 = -26;
 uni2083 = -29;
 uni2084 = -75;
 uni2085 = -31;
@@ -26021,7 +26049,7 @@ Hbar = 16;
 J = -16;
 T = -11;
 a = -12;
-a.ss01 = -18;
+a.ss02 = -18;
 d = -12;
 e = -13;
 o = -13;
@@ -26040,7 +26068,7 @@ at = -23;
 equal = -36;
 germandbls = -37;
 jcircumflex = 22;
-l.ss02 = 0;
+l.ss04 = 0;
 less = -71;
 logicalnot = -20;
 minus = -41;
@@ -26048,26 +26076,26 @@ numbersign = -37;
 parenleft = -17;
 registered = -36;
 };
-I.ss04 = {
+I.ss06 = {
 jcircumflex = 32;
 };
 Iacute = {
 Lslash = -18;
 thorn = -4;
 };
-Iacute.ss04 = {
+Iacute.ss06 = {
 Eth = 24;
 };
 Icircumflex = {
-l.ss02 = 0;
+l.ss04 = 0;
 };
-Icircumflex.ss04 = {
+Icircumflex.ss06 = {
 parenright = 27;
 };
 Idieresis = {
 idieresis = 55;
 };
-Imacron.ss04 = {
+Imacron.ss06 = {
 imacron = 50;
 parenright = 27;
 };
@@ -26112,9 +26140,9 @@ G = -21;
 Lslash = -19;
 OE = -24;
 Oslash = -3;
-adieresis.ss01 = -10;
+adieresis.ss01.ss02 = -10;
 amacron = -14;
-amacron.ss01 = -9;
+amacron.ss02 = -9;
 ampersand = -17;
 asciitilde = -80;
 at = -31;
@@ -26129,7 +26157,7 @@ equal = -43;
 i.ss01 = 0;
 less = -93;
 logicalnot = -45;
-lslash.ss02 = -15;
+lslash.ss04 = -15;
 minus = -64;
 notequal = -52;
 numbersign = -39;
@@ -26143,7 +26171,7 @@ udieresis = -18;
 umacron = -18;
 uni1EF9 = -26;
 ygrave = -30;
-ygrave.ss01 = -32;
+ygrave.ss02 = -32;
 };
 L = {
 Ecircumflex = -11;
@@ -26209,7 +26237,7 @@ U = 12;
 Uacute = 12;
 V = 20;
 a = -22;
-a.ss01 = -17;
+a.ss02 = -17;
 hyphen = -103;
 hyphen.case = -76;
 parenright = 13;
@@ -26251,7 +26279,7 @@ W = -35;
 Y = -78;
 Zdotaccent = 18;
 a = -9;
-a.ss01 = -4;
+a.ss02 = -4;
 aacute = -9;
 aogonek = -9;
 comma = 22;
@@ -26297,7 +26325,7 @@ j = 0;
 jcircumflex = 31;
 k = 2;
 l = 2;
-l.ss02 = 2;
+l.ss04 = 2;
 parenleft = 6;
 };
 Oacute = {
@@ -26342,7 +26370,7 @@ bracketright = -28;
 parenright = -27;
 u = 3;
 };
-Q.ss01 = {
+Q.ss03 = {
 Edieresis.ss01 = 12;
 };
 R = {
@@ -26377,17 +26405,17 @@ Hbar = -11;
 Lslash = -19;
 OE = -30;
 Oslash = -34;
-a.ss01 = -81;
-aacute.ss01 = -81;
+a.ss02 = -81;
+aacute.ss02 = -81;
 abreve = -42;
 acircumflex = -51;
 adieresis = -33;
 agrave = -45;
-agrave.ss01 = -41;
+agrave.ss02 = -41;
 amacron = -34;
-amacron.ss01 = -32;
+amacron.ss02 = -32;
 ampersand = -41;
-aogonek.ss01 = -81;
+aogonek.ss02 = -81;
 aring = -54;
 asciitilde = -86;
 at = -55;
@@ -26419,9 +26447,9 @@ ohungarumlaut = -61;
 omacron = -32;
 otilde = -43;
 parenleft = -41;
-r.ss03 = -81;
+r.ss05 = -81;
 racute = -47;
-racute.ss03 = -66;
+racute.ss05 = -66;
 rcaron = 16;
 registered = -34;
 scaron = -19;
@@ -26433,9 +26461,9 @@ udieresis.ss01 = -48;
 ugrave = -45;
 uhungarumlaut = -63;
 umacron = -39;
-uni1EA1.ss01 = -81;
+uni1EA1.ss01.ss02 = -81;
 uni1EA3 = -61;
-uni1EA3.ss01 = -64;
+uni1EA3.ss02 = -64;
 uni1EA5 = -56;
 uni1EA7 = -55;
 uni1EA9 = -56;
@@ -26459,9 +26487,9 @@ uni2082 = -74;
 uring = -50;
 utilde = -43;
 ycircumflex = -46;
-ycircumflex.ss01 = -46;
+ycircumflex.ss02 = -46;
 ygrave = -28;
-ygrave.ss01 = -28;
+ygrave.ss02 = -28;
 zcaron = -16;
 };
 Tbar = {
@@ -26479,7 +26507,7 @@ slash = -70;
 tbar = -38;
 };
 Tcaron = {
-a.ss01 = -81;
+a.ss02 = -81;
 udieresis = -35;
 };
 U = {
@@ -26504,13 +26532,13 @@ V = {
 OE = -8;
 Oslash = -14;
 abreve = -29;
-abreve.ss01 = -29;
+abreve.ss02 = -29;
 acircumflex = -34;
 adieresis = -21;
-adieresis.ss01 = -34;
+adieresis.ss01.ss02 = -34;
 agrave = -31;
 amacron = -11;
-amacron.ss01 = -10;
+amacron.ss02 = -10;
 ampersand = -28;
 aring = -34;
 at = -21;
@@ -26530,8 +26558,8 @@ odieresis = -20;
 ograve = -32;
 otilde = -20;
 parenleft = -18;
-r.ss03 = -31;
-racute.ss03 = -31;
+r.ss05 = -31;
+racute.ss05 = -31;
 rcaron = 23;
 registered = -13;
 scaron = -6;
@@ -26543,15 +26571,15 @@ zcaron = -2;
 W = {
 Lslash = -12;
 adieresis = -11;
-adieresis.ss01 = -22;
+adieresis.ss01.ss02 = -22;
 ampersand = -21;
 asciitilde = -28;
 i.ss01 = 2;
 idieresis = 77;
 less = -38;
-lslash.ss02 = -10;
+lslash.ss04 = -10;
 minus = -11;
-r.ss03 = -19;
+r.ss05 = -19;
 scaron = -3;
 uni2083 = -27;
 };
@@ -26575,11 +26603,11 @@ Lslash = -18;
 Oslash = -27;
 acircumflex = -54;
 adieresis = -23;
-adieresis.ss01 = -43;
+adieresis.ss01.ss02 = -43;
 agrave = -40;
-agrave.ss01 = -38;
+agrave.ss02 = -38;
 amacron = -21;
-amacron.ss01 = -19;
+amacron.ss02 = -19;
 ampersand = -35;
 asciitilde = -78;
 at = -51;
@@ -26598,7 +26626,7 @@ odieresis = -22;
 ograve = -40;
 omacron = -20;
 parenleft = -42;
-r.ss03 = -55;
+r.ss05 = -55;
 registered = -22;
 scaron = -6;
 udieresis = -31;
@@ -26636,7 +26664,7 @@ jcircumflex = 0;
 logicalnot = 33;
 notequal = -6;
 };
-a.ss01 = {
+a.ss02 = {
 T = -84;
 exclam.ss01 = -5;
 germandbls = -9;
@@ -26653,7 +26681,7 @@ parenright = -31;
 adieresis = {
 parenright = -29;
 };
-adieresis.ss01 = {
+adieresis.ss01.ss02 = {
 germandbls = -9;
 };
 amacron = {
@@ -26665,7 +26693,7 @@ comma = 2;
 j = 5;
 parenright = 0;
 };
-aogonek.ss01 = {
+aogonek.ss02 = {
 comma.ss01 = 0;
 parenright = 0;
 };
@@ -26861,9 +26889,9 @@ rcaron = 4;
 dcaron = {
 H = 77;
 a = 2;
-a.ss01 = -5;
+a.ss02 = -5;
 aacute = 2;
-aacute.ss01 = -4;
+aacute.ss02 = -4;
 colon = 29;
 comma = -30;
 comma.ss01 = -41;
@@ -26948,7 +26976,7 @@ exclam = -5;
 exclam.ss01 = -5;
 germandbls = -4;
 logicalnot = 48;
-lslash.ss02 = 9;
+lslash.ss04 = 9;
 parenleft = 8;
 quotedblleft = -42;
 registered = -13;
@@ -27029,7 +27057,7 @@ bracketright = 0;
 parenright = -3;
 };
 eogonek = {
-lslash.ss02 = 10;
+lslash.ss04 = 10;
 parenright = -14;
 };
 equal = {
@@ -27065,7 +27093,7 @@ t = 0;
 u = 2;
 v = -5;
 y = -7;
-y.ss01 = -7;
+y.ss02 = -7;
 yacute = -7;
 };
 exclam = {
@@ -27100,13 +27128,13 @@ idieresis = 22;
 l = 0;
 n = 0;
 ordmasculine = 15;
-r.ss03 = -2;
+r.ss05 = -2;
 };
 f_f.liga = {
 exclam = 2;
 idieresis = 22;
 ordmasculine = 15;
-r.ss03 = -2;
+r.ss05 = -2;
 };
 f_f_i.liga = {
 asciitilde = -16;
@@ -27123,7 +27151,7 @@ idieresis = 25;
 jcircumflex = 14;
 periodcentered.loclCAT = 0;
 };
-f_f_l.liga.ss02 = {
+f_f_l.liga.ss04 = {
 periodcentered.loclCAT = -28;
 periodcentered.loclCAT.ss01 = -33;
 };
@@ -27156,7 +27184,7 @@ idieresis = 25;
 jcircumflex = 14;
 periodcentered.loclCAT = 0;
 };
-fl.ss02 = {
+fl.ss04 = {
 periodcentered.loclCAT = -28;
 periodcentered.loclCAT.ss01 = -33;
 };
@@ -27225,10 +27253,10 @@ f = -6;
 f_f.liga = -6;
 f_f_i.liga = -6;
 f_f_l.liga = -6;
-f_f_l.liga.ss02 = -6;
+f_f_l.liga.ss04 = -6;
 fi = -6;
 fl = -6;
-fl.ss02 = -6;
+fl.ss04 = -6;
 g = 11;
 o = 11;
 parenright = -42;
@@ -27278,7 +27306,7 @@ h = {
 asciitilde = -14;
 exclam = -6;
 registered = -17;
-uni1EB3.ss01 = 0;
+uni1EB3.ss02 = 0;
 };
 hyphen = {
 Hbar = -14;
@@ -27369,7 +27397,7 @@ idieresis = 54;
 j = 25;
 k = 25;
 l = 25;
-l.ss02 = 25;
+l.ss04 = 25;
 parenright = 45;
 question = 48;
 quotedbl = 62;
@@ -27389,7 +27417,7 @@ idieresis.ss01 = {
 b = 17;
 k = 17;
 l = 17;
-l.ss02 = 16;
+l.ss04 = 16;
 t = 4;
 };
 igrave = {
@@ -27399,7 +27427,7 @@ parenright = -36;
 imacron = {
 G = 38;
 I = 37;
-I.ss04 = 50;
+I.ss06 = 50;
 N = 50;
 P = 50;
 S = 40;
@@ -27418,7 +27446,7 @@ j = 16;
 j.ss01 = 19;
 k = 16;
 l = 16;
-l.ss02 = 15;
+l.ss04 = 15;
 parenright = 36;
 period.ss01 = -27;
 question = 57;
@@ -27439,7 +27467,7 @@ uni00B3 = 58;
 uni00B9 = 40;
 uni0137 = 16;
 uni013C = 16;
-uni013C.ss02 = 15;
+uni013C.ss04 = 15;
 uni2074 = 22;
 uni2075 = 53;
 uni2076 = 58;
@@ -27456,7 +27484,7 @@ parenright.case = -49;
 integral = {
 A = -55;
 a = -58;
-a.ss01 = -58;
+a.ss02 = -58;
 d = -58;
 e = -59;
 integral = -59;
@@ -27519,7 +27547,7 @@ iogonek = 0;
 lacute = 0;
 less = -56;
 logicalnot = -20;
-lslash.ss02 = -18;
+lslash.ss04 = -18;
 minus = -30;
 parenleft = -12;
 rcaron = 0;
@@ -27550,7 +27578,7 @@ quoteright = 0;
 slash = 0;
 underscore = 0;
 };
-l.ss02 = {
+l.ss04 = {
 periodcentered.loclCAT = -28;
 periodcentered.loclCAT.ss01 = -33;
 };
@@ -27559,9 +27587,9 @@ exclam = 116;
 exclam.ss01 = 116;
 scaron = 58;
 };
-lcaron.ss02 = {
+lcaron.ss04 = {
 a = 18;
-a.ss01 = 9;
+a.ss02 = 9;
 b = 64;
 ccaron = 26;
 comma = 12;
@@ -27572,7 +27600,7 @@ h = 64;
 i = 52;
 j = 52;
 k = 64;
-l.ss02 = 64;
+l.ss04 = 64;
 m = 33;
 n = 33;
 ncaron = 34;
@@ -27639,7 +27667,7 @@ w = 8;
 y = 0;
 zdotaccent = -6;
 };
-lslash.ss02 = {
+lslash.ss04 = {
 comma = 10;
 period = 10;
 zdotaccent = 3;
@@ -27737,7 +27765,7 @@ exclam = -7;
 exclam.ss01 = -7;
 germandbls = -5;
 logicalnot = 43;
-lslash.ss02 = 9;
+lslash.ss04 = 9;
 n = 0;
 parenleft = 5;
 question = -46;
@@ -27748,7 +27776,7 @@ registered = -16;
 tbar = 2;
 };
 oacute = {
-lslash.ss02 = 9;
+lslash.ss04 = 9;
 };
 odieresis = {
 germandbls = -5;
@@ -27834,7 +27862,7 @@ parenright = -43;
 period = -7;
 period.ss01 = -41;
 r = 0;
-r.ss03 = 0;
+r.ss05 = 0;
 s = 0;
 slash = -11;
 t = 4;
@@ -27843,19 +27871,19 @@ y = 5;
 };
 p = {
 exclam = -7;
-lslash.ss02 = 8;
+lslash.ss04 = 8;
 registered = -14;
 };
 parenleft = {
 Euro = -63;
 H = 0;
 Hbar = -13;
-Icircumflex.ss04 = 27;
+Icircumflex.ss06 = 27;
 Lslash = -24;
 OE = -36;
 Odieresis = -27;
 Oslash = -18;
-a.ss01 = -47;
+a.ss02 = -47;
 adieresis = -28;
 agrave = -40;
 ampersand = -44;
@@ -27889,7 +27917,7 @@ l = 0;
 less = -80;
 lessequal = -14;
 logicalnot = -21;
-lslash.ss02 = -19;
+lslash.ss04 = -19;
 minus = -42;
 multiply = -27;
 notequal = -50;
@@ -27921,7 +27949,7 @@ zcaron = -9;
 };
 parenleft.case = {
 Euro = -55;
-Icircumflex.ss04 = 37;
+Icircumflex.ss06 = 37;
 Lslash = -22;
 OE = -37;
 Oslash = 4;
@@ -28056,14 +28084,14 @@ G = -50;
 O = -54;
 Oacute = -54;
 P = -32;
-Q.ss01 = -54;
+Q.ss03 = -54;
 S = -48;
 T = -102;
 U = -56;
 V = -86;
 W = -66;
 Y = -111;
-a.ss01 = -44;
+a.ss02 = -44;
 c = -49;
 d = -44;
 e = -49;
@@ -28077,7 +28105,7 @@ s = -45;
 t = -53;
 v = -65;
 w = -58;
-y.ss01 = -46;
+y.ss02 = -46;
 };
 quotedbl = {
 A = -55;
@@ -28099,7 +28127,7 @@ period.ss01 = -88;
 questiondown = -76;
 questiondown.case = -61;
 questiondown.ss01 = -73;
-r.ss03 = -21;
+r.ss05 = -21;
 underscore = -137;
 uni1EA2 = -55;
 uni1EA4 = -54;
@@ -28177,7 +28205,7 @@ idieresis = 62;
 itilde = 52;
 questiondown = -71;
 quotedblbase = -77;
-r.ss03 = -56;
+r.ss05 = -56;
 };
 quoteright.ss01 = {
 quotedblbase.ss01 = -79;
@@ -28217,7 +28245,7 @@ period = -72;
 questiondown = -66;
 questiondown.case = -61;
 questiondown.ss01 = -64;
-r.ss03 = -21;
+r.ss05 = -21;
 slash = -64;
 };
 r = {
@@ -28226,7 +28254,7 @@ asciitilde = -40;
 germandbls = 3;
 jcircumflex = 0;
 logicalnot = -14;
-lslash.ss02 = -12;
+lslash.ss04 = -12;
 n = 0;
 uni2081 = -56;
 uni2082 = -52;
@@ -28235,8 +28263,8 @@ uni2084 = -55;
 uni2085 = -44;
 uni2086 = -55;
 };
-r.ss03 = {
-r.ss03 = 0;
+r.ss05 = {
+r.ss05 = 0;
 uni2084 = -39;
 };
 racute = {
@@ -28249,7 +28277,7 @@ period = -57;
 period.ss01 = -74;
 t = 3;
 };
-racute.ss03 = {
+racute.ss05 = {
 comma = -39;
 period = -38;
 t = 17;
@@ -28271,7 +28299,7 @@ parenright = 0;
 uni00B9 = 0;
 uni2077 = -3;
 };
-rcaron.ss03 = {
+rcaron.ss05 = {
 a = -3;
 aacute = -3;
 b = 11;
@@ -28302,7 +28330,7 @@ l = 0;
 logicalnot = 0;
 parenleft = 3;
 registered = -12;
-uni1EB5.ss01 = 9;
+uni1EB5.ss02 = 9;
 wacute = -2;
 };
 scaron = {
@@ -28552,7 +28580,7 @@ uni0145 = {
 imacron = 50;
 };
 uni0162 = {
-a.ss01 = -81;
+a.ss02 = -81;
 abreve = -42;
 acircumflex = -51;
 amacron = -33;
@@ -28563,9 +28591,9 @@ comma = 41;
 parenright = 29;
 };
 uni021A = {
-a.ss01 = -81;
+a.ss02 = -81;
 abreve = -42;
-abreve.ss01 = -38;
+abreve.ss02 = -38;
 acircumflex = -51;
 amacron = -34;
 };
@@ -28599,12 +28627,12 @@ uni00B9 = -30;
 uni1EA8 = {
 Y = -79;
 };
-uni1EA9.ss01 = {
-y.ss01 = -11;
+uni1EA9.ss02 = {
+y.ss02 = -11;
 };
-uni1EAB.ss01 = {
+uni1EAB.ss02 = {
 n = -2;
-y.ss01 = -11;
+y.ss02 = -11;
 };
 uni1EAF = {
 uni00B9 = -28;
@@ -28615,13 +28643,13 @@ uni00B9 = -28;
 uni1EB3 = {
 uni00B9 = -28;
 };
-uni1EB3.ss01 = {
+uni1EB3.ss02 = {
 n = -2;
 };
 uni1EB5 = {
 uni00B9 = -27;
 };
-uni1EB5.ss01 = {
+uni1EB5.ss02 = {
 n = -2;
 };
 uni1EB7 = {
@@ -28727,7 +28755,7 @@ period = -32;
 uni1EC7 = -9;
 uni2077 = -38;
 };
-uni1EF5.ss01 = {
+uni1EF5.ss01.ss02 = {
 comma.ss01 = -5;
 parenright = 9;
 period.ss01 = -67;
@@ -28885,12 +28913,12 @@ parenright = 0;
 v = {
 ampersand = -18;
 n = 0;
-r.ss03 = -3;
+r.ss05 = -3;
 };
 w = {
 ampersand = -16;
 asciitilde = -17;
-r.ss03 = 0;
+r.ss05 = 0;
 };
 x = {
 ampersand = -18;
@@ -28902,22 +28930,22 @@ ampersand = -20;
 asciitilde = -24;
 germandbls = 4;
 logicalnot = 23;
-lslash.ss02 = -8;
-r.ss03 = -5;
-rcaron.ss03 = -5;
+lslash.ss04 = -8;
+r.ss05 = -5;
+rcaron.ss05 = -5;
 uni2080 = -31;
 uni2082 = -24;
 };
-y.ss01 = {
+y.ss02 = {
 asciitilde = -27;
 o = -12;
-r.ss03 = -7;
+r.ss05 = -7;
 };
 yacute = {
-r.ss03 = -5;
+r.ss05 = -5;
 };
 ycircumflex = {
-r.ss03 = -5;
+r.ss05 = -5;
 };
 yen = {
 colon = -51;
@@ -28936,7 +28964,7 @@ uni2074 = -35;
 };
 z = {
 asciitilde = -29;
-lslash.ss02 = -14;
+lslash.ss04 = -14;
 };
 zcaron = {
 T = -16;
@@ -36963,10 +36991,10 @@ dollar = -11;
 equal = -11;
 germandbls = -27;
 idieresis = 16;
-l.ss02 = -4;
+l.ss04 = -4;
 less = -20;
 logicalnot = -16;
-lslash.ss02 = -13;
+lslash.ss04 = -13;
 minus = -23;
 notequal = -20;
 numbersign = -5;
@@ -37015,8 +37043,8 @@ v = -24;
 Aacute = {
 Lslash = -11;
 Tbar = -40;
-l.ss02 = -4;
-lslash.ss02 = -13;
+l.ss04 = -4;
+lslash.ss04 = -13;
 registered = -31;
 };
 Abreve = {
@@ -37112,7 +37140,7 @@ i.ss01 = 3;
 idieresis = 87;
 idieresis.ss01 = 81;
 jcircumflex = 64;
-l.ss02 = 0;
+l.ss04 = 0;
 less = -37;
 logicalnot = -33;
 minus = -36;
@@ -37163,7 +37191,7 @@ slash = -21;
 };
 F = {
 Oslash = -7;
-adieresis.ss01 = -14;
+adieresis.ss01.ss02 = -14;
 ampersand = -27;
 ellipsis.ss01 = -98;
 i.ss01 = 8;
@@ -37171,7 +37199,7 @@ iacute = -6;
 idieresis = 97;
 numbersign = -2;
 parenleft = -10;
-r.ss03 = -17;
+r.ss05 = -17;
 uni2083 = -28;
 uni2084 = -56;
 uni2085 = -26;
@@ -37216,7 +37244,7 @@ Hbar = 10;
 J = -14;
 T = 0;
 a = -9;
-a.ss01 = -18;
+a.ss02 = -18;
 d = -9;
 e = -12;
 o = -12;
@@ -37235,7 +37263,7 @@ at = -21;
 equal = -24;
 germandbls = -23;
 jcircumflex = 72;
-l.ss02 = 0;
+l.ss04 = 0;
 less = -56;
 logicalnot = -51;
 minus = -56;
@@ -37243,26 +37271,26 @@ numbersign = -9;
 parenleft = -10;
 registered = -20;
 };
-I.ss04 = {
+I.ss06 = {
 jcircumflex = 64;
 };
 Iacute = {
 Lslash = -16;
 thorn = 0;
 };
-Iacute.ss04 = {
+Iacute.ss06 = {
 Eth = 22;
 };
 Icircumflex = {
-l.ss02 = 0;
+l.ss04 = 0;
 };
-Icircumflex.ss04 = {
+Icircumflex.ss06 = {
 parenright = 71;
 };
 Idieresis = {
 idieresis = 88;
 };
-Imacron.ss04 = {
+Imacron.ss06 = {
 imacron = 83;
 parenright = 78;
 };
@@ -37307,9 +37335,9 @@ G = -29;
 Lslash = -21;
 OE = -33;
 Oslash = -10;
-adieresis.ss01 = -21;
+adieresis.ss01.ss02 = -21;
 amacron = -20;
-amacron.ss01 = -17;
+amacron.ss02 = -17;
 ampersand = -22;
 asciitilde = -70;
 at = -39;
@@ -37324,7 +37352,7 @@ equal = -40;
 i.ss01 = 2;
 less = -64;
 logicalnot = -61;
-lslash.ss02 = -19;
+lslash.ss04 = -19;
 minus = -71;
 notequal = -48;
 numbersign = -32;
@@ -37338,7 +37366,7 @@ udieresis = -23;
 umacron = -21;
 uni1EF9 = -37;
 ygrave = -37;
-ygrave.ss01 = -47;
+ygrave.ss02 = -47;
 };
 L = {
 Ecircumflex = 0;
@@ -37404,7 +37432,7 @@ U = 93;
 Uacute = 93;
 V = 105;
 a = 19;
-a.ss01 = 6;
+a.ss02 = 6;
 hyphen = -61;
 hyphen.case = -47;
 parenright = 81;
@@ -37446,7 +37474,7 @@ W = -29;
 Y = -69;
 Zdotaccent = 9;
 a = 0;
-a.ss01 = 0;
+a.ss02 = 0;
 aacute = 0;
 aogonek = 0;
 comma = 7;
@@ -37492,7 +37520,7 @@ j = 0;
 jcircumflex = 47;
 k = 0;
 l = 0;
-l.ss02 = 0;
+l.ss04 = 0;
 parenleft = 7;
 };
 Oacute = {
@@ -37537,7 +37565,7 @@ bracketright = -23;
 parenright = -25;
 u = 2;
 };
-Q.ss01 = {
+Q.ss03 = {
 Edieresis.ss01 = 28;
 };
 R = {
@@ -37572,17 +37600,17 @@ Hbar = 0;
 Lslash = -18;
 OE = -17;
 Oslash = -23;
-a.ss01 = -68;
-aacute.ss01 = -68;
+a.ss02 = -68;
+aacute.ss02 = -68;
 abreve = -45;
 acircumflex = -29;
 adieresis = -20;
 agrave = -51;
-agrave.ss01 = -47;
+agrave.ss02 = -47;
 amacron = -18;
-amacron.ss01 = -15;
+amacron.ss02 = -15;
 ampersand = -29;
-aogonek.ss01 = -68;
+aogonek.ss02 = -68;
 aring = -58;
 asciitilde = -71;
 at = -41;
@@ -37614,9 +37642,9 @@ ohungarumlaut = -39;
 omacron = -11;
 otilde = -34;
 parenleft = -22;
-r.ss03 = -60;
+r.ss05 = -60;
 racute = -30;
-racute.ss03 = -60;
+racute.ss05 = -60;
 rcaron = 40;
 registered = -18;
 scaron = -2;
@@ -37628,9 +37656,9 @@ udieresis.ss01 = -21;
 ugrave = -27;
 uhungarumlaut = -27;
 umacron = -16;
-uni1EA1.ss01 = -68;
+uni1EA1.ss01.ss02 = -68;
 uni1EA3 = -58;
-uni1EA3.ss01 = -68;
+uni1EA3.ss02 = -68;
 uni1EA5 = -29;
 uni1EA7 = -29;
 uni1EA9 = -30;
@@ -37654,9 +37682,9 @@ uni2082 = -62;
 uring = -27;
 utilde = -27;
 ycircumflex = -23;
-ycircumflex.ss01 = -23;
+ycircumflex.ss02 = -23;
 ygrave = -26;
-ygrave.ss01 = -26;
+ygrave.ss02 = -26;
 zcaron = 0;
 };
 Tbar = {
@@ -37674,7 +37702,7 @@ slash = -61;
 tbar = -20;
 };
 Tcaron = {
-a.ss01 = -68;
+a.ss02 = -68;
 udieresis = -16;
 };
 U = {
@@ -37699,13 +37727,13 @@ V = {
 OE = -10;
 Oslash = -14;
 abreve = -25;
-abreve.ss01 = -29;
+abreve.ss02 = -29;
 acircumflex = -22;
 adieresis = -15;
-adieresis.ss01 = -19;
+adieresis.ss01.ss02 = -19;
 agrave = -26;
 amacron = -14;
-amacron.ss01 = -14;
+amacron.ss02 = -14;
 ampersand = -27;
 aring = -26;
 at = -20;
@@ -37725,8 +37753,8 @@ odieresis = -12;
 ograve = -27;
 otilde = -23;
 parenleft = -15;
-r.ss03 = -27;
-racute.ss03 = -27;
+r.ss05 = -27;
+racute.ss05 = -27;
 rcaron = 35;
 registered = -13;
 scaron = 0;
@@ -37738,15 +37766,15 @@ zcaron = 6;
 W = {
 Lslash = -10;
 adieresis = -9;
-adieresis.ss01 = -16;
+adieresis.ss01.ss02 = -16;
 ampersand = -20;
 asciitilde = -25;
 i.ss01 = 5;
 idieresis = 90;
 less = -14;
-lslash.ss02 = -7;
+lslash.ss04 = -7;
 minus = -14;
-r.ss03 = -17;
+r.ss05 = -17;
 scaron = 0;
 uni2083 = -25;
 };
@@ -37770,11 +37798,11 @@ Lslash = -19;
 Oslash = -29;
 acircumflex = -42;
 adieresis = -20;
-adieresis.ss01 = -20;
+adieresis.ss01.ss02 = -20;
 agrave = -42;
-agrave.ss01 = -40;
+agrave.ss02 = -40;
 amacron = -19;
-amacron.ss01 = -15;
+amacron.ss02 = -15;
 ampersand = -41;
 asciitilde = -74;
 at = -52;
@@ -37793,7 +37821,7 @@ odieresis = -14;
 ograve = -39;
 omacron = -11;
 parenleft = -38;
-r.ss03 = -52;
+r.ss05 = -52;
 registered = -26;
 scaron = 0;
 udieresis = -20;
@@ -37831,7 +37859,7 @@ jcircumflex = 0;
 logicalnot = 0;
 notequal = -4;
 };
-a.ss01 = {
+a.ss02 = {
 T = -70;
 exclam.ss01 = 3;
 germandbls = -6;
@@ -37848,7 +37876,7 @@ parenright = -26;
 adieresis = {
 parenright = -25;
 };
-adieresis.ss01 = {
+adieresis.ss01.ss02 = {
 germandbls = -6;
 };
 amacron = {
@@ -37860,7 +37888,7 @@ comma = 8;
 j = 18;
 parenright = 0;
 };
-aogonek.ss01 = {
+aogonek.ss02 = {
 comma.ss01 = 2;
 parenright = 0;
 };
@@ -38056,9 +38084,9 @@ rcaron = 9;
 dcaron = {
 H = 34;
 a = -30;
-a.ss01 = -46;
+a.ss02 = -46;
 aacute = -30;
-aacute.ss01 = -46;
+aacute.ss02 = -46;
 colon = 0;
 comma = -105;
 comma.ss01 = -103;
@@ -38143,7 +38171,7 @@ exclam = -2;
 exclam.ss01 = 0;
 germandbls = -2;
 logicalnot = 11;
-lslash.ss02 = 7;
+lslash.ss04 = 7;
 parenleft = 8;
 quotedblleft = -8;
 registered = -8;
@@ -38224,7 +38252,7 @@ bracketright = 0;
 parenright = -12;
 };
 eogonek = {
-lslash.ss02 = 7;
+lslash.ss04 = 7;
 parenright = -30;
 };
 equal = {
@@ -38260,7 +38288,7 @@ t = 0;
 u = 3;
 v = -8;
 y = -15;
-y.ss01 = -16;
+y.ss02 = -16;
 yacute = -13;
 };
 exclam = {
@@ -38295,13 +38323,13 @@ idieresis = 68;
 l = 0;
 n = 0;
 ordmasculine = 19;
-r.ss03 = 0;
+r.ss05 = 0;
 };
 f_f.liga = {
 exclam = 7;
 idieresis = 68;
 ordmasculine = 19;
-r.ss03 = 0;
+r.ss05 = 0;
 };
 f_f_i.liga = {
 asciitilde = -13;
@@ -38318,7 +38346,7 @@ idieresis = 52;
 jcircumflex = 41;
 periodcentered.loclCAT = 0;
 };
-f_f_l.liga.ss02 = {
+f_f_l.liga.ss04 = {
 periodcentered.loclCAT = -20;
 periodcentered.loclCAT.ss01 = -30;
 };
@@ -38351,7 +38379,7 @@ idieresis = 52;
 jcircumflex = 41;
 periodcentered.loclCAT = 0;
 };
-fl.ss02 = {
+fl.ss04 = {
 periodcentered.loclCAT = -20;
 periodcentered.loclCAT.ss01 = -30;
 };
@@ -38420,10 +38448,10 @@ f = -15;
 f_f.liga = -15;
 f_f_i.liga = -15;
 f_f_l.liga = -15;
-f_f_l.liga.ss02 = -15;
+f_f_l.liga.ss04 = -15;
 fi = -15;
 fl = -15;
-fl.ss02 = -15;
+fl.ss04 = -15;
 g = 8;
 o = 9;
 parenright = -36;
@@ -38473,7 +38501,7 @@ h = {
 asciitilde = -9;
 exclam = 0;
 registered = -5;
-uni1EB3.ss01 = 0;
+uni1EB3.ss02 = 0;
 };
 hyphen = {
 Hbar = -13;
@@ -38564,7 +38592,7 @@ idieresis = 148;
 j = 51;
 k = 51;
 l = 51;
-l.ss02 = 51;
+l.ss04 = 51;
 parenright = 64;
 question = 62;
 quotedbl = 90;
@@ -38584,7 +38612,7 @@ idieresis.ss01 = {
 b = 54;
 k = 54;
 l = 54;
-l.ss02 = 54;
+l.ss04 = 54;
 t = 16;
 };
 igrave = {
@@ -38594,7 +38622,7 @@ parenright = -26;
 imacron = {
 G = 61;
 I = 90;
-I.ss04 = 82;
+I.ss06 = 82;
 N = 82;
 P = 82;
 S = 72;
@@ -38613,7 +38641,7 @@ j = 54;
 j.ss01 = 65;
 k = 54;
 l = 54;
-l.ss02 = 54;
+l.ss04 = 54;
 parenright = 68;
 period.ss01 = -9;
 question = 65;
@@ -38634,7 +38662,7 @@ uni00B3 = 76;
 uni00B9 = 92;
 uni0137 = 54;
 uni013C = 54;
-uni013C.ss02 = 54;
+uni013C.ss04 = 54;
 uni2074 = 58;
 uni2075 = 83;
 uni2076 = 87;
@@ -38651,7 +38679,7 @@ parenright.case = -58;
 integral = {
 A = -39;
 a = -42;
-a.ss01 = -49;
+a.ss02 = -49;
 d = -42;
 e = -46;
 integral = -39;
@@ -38714,7 +38742,7 @@ iogonek = 0;
 lacute = 0;
 less = -29;
 logicalnot = -38;
-lslash.ss02 = -19;
+lslash.ss04 = -19;
 minus = -43;
 parenleft = -10;
 rcaron = 0;
@@ -38745,7 +38773,7 @@ quoteright = 0;
 slash = 0;
 underscore = 0;
 };
-l.ss02 = {
+l.ss04 = {
 periodcentered.loclCAT = -20;
 periodcentered.loclCAT.ss01 = -30;
 };
@@ -38754,9 +38782,9 @@ exclam = 195;
 exclam.ss01 = 195;
 scaron = 142;
 };
-lcaron.ss02 = {
+lcaron.ss04 = {
 a = 62;
-a.ss01 = 35;
+a.ss02 = 35;
 b = 149;
 ccaron = 88;
 comma = 12;
@@ -38767,7 +38795,7 @@ h = 149;
 i = 133;
 j = 133;
 k = 149;
-l.ss02 = 149;
+l.ss04 = 149;
 m = 100;
 n = 100;
 ncaron = 101;
@@ -38834,7 +38862,7 @@ w = 8;
 y = 3;
 zdotaccent = 0;
 };
-lslash.ss02 = {
+lslash.ss04 = {
 comma = 12;
 period = 12;
 zdotaccent = 11;
@@ -38932,7 +38960,7 @@ exclam = -2;
 exclam.ss01 = -2;
 germandbls = -2;
 logicalnot = 11;
-lslash.ss02 = 7;
+lslash.ss04 = 7;
 n = 0;
 parenleft = 8;
 question = -42;
@@ -38943,7 +38971,7 @@ registered = -8;
 tbar = 6;
 };
 oacute = {
-lslash.ss02 = 7;
+lslash.ss04 = 7;
 };
 odieresis = {
 germandbls = -2;
@@ -39029,7 +39057,7 @@ parenright = -31;
 period = 0;
 period.ss01 = -19;
 r = 0;
-r.ss03 = 0;
+r.ss05 = 0;
 s = 3;
 slash = -18;
 t = 0;
@@ -39038,19 +39066,19 @@ y = -2;
 };
 p = {
 exclam = -2;
-lslash.ss02 = 5;
+lslash.ss04 = 5;
 registered = -3;
 };
 parenleft = {
 Euro = -41;
 H = 0;
 Hbar = -11;
-Icircumflex.ss04 = 71;
+Icircumflex.ss06 = 71;
 Lslash = -23;
 OE = -33;
 Odieresis = -16;
 Oslash = -16;
-a.ss01 = -43;
+a.ss02 = -43;
 adieresis = -28;
 agrave = -39;
 ampersand = -37;
@@ -39084,7 +39112,7 @@ l = 0;
 less = -45;
 lessequal = -44;
 logicalnot = -42;
-lslash.ss02 = -19;
+lslash.ss04 = -19;
 minus = -46;
 multiply = -46;
 notequal = -46;
@@ -39116,7 +39144,7 @@ zcaron = 0;
 };
 parenleft.case = {
 Euro = -54;
-Icircumflex.ss04 = 54;
+Icircumflex.ss06 = 54;
 Lslash = -36;
 OE = -48;
 Oslash = -10;
@@ -39251,14 +39279,14 @@ G = -32;
 O = -47;
 Oacute = -47;
 P = -8;
-Q.ss01 = -47;
+Q.ss03 = -47;
 S = -39;
 T = -71;
 U = -47;
 V = -60;
 W = -46;
 Y = -96;
-a.ss01 = -24;
+a.ss02 = -24;
 c = -42;
 d = -27;
 e = -43;
@@ -39272,7 +39300,7 @@ s = -30;
 t = -43;
 v = -57;
 w = -42;
-y.ss01 = -56;
+y.ss02 = -56;
 };
 quotedbl = {
 A = -39;
@@ -39294,7 +39322,7 @@ period.ss01 = -124;
 questiondown = -78;
 questiondown.case = -65;
 questiondown.ss01 = -72;
-r.ss03 = -17;
+r.ss05 = -17;
 underscore = -182;
 uni1EA2 = -39;
 uni1EA4 = -36;
@@ -39372,7 +39400,7 @@ idieresis = 85;
 itilde = 58;
 questiondown = -84;
 quotedblbase = -105;
-r.ss03 = -38;
+r.ss05 = -38;
 };
 quoteright.ss01 = {
 quotedblbase.ss01 = -113;
@@ -39412,7 +39440,7 @@ period = -98;
 questiondown = -78;
 questiondown.case = -65;
 questiondown.ss01 = -72;
-r.ss03 = -17;
+r.ss05 = -17;
 slash = -73;
 };
 r = {
@@ -39421,7 +39449,7 @@ asciitilde = -22;
 germandbls = 11;
 jcircumflex = 2;
 logicalnot = 0;
-lslash.ss02 = 0;
+lslash.ss04 = 0;
 n = 0;
 uni2081 = -54;
 uni2082 = -38;
@@ -39430,8 +39458,8 @@ uni2084 = -55;
 uni2085 = -19;
 uni2086 = -45;
 };
-r.ss03 = {
-r.ss03 = 0;
+r.ss05 = {
+r.ss05 = 0;
 uni2084 = -51;
 };
 racute = {
@@ -39444,7 +39472,7 @@ period = -68;
 period.ss01 = -77;
 t = 11;
 };
-racute.ss03 = {
+racute.ss05 = {
 comma = -53;
 period = -53;
 t = 12;
@@ -39466,7 +39494,7 @@ parenright = 0;
 uni00B9 = 16;
 uni2077 = 16;
 };
-rcaron.ss03 = {
+rcaron.ss05 = {
 a = 0;
 aacute = 0;
 b = 37;
@@ -39497,7 +39525,7 @@ l = 0;
 logicalnot = 0;
 parenleft = 2;
 registered = -3;
-uni1EB5.ss01 = 3;
+uni1EB5.ss02 = 3;
 wacute = -5;
 };
 scaron = {
@@ -39747,7 +39775,7 @@ uni0145 = {
 imacron = 83;
 };
 uni0162 = {
-a.ss01 = -68;
+a.ss02 = -68;
 abreve = -45;
 acircumflex = -29;
 amacron = -18;
@@ -39758,9 +39786,9 @@ comma = 28;
 parenright = 30;
 };
 uni021A = {
-a.ss01 = -68;
+a.ss02 = -68;
 abreve = -45;
-abreve.ss01 = -41;
+abreve.ss02 = -41;
 acircumflex = -29;
 amacron = -18;
 };
@@ -39794,12 +39822,12 @@ uni00B9 = -31;
 uni1EA8 = {
 Y = -45;
 };
-uni1EA9.ss01 = {
-y.ss01 = -23;
+uni1EA9.ss02 = {
+y.ss02 = -23;
 };
-uni1EAB.ss01 = {
+uni1EAB.ss02 = {
 n = -3;
-y.ss01 = -23;
+y.ss02 = -23;
 };
 uni1EAF = {
 uni00B9 = -38;
@@ -39810,13 +39838,13 @@ uni00B9 = -39;
 uni1EB3 = {
 uni00B9 = -39;
 };
-uni1EB3.ss01 = {
+uni1EB3.ss02 = {
 n = -3;
 };
 uni1EB5 = {
 uni00B9 = -39;
 };
-uni1EB5.ss01 = {
+uni1EB5.ss02 = {
 n = -3;
 };
 uni1EB7 = {
@@ -39922,7 +39950,7 @@ period = -43;
 uni1EC7 = -20;
 uni2077 = -61;
 };
-uni1EF5.ss01 = {
+uni1EF5.ss01.ss02 = {
 comma.ss01 = 3;
 parenright = 33;
 period.ss01 = -67;
@@ -40080,12 +40108,12 @@ parenright = 0;
 v = {
 ampersand = -22;
 n = 0;
-r.ss03 = -7;
+r.ss05 = -7;
 };
 w = {
 ampersand = -17;
 asciitilde = -19;
-r.ss03 = -4;
+r.ss05 = -4;
 };
 x = {
 ampersand = -22;
@@ -40097,22 +40125,22 @@ ampersand = -25;
 asciitilde = -34;
 germandbls = 10;
 logicalnot = -11;
-lslash.ss02 = -14;
-r.ss03 = -15;
-rcaron.ss03 = -15;
+lslash.ss04 = -14;
+r.ss05 = -15;
+rcaron.ss05 = -15;
 uni2080 = -41;
 uni2082 = -40;
 };
-y.ss01 = {
+y.ss02 = {
 asciitilde = -40;
 o = -26;
-r.ss03 = -19;
+r.ss05 = -19;
 };
 yacute = {
-r.ss03 = -15;
+r.ss05 = -15;
 };
 ycircumflex = {
-r.ss03 = -15;
+r.ss05 = -15;
 };
 yen = {
 colon = -38;
@@ -40131,7 +40159,7 @@ uni2074 = -33;
 };
 z = {
 asciitilde = -29;
-lslash.ss02 = -11;
+lslash.ss04 = -11;
 };
 zcaron = {
 T = 0;
@@ -48157,10 +48185,10 @@ dollar = -40;
 equal = -51;
 germandbls = -57;
 idieresis = 0;
-l.ss02 = -2;
+l.ss04 = -2;
 less = -72;
 logicalnot = -132;
-lslash.ss02 = -36;
+lslash.ss04 = -36;
 minus = -79;
 notequal = -112;
 numbersign = -51;
@@ -48209,8 +48237,8 @@ v = -125;
 Aacute = {
 Lslash = -54;
 Tbar = -178;
-l.ss02 = -2;
-lslash.ss02 = -36;
+l.ss04 = -2;
+lslash.ss04 = -36;
 registered = -132;
 };
 Abreve = {
@@ -48306,7 +48334,7 @@ i.ss01 = 13;
 idieresis = 67;
 idieresis.ss01 = 50;
 jcircumflex = 44;
-l.ss02 = 6;
+l.ss04 = 6;
 less = -82;
 logicalnot = -132;
 minus = -82;
@@ -48357,7 +48385,7 @@ slash = -62;
 };
 F = {
 Oslash = -20;
-adieresis.ss01 = -43;
+adieresis.ss01.ss02 = -43;
 ampersand = -37;
 ellipsis.ss01 = -213;
 i.ss01 = 0;
@@ -48365,7 +48393,7 @@ iacute = -17;
 idieresis = 53;
 numbersign = -51;
 parenleft = -27;
-r.ss03 = -49;
+r.ss05 = -49;
 uni2083 = -37;
 uni2084 = -124;
 uni2085 = -44;
@@ -48410,7 +48438,7 @@ Hbar = 13;
 J = -40;
 T = -19;
 a = -32;
-a.ss01 = -39;
+a.ss02 = -39;
 d = -32;
 e = -32;
 o = -32;
@@ -48429,7 +48457,7 @@ at = -33;
 equal = -69;
 germandbls = -57;
 jcircumflex = 44;
-l.ss02 = 6;
+l.ss04 = 6;
 less = -151;
 logicalnot = -186;
 minus = -151;
@@ -48437,26 +48465,26 @@ numbersign = -74;
 parenleft = -18;
 registered = -49;
 };
-I.ss04 = {
+I.ss06 = {
 jcircumflex = 66;
 };
 Iacute = {
 Lslash = -56;
 thorn = 6;
 };
-Iacute.ss04 = {
+Iacute.ss06 = {
 Eth = 68;
 };
 Icircumflex = {
-l.ss02 = 6;
+l.ss04 = 6;
 };
-Icircumflex.ss04 = {
+Icircumflex.ss06 = {
 parenright = 39;
 };
 Idieresis = {
 idieresis = 71;
 };
-Imacron.ss04 = {
+Imacron.ss06 = {
 imacron = 104;
 parenright = 17;
 };
@@ -48501,9 +48529,9 @@ G = -65;
 Lslash = -60;
 OE = -63;
 Oslash = -63;
-adieresis.ss01 = -27;
+adieresis.ss01.ss02 = -27;
 amacron = -48;
-amacron.ss01 = -19;
+amacron.ss02 = -19;
 ampersand = -18;
 asciitilde = -172;
 at = -46;
@@ -48518,7 +48546,7 @@ equal = -80;
 i.ss01 = 2;
 less = -146;
 logicalnot = -199;
-lslash.ss02 = -21;
+lslash.ss04 = -21;
 minus = -149;
 notequal = -132;
 numbersign = -90;
@@ -48532,7 +48560,7 @@ udieresis = -38;
 umacron = -38;
 uni1EF9 = -78;
 ygrave = -78;
-ygrave.ss01 = -114;
+ygrave.ss02 = -114;
 };
 L = {
 Ecircumflex = -6;
@@ -48598,7 +48626,7 @@ U = -52;
 Uacute = -52;
 V = -105;
 a = -36;
-a.ss01 = -10;
+a.ss02 = -10;
 hyphen = -171;
 hyphen.case = -155;
 parenright = -61;
@@ -48640,7 +48668,7 @@ W = -112;
 Y = -180;
 Zdotaccent = 31;
 a = -21;
-a.ss01 = 0;
+a.ss02 = 0;
 aacute = -21;
 aogonek = -21;
 comma = 30;
@@ -48686,7 +48714,7 @@ j = 5;
 jcircumflex = 37;
 k = 7;
 l = 7;
-l.ss02 = 7;
+l.ss04 = 7;
 parenleft = 18;
 };
 Oacute = {
@@ -48731,7 +48759,7 @@ bracketright = -77;
 parenright = -75;
 u = 13;
 };
-Q.ss01 = {
+Q.ss03 = {
 Edieresis.ss01 = 22;
 };
 R = {
@@ -48766,17 +48794,17 @@ Hbar = -18;
 Lslash = -66;
 OE = -62;
 Oslash = -64;
-a.ss01 = -171;
-aacute.ss01 = -159;
+a.ss02 = -171;
+aacute.ss02 = -159;
 abreve = -90;
 acircumflex = -115;
 adieresis = -121;
 agrave = -126;
-agrave.ss01 = -108;
+agrave.ss02 = -108;
 amacron = -77;
-amacron.ss01 = -65;
+amacron.ss02 = -65;
 ampersand = -46;
-aogonek.ss01 = -171;
+aogonek.ss02 = -171;
 aring = -112;
 asciitilde = -233;
 at = -88;
@@ -48808,9 +48836,9 @@ ohungarumlaut = -141;
 omacron = -77;
 otilde = -100;
 parenleft = -61;
-r.ss03 = -159;
+r.ss05 = -159;
 racute = -84;
-racute.ss03 = -114;
+racute.ss05 = -114;
 rcaron = 14;
 registered = -45;
 scaron = -52;
@@ -48822,9 +48850,9 @@ udieresis.ss01 = -101;
 ugrave = -113;
 uhungarumlaut = -136;
 umacron = -68;
-uni1EA1.ss01 = -171;
+uni1EA1.ss01.ss02 = -171;
 uni1EA3 = -138;
-uni1EA3.ss01 = -128;
+uni1EA3.ss02 = -128;
 uni1EA5 = -130;
 uni1EA7 = -130;
 uni1EA9 = -130;
@@ -48848,9 +48876,9 @@ uni2082 = -195;
 uring = -97;
 utilde = -89;
 ycircumflex = -112;
-ycircumflex.ss01 = -112;
+ycircumflex.ss02 = -112;
 ygrave = -125;
-ygrave.ss01 = -125;
+ygrave.ss02 = -125;
 zcaron = -58;
 };
 Tbar = {
@@ -48868,7 +48896,7 @@ slash = -192;
 tbar = -65;
 };
 Tcaron = {
-a.ss01 = -171;
+a.ss02 = -171;
 udieresis = -104;
 };
 U = {
@@ -48893,13 +48921,13 @@ V = {
 OE = -46;
 Oslash = -47;
 abreve = -78;
-abreve.ss01 = -70;
+abreve.ss02 = -70;
 acircumflex = -95;
 adieresis = -93;
-adieresis.ss01 = -100;
+adieresis.ss01.ss02 = -100;
 agrave = -99;
 amacron = -74;
-amacron.ss01 = -62;
+amacron.ss02 = -62;
 ampersand = -41;
 aring = -89;
 at = -62;
@@ -48919,8 +48947,8 @@ odieresis = -94;
 ograve = -100;
 otilde = -89;
 parenleft = -44;
-r.ss03 = -81;
-racute.ss03 = -81;
+r.ss05 = -81;
+racute.ss05 = -81;
 rcaron = 25;
 registered = -44;
 scaron = -45;
@@ -48932,15 +48960,15 @@ zcaron = -50;
 W = {
 Lslash = -49;
 adieresis = -56;
-adieresis.ss01 = -60;
+adieresis.ss01.ss02 = -60;
 ampersand = -29;
 asciitilde = -107;
 i.ss01 = 0;
 idieresis = 74;
 less = -48;
-lslash.ss02 = -19;
+lslash.ss04 = -19;
 minus = -51;
-r.ss03 = -50;
+r.ss05 = -50;
 scaron = -30;
 uni2083 = -86;
 };
@@ -48964,11 +48992,11 @@ Lslash = -67;
 Oslash = -64;
 acircumflex = -131;
 adieresis = -120;
-adieresis.ss01 = -102;
+adieresis.ss01.ss02 = -102;
 agrave = -125;
-agrave.ss01 = -106;
+agrave.ss02 = -106;
 amacron = -76;
-amacron.ss01 = -65;
+amacron.ss02 = -65;
 ampersand = -48;
 asciitilde = -165;
 at = -101;
@@ -48987,7 +49015,7 @@ odieresis = -120;
 ograve = -125;
 omacron = -76;
 parenleft = -61;
-r.ss03 = -114;
+r.ss05 = -114;
 registered = -51;
 scaron = -50;
 udieresis = -89;
@@ -49025,7 +49053,7 @@ jcircumflex = 0;
 logicalnot = -54;
 notequal = -54;
 };
-a.ss01 = {
+a.ss02 = {
 T = -170;
 exclam.ss01 = -13;
 germandbls = -17;
@@ -49042,7 +49070,7 @@ parenright = -44;
 adieresis = {
 parenright = -44;
 };
-adieresis.ss01 = {
+adieresis.ss01.ss02 = {
 germandbls = -17;
 };
 amacron = {
@@ -49054,7 +49082,7 @@ comma = 10;
 j = 2;
 parenright = -8;
 };
-aogonek.ss01 = {
+aogonek.ss02 = {
 comma.ss01 = 6;
 parenright = -8;
 };
@@ -49250,9 +49278,9 @@ rcaron = 0;
 dcaron = {
 H = 66;
 a = 0;
-a.ss01 = 0;
+a.ss02 = 0;
 aacute = 0;
-aacute.ss01 = 0;
+aacute.ss02 = 0;
 colon = 39;
 comma = 0;
 comma.ss01 = -14;
@@ -49337,7 +49365,7 @@ exclam = -9;
 exclam.ss01 = -9;
 germandbls = -21;
 logicalnot = -36;
-lslash.ss02 = 21;
+lslash.ss04 = 21;
 parenleft = 6;
 quotedblleft = -70;
 registered = -22;
@@ -49418,7 +49446,7 @@ bracketright = -17;
 parenright = -6;
 };
 eogonek = {
-lslash.ss02 = 21;
+lslash.ss04 = 21;
 parenright = -54;
 };
 equal = {
@@ -49454,7 +49482,7 @@ t = -15;
 u = 7;
 v = -34;
 y = -36;
-y.ss01 = -36;
+y.ss02 = -36;
 yacute = -36;
 };
 exclam = {
@@ -49489,13 +49517,13 @@ idieresis = 0;
 l = 0;
 n = 0;
 ordmasculine = 34;
-r.ss03 = -4;
+r.ss05 = -4;
 };
 f_f.liga = {
 exclam = 5;
 idieresis = 0;
 ordmasculine = 34;
-r.ss03 = -4;
+r.ss05 = -4;
 };
 f_f_i.liga = {
 asciitilde = -57;
@@ -49512,7 +49540,7 @@ idieresis = 0;
 jcircumflex = 3;
 periodcentered.loclCAT = 0;
 };
-f_f_l.liga.ss02 = {
+f_f_l.liga.ss04 = {
 periodcentered.loclCAT = -50;
 periodcentered.loclCAT.ss01 = -54;
 };
@@ -49545,7 +49573,7 @@ idieresis = 0;
 jcircumflex = 3;
 periodcentered.loclCAT = 0;
 };
-fl.ss02 = {
+fl.ss04 = {
 periodcentered.loclCAT = -50;
 periodcentered.loclCAT.ss01 = -54;
 };
@@ -49614,10 +49642,10 @@ f = -12;
 f_f.liga = -12;
 f_f_i.liga = -12;
 f_f_l.liga = -12;
-f_f_l.liga.ss02 = -12;
+f_f_l.liga.ss04 = -12;
 fi = -12;
 fl = -12;
-fl.ss02 = -12;
+fl.ss04 = -12;
 g = 15;
 o = 15;
 parenright = -67;
@@ -49667,7 +49695,7 @@ h = {
 asciitilde = -51;
 exclam = -12;
 registered = -28;
-uni1EB3.ss01 = -3;
+uni1EB3.ss02 = -3;
 };
 hyphen = {
 Hbar = -32;
@@ -49758,7 +49786,7 @@ idieresis = 0;
 j = 0;
 k = 0;
 l = 0;
-l.ss02 = 0;
+l.ss04 = 0;
 parenright = 33;
 question = 60;
 quotedbl = 51;
@@ -49778,7 +49806,7 @@ idieresis.ss01 = {
 b = 0;
 k = 0;
 l = 0;
-l.ss02 = 0;
+l.ss04 = 0;
 t = 0;
 };
 igrave = {
@@ -49788,7 +49816,7 @@ parenright = -39;
 imacron = {
 G = 25;
 I = 67;
-I.ss04 = 105;
+I.ss06 = 105;
 N = 105;
 P = 105;
 S = 76;
@@ -49807,7 +49835,7 @@ j = 0;
 j.ss01 = 0;
 k = 0;
 l = 0;
-l.ss02 = 0;
+l.ss04 = 0;
 parenright = 43;
 period.ss01 = -19;
 question = 91;
@@ -49828,7 +49856,7 @@ uni00B3 = 55;
 uni00B9 = 56;
 uni0137 = 0;
 uni013C = 0;
-uni013C.ss02 = 0;
+uni013C.ss04 = 0;
 uni2074 = 45;
 uni2075 = 87;
 uni2076 = 103;
@@ -49845,7 +49873,7 @@ parenright.case = -83;
 integral = {
 A = -101;
 a = -85;
-a.ss01 = -96;
+a.ss02 = -96;
 d = -85;
 e = -87;
 integral = -72;
@@ -49908,7 +49936,7 @@ iogonek = 10;
 lacute = 3;
 less = -20;
 logicalnot = -88;
-lslash.ss02 = -16;
+lslash.ss04 = -16;
 minus = -31;
 parenleft = 0;
 rcaron = 3;
@@ -49939,7 +49967,7 @@ quoteright = 0;
 slash = 0;
 underscore = 0;
 };
-l.ss02 = {
+l.ss04 = {
 periodcentered.loclCAT = -50;
 periodcentered.loclCAT.ss01 = -54;
 };
@@ -49948,9 +49976,9 @@ exclam = 110;
 exclam.ss01 = 111;
 scaron = 22;
 };
-lcaron.ss02 = {
+lcaron.ss04 = {
 a = -19;
-a.ss01 = 0;
+a.ss02 = 0;
 b = 0;
 ccaron = -20;
 comma = 24;
@@ -49961,7 +49989,7 @@ h = 0;
 i = 0;
 j = 0;
 k = 0;
-l.ss02 = 0;
+l.ss04 = 0;
 m = 0;
 n = 0;
 ncaron = 0;
@@ -50028,7 +50056,7 @@ w = 9;
 y = 0;
 zdotaccent = 0;
 };
-lslash.ss02 = {
+lslash.ss04 = {
 comma = 21;
 period = 17;
 zdotaccent = 26;
@@ -50126,7 +50154,7 @@ exclam = -9;
 exclam.ss01 = -9;
 germandbls = -20;
 logicalnot = -40;
-lslash.ss02 = 16;
+lslash.ss04 = 16;
 n = 0;
 parenleft = 9;
 question = -68;
@@ -50137,7 +50165,7 @@ registered = -27;
 tbar = 19;
 };
 oacute = {
-lslash.ss02 = 16;
+lslash.ss04 = 16;
 };
 odieresis = {
 germandbls = -20;
@@ -50223,7 +50251,7 @@ parenright = -80;
 period = -18;
 period.ss01 = -57;
 r = 0;
-r.ss03 = 0;
+r.ss05 = 0;
 s = 0;
 slash = -47;
 t = 0;
@@ -50232,19 +50260,19 @@ y = 0;
 };
 p = {
 exclam = -10;
-lslash.ss02 = 16;
+lslash.ss04 = 16;
 registered = -27;
 };
 parenleft = {
 Euro = -123;
 H = 0;
 Hbar = -37;
-Icircumflex.ss04 = 38;
+Icircumflex.ss06 = 38;
 Lslash = -75;
 OE = -88;
 Odieresis = -90;
 Oslash = -91;
-a.ss01 = -82;
+a.ss02 = -82;
 adieresis = -85;
 agrave = -86;
 ampersand = -58;
@@ -50278,7 +50306,7 @@ l = 0;
 less = -101;
 lessequal = -83;
 logicalnot = -145;
-lslash.ss02 = -37;
+lslash.ss04 = -37;
 minus = -99;
 multiply = -56;
 notequal = -142;
@@ -50310,7 +50338,7 @@ zcaron = -48;
 };
 parenleft.case = {
 Euro = -101;
-Icircumflex.ss04 = 56;
+Icircumflex.ss06 = 56;
 Lslash = -64;
 OE = -80;
 Oslash = -71;
@@ -50445,14 +50473,14 @@ G = -121;
 O = -121;
 Oacute = -121;
 P = -22;
-Q.ss01 = -121;
+Q.ss03 = -121;
 S = -73;
 T = -206;
 U = -97;
 V = -179;
 W = -151;
 Y = -208;
-a.ss01 = -59;
+a.ss02 = -59;
 c = -80;
 d = -80;
 e = -80;
@@ -50466,7 +50494,7 @@ s = -57;
 t = -75;
 v = -127;
 w = -125;
-y.ss01 = -92;
+y.ss02 = -92;
 };
 quotedbl = {
 A = -143;
@@ -50488,7 +50516,7 @@ period.ss01 = -77;
 questiondown = -147;
 questiondown.case = -85;
 questiondown.ss01 = -146;
-r.ss03 = -26;
+r.ss05 = -26;
 underscore = -147;
 uni1EA2 = -143;
 uni1EA4 = -143;
@@ -50566,7 +50594,7 @@ idieresis = 51;
 itilde = 81;
 questiondown = -71;
 quotedblbase = -71;
-r.ss03 = -62;
+r.ss05 = -62;
 };
 quoteright.ss01 = {
 quotedblbase.ss01 = -74;
@@ -50606,7 +50634,7 @@ period = -68;
 questiondown = -68;
 questiondown.case = -68;
 questiondown.ss01 = -68;
-r.ss03 = -26;
+r.ss05 = -26;
 slash = -68;
 };
 r = {
@@ -50615,7 +50643,7 @@ asciitilde = -68;
 germandbls = 12;
 jcircumflex = 0;
 logicalnot = -73;
-lslash.ss02 = -31;
+lslash.ss04 = -31;
 n = 0;
 uni2081 = -97;
 uni2082 = -81;
@@ -50624,8 +50652,8 @@ uni2084 = -114;
 uni2085 = -62;
 uni2086 = -90;
 };
-r.ss03 = {
-r.ss03 = -5;
+r.ss05 = {
+r.ss05 = -5;
 uni2084 = -124;
 };
 racute = {
@@ -50638,7 +50666,7 @@ period = -71;
 period.ss01 = -77;
 t = 12;
 };
-racute.ss03 = {
+racute.ss05 = {
 comma = -71;
 period = -71;
 t = 14;
@@ -50660,7 +50688,7 @@ parenright = -12;
 uni00B9 = 0;
 uni2077 = 8;
 };
-rcaron.ss03 = {
+rcaron.ss05 = {
 a = -40;
 aacute = -40;
 b = 0;
@@ -50691,7 +50719,7 @@ l = 0;
 logicalnot = -42;
 parenleft = 4;
 registered = -14;
-uni1EB5.ss01 = 3;
+uni1EB5.ss02 = 3;
 wacute = -9;
 };
 scaron = {
@@ -50941,7 +50969,7 @@ uni0145 = {
 imacron = 104;
 };
 uni0162 = {
-a.ss01 = -169;
+a.ss02 = -169;
 abreve = -90;
 acircumflex = -115;
 amacron = -77;
@@ -50952,9 +50980,9 @@ comma = 46;
 parenright = 11;
 };
 uni021A = {
-a.ss01 = -171;
+a.ss02 = -171;
 abreve = -90;
-abreve.ss01 = -78;
+abreve.ss02 = -78;
 acircumflex = -115;
 amacron = -77;
 };
@@ -50988,12 +51016,12 @@ uni00B9 = -77;
 uni1EA8 = {
 Y = -179;
 };
-uni1EA9.ss01 = {
-y.ss01 = -32;
+uni1EA9.ss02 = {
+y.ss02 = -32;
 };
-uni1EAB.ss01 = {
+uni1EAB.ss02 = {
 n = -6;
-y.ss01 = -32;
+y.ss02 = -32;
 };
 uni1EAF = {
 uni00B9 = -74;
@@ -51004,13 +51032,13 @@ uni00B9 = -74;
 uni1EB3 = {
 uni00B9 = -74;
 };
-uni1EB3.ss01 = {
+uni1EB3.ss02 = {
 n = -6;
 };
 uni1EB5 = {
 uni00B9 = -74;
 };
-uni1EB5.ss01 = {
+uni1EB5.ss02 = {
 n = -6;
 };
 uni1EB7 = {
@@ -51116,7 +51144,7 @@ period = -71;
 uni1EC7 = -43;
 uni2077 = -72;
 };
-uni1EF5.ss01 = {
+uni1EF5.ss01.ss02 = {
 comma.ss01 = -74;
 parenright = -74;
 period.ss01 = -77;
@@ -51274,12 +51302,12 @@ parenright = -8;
 v = {
 ampersand = -23;
 n = 0;
-r.ss03 = -3;
+r.ss05 = -3;
 };
 w = {
 ampersand = -18;
 asciitilde = -61;
-r.ss03 = 0;
+r.ss05 = 0;
 };
 x = {
 ampersand = -22;
@@ -51291,22 +51319,22 @@ ampersand = -26;
 asciitilde = -68;
 germandbls = 23;
 logicalnot = -67;
-lslash.ss02 = -25;
-r.ss03 = -4;
-rcaron.ss03 = -3;
+lslash.ss04 = -25;
+r.ss05 = -4;
+rcaron.ss05 = -3;
 uni2080 = -78;
 uni2082 = -64;
 };
-y.ss01 = {
+y.ss02 = {
 asciitilde = -68;
 o = -43;
-r.ss03 = -4;
+r.ss05 = -4;
 };
 yacute = {
-r.ss03 = -4;
+r.ss05 = -4;
 };
 ycircumflex = {
-r.ss03 = -4;
+r.ss05 = -4;
 };
 yen = {
 colon = -71;
@@ -51325,7 +51353,7 @@ uni2074 = -69;
 };
 z = {
 asciitilde = -65;
-lslash.ss02 = -15;
+lslash.ss04 = -15;
 };
 zcaron = {
 T = -59;
@@ -59355,10 +59383,10 @@ dollar = -43;
 equal = -45;
 germandbls = -60;
 idieresis = 0;
-l.ss02 = -6;
+l.ss04 = -6;
 less = -68;
 logicalnot = -128;
-lslash.ss02 = -39;
+lslash.ss04 = -39;
 minus = -82;
 notequal = -99;
 numbersign = -45;
@@ -59407,8 +59435,8 @@ v = -89;
 Aacute = {
 Lslash = -54;
 Tbar = -164;
-l.ss02 = -6;
-lslash.ss02 = -39;
+l.ss04 = -6;
+lslash.ss04 = -39;
 registered = -124;
 };
 Abreve = {
@@ -59504,7 +59532,7 @@ i.ss01 = 11;
 idieresis = 71;
 idieresis.ss01 = 70;
 jcircumflex = 68;
-l.ss02 = 4;
+l.ss04 = 4;
 less = -59;
 logicalnot = -125;
 minus = -75;
@@ -59555,7 +59583,7 @@ slash = -62;
 };
 F = {
 Oslash = -17;
-adieresis.ss01 = -39;
+adieresis.ss01.ss02 = -39;
 ampersand = -37;
 ellipsis.ss01 = -179;
 i.ss01 = 0;
@@ -59563,7 +59591,7 @@ iacute = -13;
 idieresis = 61;
 numbersign = -36;
 parenleft = -22;
-r.ss03 = -44;
+r.ss05 = -44;
 uni2083 = -35;
 uni2084 = -108;
 uni2085 = -44;
@@ -59608,7 +59636,7 @@ Hbar = 15;
 J = -34;
 T = -9;
 a = -28;
-a.ss01 = -34;
+a.ss02 = -34;
 d = -28;
 e = -29;
 o = -28;
@@ -59627,7 +59655,7 @@ at = -25;
 equal = -49;
 germandbls = -41;
 jcircumflex = 65;
-l.ss02 = 4;
+l.ss04 = 4;
 less = -109;
 logicalnot = -163;
 minus = -124;
@@ -59635,26 +59663,26 @@ numbersign = -53;
 parenleft = -14;
 registered = -37;
 };
-I.ss04 = {
+I.ss06 = {
 jcircumflex = 83;
 };
 Iacute = {
 Lslash = -47;
 thorn = 4;
 };
-Iacute.ss04 = {
+Iacute.ss06 = {
 Eth = 68;
 };
 Icircumflex = {
-l.ss02 = 4;
+l.ss04 = 4;
 };
-Icircumflex.ss04 = {
+Icircumflex.ss06 = {
 parenright = 59;
 };
 Idieresis = {
 idieresis = 71;
 };
-Imacron.ss04 = {
+Imacron.ss06 = {
 imacron = 110;
 parenright = 37;
 };
@@ -59699,9 +59727,9 @@ G = -71;
 Lslash = -59;
 OE = -71;
 Oslash = -68;
-adieresis.ss01 = -26;
+adieresis.ss01.ss02 = -26;
 amacron = -52;
-amacron.ss01 = -20;
+amacron.ss02 = -20;
 ampersand = -26;
 asciitilde = -156;
 at = -50;
@@ -59716,7 +59744,7 @@ equal = -74;
 i.ss01 = 0;
 less = -133;
 logicalnot = -190;
-lslash.ss02 = -26;
+lslash.ss04 = -26;
 minus = -144;
 notequal = -117;
 numbersign = -82;
@@ -59730,7 +59758,7 @@ udieresis = -43;
 umacron = -43;
 uni1EF9 = -62;
 ygrave = -62;
-ygrave.ss01 = -109;
+ygrave.ss02 = -109;
 };
 L = {
 Ecircumflex = -4;
@@ -59796,7 +59824,7 @@ U = -40;
 Uacute = -40;
 V = -93;
 a = -26;
-a.ss01 = -5;
+a.ss02 = -5;
 hyphen = -128;
 hyphen.case = -129;
 parenright = -47;
@@ -59838,7 +59866,7 @@ W = -102;
 Y = -184;
 Zdotaccent = 28;
 a = -15;
-a.ss01 = 2;
+a.ss02 = 2;
 aacute = -15;
 aogonek = -15;
 comma = 28;
@@ -59884,7 +59912,7 @@ j = 4;
 jcircumflex = 46;
 k = 5;
 l = 5;
-l.ss02 = 5;
+l.ss04 = 5;
 parenleft = 16;
 };
 Oacute = {
@@ -59929,7 +59957,7 @@ bracketright = -66;
 parenright = -67;
 u = 12;
 };
-Q.ss01 = {
+Q.ss03 = {
 Edieresis.ss01 = 20;
 };
 R = {
@@ -59964,17 +59992,17 @@ Hbar = -8;
 Lslash = -61;
 OE = -48;
 Oslash = -50;
-a.ss01 = -141;
-aacute.ss01 = -133;
+a.ss02 = -141;
+aacute.ss02 = -133;
 abreve = -85;
 acircumflex = -99;
 adieresis = -108;
 agrave = -112;
-agrave.ss01 = -95;
+agrave.ss02 = -95;
 amacron = -74;
-amacron.ss01 = -62;
+amacron.ss02 = -62;
 ampersand = -46;
-aogonek.ss01 = -141;
+aogonek.ss02 = -141;
 aring = -102;
 asciitilde = -191;
 at = -69;
@@ -60006,9 +60034,9 @@ ohungarumlaut = -126;
 omacron = -75;
 otilde = -97;
 parenleft = -48;
-r.ss03 = -127;
+r.ss05 = -127;
 racute = -62;
-racute.ss03 = -94;
+racute.ss05 = -94;
 rcaron = 26;
 registered = -33;
 scaron = -43;
@@ -60020,9 +60048,9 @@ udieresis.ss01 = -73;
 ugrave = -81;
 uhungarumlaut = -98;
 umacron = -49;
-uni1EA1.ss01 = -141;
+uni1EA1.ss01.ss02 = -141;
 uni1EA3 = -120;
-uni1EA3.ss01 = -110;
+uni1EA3.ss02 = -110;
 uni1EA5 = -111;
 uni1EA7 = -111;
 uni1EA9 = -111;
@@ -60046,9 +60074,9 @@ uni2082 = -187;
 uring = -70;
 utilde = -64;
 ycircumflex = -80;
-ycircumflex.ss01 = -80;
+ycircumflex.ss02 = -80;
 ygrave = -89;
-ygrave.ss01 = -89;
+ygrave.ss02 = -89;
 zcaron = -41;
 };
 Tbar = {
@@ -60066,7 +60094,7 @@ slash = -175;
 tbar = -46;
 };
 Tcaron = {
-a.ss01 = -141;
+a.ss02 = -141;
 udieresis = -75;
 };
 U = {
@@ -60091,13 +60119,13 @@ V = {
 OE = -50;
 Oslash = -51;
 abreve = -79;
-abreve.ss01 = -68;
+abreve.ss02 = -68;
 acircumflex = -92;
 adieresis = -93;
-adieresis.ss01 = -87;
+adieresis.ss01.ss02 = -87;
 agrave = -97;
 amacron = -74;
-amacron.ss01 = -60;
+amacron.ss02 = -60;
 ampersand = -50;
 aring = -90;
 at = -64;
@@ -60117,8 +60145,8 @@ odieresis = -92;
 ograve = -97;
 otilde = -91;
 parenleft = -48;
-r.ss03 = -81;
-racute.ss03 = -81;
+r.ss05 = -81;
+racute.ss05 = -81;
 rcaron = 38;
 registered = -46;
 scaron = -37;
@@ -60130,15 +60158,15 @@ zcaron = -37;
 W = {
 Lslash = -45;
 adieresis = -55;
-adieresis.ss01 = -56;
+adieresis.ss01.ss02 = -56;
 ampersand = -37;
 asciitilde = -97;
 i.ss01 = 2;
 idieresis = 80;
 less = -40;
-lslash.ss02 = -21;
+lslash.ss04 = -21;
 minus = -55;
-r.ss03 = -51;
+r.ss05 = -51;
 scaron = -26;
 uni2083 = -82;
 };
@@ -60162,11 +60190,11 @@ Lslash = -60;
 Oslash = -69;
 acircumflex = -120;
 adieresis = -111;
-adieresis.ss01 = -86;
+adieresis.ss01.ss02 = -86;
 agrave = -116;
-agrave.ss01 = -94;
+agrave.ss02 = -94;
 amacron = -73;
-amacron.ss01 = -59;
+amacron.ss02 = -59;
 ampersand = -56;
 asciitilde = -157;
 at = -100;
@@ -60185,7 +60213,7 @@ odieresis = -108;
 ograve = -114;
 omacron = -72;
 parenleft = -61;
-r.ss03 = -114;
+r.ss05 = -114;
 registered = -54;
 scaron = -41;
 udieresis = -84;
@@ -60223,7 +60251,7 @@ jcircumflex = 7;
 logicalnot = -58;
 notequal = -50;
 };
-a.ss01 = {
+a.ss02 = {
 T = -142;
 exclam.ss01 = -8;
 germandbls = -15;
@@ -60240,7 +60268,7 @@ parenright = -42;
 adieresis = {
 parenright = -42;
 };
-adieresis.ss01 = {
+adieresis.ss01.ss02 = {
 germandbls = -15;
 };
 amacron = {
@@ -60252,7 +60280,7 @@ comma = 7;
 j = 12;
 parenright = -6;
 };
-aogonek.ss01 = {
+aogonek.ss02 = {
 comma.ss01 = 4;
 parenright = -6;
 };
@@ -60448,9 +60476,9 @@ rcaron = 2;
 dcaron = {
 H = 57;
 a = -13;
-a.ss01 = -9;
+a.ss02 = -9;
 aacute = -13;
-aacute.ss01 = -9;
+aacute.ss02 = -9;
 colon = 30;
 comma = -42;
 comma.ss01 = -51;
@@ -60535,7 +60563,7 @@ exclam = -9;
 exclam.ss01 = -6;
 germandbls = -17;
 logicalnot = -43;
-lslash.ss02 = 19;
+lslash.ss04 = 19;
 parenleft = 6;
 quotedblleft = -53;
 registered = -22;
@@ -60616,7 +60644,7 @@ bracketright = -11;
 parenright = -7;
 };
 eogonek = {
-lslash.ss02 = 19;
+lslash.ss04 = 19;
 parenright = -53;
 };
 equal = {
@@ -60652,7 +60680,7 @@ t = -11;
 u = 7;
 v = -34;
 y = -38;
-y.ss01 = -38;
+y.ss02 = -38;
 yacute = -38;
 };
 exclam = {
@@ -60687,13 +60715,13 @@ idieresis = 8;
 l = 0;
 n = 0;
 ordmasculine = 30;
-r.ss03 = -3;
+r.ss05 = -3;
 };
 f_f.liga = {
 exclam = 7;
 idieresis = 8;
 ordmasculine = 30;
-r.ss03 = -3;
+r.ss05 = -3;
 };
 f_f_i.liga = {
 asciitilde = -47;
@@ -60710,7 +60738,7 @@ idieresis = 11;
 jcircumflex = 14;
 periodcentered.loclCAT = 2;
 };
-f_f_l.liga.ss02 = {
+f_f_l.liga.ss04 = {
 periodcentered.loclCAT = -47;
 periodcentered.loclCAT.ss01 = -53;
 };
@@ -60743,7 +60771,7 @@ idieresis = 11;
 jcircumflex = 14;
 periodcentered.loclCAT = 2;
 };
-fl.ss02 = {
+fl.ss04 = {
 periodcentered.loclCAT = -47;
 periodcentered.loclCAT.ss01 = -53;
 };
@@ -60812,10 +60840,10 @@ f = -16;
 f_f.liga = -16;
 f_f_i.liga = -16;
 f_f_l.liga = -16;
-f_f_l.liga.ss02 = -16;
+f_f_l.liga.ss04 = -16;
 fi = -16;
 fl = -16;
-fl.ss02 = -16;
+fl.ss04 = -16;
 g = 12;
 o = 14;
 parenright = -61;
@@ -60865,7 +60893,7 @@ h = {
 asciitilde = -41;
 exclam = -11;
 registered = -26;
-uni1EB3.ss01 = -2;
+uni1EB3.ss02 = -2;
 };
 hyphen = {
 Hbar = -29;
@@ -60956,7 +60984,7 @@ idieresis = 12;
 j = 11;
 k = 10;
 l = 10;
-l.ss02 = 10;
+l.ss04 = 10;
 parenright = 48;
 question = 62;
 quotedbl = 62;
@@ -60976,7 +61004,7 @@ idieresis.ss01 = {
 b = 11;
 k = 11;
 l = 11;
-l.ss02 = 10;
+l.ss04 = 10;
 t = 5;
 };
 igrave = {
@@ -60986,7 +61014,7 @@ parenright = -39;
 imacron = {
 G = 28;
 I = 76;
-I.ss04 = 102;
+I.ss06 = 102;
 N = 102;
 P = 102;
 S = 76;
@@ -61005,7 +61033,7 @@ j = 11;
 j.ss01 = 11;
 k = 11;
 l = 11;
-l.ss02 = 10;
+l.ss04 = 10;
 parenright = 65;
 period.ss01 = -15;
 question = 90;
@@ -61026,7 +61054,7 @@ uni00B3 = 68;
 uni00B9 = 72;
 uni0137 = 11;
 uni013C = 11;
-uni013C.ss02 = 10;
+uni013C.ss04 = 10;
 uni2074 = 53;
 uni2075 = 90;
 uni2076 = 104;
@@ -61043,7 +61071,7 @@ parenright.case = -72;
 integral = {
 A = -97;
 a = -83;
-a.ss01 = -91;
+a.ss02 = -91;
 d = -83;
 e = -85;
 integral = -74;
@@ -61106,7 +61134,7 @@ iogonek = 6;
 lacute = 2;
 less = -17;
 logicalnot = -91;
-lslash.ss02 = -22;
+lslash.ss04 = -22;
 minus = -39;
 parenleft = -5;
 rcaron = 2;
@@ -61137,7 +61165,7 @@ quoteright = 0;
 slash = 0;
 underscore = 0;
 };
-l.ss02 = {
+l.ss04 = {
 periodcentered.loclCAT = -47;
 periodcentered.loclCAT.ss01 = -53;
 };
@@ -61146,9 +61174,9 @@ exclam = 149;
 exclam.ss01 = 150;
 scaron = 62;
 };
-lcaron.ss02 = {
+lcaron.ss04 = {
 a = 7;
-a.ss01 = 24;
+a.ss02 = 24;
 b = 48;
 ccaron = 4;
 comma = 23;
@@ -61159,7 +61187,7 @@ h = 48;
 i = 39;
 j = 40;
 k = 48;
-l.ss02 = 48;
+l.ss04 = 48;
 m = 38;
 n = 38;
 ncaron = 38;
@@ -61226,7 +61254,7 @@ w = 11;
 y = 4;
 zdotaccent = 0;
 };
-lslash.ss02 = {
+lslash.ss04 = {
 comma = 21;
 period = 18;
 zdotaccent = 23;
@@ -61324,7 +61352,7 @@ exclam = -11;
 exclam.ss01 = -8;
 germandbls = -16;
 logicalnot = -46;
-lslash.ss02 = 15;
+lslash.ss04 = 15;
 n = 0;
 parenleft = 9;
 question = -66;
@@ -61335,7 +61363,7 @@ registered = -26;
 tbar = 15;
 };
 oacute = {
-lslash.ss02 = 15;
+lslash.ss04 = 15;
 };
 odieresis = {
 germandbls = -16;
@@ -61421,7 +61449,7 @@ parenright = -66;
 period = -8;
 period.ss01 = -41;
 r = 5;
-r.ss03 = 5;
+r.ss05 = 5;
 s = 5;
 slash = -41;
 t = 3;
@@ -61430,19 +61458,19 @@ y = -2;
 };
 p = {
 exclam = -11;
-lslash.ss02 = 15;
+lslash.ss04 = 15;
 registered = -25;
 };
 parenleft = {
 Euro = -103;
 H = 0;
 Hbar = -26;
-Icircumflex.ss04 = 59;
+Icircumflex.ss06 = 59;
 Lslash = -67;
 OE = -76;
 Odieresis = -78;
 Oslash = -79;
-a.ss01 = -71;
+a.ss02 = -71;
 adieresis = -75;
 agrave = -76;
 ampersand = -56;
@@ -61476,7 +61504,7 @@ l = 0;
 less = -89;
 lessequal = -78;
 logicalnot = -135;
-lslash.ss02 = -34;
+lslash.ss04 = -34;
 minus = -99;
 multiply = -63;
 notequal = -123;
@@ -61508,7 +61536,7 @@ zcaron = -34;
 };
 parenleft.case = {
 Euro = -85;
-Icircumflex.ss04 = 71;
+Icircumflex.ss06 = 71;
 Lslash = -57;
 OE = -69;
 Oslash = -62;
@@ -61643,14 +61671,14 @@ G = -114;
 O = -115;
 Oacute = -115;
 P = -17;
-Q.ss01 = -115;
+Q.ss03 = -115;
 S = -69;
 T = -183;
 U = -95;
 V = -175;
 W = -139;
 Y = -202;
-a.ss01 = -48;
+a.ss02 = -48;
 c = -75;
 d = -74;
 e = -75;
@@ -61664,7 +61692,7 @@ s = -50;
 t = -76;
 v = -125;
 w = -117;
-y.ss01 = -98;
+y.ss02 = -98;
 };
 quotedbl = {
 A = -135;
@@ -61686,7 +61714,7 @@ period.ss01 = -99;
 questiondown = -141;
 questiondown.case = -79;
 questiondown.ss01 = -138;
-r.ss03 = -27;
+r.ss05 = -27;
 underscore = -166;
 uni1EA2 = -135;
 uni1EA4 = -135;
@@ -61764,7 +61792,7 @@ idieresis = 60;
 itilde = 76;
 questiondown = -88;
 quotedblbase = -93;
-r.ss03 = -60;
+r.ss05 = -60;
 };
 quoteright.ss01 = {
 quotedblbase.ss01 = -96;
@@ -61804,7 +61832,7 @@ period = -82;
 questiondown = -82;
 questiondown.case = -67;
 questiondown.ss01 = -82;
-r.ss03 = -27;
+r.ss05 = -27;
 slash = -82;
 };
 r = {
@@ -61813,7 +61841,7 @@ asciitilde = -53;
 germandbls = 11;
 jcircumflex = 12;
 logicalnot = -70;
-lslash.ss02 = -20;
+lslash.ss04 = -20;
 n = 0;
 uni2081 = -74;
 uni2082 = -66;
@@ -61822,8 +61850,8 @@ uni2084 = -105;
 uni2085 = -48;
 uni2086 = -77;
 };
-r.ss03 = {
-r.ss03 = -4;
+r.ss05 = {
+r.ss05 = -4;
 uni2084 = -113;
 };
 racute = {
@@ -61836,7 +61864,7 @@ period = -85;
 period.ss01 = -89;
 t = 11;
 };
-racute.ss03 = {
+racute.ss05 = {
 comma = -79;
 period = -79;
 t = 15;
@@ -61858,7 +61886,7 @@ parenright = -2;
 uni00B9 = 12;
 uni2077 = 17;
 };
-rcaron.ss03 = {
+rcaron.ss05 = {
 a = -29;
 aacute = -29;
 b = 8;
@@ -61889,7 +61917,7 @@ l = 0;
 logicalnot = -50;
 parenleft = 3;
 registered = -15;
-uni1EB5.ss01 = 5;
+uni1EB5.ss02 = 5;
 wacute = -15;
 };
 scaron = {
@@ -62139,7 +62167,7 @@ uni0145 = {
 imacron = 102;
 };
 uni0162 = {
-a.ss01 = -140;
+a.ss02 = -140;
 abreve = -85;
 acircumflex = -99;
 amacron = -74;
@@ -62150,9 +62178,9 @@ comma = 36;
 parenright = 13;
 };
 uni021A = {
-a.ss01 = -141;
+a.ss02 = -141;
 abreve = -85;
-abreve.ss01 = -73;
+abreve.ss02 = -73;
 acircumflex = -99;
 amacron = -74;
 };
@@ -62186,12 +62214,12 @@ uni00B9 = -72;
 uni1EA8 = {
 Y = -171;
 };
-uni1EA9.ss01 = {
-y.ss01 = -39;
+uni1EA9.ss02 = {
+y.ss02 = -39;
 };
-uni1EAB.ss01 = {
+uni1EAB.ss02 = {
 n = -5;
-y.ss01 = -39;
+y.ss02 = -39;
 };
 uni1EAF = {
 uni00B9 = -70;
@@ -62202,13 +62230,13 @@ uni00B9 = -70;
 uni1EB3 = {
 uni00B9 = -70;
 };
-uni1EB3.ss01 = {
+uni1EB3.ss02 = {
 n = -5;
 };
 uni1EB5 = {
 uni00B9 = -70;
 };
-uni1EB5.ss01 = {
+uni1EB5.ss02 = {
 n = -5;
 };
 uni1EB7 = {
@@ -62314,7 +62342,7 @@ period = -55;
 uni1EC7 = -47;
 uni2077 = -70;
 };
-uni1EF5.ss01 = {
+uni1EF5.ss01.ss02 = {
 comma.ss01 = -63;
 parenright = -54;
 period.ss01 = -82;
@@ -62472,12 +62500,12 @@ parenright = -6;
 v = {
 ampersand = -29;
 n = 0;
-r.ss03 = -12;
+r.ss05 = -12;
 };
 w = {
 ampersand = -26;
 asciitilde = -58;
-r.ss03 = -6;
+r.ss05 = -6;
 };
 x = {
 ampersand = -31;
@@ -62489,22 +62517,22 @@ ampersand = -32;
 asciitilde = -68;
 germandbls = 20;
 logicalnot = -71;
-lslash.ss02 = -27;
-r.ss03 = -14;
-rcaron.ss03 = -13;
+lslash.ss04 = -27;
+r.ss05 = -14;
+rcaron.ss05 = -13;
 uni2080 = -83;
 uni2082 = -71;
 };
-y.ss01 = {
+y.ss02 = {
 asciitilde = -68;
 o = -47;
-r.ss03 = -14;
+r.ss05 = -14;
 };
 yacute = {
-r.ss03 = -14;
+r.ss05 = -14;
 };
 ycircumflex = {
-r.ss03 = -14;
+r.ss05 = -14;
 };
 yen = {
 colon = -77;
@@ -62523,7 +62551,7 @@ uni2074 = -71;
 };
 z = {
 asciitilde = -56;
-lslash.ss02 = -13;
+lslash.ss04 = -13;
 };
 zcaron = {
 T = -43;
@@ -70549,10 +70577,10 @@ dollar = -51;
 equal = -30;
 germandbls = -67;
 idieresis = 0;
-l.ss02 = -20;
+l.ss04 = -20;
 less = -56;
 logicalnot = -120;
-lslash.ss02 = -48;
+lslash.ss04 = -48;
 minus = -89;
 notequal = -66;
 numbersign = -31;
@@ -70601,8 +70629,8 @@ v = 0;
 Aacute = {
 Lslash = -54;
 Tbar = -128;
-l.ss02 = -20;
-lslash.ss02 = -48;
+l.ss04 = -20;
+lslash.ss04 = -48;
 registered = -106;
 };
 Abreve = {
@@ -70698,7 +70726,7 @@ i.ss01 = 4;
 idieresis = 81;
 idieresis.ss01 = 121;
 jcircumflex = 128;
-l.ss02 = 0;
+l.ss04 = 0;
 less = -3;
 logicalnot = -107;
 minus = -58;
@@ -70749,7 +70777,7 @@ slash = -63;
 };
 F = {
 Oslash = -9;
-adieresis.ss01 = -30;
+adieresis.ss01.ss02 = -30;
 ampersand = -37;
 ellipsis.ss01 = -92;
 i.ss01 = 3;
@@ -70757,7 +70785,7 @@ iacute = -2;
 idieresis = 81;
 numbersign = 0;
 parenleft = -11;
-r.ss03 = -33;
+r.ss05 = -33;
 uni2083 = -32;
 uni2084 = -68;
 uni2085 = -45;
@@ -70802,7 +70830,7 @@ Hbar = 19;
 J = -20;
 T = 17;
 a = -17;
-a.ss01 = -20;
+a.ss02 = -20;
 d = -17;
 e = -20;
 o = -20;
@@ -70821,7 +70849,7 @@ at = -4;
 equal = 0;
 germandbls = 0;
 jcircumflex = 119;
-l.ss02 = 0;
+l.ss04 = 0;
 less = -2;
 logicalnot = -105;
 minus = -56;
@@ -70829,26 +70857,26 @@ numbersign = 0;
 parenleft = -3;
 registered = -8;
 };
-I.ss04 = {
+I.ss06 = {
 jcircumflex = 127;
 };
 Iacute = {
 Lslash = -25;
 thorn = 0;
 };
-Iacute.ss04 = {
+Iacute.ss06 = {
 Eth = 67;
 };
 Icircumflex = {
-l.ss02 = 0;
+l.ss04 = 0;
 };
-Icircumflex.ss04 = {
+Icircumflex.ss06 = {
 parenright = 108;
 };
 Idieresis = {
 idieresis = 73;
 };
-Imacron.ss04 = {
+Imacron.ss06 = {
 imacron = 125;
 parenright = 86;
 };
@@ -70893,9 +70921,9 @@ G = -86;
 Lslash = -56;
 OE = -89;
 Oslash = -79;
-adieresis.ss01 = -23;
+adieresis.ss01.ss02 = -23;
 amacron = -62;
-amacron.ss01 = -23;
+amacron.ss02 = -23;
 ampersand = -44;
 asciitilde = -117;
 at = -61;
@@ -70910,7 +70938,7 @@ equal = -59;
 i.ss01 = 0;
 less = -99;
 logicalnot = -166;
-lslash.ss02 = -38;
+lslash.ss04 = -38;
 minus = -131;
 notequal = -80;
 numbersign = -63;
@@ -70924,7 +70952,7 @@ udieresis = -54;
 umacron = -54;
 uni1EF9 = -22;
 ygrave = -22;
-ygrave.ss01 = -98;
+ygrave.ss02 = -98;
 };
 L = {
 Ecircumflex = 0;
@@ -70990,7 +71018,7 @@ U = -11;
 Uacute = -11;
 V = -64;
 a = 0;
-a.ss01 = 6;
+a.ss02 = 6;
 hyphen = -21;
 hyphen.case = -63;
 parenright = -14;
@@ -71032,7 +71060,7 @@ W = -78;
 Y = -196;
 Zdotaccent = 21;
 a = 0;
-a.ss01 = 6;
+a.ss02 = 6;
 aacute = 0;
 aogonek = 0;
 comma = 23;
@@ -71078,7 +71106,7 @@ j = 2;
 jcircumflex = 67;
 k = 2;
 l = 2;
-l.ss02 = 2;
+l.ss04 = 2;
 parenleft = 11;
 };
 Oacute = {
@@ -71123,7 +71151,7 @@ bracketright = -38;
 parenright = -48;
 u = 8;
 };
-Q.ss01 = {
+Q.ss03 = {
 Edieresis.ss01 = 15;
 };
 R = {
@@ -71158,17 +71186,17 @@ Hbar = 17;
 Lslash = -49;
 OE = -13;
 Oslash = -14;
-a.ss01 = -66;
-aacute.ss01 = -66;
+a.ss02 = -66;
+aacute.ss02 = -66;
 abreve = -73;
 acircumflex = -59;
 adieresis = -76;
 agrave = -76;
-agrave.ss01 = -63;
+agrave.ss02 = -63;
 amacron = -66;
-amacron.ss01 = -55;
+amacron.ss02 = -55;
 ampersand = -47;
-aogonek.ss01 = -66;
+aogonek.ss02 = -66;
 aring = -76;
 asciitilde = -85;
 at = -24;
@@ -71200,9 +71228,9 @@ ohungarumlaut = -89;
 omacron = -69;
 otilde = -89;
 parenleft = -15;
-r.ss03 = -45;
+r.ss05 = -45;
 racute = -7;
-racute.ss03 = -45;
+racute.ss05 = -45;
 rcaron = 55;
 registered = -4;
 scaron = -20;
@@ -71214,9 +71242,9 @@ udieresis.ss01 = -2;
 ugrave = -2;
 uhungarumlaut = -2;
 umacron = -2;
-uni1EA1.ss01 = -66;
+uni1EA1.ss01.ss02 = -66;
 uni1EA3 = -76;
-uni1EA3.ss01 = -66;
+uni1EA3.ss02 = -66;
 uni1EA5 = -66;
 uni1EA7 = -66;
 uni1EA9 = -66;
@@ -71240,9 +71268,9 @@ uni2082 = -168;
 uring = -2;
 utilde = -2;
 ycircumflex = 0;
-ycircumflex.ss01 = 0;
+ycircumflex.ss02 = 0;
 ygrave = 0;
-ygrave.ss01 = 0;
+ygrave.ss02 = 0;
 zcaron = 0;
 };
 Tbar = {
@@ -71260,7 +71288,7 @@ slash = -133;
 tbar = 0;
 };
 Tcaron = {
-a.ss01 = -66;
+a.ss02 = -66;
 udieresis = -2;
 };
 U = {
@@ -71285,13 +71313,13 @@ V = {
 OE = -60;
 Oslash = -60;
 abreve = -81;
-abreve.ss01 = -62;
+abreve.ss02 = -62;
 acircumflex = -84;
 adieresis = -92;
-adieresis.ss01 = -56;
+adieresis.ss01.ss02 = -56;
 agrave = -91;
 amacron = -74;
-amacron.ss01 = -56;
+amacron.ss02 = -56;
 ampersand = -73;
 aring = -94;
 at = -70;
@@ -71311,8 +71339,8 @@ odieresis = -88;
 ograve = -89;
 otilde = -97;
 parenleft = -56;
-r.ss03 = -83;
-racute.ss03 = -83;
+r.ss05 = -83;
+racute.ss05 = -83;
 rcaron = 70;
 registered = -50;
 scaron = -19;
@@ -71324,15 +71352,15 @@ zcaron = -3;
 W = {
 Lslash = -34;
 adieresis = -52;
-adieresis.ss01 = -45;
+adieresis.ss01.ss02 = -45;
 ampersand = -58;
 asciitilde = -71;
 i.ss01 = 9;
 idieresis = 96;
 less = -20;
-lslash.ss02 = -28;
+lslash.ss04 = -28;
 minus = -65;
-r.ss03 = -52;
+r.ss05 = -52;
 scaron = -16;
 uni2083 = -71;
 };
@@ -71356,11 +71384,11 @@ Lslash = -45;
 Oslash = -81;
 acircumflex = -93;
 adieresis = -89;
-adieresis.ss01 = -46;
+adieresis.ss01.ss02 = -46;
 agrave = -92;
-agrave.ss01 = -66;
+agrave.ss02 = -66;
 amacron = -66;
-amacron.ss01 = -45;
+amacron.ss02 = -45;
 ampersand = -75;
 asciitilde = -138;
 at = -96;
@@ -71379,7 +71407,7 @@ odieresis = -80;
 ograve = -85;
 omacron = -62;
 parenleft = -63;
-r.ss03 = -114;
+r.ss05 = -114;
 registered = -62;
 scaron = -18;
 udieresis = -71;
@@ -71417,7 +71445,7 @@ jcircumflex = 22;
 logicalnot = -68;
 notequal = -41;
 };
-a.ss01 = {
+a.ss02 = {
 T = -73;
 exclam.ss01 = 3;
 germandbls = -8;
@@ -71434,7 +71462,7 @@ parenright = -37;
 adieresis = {
 parenright = -37;
 };
-adieresis.ss01 = {
+adieresis.ss01.ss02 = {
 germandbls = -8;
 };
 amacron = {
@@ -71446,7 +71474,7 @@ comma = 0;
 j = 37;
 parenright = 0;
 };
-aogonek.ss01 = {
+aogonek.ss02 = {
 comma.ss01 = 0;
 parenright = 0;
 };
@@ -71642,9 +71670,9 @@ rcaron = 3;
 dcaron = {
 H = 35;
 a = -45;
-a.ss01 = -32;
+a.ss02 = -32;
 aacute = -45;
-aacute.ss01 = -32;
+aacute.ss02 = -32;
 colon = 6;
 comma = -147;
 comma.ss01 = -144;
@@ -71729,7 +71757,7 @@ exclam = -10;
 exclam.ss01 = 0;
 germandbls = -5;
 logicalnot = -62;
-lslash.ss02 = 13;
+lslash.ss04 = 13;
 parenleft = 7;
 quotedblleft = -10;
 registered = -22;
@@ -71810,7 +71838,7 @@ bracketright = 5;
 parenright = -10;
 };
 eogonek = {
-lslash.ss02 = 13;
+lslash.ss04 = 13;
 parenright = -50;
 };
 equal = {
@@ -71846,7 +71874,7 @@ t = -2;
 u = 6;
 v = -34;
 y = -44;
-y.ss01 = -44;
+y.ss02 = -44;
 yacute = -44;
 };
 exclam = {
@@ -71881,13 +71909,13 @@ idieresis = 28;
 l = 0;
 n = 0;
 ordmasculine = 19;
-r.ss03 = -2;
+r.ss05 = -2;
 };
 f_f.liga = {
 exclam = 13;
 idieresis = 29;
 ordmasculine = 20;
-r.ss03 = 0;
+r.ss05 = 0;
 };
 f_f_i.liga = {
 asciitilde = -24;
@@ -71904,7 +71932,7 @@ idieresis = 36;
 jcircumflex = 43;
 periodcentered.loclCAT = 7;
 };
-f_f_l.liga.ss02 = {
+f_f_l.liga.ss04 = {
 periodcentered.loclCAT = -39;
 periodcentered.loclCAT.ss01 = -52;
 };
@@ -71937,7 +71965,7 @@ idieresis = 36;
 jcircumflex = 43;
 periodcentered.loclCAT = 7;
 };
-fl.ss02 = {
+fl.ss04 = {
 periodcentered.loclCAT = -39;
 periodcentered.loclCAT.ss01 = -52;
 };
@@ -72006,10 +72034,10 @@ f = -27;
 f_f.liga = -27;
 f_f_i.liga = -27;
 f_f_l.liga = -27;
-f_f_l.liga.ss02 = -27;
+f_f_l.liga.ss04 = -27;
 fi = -27;
 fl = -27;
-fl.ss02 = -27;
+fl.ss04 = -27;
 g = 3;
 o = 12;
 parenright = -46;
@@ -72059,7 +72087,7 @@ h = {
 asciitilde = -17;
 exclam = -9;
 registered = -20;
-uni1EB3.ss01 = 3;
+uni1EB3.ss02 = 3;
 };
 hyphen = {
 Hbar = -20;
@@ -72150,7 +72178,7 @@ idieresis = 42;
 j = 37;
 k = 36;
 l = 36;
-l.ss02 = 36;
+l.ss04 = 36;
 parenright = 86;
 question = 65;
 quotedbl = 90;
@@ -72170,7 +72198,7 @@ idieresis.ss01 = {
 b = 36;
 k = 36;
 l = 36;
-l.ss02 = 36;
+l.ss04 = 36;
 t = 16;
 };
 igrave = {
@@ -72180,7 +72208,7 @@ parenright = -37;
 imacron = {
 G = 36;
 I = 98;
-I.ss04 = 93;
+I.ss06 = 93;
 N = 93;
 P = 93;
 S = 75;
@@ -72199,7 +72227,7 @@ j = 38;
 j.ss01 = 38;
 k = 37;
 l = 37;
-l.ss02 = 37;
+l.ss04 = 37;
 parenright = 118;
 period.ss01 = -6;
 question = 86;
@@ -72220,7 +72248,7 @@ uni00B3 = 100;
 uni00B9 = 111;
 uni0137 = 37;
 uni013C = 37;
-uni013C.ss02 = 37;
+uni013C.ss04 = 37;
 uni2074 = 73;
 uni2075 = 97;
 uni2076 = 107;
@@ -72237,7 +72265,7 @@ parenright.case = -44;
 integral = {
 A = -88;
 a = -78;
-a.ss01 = -77;
+a.ss02 = -77;
 d = -78;
 e = -80;
 integral = -78;
@@ -72300,7 +72328,7 @@ iogonek = -3;
 lacute = -3;
 less = -9;
 logicalnot = -99;
-lslash.ss02 = -38;
+lslash.ss04 = -38;
 minus = -59;
 parenleft = -19;
 rcaron = -3;
@@ -72331,7 +72359,7 @@ quoteright = 0;
 slash = 0;
 underscore = 0;
 };
-l.ss02 = {
+l.ss04 = {
 periodcentered.loclCAT = -39;
 periodcentered.loclCAT.ss01 = -52;
 };
@@ -72340,9 +72368,9 @@ exclam = 248;
 exclam.ss01 = 248;
 scaron = 161;
 };
-lcaron.ss02 = {
+lcaron.ss04 = {
 a = 72;
-a.ss01 = 86;
+a.ss02 = 86;
 b = 168;
 ccaron = 65;
 comma = 21;
@@ -72353,7 +72381,7 @@ h = 168;
 i = 137;
 j = 137;
 k = 168;
-l.ss02 = 168;
+l.ss04 = 168;
 m = 133;
 n = 133;
 ncaron = 133;
@@ -72420,7 +72448,7 @@ w = 17;
 y = 14;
 zdotaccent = 0;
 };
-lslash.ss02 = {
+lslash.ss04 = {
 comma = 22;
 period = 22;
 zdotaccent = 14;
@@ -72518,7 +72546,7 @@ exclam = -14;
 exclam.ss01 = -6;
 germandbls = -6;
 logicalnot = -62;
-lslash.ss02 = 13;
+lslash.ss04 = 13;
 n = 0;
 parenleft = 11;
 question = -61;
@@ -72529,7 +72557,7 @@ registered = -22;
 tbar = 6;
 };
 oacute = {
-lslash.ss02 = 13;
+lslash.ss04 = 13;
 };
 odieresis = {
 germandbls = -6;
@@ -72615,7 +72643,7 @@ parenright = -32;
 period = 15;
 period.ss01 = -3;
 r = 19;
-r.ss03 = 19;
+r.ss05 = 19;
 s = 19;
 slash = -28;
 t = 9;
@@ -72624,19 +72652,19 @@ y = -8;
 };
 p = {
 exclam = -13;
-lslash.ss02 = 13;
+lslash.ss04 = 13;
 registered = -21;
 };
 parenleft = {
 Euro = -55;
 H = 0;
 Hbar = 0;
-Icircumflex.ss04 = 110;
+Icircumflex.ss06 = 110;
 Lslash = -46;
 OE = -47;
 Odieresis = -47;
 Oslash = -47;
-a.ss01 = -45;
+a.ss02 = -45;
 adieresis = -51;
 agrave = -51;
 ampersand = -52;
@@ -72670,7 +72698,7 @@ l = 0;
 less = -60;
 lessequal = -66;
 logicalnot = -110;
-lslash.ss02 = -27;
+lslash.ss04 = -27;
 minus = -99;
 multiply = -82;
 notequal = -76;
@@ -72702,7 +72730,7 @@ zcaron = 0;
 };
 parenleft.case = {
 Euro = -47;
-Icircumflex.ss04 = 107;
+Icircumflex.ss06 = 107;
 Lslash = -39;
 OE = -42;
 Oslash = -41;
@@ -72837,14 +72865,14 @@ G = -95;
 O = -99;
 Oacute = -99;
 P = -5;
-Q.ss01 = -99;
+Q.ss03 = -99;
 S = -58;
 T = -124;
 U = -90;
 V = -166;
 W = -108;
 Y = -186;
-a.ss01 = -21;
+a.ss02 = -21;
 c = -64;
 d = -59;
 e = -64;
@@ -72858,7 +72886,7 @@ s = -33;
 t = -78;
 v = -121;
 w = -98;
-y.ss01 = -114;
+y.ss02 = -114;
 };
 quotedbl = {
 A = -114;
@@ -72880,7 +72908,7 @@ period.ss01 = -155;
 questiondown = -127;
 questiondown.case = -64;
 questiondown.ss01 = -119;
-r.ss03 = -29;
+r.ss05 = -29;
 underscore = -214;
 uni1EA2 = -114;
 uni1EA4 = -114;
@@ -72958,7 +72986,7 @@ idieresis = 80;
 itilde = 64;
 questiondown = -132;
 quotedblbase = -148;
-r.ss03 = -55;
+r.ss05 = -55;
 };
 quoteright.ss01 = {
 quotedblbase.ss01 = -150;
@@ -72998,7 +73026,7 @@ period = -117;
 questiondown = -117;
 questiondown.case = -64;
 questiondown.ss01 = -117;
-r.ss03 = -29;
+r.ss05 = -29;
 slash = -116;
 };
 r = {
@@ -73007,7 +73035,7 @@ asciitilde = -15;
 germandbls = 9;
 jcircumflex = 40;
 logicalnot = -61;
-lslash.ss02 = 6;
+lslash.ss04 = 6;
 n = 0;
 uni2081 = -18;
 uni2082 = -30;
@@ -73016,8 +73044,8 @@ uni2084 = -81;
 uni2085 = -14;
 uni2086 = -43;
 };
-r.ss03 = {
-r.ss03 = -2;
+r.ss05 = {
+r.ss05 = -2;
 uni2084 = -87;
 };
 racute = {
@@ -73030,7 +73058,7 @@ period = -119;
 period.ss01 = -121;
 t = 9;
 };
-racute.ss03 = {
+racute.ss05 = {
 comma = -98;
 period = -98;
 t = 19;
@@ -73052,7 +73080,7 @@ parenright = 24;
 uni00B9 = 42;
 uni2077 = 40;
 };
-rcaron.ss03 = {
+rcaron.ss05 = {
 a = 0;
 aacute = 0;
 b = 29;
@@ -73083,7 +73111,7 @@ l = 0;
 logicalnot = -71;
 parenleft = 2;
 registered = -18;
-uni1EB5.ss01 = 8;
+uni1EB5.ss02 = 8;
 wacute = -32;
 };
 scaron = {
@@ -73333,7 +73361,7 @@ uni0145 = {
 imacron = 97;
 };
 uni0162 = {
-a.ss01 = -66;
+a.ss02 = -66;
 abreve = -73;
 acircumflex = -59;
 amacron = -66;
@@ -73344,9 +73372,9 @@ comma = 13;
 parenright = 17;
 };
 uni021A = {
-a.ss01 = -66;
+a.ss02 = -66;
 abreve = -73;
-abreve.ss01 = -60;
+abreve.ss02 = -60;
 acircumflex = -59;
 amacron = -66;
 };
@@ -73380,12 +73408,12 @@ uni00B9 = -60;
 uni1EA8 = {
 Y = -152;
 };
-uni1EA9.ss01 = {
-y.ss01 = -57;
+uni1EA9.ss02 = {
+y.ss02 = -57;
 };
-uni1EAB.ss01 = {
+uni1EAB.ss02 = {
 n = -4;
-y.ss01 = -57;
+y.ss02 = -57;
 };
 uni1EAF = {
 uni00B9 = -60;
@@ -73396,13 +73424,13 @@ uni00B9 = -60;
 uni1EB3 = {
 uni00B9 = -60;
 };
-uni1EB3.ss01 = {
+uni1EB3.ss02 = {
 n = -4;
 };
 uni1EB5 = {
 uni00B9 = -60;
 };
-uni1EB5.ss01 = {
+uni1EB5.ss02 = {
 n = -4;
 };
 uni1EB7 = {
@@ -73508,7 +73536,7 @@ period = -15;
 uni1EC7 = -56;
 uni2077 = -65;
 };
-uni1EF5.ss01 = {
+uni1EF5.ss01.ss02 = {
 comma.ss01 = -36;
 parenright = -3;
 period.ss01 = -96;
@@ -73666,12 +73694,12 @@ parenright = 0;
 v = {
 ampersand = -45;
 n = 0;
-r.ss03 = -33;
+r.ss05 = -33;
 };
 w = {
 ampersand = -46;
 asciitilde = -50;
-r.ss03 = -22;
+r.ss05 = -22;
 };
 x = {
 ampersand = -53;
@@ -73683,22 +73711,22 @@ ampersand = -45;
 asciitilde = -66;
 germandbls = 13;
 logicalnot = -80;
-lslash.ss02 = -32;
-r.ss03 = -39;
-rcaron.ss03 = -39;
+lslash.ss04 = -32;
+r.ss05 = -39;
+rcaron.ss05 = -39;
 uni2080 = -97;
 uni2082 = -88;
 };
-y.ss01 = {
+y.ss02 = {
 asciitilde = -66;
 o = -57;
-r.ss03 = -38;
+r.ss05 = -38;
 };
 yacute = {
-r.ss03 = -39;
+r.ss05 = -39;
 };
 ycircumflex = {
-r.ss03 = -39;
+r.ss05 = -39;
 };
 yen = {
 colon = -92;
@@ -73717,7 +73745,7 @@ uni2074 = -75;
 };
 z = {
 asciitilde = -33;
-lslash.ss02 = -7;
+lslash.ss04 = -7;
 };
 zcaron = {
 T = -2;
@@ -81747,10 +81775,10 @@ dollar = -26;
 equal = -24;
 germandbls = -36;
 idieresis = 0;
-l.ss02 = 0;
+l.ss04 = 0;
 less = -68;
 logicalnot = 0;
-lslash.ss02 = -21;
+lslash.ss04 = -21;
 minus = -27;
 notequal = -30;
 numbersign = -23;
@@ -81799,8 +81827,8 @@ v = -56;
 Aacute = {
 Lslash = -20;
 Tbar = -77;
-l.ss02 = 0;
-lslash.ss02 = -21;
+l.ss04 = 0;
+lslash.ss04 = -21;
 registered = -74;
 };
 Abreve = {
@@ -81896,7 +81924,7 @@ i.ss01 = -6;
 idieresis = 45;
 idieresis.ss01 = 8;
 jcircumflex = 14;
-l.ss02 = 0;
+l.ss04 = 0;
 less = -62;
 logicalnot = 0;
 minus = -25;
@@ -81947,7 +81975,7 @@ slash = -16;
 };
 F = {
 Oslash = -17;
-adieresis.ss01 = -21;
+adieresis.ss01.ss02 = -21;
 ampersand = -27;
 ellipsis.ss01 = -136;
 i.ss01 = -8;
@@ -81955,7 +81983,7 @@ iacute = -21;
 idieresis = 41;
 numbersign = -53;
 parenleft = -19;
-r.ss03 = -23;
+r.ss05 = -23;
 uni2083 = -21;
 uni2084 = -69;
 uni2085 = -25;
@@ -82000,7 +82028,7 @@ Hbar = 0;
 J = -18;
 T = -21;
 a = -17;
-a.ss01 = -28;
+a.ss02 = -28;
 d = -17;
 e = -17;
 o = -17;
@@ -82019,7 +82047,7 @@ at = -26;
 equal = -40;
 germandbls = -31;
 jcircumflex = 9;
-l.ss02 = 0;
+l.ss04 = 0;
 less = -77;
 logicalnot = 0;
 minus = -35;
@@ -82027,26 +82055,26 @@ numbersign = -41;
 parenleft = -25;
 registered = -23;
 };
-I.ss04 = {
+I.ss06 = {
 jcircumflex = 24;
 };
 Iacute = {
 Lslash = -18;
 thorn = 0;
 };
-Iacute.ss04 = {
+Iacute.ss06 = {
 Eth = 34;
 };
 Icircumflex = {
-l.ss02 = 0;
+l.ss04 = 0;
 };
-Icircumflex.ss04 = {
+Icircumflex.ss06 = {
 parenright = 11;
 };
 Idieresis = {
 idieresis = 49;
 };
-Imacron.ss04 = {
+Imacron.ss06 = {
 imacron = 59;
 parenright = 0;
 };
@@ -82091,9 +82119,9 @@ G = -15;
 Lslash = -25;
 OE = -18;
 Oslash = -14;
-adieresis.ss01 = -29;
+adieresis.ss01.ss02 = -29;
 amacron = -22;
-amacron.ss01 = -18;
+amacron.ss02 = -18;
 ampersand = -27;
 asciitilde = -98;
 at = -31;
@@ -82108,7 +82136,7 @@ equal = -59;
 i.ss01 = -2;
 less = -121;
 logicalnot = -48;
-lslash.ss02 = -18;
+lslash.ss04 = -18;
 minus = -77;
 notequal = -61;
 numbersign = -51;
@@ -82122,7 +82150,7 @@ udieresis = -31;
 umacron = -22;
 uni1EF9 = -11;
 ygrave = 0;
-ygrave.ss01 = 0;
+ygrave.ss02 = 0;
 };
 L = {
 Ecircumflex = -17;
@@ -82188,7 +82216,7 @@ U = -24;
 Uacute = -24;
 V = -6;
 a = -34;
-a.ss01 = -33;
+a.ss02 = -33;
 hyphen = -108;
 hyphen.case = -77;
 parenright = -41;
@@ -82230,7 +82258,7 @@ W = -37;
 Y = -79;
 Zdotaccent = 14;
 a = -14;
-a.ss01 = -14;
+a.ss02 = -14;
 aacute = -14;
 aogonek = -14;
 comma = 30;
@@ -82276,7 +82304,7 @@ j = 2;
 jcircumflex = 22;
 k = 6;
 l = 6;
-l.ss02 = 7;
+l.ss04 = 7;
 parenleft = 0;
 };
 Oacute = {
@@ -82321,7 +82349,7 @@ bracketright = -37;
 parenright = -37;
 u = 6;
 };
-Q.ss01 = {
+Q.ss03 = {
 Edieresis.ss01 = 3;
 };
 R = {
@@ -82356,17 +82384,17 @@ Hbar = -21;
 Lslash = -21;
 OE = -16;
 Oslash = -12;
-a.ss01 = -88;
-aacute.ss01 = -88;
+a.ss02 = -88;
+aacute.ss02 = -88;
 abreve = -46;
 acircumflex = -64;
 adieresis = -37;
 agrave = -21;
-agrave.ss01 = -10;
+agrave.ss02 = -10;
 amacron = -32;
-amacron.ss01 = -26;
+amacron.ss02 = -26;
 ampersand = -28;
-aogonek.ss01 = -88;
+aogonek.ss02 = -88;
 aring = -59;
 asciitilde = -90;
 at = -47;
@@ -82398,9 +82426,9 @@ ohungarumlaut = -67;
 omacron = -20;
 otilde = -34;
 parenleft = -38;
-r.ss03 = -93;
+r.ss05 = -93;
 racute = -45;
-racute.ss03 = -62;
+racute.ss05 = -62;
 rcaron = 0;
 registered = -26;
 scaron = -29;
@@ -82412,9 +82440,9 @@ udieresis.ss01 = -57;
 ugrave = -21;
 uhungarumlaut = -77;
 umacron = -32;
-uni1EA1.ss01 = -88;
+uni1EA1.ss01.ss02 = -88;
 uni1EA3 = -63;
-uni1EA3.ss01 = -55;
+uni1EA3.ss02 = -55;
 uni1EA5 = -70;
 uni1EA7 = -70;
 uni1EA9 = -71;
@@ -82438,9 +82466,9 @@ uni2082 = -76;
 uring = -59;
 utilde = -44;
 ycircumflex = -37;
-ycircumflex.ss01 = -52;
+ycircumflex.ss02 = -52;
 ygrave = 0;
-ygrave.ss01 = 0;
+ygrave.ss02 = 0;
 zcaron = -27;
 };
 Tbar = {
@@ -82458,7 +82486,7 @@ slash = -64;
 tbar = -41;
 };
 Tcaron = {
-a.ss01 = -88;
+a.ss02 = -88;
 udieresis = -37;
 };
 U = {
@@ -82483,13 +82511,13 @@ V = {
 OE = -5;
 Oslash = -4;
 abreve = -27;
-abreve.ss01 = -25;
+abreve.ss02 = -25;
 acircumflex = -27;
 adieresis = -24;
-adieresis.ss01 = -38;
+adieresis.ss01.ss02 = -38;
 agrave = -10;
 amacron = -23;
-amacron.ss01 = -13;
+amacron.ss02 = -13;
 ampersand = -18;
 aring = -27;
 at = -18;
@@ -82509,8 +82537,8 @@ odieresis = -17;
 ograve = 0;
 otilde = -17;
 parenleft = -18;
-r.ss03 = -32;
-racute.ss03 = -21;
+r.ss05 = -32;
+racute.ss05 = -21;
 rcaron = 2;
 registered = -22;
 scaron = -24;
@@ -82522,15 +82550,15 @@ zcaron = -17;
 W = {
 Lslash = -10;
 adieresis = -6;
-adieresis.ss01 = -21;
+adieresis.ss01.ss02 = -21;
 ampersand = -12;
 asciitilde = -34;
 i.ss01 = 0;
 idieresis = 63;
 less = -43;
-lslash.ss02 = 0;
+lslash.ss04 = 0;
 minus = -10;
-r.ss03 = -12;
+r.ss05 = -12;
 scaron = -12;
 uni2083 = -31;
 };
@@ -82554,11 +82582,11 @@ Lslash = -26;
 Oslash = -12;
 acircumflex = -54;
 adieresis = -32;
-adieresis.ss01 = -48;
+adieresis.ss01.ss02 = -48;
 agrave = -16;
-agrave.ss01 = 0;
+agrave.ss02 = 0;
 amacron = -21;
-amacron.ss01 = -18;
+amacron.ss02 = -18;
 ampersand = -22;
 asciitilde = -73;
 at = -32;
@@ -82577,7 +82605,7 @@ odieresis = -26;
 ograve = 0;
 omacron = -12;
 parenleft = -28;
-r.ss03 = -49;
+r.ss05 = -49;
 registered = -23;
 scaron = -23;
 udieresis = -31;
@@ -82615,7 +82643,7 @@ jcircumflex = 2;
 logicalnot = 54;
 notequal = -4;
 };
-a.ss01 = {
+a.ss02 = {
 T = -95;
 exclam.ss01 = -11;
 germandbls = -17;
@@ -82632,7 +82660,7 @@ parenright = -50;
 adieresis = {
 parenright = -40;
 };
-adieresis.ss01 = {
+adieresis.ss01.ss02 = {
 germandbls = -16;
 };
 amacron = {
@@ -82644,7 +82672,7 @@ comma = 0;
 j = 2;
 parenright = -2;
 };
-aogonek.ss01 = {
+aogonek.ss02 = {
 comma.ss01 = 0;
 parenright = -2;
 };
@@ -82840,9 +82868,9 @@ rcaron = 2;
 dcaron = {
 H = 85;
 a = 18;
-a.ss01 = 19;
+a.ss02 = 19;
 aacute = 18;
-aacute.ss01 = 19;
+aacute.ss02 = 19;
 colon = 62;
 comma = 0;
 comma.ss01 = -15;
@@ -82927,7 +82955,7 @@ exclam = -13;
 exclam.ss01 = -13;
 germandbls = -19;
 logicalnot = 67;
-lslash.ss02 = 2;
+lslash.ss04 = 2;
 parenleft = 0;
 quotedblleft = -44;
 registered = -33;
@@ -83008,7 +83036,7 @@ bracketright = -6;
 parenright = -8;
 };
 eogonek = {
-lslash.ss02 = 2;
+lslash.ss04 = 2;
 parenright = -30;
 };
 equal = {
@@ -83044,7 +83072,7 @@ t = -14;
 u = 0;
 v = -7;
 y = -10;
-y.ss01 = -7;
+y.ss02 = -7;
 yacute = -10;
 };
 exclam = {
@@ -83079,13 +83107,13 @@ idieresis = 0;
 l = 0;
 n = 0;
 ordmasculine = 13;
-r.ss03 = 0;
+r.ss05 = 0;
 };
 f_f.liga = {
 exclam = 10;
 idieresis = 0;
 ordmasculine = 13;
-r.ss03 = 0;
+r.ss05 = 0;
 };
 f_f_i.liga = {
 asciitilde = -21;
@@ -83102,7 +83130,7 @@ idieresis = 6;
 jcircumflex = 7;
 periodcentered.loclCAT = 0;
 };
-f_f_l.liga.ss02 = {
+f_f_l.liga.ss04 = {
 periodcentered.loclCAT = -30;
 periodcentered.loclCAT.ss01 = -30;
 };
@@ -83135,7 +83163,7 @@ idieresis = 6;
 jcircumflex = 7;
 periodcentered.loclCAT = 0;
 };
-fl.ss02 = {
+fl.ss04 = {
 periodcentered.loclCAT = -30;
 periodcentered.loclCAT.ss01 = -30;
 };
@@ -83204,10 +83232,10 @@ f = -5;
 f_f.liga = -5;
 f_f_i.liga = -5;
 f_f_l.liga = -5;
-f_f_l.liga.ss02 = -5;
+f_f_l.liga.ss04 = -5;
 fi = -5;
 fl = -5;
-fl.ss02 = -5;
+fl.ss04 = -5;
 g = 7;
 o = 9;
 parenright = -64;
@@ -83257,7 +83285,7 @@ h = {
 asciitilde = -18;
 exclam = -8;
 registered = -37;
-uni1EB3.ss01 = -6;
+uni1EB3.ss02 = -6;
 };
 hyphen = {
 Hbar = -17;
@@ -83348,7 +83376,7 @@ idieresis = 7;
 j = 6;
 k = 6;
 l = 6;
-l.ss02 = 7;
+l.ss04 = 7;
 parenright = 5;
 question = 61;
 quotedbl = 66;
@@ -83368,7 +83396,7 @@ idieresis.ss01 = {
 b = 3;
 k = 3;
 l = 3;
-l.ss02 = 4;
+l.ss04 = 4;
 t = 0;
 };
 igrave = {
@@ -83378,7 +83406,7 @@ parenright = -51;
 imacron = {
 G = 49;
 I = 25;
-I.ss04 = 59;
+I.ss06 = 59;
 N = 59;
 P = 59;
 S = 50;
@@ -83397,7 +83425,7 @@ j = 0;
 j.ss01 = 0;
 k = 0;
 l = 0;
-l.ss02 = 0;
+l.ss04 = 0;
 parenright = 0;
 period.ss01 = -33;
 question = 64;
@@ -83418,7 +83446,7 @@ uni00B3 = 26;
 uni00B9 = 21;
 uni0137 = 0;
 uni013C = 0;
-uni013C.ss02 = 0;
+uni013C.ss04 = 0;
 uni2074 = 21;
 uni2075 = 48;
 uni2076 = 53;
@@ -83435,7 +83463,7 @@ parenright.case = -60;
 integral = {
 A = -61;
 a = -65;
-a.ss01 = -66;
+a.ss02 = -66;
 d = -65;
 e = -64;
 integral = -56;
@@ -83498,7 +83526,7 @@ iogonek = 0;
 lacute = -2;
 less = -56;
 logicalnot = 0;
-lslash.ss02 = -27;
+lslash.ss04 = -27;
 minus = -25;
 parenleft = -18;
 rcaron = -2;
@@ -83529,7 +83557,7 @@ quoteright = 0;
 slash = 0;
 underscore = 0;
 };
-l.ss02 = {
+l.ss04 = {
 periodcentered.loclCAT = -29;
 periodcentered.loclCAT.ss01 = -30;
 };
@@ -83538,9 +83566,9 @@ exclam = 100;
 exclam.ss01 = 100;
 scaron = 27;
 };
-lcaron.ss02 = {
+lcaron.ss04 = {
 a = 0;
-a.ss01 = 0;
+a.ss02 = 0;
 b = 30;
 ccaron = 0;
 comma = 13;
@@ -83551,7 +83579,7 @@ h = 30;
 i = 26;
 j = 26;
 k = 30;
-l.ss02 = 30;
+l.ss04 = 30;
 m = 10;
 n = 9;
 ncaron = 9;
@@ -83618,7 +83646,7 @@ w = 4;
 y = 0;
 zdotaccent = -21;
 };
-lslash.ss02 = {
+lslash.ss04 = {
 comma = 6;
 period = 5;
 zdotaccent = 0;
@@ -83716,7 +83744,7 @@ exclam = -10;
 exclam.ss01 = -9;
 germandbls = -16;
 logicalnot = 62;
-lslash.ss02 = 7;
+lslash.ss04 = 7;
 n = 0;
 parenleft = 0;
 question = -52;
@@ -83727,7 +83755,7 @@ registered = -35;
 tbar = 0;
 };
 oacute = {
-lslash.ss02 = 7;
+lslash.ss04 = 7;
 };
 odieresis = {
 germandbls = -16;
@@ -83813,7 +83841,7 @@ parenright = -62;
 period = -7;
 period.ss01 = -39;
 r = 0;
-r.ss03 = 0;
+r.ss05 = 0;
 s = 0;
 slash = -3;
 t = 0;
@@ -83822,19 +83850,19 @@ y = 0;
 };
 p = {
 exclam = -9;
-lslash.ss02 = 6;
+lslash.ss04 = 6;
 registered = -34;
 };
 parenleft = {
 Euro = -75;
 H = 0;
 Hbar = -24;
-Icircumflex.ss04 = 7;
+Icircumflex.ss06 = 7;
 Lslash = -25;
 OE = -48;
 Odieresis = -38;
 Oslash = -38;
-a.ss01 = -73;
+a.ss02 = -73;
 adieresis = -38;
 agrave = -26;
 ampersand = -46;
@@ -83868,7 +83896,7 @@ l = 0;
 less = -100;
 lessequal = -23;
 logicalnot = -39;
-lslash.ss02 = -20;
+lslash.ss04 = -20;
 minus = -64;
 multiply = -37;
 notequal = -69;
@@ -83900,7 +83928,7 @@ zcaron = -31;
 };
 parenleft.case = {
 Euro = -66;
-Icircumflex.ss04 = 26;
+Icircumflex.ss06 = 26;
 Lslash = -18;
 OE = -44;
 Oslash = -37;
@@ -84035,14 +84063,14 @@ G = -77;
 O = -77;
 Oacute = -77;
 P = -46;
-Q.ss01 = -77;
+Q.ss03 = -77;
 S = -78;
 T = -127;
 U = -80;
 V = -104;
 W = -85;
 Y = -127;
-a.ss01 = -63;
+a.ss02 = -63;
 c = -63;
 d = -62;
 e = -62;
@@ -84056,7 +84084,7 @@ s = -60;
 t = -66;
 v = -73;
 w = -69;
-y.ss01 = -40;
+y.ss02 = -40;
 };
 quotedbl = {
 A = -47;
@@ -84078,7 +84106,7 @@ period.ss01 = -76;
 questiondown = -62;
 questiondown.case = -49;
 questiondown.ss01 = -55;
-r.ss03 = -11;
+r.ss05 = -11;
 underscore = -121;
 uni1EA2 = -47;
 uni1EA4 = -47;
@@ -84156,7 +84184,7 @@ idieresis = 69;
 itilde = 61;
 questiondown = -64;
 quotedblbase = -64;
-r.ss03 = -34;
+r.ss05 = -34;
 };
 quoteright.ss01 = {
 quotedblbase.ss01 = -66;
@@ -84196,7 +84224,7 @@ period = -61;
 questiondown = -61;
 questiondown.case = -49;
 questiondown.ss01 = -55;
-r.ss03 = -11;
+r.ss05 = -11;
 slash = -58;
 };
 r = {
@@ -84205,7 +84233,7 @@ asciitilde = -47;
 germandbls = 2;
 jcircumflex = 0;
 logicalnot = -12;
-lslash.ss02 = -19;
+lslash.ss04 = -19;
 n = 0;
 uni2081 = -57;
 uni2082 = -54;
@@ -84214,8 +84242,8 @@ uni2084 = -54;
 uni2085 = -49;
 uni2086 = -59;
 };
-r.ss03 = {
-r.ss03 = 0;
+r.ss05 = {
+r.ss05 = 0;
 uni2084 = -37;
 };
 racute = {
@@ -84228,7 +84256,7 @@ period = -52;
 period.ss01 = -76;
 t = 2;
 };
-racute.ss03 = {
+racute.ss05 = {
 comma = -35;
 period = -34;
 t = 16;
@@ -84250,7 +84278,7 @@ parenright = -21;
 uni00B9 = 0;
 uni2077 = 0;
 };
-rcaron.ss03 = {
+rcaron.ss05 = {
 a = 0;
 aacute = 0;
 b = 5;
@@ -84281,7 +84309,7 @@ l = 0;
 logicalnot = 44;
 parenleft = -6;
 registered = -31;
-uni1EB5.ss01 = 0;
+uni1EB5.ss02 = 0;
 wacute = -5;
 };
 scaron = {
@@ -84531,7 +84559,7 @@ uni0145 = {
 imacron = 59;
 };
 uni0162 = {
-a.ss01 = -88;
+a.ss02 = -88;
 abreve = -46;
 acircumflex = -64;
 amacron = -29;
@@ -84542,9 +84570,9 @@ comma = 45;
 parenright = 22;
 };
 uni021A = {
-a.ss01 = -88;
+a.ss02 = -88;
 abreve = -46;
-abreve.ss01 = -31;
+abreve.ss02 = -31;
 acircumflex = -64;
 amacron = -31;
 };
@@ -84578,12 +84606,12 @@ uni00B9 = -35;
 uni1EA8 = {
 Y = -84;
 };
-uni1EA9.ss01 = {
-y.ss01 = -11;
+uni1EA9.ss02 = {
+y.ss02 = -11;
 };
-uni1EAB.ss01 = {
+uni1EAB.ss02 = {
 n = -2;
-y.ss01 = -11;
+y.ss02 = -11;
 };
 uni1EAF = {
 uni00B9 = -27;
@@ -84594,13 +84622,13 @@ uni00B9 = -25;
 uni1EB3 = {
 uni00B9 = -24;
 };
-uni1EB3.ss01 = {
+uni1EB3.ss02 = {
 n = -2;
 };
 uni1EB5 = {
 uni00B9 = -25;
 };
-uni1EB5.ss01 = {
+uni1EB5.ss02 = {
 n = -2;
 };
 uni1EB7 = {
@@ -84706,7 +84734,7 @@ period = -29;
 uni1EC7 = -2;
 uni2077 = -30;
 };
-uni1EF5.ss01 = {
+uni1EF5.ss01.ss02 = {
 comma.ss01 = -13;
 parenright = -30;
 period.ss01 = -76;
@@ -84864,12 +84892,12 @@ parenright = -2;
 v = {
 ampersand = -21;
 n = 0;
-r.ss03 = 0;
+r.ss05 = 0;
 };
 w = {
 ampersand = -20;
 asciitilde = -17;
-r.ss03 = 0;
+r.ss05 = 0;
 };
 x = {
 ampersand = -25;
@@ -84881,22 +84909,22 @@ ampersand = -24;
 asciitilde = -21;
 germandbls = 0;
 logicalnot = 50;
-lslash.ss02 = -4;
-r.ss03 = 0;
-rcaron.ss03 = 0;
+lslash.ss04 = -4;
+r.ss05 = 0;
+rcaron.ss05 = 0;
 uni2080 = -25;
 uni2082 = -18;
 };
-y.ss01 = {
+y.ss02 = {
 asciitilde = -23;
 o = -4;
-r.ss03 = 0;
+r.ss05 = 0;
 };
 yacute = {
-r.ss03 = 0;
+r.ss05 = 0;
 };
 ycircumflex = {
-r.ss03 = 0;
+r.ss05 = 0;
 };
 yen = {
 colon = -38;
@@ -84915,7 +84943,7 @@ uni2074 = -35;
 };
 z = {
 asciitilde = -29;
-lslash.ss02 = -18;
+lslash.ss04 = -18;
 };
 zcaron = {
 T = -6;
@@ -92945,10 +92973,10 @@ dollar = -24;
 equal = -21;
 germandbls = -35;
 idieresis = 6;
-l.ss02 = 0;
+l.ss04 = 0;
 less = -55;
 logicalnot = -5;
-lslash.ss02 = -18;
+lslash.ss04 = -18;
 minus = -26;
 notequal = -28;
 numbersign = -17;
@@ -92997,8 +93025,8 @@ v = -47;
 Aacute = {
 Lslash = -20;
 Tbar = -69;
-l.ss02 = 0;
-lslash.ss02 = -17;
+l.ss04 = 0;
+lslash.ss04 = -17;
 registered = -67;
 };
 Abreve = {
@@ -93094,7 +93122,7 @@ i.ss01 = -3;
 idieresis = 57;
 idieresis.ss01 = 27;
 jcircumflex = 33;
-l.ss02 = 0;
+l.ss04 = 0;
 less = -51;
 logicalnot = -5;
 minus = -24;
@@ -93145,7 +93173,7 @@ slash = -19;
 };
 F = {
 Oslash = -12;
-adieresis.ss01 = -15;
+adieresis.ss01.ss02 = -15;
 ampersand = -27;
 ellipsis.ss01 = -126;
 i.ss01 = -4;
@@ -93153,7 +93181,7 @@ iacute = -15;
 idieresis = 57;
 numbersign = -38;
 parenleft = -23;
-r.ss03 = -21;
+r.ss05 = -21;
 uni2083 = -22;
 uni2084 = -67;
 uni2085 = -25;
@@ -93198,7 +93226,7 @@ Hbar = 0;
 J = -18;
 T = -15;
 a = -16;
-a.ss01 = -27;
+a.ss02 = -27;
 d = -15;
 e = -18;
 o = -18;
@@ -93217,7 +93245,7 @@ at = -26;
 equal = -32;
 germandbls = -29;
 jcircumflex = 30;
-l.ss02 = 0;
+l.ss04 = 0;
 less = -72;
 logicalnot = -16;
 minus = -41;
@@ -93225,26 +93253,26 @@ numbersign = -29;
 parenleft = -28;
 registered = -19;
 };
-I.ss04 = {
+I.ss06 = {
 jcircumflex = 38;
 };
 Iacute = {
 Lslash = -19;
 thorn = 0;
 };
-Iacute.ss04 = {
+Iacute.ss06 = {
 Eth = 34;
 };
 Icircumflex = {
-l.ss02 = 0;
+l.ss04 = 0;
 };
-Icircumflex.ss04 = {
+Icircumflex.ss06 = {
 parenright = 26;
 };
 Idieresis = {
 idieresis = 61;
 };
-Imacron.ss04 = {
+Imacron.ss06 = {
 imacron = 66;
 parenright = 22;
 };
@@ -93289,9 +93317,9 @@ G = -21;
 Lslash = -27;
 OE = -26;
 Oslash = -10;
-adieresis.ss01 = -22;
+adieresis.ss01.ss02 = -22;
 amacron = -24;
-amacron.ss01 = -13;
+amacron.ss02 = -13;
 ampersand = -29;
 asciitilde = -93;
 at = -38;
@@ -93306,7 +93334,7 @@ equal = -56;
 i.ss01 = 0;
 less = -105;
 logicalnot = -53;
-lslash.ss02 = -21;
+lslash.ss04 = -21;
 minus = -76;
 notequal = -60;
 numbersign = -46;
@@ -93320,7 +93348,7 @@ udieresis = -27;
 umacron = -21;
 uni1EF9 = -15;
 ygrave = -9;
-ygrave.ss01 = -15;
+ygrave.ss02 = -15;
 };
 L = {
 Ecircumflex = -12;
@@ -93387,7 +93415,7 @@ U = 10;
 Uacute = 10;
 V = 26;
 a = -17;
-a.ss01 = -21;
+a.ss02 = -21;
 hyphen = -96;
 hyphen.case = -71;
 parenright = -8;
@@ -93429,7 +93457,7 @@ W = -37;
 Y = -77;
 Zdotaccent = 12;
 a = -10;
-a.ss01 = -12;
+a.ss02 = -12;
 aacute = -10;
 aogonek = -10;
 comma = 24;
@@ -93475,7 +93503,7 @@ j = 2;
 jcircumflex = 31;
 k = 5;
 l = 4;
-l.ss02 = 5;
+l.ss04 = 5;
 parenleft = -3;
 };
 Oacute = {
@@ -93520,7 +93548,7 @@ bracketright = -30;
 parenright = -31;
 u = 5;
 };
-Q.ss01 = {
+Q.ss03 = {
 Edieresis.ss01 = 14;
 };
 R = {
@@ -93555,17 +93583,17 @@ Hbar = -15;
 Lslash = -22;
 OE = -14;
 Oslash = -11;
-a.ss01 = -83;
-aacute.ss01 = -81;
+a.ss02 = -83;
+aacute.ss02 = -81;
 abreve = -47;
 acircumflex = -52;
 adieresis = -34;
 agrave = -30;
-agrave.ss01 = -18;
+agrave.ss02 = -18;
 amacron = -29;
-amacron.ss01 = -18;
+amacron.ss02 = -18;
 ampersand = -30;
-aogonek.ss01 = -82;
+aogonek.ss02 = -82;
 aring = -57;
 asciitilde = -86;
 at = -43;
@@ -93597,9 +93625,9 @@ ohungarumlaut = -53;
 omacron = -15;
 otilde = -31;
 parenleft = -39;
-r.ss03 = -84;
+r.ss05 = -84;
 racute = -40;
-racute.ss03 = -60;
+racute.ss05 = -60;
 rcaron = 8;
 registered = -21;
 scaron = -20;
@@ -93611,9 +93639,9 @@ udieresis.ss01 = -44;
 ugrave = -22;
 uhungarumlaut = -60;
 umacron = -24;
-uni1EA1.ss01 = -81;
+uni1EA1.ss01.ss02 = -81;
 uni1EA3 = -60;
-uni1EA3.ss01 = -58;
+uni1EA3.ss02 = -58;
 uni1EA5 = -56;
 uni1EA7 = -56;
 uni1EA9 = -61;
@@ -93637,9 +93665,9 @@ uni2082 = -74;
 uring = -49;
 utilde = -37;
 ycircumflex = -30;
-ycircumflex.ss01 = -43;
+ycircumflex.ss02 = -43;
 ygrave = -10;
-ygrave.ss01 = -11;
+ygrave.ss02 = -11;
 zcaron = -20;
 };
 Tbar = {
@@ -93657,7 +93685,7 @@ slash = -65;
 tbar = -34;
 };
 Tcaron = {
-a.ss01 = -82;
+a.ss02 = -82;
 udieresis = -27;
 };
 U = {
@@ -93682,13 +93710,13 @@ V = {
 OE = -6;
 Oslash = -6;
 abreve = -26;
-abreve.ss01 = -24;
+abreve.ss02 = -24;
 acircumflex = -26;
 adieresis = -23;
-adieresis.ss01 = -27;
+adieresis.ss01.ss02 = -27;
 agrave = -14;
 amacron = -22;
-amacron.ss01 = -9;
+amacron.ss02 = -9;
 ampersand = -25;
 aring = -26;
 at = -20;
@@ -93708,8 +93736,8 @@ odieresis = -12;
 ograve = -7;
 otilde = -18;
 parenleft = -22;
-r.ss03 = -32;
-racute.ss03 = -23;
+r.ss05 = -32;
+racute.ss05 = -23;
 rcaron = 9;
 registered = -19;
 scaron = -17;
@@ -93721,15 +93749,15 @@ zcaron = -12;
 W = {
 Lslash = -11;
 adieresis = -6;
-adieresis.ss01 = -14;
+adieresis.ss01.ss02 = -14;
 ampersand = -16;
 asciitilde = -33;
 i.ss01 = 4;
 idieresis = 71;
 less = -34;
-lslash.ss02 = -2;
+lslash.ss04 = -2;
 minus = -11;
-r.ss03 = -14;
+r.ss05 = -14;
 scaron = -7;
 uni2083 = -29;
 };
@@ -93753,11 +93781,11 @@ Lslash = -26;
 Oslash = -16;
 acircumflex = -52;
 adieresis = -30;
-adieresis.ss01 = -34;
+adieresis.ss01.ss02 = -34;
 agrave = -27;
-agrave.ss01 = -10;
+agrave.ss02 = -10;
 amacron = -22;
-amacron.ss01 = -13;
+amacron.ss02 = -13;
 ampersand = -30;
 asciitilde = -74;
 at = -38;
@@ -93776,7 +93804,7 @@ odieresis = -20;
 ograve = -11;
 omacron = -9;
 parenleft = -36;
-r.ss03 = -52;
+r.ss05 = -52;
 registered = -24;
 scaron = -16;
 udieresis = -24;
@@ -93814,7 +93842,7 @@ jcircumflex = 2;
 logicalnot = 39;
 notequal = -4;
 };
-a.ss01 = {
+a.ss02 = {
 T = -90;
 exclam.ss01 = -6;
 germandbls = -15;
@@ -93831,7 +93859,7 @@ parenright = -49;
 adieresis = {
 parenright = -34;
 };
-adieresis.ss01 = {
+adieresis.ss01.ss02 = {
 germandbls = -15;
 };
 amacron = {
@@ -93843,7 +93871,7 @@ comma = 2;
 j = 9;
 parenright = -2;
 };
-aogonek.ss01 = {
+aogonek.ss02 = {
 comma.ss01 = 0;
 parenright = 0;
 };
@@ -94039,9 +94067,9 @@ rcaron = 2;
 dcaron = {
 H = 69;
 a = 5;
-a.ss01 = 3;
+a.ss02 = 3;
 aacute = 5;
-aacute.ss01 = 4;
+aacute.ss02 = 4;
 colon = 45;
 comma = -30;
 comma.ss01 = -42;
@@ -94126,7 +94154,7 @@ exclam = -9;
 exclam.ss01 = -7;
 germandbls = -15;
 logicalnot = 50;
-lslash.ss02 = 4;
+lslash.ss04 = 4;
 parenleft = -5;
 quotedblleft = -34;
 registered = -29;
@@ -94207,7 +94235,7 @@ bracketright = -4;
 parenright = -12;
 };
 eogonek = {
-lslash.ss02 = 4;
+lslash.ss04 = 4;
 parenright = -33;
 };
 equal = {
@@ -94243,7 +94271,7 @@ t = -10;
 u = 0;
 v = -10;
 y = -14;
-y.ss01 = -13;
+y.ss02 = -13;
 yacute = -14;
 };
 exclam = {
@@ -94278,13 +94306,13 @@ idieresis = 19;
 l = 0;
 n = 0;
 ordmasculine = 12;
-r.ss03 = 0;
+r.ss05 = 0;
 };
 f_f.liga = {
 exclam = 10;
 idieresis = 19;
 ordmasculine = 12;
-r.ss03 = 0;
+r.ss05 = 0;
 };
 f_f_i.liga = {
 asciitilde = -19;
@@ -94301,7 +94329,7 @@ idieresis = 19;
 jcircumflex = 19;
 periodcentered.loclCAT = 0;
 };
-f_f_l.liga.ss02 = {
+f_f_l.liga.ss04 = {
 periodcentered.loclCAT = -28;
 periodcentered.loclCAT.ss01 = -31;
 };
@@ -94334,7 +94362,7 @@ idieresis = 19;
 jcircumflex = 19;
 periodcentered.loclCAT = 0;
 };
-fl.ss02 = {
+fl.ss04 = {
 periodcentered.loclCAT = -28;
 periodcentered.loclCAT.ss01 = -31;
 };
@@ -94403,10 +94431,10 @@ f = -8;
 f_f.liga = -8;
 f_f_i.liga = -8;
 f_f_l.liga = -8;
-f_f_l.liga.ss02 = -8;
+f_f_l.liga.ss04 = -8;
 fi = -8;
 fl = -8;
-fl.ss02 = -8;
+fl.ss04 = -8;
 g = 6;
 o = 7;
 parenright = -62;
@@ -94456,7 +94484,7 @@ h = {
 asciitilde = -17;
 exclam = -5;
 registered = -31;
-uni1EB3.ss01 = -4;
+uni1EB3.ss02 = -4;
 };
 hyphen = {
 Hbar = -17;
@@ -94547,7 +94575,7 @@ idieresis = 31;
 j = 20;
 k = 19;
 l = 19;
-l.ss02 = 19;
+l.ss04 = 19;
 parenright = 20;
 question = 67;
 quotedbl = 71;
@@ -94567,7 +94595,7 @@ idieresis.ss01 = {
 b = 18;
 k = 18;
 l = 18;
-l.ss02 = 18;
+l.ss04 = 18;
 t = 4;
 };
 igrave = {
@@ -94577,7 +94605,7 @@ parenright = -48;
 imacron = {
 G = 55;
 I = 45;
-I.ss04 = 66;
+I.ss06 = 66;
 N = 66;
 P = 66;
 S = 60;
@@ -94596,7 +94624,7 @@ j = 17;
 j.ss01 = 20;
 k = 16;
 l = 16;
-l.ss02 = 15;
+l.ss04 = 15;
 parenright = 18;
 period.ss01 = -27;
 question = 71;
@@ -94617,7 +94645,7 @@ uni00B3 = 42;
 uni00B9 = 40;
 uni0137 = 16;
 uni013C = 16;
-uni013C.ss02 = 15;
+uni013C.ss04 = 15;
 uni2074 = 34;
 uni2075 = 56;
 uni2076 = 62;
@@ -94634,7 +94662,7 @@ parenright.case = -64;
 integral = {
 A = -57;
 a = -59;
-a.ss01 = -63;
+a.ss02 = -63;
 d = -59;
 e = -60;
 integral = -50;
@@ -94697,7 +94725,7 @@ iogonek = 0;
 lacute = -2;
 less = -47;
 logicalnot = -11;
-lslash.ss02 = -26;
+lslash.ss04 = -26;
 minus = -29;
 parenleft = -23;
 rcaron = -2;
@@ -94728,7 +94756,7 @@ quoteright = 0;
 slash = 0;
 underscore = 0;
 };
-l.ss02 = {
+l.ss04 = {
 periodcentered.loclCAT = -27;
 periodcentered.loclCAT.ss01 = -31;
 };
@@ -94737,9 +94765,9 @@ exclam = 128;
 exclam.ss01 = 128;
 scaron = 66;
 };
-lcaron.ss02 = {
+lcaron.ss04 = {
 a = 21;
-a.ss01 = 16;
+a.ss02 = 16;
 b = 64;
 ccaron = 33;
 comma = 12;
@@ -94750,7 +94778,7 @@ h = 64;
 i = 61;
 j = 61;
 k = 64;
-l.ss02 = 64;
+l.ss04 = 64;
 m = 36;
 n = 35;
 ncaron = 39;
@@ -94817,7 +94845,7 @@ w = 5;
 y = 0;
 zdotaccent = -15;
 };
-lslash.ss02 = {
+lslash.ss04 = {
 comma = 7;
 period = 7;
 zdotaccent = 2;
@@ -94915,7 +94943,7 @@ exclam = -7;
 exclam.ss01 = -5;
 germandbls = -14;
 logicalnot = 47;
-lslash.ss02 = 7;
+lslash.ss04 = 7;
 n = 0;
 parenleft = -5;
 question = -54;
@@ -94926,7 +94954,7 @@ registered = -32;
 tbar = 0;
 };
 oacute = {
-lslash.ss02 = 7;
+lslash.ss04 = 7;
 };
 odieresis = {
 germandbls = -14;
@@ -95012,7 +95040,7 @@ parenright = -60;
 period = -4;
 period.ss01 = -29;
 r = 0;
-r.ss03 = 0;
+r.ss05 = 0;
 s = 2;
 slash = -7;
 t = 0;
@@ -95021,19 +95049,19 @@ y = 0;
 };
 p = {
 exclam = -6;
-lslash.ss02 = 6;
+lslash.ss04 = 6;
 registered = -28;
 };
 parenleft = {
 Euro = -72;
 H = 0;
 Hbar = -24;
-Icircumflex.ss04 = 26;
+Icircumflex.ss06 = 26;
 Lslash = -27;
 OE = -47;
 Odieresis = -31;
 Oslash = -34;
-a.ss01 = -73;
+a.ss02 = -73;
 adieresis = -38;
 agrave = -36;
 ampersand = -50;
@@ -95067,7 +95095,7 @@ l = 0;
 less = -92;
 lessequal = -34;
 logicalnot = -49;
-lslash.ss02 = -22;
+lslash.ss04 = -22;
 minus = -67;
 multiply = -47;
 notequal = -70;
@@ -95099,7 +95127,7 @@ zcaron = -28;
 };
 parenleft.case = {
 Euro = -65;
-Icircumflex.ss04 = 38;
+Icircumflex.ss06 = 38;
 Lslash = -24;
 OE = -47;
 Oslash = -30;
@@ -95237,14 +95265,14 @@ G = -69;
 O = -76;
 Oacute = -76;
 P = -38;
-Q.ss01 = -76;
+Q.ss03 = -76;
 S = -74;
 T = -112;
 U = -78;
 V = -94;
 W = -76;
 Y = -120;
-a.ss01 = -58;
+a.ss02 = -58;
 c = -63;
 d = -56;
 e = -63;
@@ -95258,7 +95286,7 @@ s = -58;
 t = -64;
 v = -72;
 w = -63;
-y.ss01 = -45;
+y.ss02 = -45;
 };
 quotedbl = {
 A = -48;
@@ -95280,7 +95308,7 @@ period.ss01 = -90;
 questiondown = -69;
 questiondown.case = -54;
 questiondown.ss01 = -60;
-r.ss03 = -12;
+r.ss05 = -12;
 underscore = -138;
 uni1EA2 = -48;
 uni1EA4 = -45;
@@ -95358,7 +95386,7 @@ idieresis = 72;
 itilde = 60;
 questiondown = -72;
 quotedblbase = -76;
-r.ss03 = -35;
+r.ss05 = -35;
 };
 quoteright.ss01 = {
 quotedblbase.ss01 = -79;
@@ -95398,7 +95426,7 @@ period = -71;
 questiondown = -68;
 questiondown.case = -54;
 questiondown.ss01 = -60;
-r.ss03 = -12;
+r.ss05 = -12;
 slash = -65;
 };
 r = {
@@ -95407,7 +95435,7 @@ asciitilde = -39;
 germandbls = 5;
 jcircumflex = 0;
 logicalnot = -8;
-lslash.ss02 = -14;
+lslash.ss04 = -14;
 n = 0;
 uni2081 = -59;
 uni2082 = -48;
@@ -95416,8 +95444,8 @@ uni2084 = -57;
 uni2085 = -39;
 uni2086 = -51;
 };
-r.ss03 = {
-r.ss03 = 0;
+r.ss05 = {
+r.ss05 = 0;
 uni2084 = -44;
 };
 racute = {
@@ -95430,7 +95458,7 @@ period = -57;
 period.ss01 = -77;
 t = 5;
 };
-racute.ss03 = {
+racute.ss05 = {
 comma = -42;
 period = -41;
 t = 14;
@@ -95452,7 +95480,7 @@ parenright = -10;
 uni00B9 = 12;
 uni2077 = 11;
 };
-rcaron.ss03 = {
+rcaron.ss05 = {
 a = 0;
 aacute = 0;
 b = 14;
@@ -95483,7 +95511,7 @@ l = 0;
 logicalnot = 31;
 parenleft = -12;
 registered = -28;
-uni1EB5.ss01 = 0;
+uni1EB5.ss02 = 0;
 wacute = -6;
 };
 scaron = {
@@ -95733,7 +95761,7 @@ uni0145 = {
 imacron = 66;
 };
 uni0162 = {
-a.ss01 = -81;
+a.ss02 = -81;
 abreve = -47;
 acircumflex = -51;
 amacron = -28;
@@ -95744,9 +95772,9 @@ comma = 41;
 parenright = 23;
 };
 uni021A = {
-a.ss01 = -81;
+a.ss02 = -81;
 abreve = -47;
-abreve.ss01 = -30;
+abreve.ss02 = -30;
 acircumflex = -51;
 amacron = -29;
 };
@@ -95780,12 +95808,12 @@ uni00B9 = -35;
 uni1EA8 = {
 Y = -75;
 };
-uni1EA9.ss01 = {
-y.ss01 = -18;
+uni1EA9.ss02 = {
+y.ss02 = -18;
 };
-uni1EAB.ss01 = {
+uni1EAB.ss02 = {
 n = -2;
-y.ss01 = -19;
+y.ss02 = -19;
 };
 uni1EAF = {
 uni00B9 = -32;
@@ -95796,13 +95824,13 @@ uni00B9 = -30;
 uni1EB3 = {
 uni00B9 = -30;
 };
-uni1EB3.ss01 = {
+uni1EB3.ss02 = {
 n = -2;
 };
 uni1EB5 = {
 uni00B9 = -30;
 };
-uni1EB5.ss01 = {
+uni1EB5.ss02 = {
 n = -2;
 };
 uni1EB7 = {
@@ -95908,7 +95936,7 @@ period = -32;
 uni1EC7 = -4;
 uni2077 = -40;
 };
-uni1EF5.ss01 = {
+uni1EF5.ss01.ss02 = {
 comma.ss01 = -2;
 parenright = -13;
 period.ss01 = -75;
@@ -96066,12 +96094,12 @@ parenright = 0;
 v = {
 ampersand = -24;
 n = 0;
-r.ss03 = -2;
+r.ss05 = -2;
 };
 w = {
 ampersand = -19;
 asciitilde = -18;
-r.ss03 = 0;
+r.ss05 = 0;
 };
 x = {
 ampersand = -29;
@@ -96083,22 +96111,22 @@ ampersand = -28;
 asciitilde = -26;
 germandbls = 2;
 logicalnot = 33;
-lslash.ss02 = -8;
-r.ss03 = -2;
-rcaron.ss03 = -2;
+lslash.ss04 = -8;
+r.ss05 = -2;
+rcaron.ss05 = -2;
 uni2080 = -32;
 uni2082 = -25;
 };
-y.ss01 = {
+y.ss02 = {
 asciitilde = -28;
 o = -7;
-r.ss03 = -3;
+r.ss05 = -3;
 };
 yacute = {
-r.ss03 = -2;
+r.ss05 = -2;
 };
 ycircumflex = {
-r.ss03 = -2;
+r.ss05 = -2;
 };
 yen = {
 colon = -39;
@@ -96117,7 +96145,7 @@ uni2074 = -38;
 };
 z = {
 asciitilde = -28;
-lslash.ss02 = -15;
+lslash.ss04 = -15;
 };
 zcaron = {
 T = 2;
@@ -104147,10 +104175,10 @@ dollar = -19;
 equal = -13;
 germandbls = -33;
 idieresis = 22;
-l.ss02 = 0;
+l.ss04 = 0;
 less = -23;
 logicalnot = -18;
-lslash.ss02 = -10;
+lslash.ss04 = -10;
 minus = -23;
 notequal = -22;
 numbersign = -2;
@@ -104199,8 +104227,8 @@ v = -24;
 Aacute = {
 Lslash = -18;
 Tbar = -47;
-l.ss02 = 3;
-lslash.ss02 = -6;
+l.ss04 = 3;
+lslash.ss04 = -6;
 registered = -49;
 };
 Abreve = {
@@ -104296,7 +104324,7 @@ i.ss01 = 4;
 idieresis = 86;
 idieresis.ss01 = 75;
 jcircumflex = 80;
-l.ss02 = 0;
+l.ss04 = 0;
 less = -25;
 logicalnot = -19;
 minus = -23;
@@ -104347,7 +104375,7 @@ slash = -27;
 };
 F = {
 Oslash = 0;
-adieresis.ss01 = 0;
+adieresis.ss01.ss02 = 0;
 ampersand = -26;
 ellipsis.ss01 = -101;
 i.ss01 = 7;
@@ -104355,7 +104383,7 @@ iacute = 0;
 idieresis = 97;
 numbersign = 0;
 parenleft = -33;
-r.ss03 = -17;
+r.ss05 = -17;
 uni2083 = -25;
 uni2084 = -61;
 uni2085 = -24;
@@ -104400,7 +104428,7 @@ Hbar = 3;
 J = -19;
 T = 0;
 a = -13;
-a.ss01 = -25;
+a.ss02 = -25;
 d = -11;
 e = -21;
 o = -21;
@@ -104419,7 +104447,7 @@ at = -27;
 equal = -13;
 germandbls = -25;
 jcircumflex = 85;
-l.ss02 = 0;
+l.ss04 = 0;
 less = -60;
 logicalnot = -58;
 minus = -57;
@@ -104427,26 +104455,26 @@ numbersign = 0;
 parenleft = -34;
 registered = -10;
 };
-I.ss04 = {
+I.ss06 = {
 jcircumflex = 73;
 };
 Iacute = {
 Lslash = -22;
 thorn = 0;
 };
-Iacute.ss04 = {
+Iacute.ss06 = {
 Eth = 35;
 };
 Icircumflex = {
-l.ss02 = 0;
+l.ss04 = 0;
 };
-Icircumflex.ss04 = {
+Icircumflex.ss06 = {
 parenright = 65;
 };
 Idieresis = {
 idieresis = 91;
 };
-Imacron.ss04 = {
+Imacron.ss06 = {
 imacron = 82;
 parenright = 78;
 };
@@ -104491,9 +104519,9 @@ G = -38;
 Lslash = -32;
 OE = -46;
 Oslash = 0;
-adieresis.ss01 = -5;
+adieresis.ss01.ss02 = -5;
 amacron = -29;
-amacron.ss01 = -2;
+amacron.ss02 = -2;
 ampersand = -35;
 asciitilde = -81;
 at = -55;
@@ -104508,7 +104536,7 @@ equal = -48;
 i.ss01 = 0;
 less = -66;
 logicalnot = -66;
-lslash.ss02 = -30;
+lslash.ss04 = -30;
 minus = -73;
 notequal = -59;
 numbersign = -36;
@@ -104522,7 +104550,7 @@ udieresis = -19;
 umacron = -17;
 uni1EF9 = -23;
 ygrave = -32;
-ygrave.ss01 = -52;
+ygrave.ss02 = -52;
 };
 L = {
 Ecircumflex = 0;
@@ -104589,7 +104617,7 @@ U = 97;
 Uacute = 97;
 V = 106;
 a = 24;
-a.ss01 = 9;
+a.ss02 = 9;
 hyphen = -65;
 hyphen.case = -57;
 parenright = 74;
@@ -104631,7 +104659,7 @@ W = -38;
 Y = -71;
 Zdotaccent = 6;
 a = 0;
-a.ss01 = -9;
+a.ss02 = -9;
 aacute = 0;
 aogonek = 0;
 comma = 8;
@@ -104677,7 +104705,7 @@ j = 4;
 jcircumflex = 53;
 k = 2;
 l = 0;
-l.ss02 = 0;
+l.ss04 = 0;
 parenleft = -12;
 };
 Oacute = {
@@ -104722,7 +104750,7 @@ bracketright = -14;
 parenright = -18;
 u = 3;
 };
-Q.ss01 = {
+Q.ss03 = {
 Edieresis.ss01 = 42;
 };
 R = {
@@ -104757,17 +104785,17 @@ Hbar = 0;
 Lslash = -25;
 OE = -9;
 Oslash = -9;
-a.ss01 = -70;
-aacute.ss01 = -65;
+a.ss02 = -70;
+aacute.ss02 = -65;
 abreve = -52;
 acircumflex = -24;
 adieresis = -26;
 agrave = -52;
-agrave.ss01 = -37;
+agrave.ss02 = -37;
 amacron = -24;
-amacron.ss01 = 2;
+amacron.ss02 = 2;
 ampersand = -35;
-aogonek.ss01 = -66;
+aogonek.ss02 = -66;
 aring = -52;
 asciitilde = -76;
 at = -34;
@@ -104799,9 +104827,9 @@ ohungarumlaut = -18;
 omacron = -2;
 otilde = -22;
 parenleft = -42;
-r.ss03 = -61;
+r.ss05 = -61;
 racute = -27;
-racute.ss03 = -56;
+racute.ss05 = -56;
 rcaron = 27;
 registered = -9;
 scaron = 0;
@@ -104813,9 +104841,9 @@ udieresis.ss01 = -12;
 ugrave = -25;
 uhungarumlaut = -19;
 umacron = -5;
-uni1EA1.ss01 = -65;
+uni1EA1.ss01.ss02 = -65;
 uni1EA3 = -52;
-uni1EA3.ss01 = -65;
+uni1EA3.ss02 = -65;
 uni1EA5 = -21;
 uni1EA7 = -20;
 uni1EA9 = -36;
@@ -104839,9 +104867,9 @@ uni2082 = -69;
 uring = -25;
 utilde = -19;
 ycircumflex = -12;
-ycircumflex.ss01 = -20;
+ycircumflex.ss02 = -20;
 ygrave = -34;
-ygrave.ss01 = -39;
+ygrave.ss02 = -39;
 zcaron = -2;
 };
 Tbar = {
@@ -104859,7 +104887,7 @@ slash = -68;
 tbar = -15;
 };
 Tcaron = {
-a.ss01 = -69;
+a.ss02 = -69;
 udieresis = -2;
 };
 U = {
@@ -104884,13 +104912,13 @@ V = {
 OE = -9;
 Oslash = -11;
 abreve = -23;
-abreve.ss01 = -22;
+abreve.ss02 = -22;
 acircumflex = -23;
 adieresis = -20;
-adieresis.ss01 = 0;
+adieresis.ss01.ss02 = 0;
 agrave = -23;
 amacron = -19;
-amacron.ss01 = 0;
+amacron.ss02 = 0;
 ampersand = -42;
 aring = -23;
 at = -25;
@@ -104910,8 +104938,8 @@ odieresis = -2;
 ograve = -24;
 otilde = -21;
 parenleft = -32;
-r.ss03 = -32;
-racute.ss03 = -27;
+r.ss05 = -32;
+racute.ss05 = -27;
 rcaron = 26;
 registered = -11;
 scaron = 0;
@@ -104923,15 +104951,15 @@ zcaron = 0;
 W = {
 Lslash = -14;
 adieresis = -5;
-adieresis.ss01 = 2;
+adieresis.ss01.ss02 = 2;
 ampersand = -26;
 asciitilde = -29;
 i.ss01 = 13;
 idieresis = 89;
 less = -11;
-lslash.ss02 = -8;
+lslash.ss04 = -8;
 minus = -14;
-r.ss03 = -19;
+r.ss05 = -19;
 scaron = 4;
 uni2083 = -25;
 };
@@ -104955,11 +104983,11 @@ Lslash = -26;
 Oslash = -26;
 acircumflex = -48;
 adieresis = -26;
-adieresis.ss01 = 0;
+adieresis.ss01.ss02 = 0;
 agrave = -55;
-agrave.ss01 = -35;
+agrave.ss02 = -35;
 amacron = -23;
-amacron.ss01 = 0;
+amacron.ss02 = 0;
 ampersand = -50;
 asciitilde = -76;
 at = -54;
@@ -104978,7 +105006,7 @@ odieresis = -4;
 ograve = -38;
 omacron = -2;
 parenleft = -57;
-r.ss03 = -60;
+r.ss05 = -60;
 registered = -27;
 scaron = 0;
 udieresis = -7;
@@ -105016,7 +105044,7 @@ jcircumflex = 0;
 logicalnot = 3;
 notequal = -6;
 };
-a.ss01 = {
+a.ss02 = {
 T = -77;
 exclam.ss01 = 4;
 germandbls = -11;
@@ -105033,7 +105061,7 @@ parenright = -45;
 adieresis = {
 parenright = -20;
 };
-adieresis.ss01 = {
+adieresis.ss01.ss02 = {
 germandbls = -11;
 };
 amacron = {
@@ -105045,7 +105073,7 @@ comma = 6;
 j = 30;
 parenright = 0;
 };
-aogonek.ss01 = {
+aogonek.ss02 = {
 comma.ss01 = 2;
 parenright = 0;
 };
@@ -105241,9 +105269,9 @@ rcaron = 0;
 dcaron = {
 H = 28;
 a = -26;
-a.ss01 = -35;
+a.ss02 = -35;
 aacute = -26;
-aacute.ss01 = -35;
+aacute.ss02 = -35;
 colon = 3;
 comma = -105;
 comma.ss01 = -111;
@@ -105328,7 +105356,7 @@ exclam = 0;
 exclam.ss01 = 6;
 germandbls = -6;
 logicalnot = 9;
-lslash.ss02 = 7;
+lslash.ss04 = 7;
 parenleft = -18;
 quotedblleft = -11;
 registered = -20;
@@ -105409,7 +105437,7 @@ bracketright = 0;
 parenright = -23;
 };
 eogonek = {
-lslash.ss02 = 7;
+lslash.ss04 = 7;
 parenright = -43;
 };
 equal = {
@@ -105445,7 +105473,7 @@ t = 0;
 u = 3;
 v = -17;
 y = -26;
-y.ss01 = -29;
+y.ss02 = -29;
 yacute = -26;
 };
 exclam = {
@@ -105480,13 +105508,13 @@ idieresis = 67;
 l = 0;
 n = 0;
 ordmasculine = 10;
-r.ss03 = 0;
+r.ss05 = 0;
 };
 f_f.liga = {
 exclam = 9;
 idieresis = 67;
 ordmasculine = 10;
-r.ss03 = 0;
+r.ss05 = 0;
 };
 f_f_i.liga = {
 asciitilde = -15;
@@ -105503,7 +105531,7 @@ idieresis = 52;
 jcircumflex = 50;
 periodcentered.loclCAT = 3;
 };
-f_f_l.liga.ss02 = {
+f_f_l.liga.ss04 = {
 periodcentered.loclCAT = -22;
 periodcentered.loclCAT.ss01 = -32;
 };
@@ -105536,7 +105564,7 @@ idieresis = 52;
 jcircumflex = 50;
 periodcentered.loclCAT = 3;
 };
-fl.ss02 = {
+fl.ss04 = {
 periodcentered.loclCAT = -22;
 periodcentered.loclCAT.ss01 = -32;
 };
@@ -105605,10 +105633,10 @@ f = -16;
 f_f.liga = -16;
 f_f_i.liga = -16;
 f_f_l.liga = -16;
-f_f_l.liga.ss02 = -16;
+f_f_l.liga.ss04 = -16;
 fi = -16;
 fl = -16;
-fl.ss02 = -16;
+fl.ss04 = -16;
 g = 3;
 o = 4;
 parenright = -59;
@@ -105658,7 +105686,7 @@ h = {
 asciitilde = -14;
 exclam = 0;
 registered = -16;
-uni1EB3.ss01 = 0;
+uni1EB3.ss02 = 0;
 };
 hyphen = {
 Hbar = -18;
@@ -105749,7 +105777,7 @@ idieresis = 88;
 j = 54;
 k = 51;
 l = 51;
-l.ss02 = 51;
+l.ss04 = 51;
 parenright = 58;
 question = 84;
 quotedbl = 84;
@@ -105769,7 +105797,7 @@ idieresis.ss01 = {
 b = 54;
 k = 54;
 l = 54;
-l.ss02 = 53;
+l.ss04 = 53;
 t = 14;
 };
 igrave = {
@@ -105779,7 +105807,7 @@ parenright = -41;
 imacron = {
 G = 69;
 I = 94;
-I.ss04 = 83;
+I.ss06 = 83;
 N = 83;
 P = 83;
 S = 84;
@@ -105798,7 +105826,7 @@ j = 57;
 j.ss01 = 70;
 k = 55;
 l = 55;
-l.ss02 = 54;
+l.ss04 = 54;
 parenright = 62;
 period.ss01 = -11;
 question = 87;
@@ -105819,7 +105847,7 @@ uni00B3 = 83;
 uni00B9 = 88;
 uni0137 = 55;
 uni013C = 55;
-uni013C.ss02 = 54;
+uni013C.ss04 = 54;
 uni2074 = 67;
 uni2075 = 77;
 uni2076 = 82;
@@ -105836,7 +105864,7 @@ parenright.case = -74;
 integral = {
 A = -47;
 a = -45;
-a.ss01 = -55;
+a.ss02 = -55;
 d = -45;
 e = -52;
 integral = -35;
@@ -105899,7 +105927,7 @@ iogonek = 0;
 lacute = -2;
 less = -24;
 logicalnot = -39;
-lslash.ss02 = -23;
+lslash.ss04 = -23;
 minus = -38;
 parenleft = -35;
 rcaron = -2;
@@ -105930,7 +105958,7 @@ quoteright = 0;
 slash = 0;
 underscore = 0;
 };
-l.ss02 = {
+l.ss04 = {
 periodcentered.loclCAT = -22;
 periodcentered.loclCAT.ss01 = -32;
 };
@@ -105939,9 +105967,9 @@ exclam = 198;
 exclam.ss01 = 198;
 scaron = 166;
 };
-lcaron.ss02 = {
+lcaron.ss04 = {
 a = 75;
-a.ss01 = 57;
+a.ss02 = 57;
 b = 148;
 ccaron = 116;
 comma = 11;
@@ -105952,7 +105980,7 @@ h = 148;
 i = 146;
 j = 146;
 k = 148;
-l.ss02 = 147;
+l.ss04 = 147;
 m = 101;
 n = 101;
 ncaron = 116;
@@ -106019,7 +106047,7 @@ w = 6;
 y = 0;
 zdotaccent = 0;
 };
-lslash.ss02 = {
+lslash.ss04 = {
 comma = 10;
 period = 11;
 zdotaccent = 9;
@@ -106117,7 +106145,7 @@ exclam = 0;
 exclam.ss01 = 5;
 germandbls = -8;
 logicalnot = 8;
-lslash.ss02 = 6;
+lslash.ss04 = 6;
 n = 0;
 parenleft = -19;
 question = -59;
@@ -106128,7 +106156,7 @@ registered = -24;
 tbar = 3;
 };
 oacute = {
-lslash.ss02 = 6;
+lslash.ss04 = 6;
 };
 odieresis = {
 germandbls = -8;
@@ -106214,7 +106242,7 @@ parenright = -54;
 period = 4;
 period.ss01 = -4;
 r = 4;
-r.ss03 = 4;
+r.ss05 = 4;
 s = 8;
 slash = -16;
 t = 0;
@@ -106223,19 +106251,19 @@ y = -3;
 };
 p = {
 exclam = 0;
-lslash.ss02 = 6;
+lslash.ss04 = 6;
 registered = -14;
 };
 parenleft = {
 Euro = -66;
 H = 0;
 Hbar = -24;
-Icircumflex.ss04 = 73;
+Icircumflex.ss06 = 73;
 Lslash = -32;
 OE = -46;
 Odieresis = -12;
 Oslash = -22;
-a.ss01 = -73;
+a.ss02 = -73;
 adieresis = -38;
 agrave = -62;
 ampersand = -61;
@@ -106269,7 +106297,7 @@ l = 0;
 less = -73;
 lessequal = -62;
 logicalnot = -73;
-lslash.ss02 = -27;
+lslash.ss04 = -27;
 minus = -73;
 multiply = -74;
 notequal = -74;
@@ -106301,7 +106329,7 @@ zcaron = -21;
 };
 parenleft.case = {
 Euro = -64;
-Icircumflex.ss04 = 68;
+Icircumflex.ss06 = 68;
 Lslash = -38;
 OE = -53;
 Oslash = -12;
@@ -106439,14 +106467,14 @@ G = -50;
 O = -73;
 Oacute = -73;
 P = -19;
-Q.ss01 = -73;
+Q.ss03 = -73;
 S = -66;
 T = -76;
 U = -72;
 V = -70;
 W = -53;
 Y = -101;
-a.ss01 = -45;
+a.ss02 = -45;
 c = -64;
 d = -42;
 e = -64;
@@ -106460,7 +106488,7 @@ s = -55;
 t = -57;
 v = -69;
 w = -49;
-y.ss01 = -59;
+y.ss02 = -59;
 };
 quotedbl = {
 A = -51;
@@ -106482,7 +106510,7 @@ period.ss01 = -124;
 questiondown = -86;
 questiondown.case = -68;
 questiondown.ss01 = -73;
-r.ss03 = -14;
+r.ss05 = -14;
 underscore = -182;
 uni1EA2 = -51;
 uni1EA4 = -40;
@@ -106560,7 +106588,7 @@ idieresis = 79;
 itilde = 59;
 questiondown = -92;
 quotedblbase = -105;
-r.ss03 = -37;
+r.ss05 = -37;
 };
 quoteright.ss01 = {
 quotedblbase.ss01 = -113;
@@ -106600,7 +106628,7 @@ period = -98;
 questiondown = -86;
 questiondown.case = -68;
 questiondown.ss01 = -73;
-r.ss03 = -14;
+r.ss05 = -14;
 slash = -83;
 };
 r = {
@@ -106609,7 +106637,7 @@ asciitilde = -18;
 germandbls = 13;
 jcircumflex = 0;
 logicalnot = 2;
-lslash.ss02 = 0;
+lslash.ss04 = 0;
 n = 0;
 uni2081 = -63;
 uni2082 = -32;
@@ -106618,8 +106646,8 @@ uni2084 = -66;
 uni2085 = -15;
 uni2086 = -32;
 };
-r.ss03 = {
-r.ss03 = 0;
+r.ss05 = {
+r.ss05 = 0;
 uni2084 = -62;
 };
 racute = {
@@ -106632,7 +106660,7 @@ period = -70;
 period.ss01 = -79;
 t = 13;
 };
-racute.ss03 = {
+racute.ss05 = {
 comma = -59;
 period = -59;
 t = 10;
@@ -106654,7 +106682,7 @@ parenright = 17;
 uni00B9 = 41;
 uni2077 = 40;
 };
-rcaron.ss03 = {
+rcaron.ss05 = {
 a = 0;
 aacute = 0;
 b = 39;
@@ -106685,7 +106713,7 @@ l = 0;
 logicalnot = 0;
 parenleft = -26;
 registered = -20;
-uni1EB5.ss01 = 0;
+uni1EB5.ss02 = 0;
 wacute = -9;
 };
 scaron = {
@@ -106935,7 +106963,7 @@ uni0145 = {
 imacron = 84;
 };
 uni0162 = {
-a.ss01 = -65;
+a.ss02 = -65;
 abreve = -52;
 acircumflex = -20;
 amacron = -24;
@@ -106946,9 +106974,9 @@ comma = 30;
 parenright = 25;
 };
 uni021A = {
-a.ss01 = -65;
+a.ss02 = -65;
 abreve = -52;
-abreve.ss01 = -27;
+abreve.ss02 = -27;
 acircumflex = -20;
 amacron = -24;
 };
@@ -106982,12 +107010,12 @@ uni00B9 = -33;
 uni1EA8 = {
 Y = -53;
 };
-uni1EA9.ss01 = {
-y.ss01 = -37;
+uni1EA9.ss02 = {
+y.ss02 = -37;
 };
-uni1EAB.ss01 = {
+uni1EAB.ss02 = {
 n = -3;
-y.ss01 = -38;
+y.ss02 = -38;
 };
 uni1EAF = {
 uni00B9 = -44;
@@ -106998,13 +107026,13 @@ uni00B9 = -44;
 uni1EB3 = {
 uni00B9 = -44;
 };
-uni1EB3.ss01 = {
+uni1EB3.ss02 = {
 n = -3;
 };
 uni1EB5 = {
 uni00B9 = -44;
 };
-uni1EB5.ss01 = {
+uni1EB5.ss02 = {
 n = -3;
 };
 uni1EB7 = {
@@ -107110,7 +107138,7 @@ period = -41;
 uni1EC7 = -12;
 uni2077 = -66;
 };
-uni1EF5.ss01 = {
+uni1EF5.ss01.ss02 = {
 comma.ss01 = 24;
 parenright = 30;
 period.ss01 = -72;
@@ -107268,12 +107296,12 @@ parenright = 0;
 v = {
 ampersand = -32;
 n = 0;
-r.ss03 = -5;
+r.ss05 = -5;
 };
 w = {
 ampersand = -19;
 asciitilde = -19;
-r.ss03 = 0;
+r.ss05 = 0;
 };
 x = {
 ampersand = -38;
@@ -107285,22 +107313,22 @@ ampersand = -38;
 asciitilde = -39;
 germandbls = 5;
 logicalnot = -9;
-lslash.ss02 = -17;
-r.ss03 = -9;
-rcaron.ss03 = -9;
+lslash.ss04 = -17;
+r.ss05 = -9;
+rcaron.ss05 = -9;
 uni2080 = -49;
 uni2082 = -42;
 };
-y.ss01 = {
+y.ss02 = {
 asciitilde = -42;
 o = -13;
-r.ss03 = -10;
+r.ss05 = -10;
 };
 yacute = {
-r.ss03 = -9;
+r.ss05 = -9;
 };
 ycircumflex = {
-r.ss03 = -9;
+r.ss05 = -9;
 };
 yen = {
 colon = -40;
@@ -107319,7 +107347,7 @@ uni2074 = -47;
 };
 z = {
 asciitilde = -27;
-lslash.ss02 = -9;
+lslash.ss04 = -9;
 };
 zcaron = {
 T = 20;
@@ -115349,10 +115377,10 @@ dollar = -49;
 equal = -67;
 germandbls = -60;
 idieresis = -10;
-l.ss02 = -11;
+l.ss04 = -11;
 less = -82;
 logicalnot = -126;
-lslash.ss02 = -46;
+lslash.ss04 = -46;
 minus = -90;
 notequal = -100;
 numbersign = -49;
@@ -115401,8 +115429,8 @@ v = -111;
 Aacute = {
 Lslash = -59;
 Tbar = -203;
-l.ss02 = -8;
-lslash.ss02 = -46;
+l.ss04 = -8;
+lslash.ss04 = -46;
 registered = -154;
 };
 Abreve = {
@@ -115498,7 +115526,7 @@ i.ss01 = 31;
 idieresis = 55;
 idieresis.ss01 = 46;
 jcircumflex = 61;
-l.ss02 = 29;
+l.ss04 = 29;
 less = -99;
 logicalnot = -122;
 minus = -105;
@@ -115549,7 +115577,7 @@ slash = -40;
 };
 F = {
 Oslash = -14;
-adieresis.ss01 = -34;
+adieresis.ss01.ss02 = -34;
 ampersand = -18;
 ellipsis.ss01 = -225;
 i.ss01 = 0;
@@ -115557,7 +115585,7 @@ iacute = -7;
 idieresis = 66;
 numbersign = -40;
 parenleft = -18;
-r.ss03 = -38;
+r.ss05 = -38;
 uni2083 = -39;
 uni2084 = -109;
 uni2085 = -40;
@@ -115602,7 +115630,7 @@ Hbar = 12;
 J = -46;
 T = -33;
 a = -28;
-a.ss01 = -25;
+a.ss02 = -25;
 d = -28;
 e = -29;
 o = -29;
@@ -115621,7 +115649,7 @@ at = -39;
 equal = -62;
 germandbls = -62;
 jcircumflex = 66;
-l.ss02 = 34;
+l.ss04 = 34;
 less = -143;
 logicalnot = -184;
 minus = -146;
@@ -115629,26 +115657,26 @@ numbersign = -61;
 parenleft = -16;
 registered = -24;
 };
-I.ss04 = {
+I.ss06 = {
 jcircumflex = 71;
 };
 Iacute = {
 Lslash = -48;
 thorn = 24;
 };
-Iacute.ss04 = {
+Iacute.ss06 = {
 Eth = 70;
 };
 Icircumflex = {
-l.ss02 = 34;
+l.ss04 = 34;
 };
-Icircumflex.ss04 = {
+Icircumflex.ss06 = {
 parenright = 60;
 };
 Idieresis = {
 idieresis = 61;
 };
-Imacron.ss04 = {
+Imacron.ss06 = {
 imacron = 134;
 parenright = 44;
 };
@@ -115693,9 +115721,9 @@ G = -41;
 Lslash = -56;
 OE = -47;
 Oslash = -41;
-adieresis.ss01 = -53;
+adieresis.ss01.ss02 = -53;
 amacron = -30;
-amacron.ss01 = -12;
+amacron.ss02 = -12;
 ampersand = -29;
 asciitilde = -196;
 at = -57;
@@ -115710,7 +115738,7 @@ equal = -74;
 i.ss01 = 7;
 less = -149;
 logicalnot = -213;
-lslash.ss02 = -22;
+lslash.ss04 = -22;
 minus = -165;
 notequal = -120;
 numbersign = -62;
@@ -115724,7 +115752,7 @@ udieresis = -59;
 umacron = -31;
 uni1EF9 = -52;
 ygrave = -69;
-ygrave.ss01 = -67;
+ygrave.ss02 = -67;
 };
 L = {
 Ecircumflex = -13;
@@ -115791,7 +115819,7 @@ U = -84;
 Uacute = -84;
 V = -155;
 a = -65;
-a.ss01 = -41;
+a.ss02 = -41;
 hyphen = -191;
 hyphen.case = -185;
 parenright = -58;
@@ -115833,7 +115861,7 @@ W = -124;
 Y = -188;
 Zdotaccent = 30;
 a = -53;
-a.ss01 = -23;
+a.ss02 = -23;
 aacute = -53;
 aogonek = -53;
 comma = 50;
@@ -115879,7 +115907,7 @@ j = 5;
 jcircumflex = 32;
 k = 4;
 l = 4;
-l.ss02 = 4;
+l.ss04 = 4;
 parenleft = 16;
 };
 Oacute = {
@@ -115924,7 +115952,7 @@ bracketright = -36;
 parenright = -37;
 u = 14;
 };
-Q.ss01 = {
+Q.ss03 = {
 Edieresis.ss01 = 80;
 };
 R = {
@@ -115959,17 +115987,17 @@ Hbar = -11;
 Lslash = -67;
 OE = -54;
 Oslash = -53;
-a.ss01 = -142;
-aacute.ss01 = -138;
+a.ss02 = -142;
+aacute.ss02 = -138;
 abreve = -73;
 acircumflex = -86;
 adieresis = -95;
 agrave = -101;
-agrave.ss01 = -91;
+agrave.ss02 = -91;
 amacron = -41;
-amacron.ss01 = -27;
+amacron.ss02 = -27;
 ampersand = -35;
-aogonek.ss01 = -142;
+aogonek.ss02 = -142;
 aring = -69;
 asciitilde = -252;
 at = -75;
@@ -116001,9 +116029,9 @@ ohungarumlaut = -102;
 omacron = -29;
 otilde = -75;
 parenleft = -38;
-r.ss03 = -129;
+r.ss05 = -129;
 racute = -81;
-racute.ss03 = -90;
+racute.ss05 = -90;
 rcaron = 0;
 registered = -28;
 scaron = -64;
@@ -116015,9 +116043,9 @@ udieresis.ss01 = -97;
 ugrave = -99;
 uhungarumlaut = -111;
 umacron = -46;
-uni1EA1.ss01 = -142;
+uni1EA1.ss01.ss02 = -142;
 uni1EA3 = -111;
-uni1EA3.ss01 = -100;
+uni1EA3.ss02 = -100;
 uni1EA5 = -94;
 uni1EA7 = -92;
 uni1EA9 = -93;
@@ -116041,9 +116069,9 @@ uni2082 = -199;
 uring = -73;
 utilde = -84;
 ycircumflex = -77;
-ycircumflex.ss01 = -92;
+ycircumflex.ss02 = -92;
 ygrave = -87;
-ygrave.ss01 = -103;
+ygrave.ss02 = -103;
 zcaron = -69;
 };
 Tbar = {
@@ -116061,7 +116089,7 @@ slash = -183;
 tbar = -50;
 };
 Tcaron = {
-a.ss01 = -142;
+a.ss02 = -142;
 udieresis = -99;
 };
 U = {
@@ -116086,13 +116114,13 @@ V = {
 OE = -26;
 Oslash = -22;
 abreve = -52;
-abreve.ss01 = -47;
+abreve.ss02 = -47;
 acircumflex = -66;
 adieresis = -73;
-adieresis.ss01 = -68;
+adieresis.ss01.ss02 = -68;
 agrave = -76;
 amacron = -27;
-amacron.ss01 = -18;
+amacron.ss02 = -18;
 ampersand = -27;
 aring = -51;
 at = -42;
@@ -116112,8 +116140,8 @@ odieresis = -66;
 ograve = -77;
 otilde = -52;
 parenleft = -23;
-r.ss03 = -54;
-racute.ss03 = -54;
+r.ss05 = -54;
+racute.ss05 = -54;
 rcaron = 3;
 registered = -17;
 scaron = -37;
@@ -116125,15 +116153,15 @@ zcaron = -55;
 W = {
 Lslash = -44;
 adieresis = -42;
-adieresis.ss01 = -41;
+adieresis.ss01.ss02 = -41;
 ampersand = -18;
 asciitilde = -84;
 i.ss01 = 0;
 idieresis = 61;
 less = -34;
-lslash.ss02 = -14;
+lslash.ss04 = -14;
 minus = -41;
-r.ss03 = -29;
+r.ss05 = -29;
 scaron = -34;
 uni2083 = -70;
 };
@@ -116157,11 +116185,11 @@ Lslash = -56;
 Oslash = -29;
 acircumflex = -84;
 adieresis = -86;
-adieresis.ss01 = -77;
+adieresis.ss01.ss02 = -77;
 agrave = -84;
-agrave.ss01 = -76;
+agrave.ss02 = -76;
 amacron = -41;
-amacron.ss01 = -29;
+amacron.ss02 = -29;
 ampersand = -40;
 asciitilde = -142;
 at = -62;
@@ -116180,7 +116208,7 @@ odieresis = -80;
 ograve = -78;
 omacron = -32;
 parenleft = -32;
-r.ss03 = -79;
+r.ss05 = -79;
 registered = -22;
 scaron = -43;
 udieresis = -64;
@@ -116218,7 +116246,7 @@ jcircumflex = 0;
 logicalnot = -53;
 notequal = -47;
 };
-a.ss01 = {
+a.ss02 = {
 T = -198;
 exclam.ss01 = -10;
 germandbls = -31;
@@ -116235,7 +116263,7 @@ parenright = -63;
 adieresis = {
 parenright = -65;
 };
-adieresis.ss01 = {
+adieresis.ss01.ss02 = {
 germandbls = -31;
 };
 amacron = {
@@ -116247,7 +116275,7 @@ comma = 12;
 j = 0;
 parenright = -12;
 };
-aogonek.ss01 = {
+aogonek.ss02 = {
 comma.ss01 = 0;
 parenright = -12;
 };
@@ -116443,9 +116471,9 @@ rcaron = 0;
 dcaron = {
 H = 98;
 a = 21;
-a.ss01 = 17;
+a.ss02 = 17;
 aacute = 21;
-aacute.ss01 = 17;
+aacute.ss02 = 17;
 colon = 76;
 comma = 3;
 comma.ss01 = -11;
@@ -116530,7 +116558,7 @@ exclam = -2;
 exclam.ss01 = 0;
 germandbls = -35;
 logicalnot = -52;
-lslash.ss02 = 4;
+lslash.ss04 = 4;
 parenleft = 2;
 quotedblleft = -84;
 registered = -56;
@@ -116611,7 +116639,7 @@ bracketright = -12;
 parenright = -14;
 };
 eogonek = {
-lslash.ss02 = 4;
+lslash.ss04 = 4;
 parenright = -70;
 };
 equal = {
@@ -116647,7 +116675,7 @@ t = -32;
 u = 4;
 v = -51;
 y = -52;
-y.ss01 = -51;
+y.ss02 = -51;
 yacute = -52;
 };
 exclam = {
@@ -116682,13 +116710,13 @@ idieresis = 0;
 l = 0;
 n = 0;
 ordmasculine = 14;
-r.ss03 = 0;
+r.ss05 = 0;
 };
 f_f.liga = {
 exclam = 12;
 idieresis = 0;
 ordmasculine = 14;
-r.ss03 = 0;
+r.ss05 = 0;
 };
 f_f_i.liga = {
 asciitilde = -55;
@@ -116705,7 +116733,7 @@ idieresis = 0;
 jcircumflex = 2;
 periodcentered.loclCAT = 0;
 };
-f_f_l.liga.ss02 = {
+f_f_l.liga.ss04 = {
 periodcentered.loclCAT = -50;
 periodcentered.loclCAT.ss01 = -55;
 };
@@ -116738,7 +116766,7 @@ idieresis = 0;
 jcircumflex = 2;
 periodcentered.loclCAT = 0;
 };
-fl.ss02 = {
+fl.ss04 = {
 periodcentered.loclCAT = -50;
 periodcentered.loclCAT.ss01 = -55;
 };
@@ -116807,10 +116835,10 @@ f = -11;
 f_f.liga = -11;
 f_f_i.liga = -11;
 f_f_l.liga = -11;
-f_f_l.liga.ss02 = -11;
+f_f_l.liga.ss04 = -11;
 fi = -11;
 fl = -11;
-fl.ss02 = -11;
+fl.ss04 = -11;
 g = 0;
 o = 2;
 parenright = -69;
@@ -116860,7 +116888,7 @@ h = {
 asciitilde = -63;
 exclam = -10;
 registered = -47;
-uni1EB3.ss01 = -7;
+uni1EB3.ss02 = -7;
 };
 hyphen = {
 Hbar = -28;
@@ -116951,7 +116979,7 @@ idieresis = 0;
 j = 0;
 k = 0;
 l = 0;
-l.ss02 = 0;
+l.ss04 = 0;
 parenright = 31;
 question = 43;
 quotedbl = 52;
@@ -116971,7 +116999,7 @@ idieresis.ss01 = {
 b = 0;
 k = 0;
 l = 0;
-l.ss02 = 0;
+l.ss04 = 0;
 t = 0;
 };
 igrave = {
@@ -116981,7 +117009,7 @@ parenright = -43;
 imacron = {
 G = 84;
 I = 105;
-I.ss04 = 125;
+I.ss06 = 125;
 N = 125;
 P = 125;
 S = 116;
@@ -117000,7 +117028,7 @@ j = 0;
 j.ss01 = 0;
 k = 0;
 l = 0;
-l.ss02 = 0;
+l.ss04 = 0;
 parenright = 60;
 period.ss01 = -14;
 question = 104;
@@ -117021,7 +117049,7 @@ uni00B3 = 72;
 uni00B9 = 63;
 uni0137 = 0;
 uni013C = 0;
-uni013C.ss02 = 0;
+uni013C.ss04 = 0;
 uni2074 = 35;
 uni2075 = 104;
 uni2076 = 115;
@@ -117038,7 +117066,7 @@ parenright.case = -87;
 integral = {
 A = -87;
 a = -79;
-a.ss01 = -87;
+a.ss02 = -87;
 d = -79;
 e = -80;
 integral = -65;
@@ -117101,7 +117129,7 @@ iogonek = 17;
 lacute = 23;
 less = -25;
 logicalnot = -77;
-lslash.ss02 = -11;
+lslash.ss04 = -11;
 minus = -44;
 parenleft = 0;
 rcaron = 23;
@@ -117132,7 +117160,7 @@ quoteright = 0;
 slash = 0;
 underscore = 0;
 };
-l.ss02 = {
+l.ss04 = {
 periodcentered.loclCAT = -50;
 periodcentered.loclCAT.ss01 = -54;
 };
@@ -117141,9 +117169,9 @@ exclam = 105;
 exclam.ss01 = 105;
 scaron = 38;
 };
-lcaron.ss02 = {
+lcaron.ss04 = {
 a = -12;
-a.ss01 = 0;
+a.ss02 = 0;
 b = 2;
 ccaron = -15;
 comma = 28;
@@ -117154,7 +117182,7 @@ h = 2;
 i = 2;
 j = 2;
 k = 2;
-l.ss02 = 11;
+l.ss04 = 11;
 m = 2;
 n = 2;
 ncaron = 2;
@@ -117221,7 +117249,7 @@ w = 0;
 y = -2;
 zdotaccent = 0;
 };
-lslash.ss02 = {
+lslash.ss04 = {
 comma = 26;
 period = 16;
 zdotaccent = 11;
@@ -117319,7 +117347,7 @@ exclam = -8;
 exclam.ss01 = -8;
 germandbls = -38;
 logicalnot = -55;
-lslash.ss02 = 0;
+lslash.ss04 = 0;
 n = 0;
 parenleft = 4;
 question = -97;
@@ -117330,7 +117358,7 @@ registered = -60;
 tbar = 4;
 };
 oacute = {
-lslash.ss02 = 0;
+lslash.ss04 = 0;
 };
 odieresis = {
 germandbls = -38;
@@ -117416,7 +117444,7 @@ parenright = -68;
 period = 0;
 period.ss01 = -24;
 r = 2;
-r.ss03 = 3;
+r.ss05 = 3;
 s = 10;
 slash = -20;
 t = 0;
@@ -117425,19 +117453,19 @@ y = 0;
 };
 p = {
 exclam = -8;
-lslash.ss02 = 2;
+lslash.ss04 = 2;
 registered = -58;
 };
 parenleft = {
 Euro = -87;
 H = 0;
 Hbar = -29;
-Icircumflex.ss04 = 43;
+Icircumflex.ss06 = 43;
 Lslash = -57;
 OE = -62;
 Odieresis = -56;
 Oslash = -56;
-a.ss01 = -90;
+a.ss02 = -90;
 adieresis = -87;
 agrave = -86;
 ampersand = -44;
@@ -117471,7 +117499,7 @@ l = 0;
 less = -92;
 lessequal = -90;
 logicalnot = -141;
-lslash.ss02 = -32;
+lslash.ss04 = -32;
 minus = -96;
 multiply = -55;
 notequal = -125;
@@ -117503,7 +117531,7 @@ zcaron = -52;
 };
 parenleft.case = {
 Euro = -80;
-Icircumflex.ss04 = 63;
+Icircumflex.ss06 = 63;
 Lslash = -55;
 OE = -60;
 Oslash = -54;
@@ -117641,14 +117669,14 @@ G = -120;
 O = -120;
 Oacute = -120;
 P = -40;
-Q.ss01 = -120;
+Q.ss03 = -120;
 S = -107;
 T = -218;
 U = -127;
 V = -198;
 W = -165;
 Y = -216;
-a.ss01 = -89;
+a.ss02 = -89;
 c = -108;
 d = -104;
 e = -108;
@@ -117662,7 +117690,7 @@ s = -86;
 t = -87;
 v = -121;
 w = -114;
-y.ss01 = -86;
+y.ss02 = -86;
 };
 quotedbl = {
 A = -106;
@@ -117684,7 +117712,7 @@ period.ss01 = -75;
 questiondown = -123;
 questiondown.case = -57;
 questiondown.ss01 = -117;
-r.ss03 = -9;
+r.ss05 = -9;
 underscore = -142;
 uni1EA2 = -106;
 uni1EA4 = -106;
@@ -117762,7 +117790,7 @@ idieresis = 56;
 itilde = 88;
 questiondown = -71;
 quotedblbase = -71;
-r.ss03 = -33;
+r.ss05 = -33;
 };
 quoteright.ss01 = {
 quotedblbase.ss01 = -74;
@@ -117802,7 +117830,7 @@ period = -68;
 questiondown = -68;
 questiondown.case = -57;
 questiondown.ss01 = -68;
-r.ss03 = -9;
+r.ss05 = -9;
 slash = -68;
 };
 r = {
@@ -117811,7 +117839,7 @@ asciitilde = -73;
 germandbls = 14;
 jcircumflex = 0;
 logicalnot = -59;
-lslash.ss02 = -36;
+lslash.ss04 = -36;
 n = 0;
 uni2081 = -82;
 uni2082 = -69;
@@ -117820,8 +117848,8 @@ uni2084 = -104;
 uni2085 = -53;
 uni2086 = -68;
 };
-r.ss03 = {
-r.ss03 = 0;
+r.ss05 = {
+r.ss05 = 0;
 uni2084 = -109;
 };
 racute = {
@@ -117834,7 +117862,7 @@ period = -70;
 period.ss01 = -75;
 t = 13;
 };
-racute.ss03 = {
+racute.ss05 = {
 comma = -71;
 period = -70;
 t = 13;
@@ -117856,7 +117884,7 @@ parenright = 0;
 uni00B9 = 0;
 uni2077 = 0;
 };
-rcaron.ss03 = {
+rcaron.ss05 = {
 a = -14;
 aacute = -14;
 b = 0;
@@ -117887,7 +117915,7 @@ l = 0;
 logicalnot = -41;
 parenleft = 7;
 registered = -48;
-uni1EB5.ss01 = 2;
+uni1EB5.ss02 = 2;
 wacute = -17;
 };
 scaron = {
@@ -118137,7 +118165,7 @@ uni0145 = {
 imacron = 135;
 };
 uni0162 = {
-a.ss01 = -142;
+a.ss02 = -142;
 abreve = -73;
 acircumflex = -86;
 amacron = -41;
@@ -118148,9 +118176,9 @@ comma = 56;
 parenright = 0;
 };
 uni021A = {
-a.ss01 = -142;
+a.ss02 = -142;
 abreve = -73;
-abreve.ss01 = -65;
+abreve.ss02 = -65;
 acircumflex = -86;
 amacron = -41;
 };
@@ -118184,12 +118212,12 @@ uni00B9 = -81;
 uni1EA8 = {
 Y = -188;
 };
-uni1EA9.ss01 = {
-y.ss01 = -50;
+uni1EA9.ss02 = {
+y.ss02 = -50;
 };
-uni1EAB.ss01 = {
+uni1EAB.ss02 = {
 n = -8;
-y.ss01 = -50;
+y.ss02 = -50;
 };
 uni1EAF = {
 uni00B9 = -81;
@@ -118200,13 +118228,13 @@ uni00B9 = -81;
 uni1EB3 = {
 uni00B9 = -81;
 };
-uni1EB3.ss01 = {
+uni1EB3.ss02 = {
 n = -8;
 };
 uni1EB5 = {
 uni00B9 = -81;
 };
-uni1EB5.ss01 = {
+uni1EB5.ss02 = {
 n = -8;
 };
 uni1EB7 = {
@@ -118312,7 +118340,7 @@ period = -70;
 uni1EC7 = -8;
 uni2077 = -75;
 };
-uni1EF5.ss01 = {
+uni1EF5.ss01.ss02 = {
 comma.ss01 = -70;
 parenright = -66;
 period.ss01 = -75;
@@ -118470,12 +118498,12 @@ parenright = -12;
 v = {
 ampersand = -25;
 n = 0;
-r.ss03 = -2;
+r.ss05 = -2;
 };
 w = {
 ampersand = -24;
 asciitilde = -57;
-r.ss03 = 0;
+r.ss05 = 0;
 };
 x = {
 ampersand = -25;
@@ -118487,22 +118515,22 @@ ampersand = -23;
 asciitilde = -63;
 germandbls = 13;
 logicalnot = -59;
-lslash.ss02 = -7;
-r.ss03 = 0;
-rcaron.ss03 = 0;
+lslash.ss04 = -7;
+r.ss05 = 0;
+rcaron.ss05 = 0;
 uni2080 = -62;
 uni2082 = -61;
 };
-y.ss01 = {
+y.ss02 = {
 asciitilde = -63;
 o = -10;
-r.ss03 = -2;
+r.ss05 = -2;
 };
 yacute = {
-r.ss03 = 0;
+r.ss05 = 0;
 };
 ycircumflex = {
-r.ss03 = 0;
+r.ss05 = 0;
 };
 yen = {
 colon = -67;
@@ -118521,7 +118549,7 @@ uni2074 = -62;
 };
 z = {
 asciitilde = -58;
-lslash.ss02 = -2;
+lslash.ss04 = -2;
 };
 zcaron = {
 T = -53;
@@ -126551,10 +126579,10 @@ dollar = -55;
 equal = -60;
 germandbls = -60;
 idieresis = -7;
-l.ss02 = -17;
+l.ss04 = -17;
 less = -75;
 logicalnot = -128;
-lslash.ss02 = -50;
+lslash.ss04 = -50;
 minus = -93;
 notequal = -93;
 numbersign = -46;
@@ -126603,8 +126631,8 @@ v = -79;
 Aacute = {
 Lslash = -54;
 Tbar = -185;
-l.ss02 = -15;
-lslash.ss02 = -50;
+l.ss04 = -15;
+lslash.ss04 = -50;
 registered = -144;
 };
 Abreve = {
@@ -126700,7 +126728,7 @@ i.ss01 = 22;
 idieresis = 60;
 idieresis.ss01 = 66;
 jcircumflex = 76;
-l.ss02 = 20;
+l.ss04 = 20;
 less = -71;
 logicalnot = -119;
 minus = -89;
@@ -126751,7 +126779,7 @@ slash = -49;
 };
 F = {
 Oslash = -9;
-adieresis.ss01 = -32;
+adieresis.ss01.ss02 = -32;
 ampersand = -22;
 ellipsis.ss01 = -185;
 i.ss01 = 0;
@@ -126759,7 +126787,7 @@ iacute = -5;
 idieresis = 71;
 numbersign = -29;
 parenleft = -13;
-r.ss03 = -35;
+r.ss05 = -35;
 uni2083 = -38;
 uni2084 = -99;
 uni2085 = -42;
@@ -126804,7 +126832,7 @@ Hbar = 14;
 J = -40;
 T = -21;
 a = -27;
-a.ss01 = -30;
+a.ss02 = -30;
 d = -27;
 e = -28;
 o = -28;
@@ -126823,7 +126851,7 @@ at = -32;
 equal = -44;
 germandbls = -44;
 jcircumflex = 80;
-l.ss02 = 24;
+l.ss04 = 24;
 less = -102;
 logicalnot = -163;
 minus = -117;
@@ -126831,26 +126859,26 @@ numbersign = -44;
 parenleft = -13;
 registered = -18;
 };
-I.ss04 = {
+I.ss06 = {
 jcircumflex = 85;
 };
 Iacute = {
 Lslash = -39;
 thorn = 17;
 };
-Iacute.ss04 = {
+Iacute.ss06 = {
 Eth = 69;
 };
 Icircumflex = {
-l.ss02 = 24;
+l.ss04 = 24;
 };
-Icircumflex.ss04 = {
+Icircumflex.ss06 = {
 parenright = 74;
 };
 Idieresis = {
 idieresis = 64;
 };
-Imacron.ss04 = {
+Imacron.ss06 = {
 imacron = 127;
 parenright = 57;
 };
@@ -126895,9 +126923,9 @@ G = -52;
 Lslash = -52;
 OE = -56;
 Oslash = -52;
-adieresis.ss01 = -51;
+adieresis.ss01.ss02 = -51;
 amacron = -42;
-amacron.ss01 = -24;
+amacron.ss02 = -24;
 ampersand = -40;
 asciitilde = -176;
 at = -65;
@@ -126912,7 +126940,7 @@ equal = -69;
 i.ss01 = 5;
 less = -138;
 logicalnot = -205;
-lslash.ss02 = -28;
+lslash.ss04 = -28;
 minus = -156;
 notequal = -110;
 numbersign = -66;
@@ -126926,7 +126954,7 @@ udieresis = -62;
 umacron = -42;
 uni1EF9 = -45;
 ygrave = -57;
-ygrave.ss01 = -74;
+ygrave.ss02 = -74;
 };
 L = {
 Ecircumflex = -9;
@@ -126993,7 +127021,7 @@ U = -69;
 Uacute = -69;
 V = -122;
 a = -50;
-a.ss01 = -32;
+a.ss02 = -32;
 hyphen = -144;
 hyphen.case = -156;
 parenright = -46;
@@ -127035,7 +127063,7 @@ W = -113;
 Y = -191;
 Zdotaccent = 27;
 a = -42;
-a.ss01 = -19;
+a.ss02 = -19;
 aacute = -42;
 aogonek = -42;
 comma = 42;
@@ -127081,7 +127109,7 @@ j = 4;
 jcircumflex = 34;
 k = 3;
 l = 3;
-l.ss02 = 3;
+l.ss04 = 3;
 parenleft = 15;
 };
 Oacute = {
@@ -127126,7 +127154,7 @@ bracketright = -37;
 parenright = -40;
 u = 13;
 };
-Q.ss01 = {
+Q.ss03 = {
 Edieresis.ss01 = 66;
 };
 R = {
@@ -127161,17 +127189,17 @@ Hbar = 0;
 Lslash = -59;
 OE = -38;
 Oslash = -38;
-a.ss01 = -123;
-aacute.ss01 = -120;
+a.ss02 = -123;
+aacute.ss02 = -120;
 abreve = -69;
 acircumflex = -74;
 adieresis = -85;
 agrave = -89;
-agrave.ss01 = -85;
+agrave.ss02 = -85;
 amacron = -45;
-amacron.ss01 = -33;
+amacron.ss02 = -33;
 ampersand = -39;
-aogonek.ss01 = -123;
+aogonek.ss02 = -123;
 aring = -66;
 asciitilde = -199;
 at = -59;
@@ -127203,9 +127231,9 @@ ohungarumlaut = -95;
 omacron = -36;
 otilde = -76;
 parenleft = -30;
-r.ss03 = -104;
+r.ss05 = -104;
 racute = -60;
-racute.ss03 = -76;
+racute.ss05 = -76;
 rcaron = 18;
 registered = -20;
 scaron = -51;
@@ -127217,9 +127245,9 @@ udieresis.ss01 = -70;
 ugrave = -71;
 uhungarumlaut = -80;
 umacron = -34;
-uni1EA1.ss01 = -123;
+uni1EA1.ss01.ss02 = -123;
 uni1EA3 = -97;
-uni1EA3.ss01 = -93;
+uni1EA3.ss02 = -93;
 uni1EA5 = -83;
 uni1EA7 = -81;
 uni1EA9 = -82;
@@ -127243,9 +127271,9 @@ uni2082 = -195;
 uring = -53;
 utilde = -61;
 ycircumflex = -55;
-ycircumflex.ss01 = -66;
+ycircumflex.ss02 = -66;
 ygrave = -62;
-ygrave.ss01 = -74;
+ygrave.ss02 = -74;
 zcaron = -49;
 };
 Tbar = {
@@ -127263,7 +127291,7 @@ slash = -172;
 tbar = -36;
 };
 Tcaron = {
-a.ss01 = -123;
+a.ss02 = -123;
 udieresis = -71;
 };
 U = {
@@ -127288,13 +127316,13 @@ V = {
 OE = -29;
 Oslash = -26;
 abreve = -57;
-abreve.ss01 = -49;
+abreve.ss02 = -49;
 acircumflex = -67;
 adieresis = -75;
-adieresis.ss01 = -59;
+adieresis.ss01.ss02 = -59;
 agrave = -78;
 amacron = -38;
-amacron.ss01 = -27;
+amacron.ss02 = -27;
 ampersand = -39;
 aring = -61;
 at = -49;
@@ -127314,8 +127342,8 @@ odieresis = -68;
 ograve = -76;
 otilde = -62;
 parenleft = -30;
-r.ss03 = -62;
-racute.ss03 = -62;
+r.ss05 = -62;
+racute.ss05 = -62;
 rcaron = 24;
 registered = -20;
 scaron = -31;
@@ -127327,15 +127355,15 @@ zcaron = -39;
 W = {
 Lslash = -40;
 adieresis = -42;
-adieresis.ss01 = -38;
+adieresis.ss01.ss02 = -38;
 ampersand = -27;
 asciitilde = -78;
 i.ss01 = 3;
 idieresis = 71;
 less = -28;
-lslash.ss02 = -17;
+lslash.ss04 = -17;
 minus = -43;
-r.ss03 = -34;
+r.ss05 = -34;
 scaron = -27;
 uni2083 = -71;
 };
@@ -127359,11 +127387,11 @@ Lslash = -49;
 Oslash = -34;
 acircumflex = -82;
 adieresis = -83;
-adieresis.ss01 = -61;
+adieresis.ss01.ss02 = -61;
 agrave = -84;
-agrave.ss01 = -73;
+agrave.ss02 = -73;
 amacron = -44;
-amacron.ss01 = -29;
+amacron.ss02 = -29;
 ampersand = -48;
 asciitilde = -136;
 at = -69;
@@ -127382,7 +127410,7 @@ odieresis = -75;
 ograve = -76;
 omacron = -33;
 parenleft = -37;
-r.ss03 = -87;
+r.ss05 = -87;
 registered = -26;
 scaron = -32;
 udieresis = -67;
@@ -127420,7 +127448,7 @@ jcircumflex = 10;
 logicalnot = -59;
 notequal = -44;
 };
-a.ss01 = {
+a.ss02 = {
 T = -173;
 exclam.ss01 = -3;
 germandbls = -27;
@@ -127437,7 +127465,7 @@ parenright = -55;
 adieresis = {
 parenright = -56;
 };
-adieresis.ss01 = {
+adieresis.ss01.ss02 = {
 germandbls = -27;
 };
 amacron = {
@@ -127449,7 +127477,7 @@ comma = 9;
 j = 11;
 parenright = -9;
 };
-aogonek.ss01 = {
+aogonek.ss02 = {
 comma.ss01 = 0;
 parenright = -9;
 };
@@ -127645,9 +127673,9 @@ rcaron = 4;
 dcaron = {
 H = 76;
 a = 6;
-a.ss01 = 0;
+a.ss02 = 0;
 aacute = 6;
-aacute.ss01 = 0;
+aacute.ss02 = 0;
 colon = 54;
 comma = -40;
 comma.ss01 = -52;
@@ -127732,7 +127760,7 @@ exclam = 0;
 exclam.ss01 = 7;
 germandbls = -31;
 logicalnot = -58;
-lslash.ss02 = 6;
+lslash.ss04 = 6;
 parenleft = 2;
 quotedblleft = -70;
 registered = -57;
@@ -127813,7 +127841,7 @@ bracketright = -6;
 parenright = -12;
 };
 eogonek = {
-lslash.ss02 = 6;
+lslash.ss04 = 6;
 parenright = -64;
 };
 equal = {
@@ -127849,7 +127877,7 @@ t = -27;
 u = 4;
 v = -53;
 y = -57;
-y.ss01 = -57;
+y.ss02 = -57;
 yacute = -57;
 };
 exclam = {
@@ -127884,13 +127912,13 @@ idieresis = 4;
 l = 0;
 n = 0;
 ordmasculine = 15;
-r.ss03 = -2;
+r.ss05 = -2;
 };
 f_f.liga = {
 exclam = 15;
 idieresis = 4;
 ordmasculine = 15;
-r.ss03 = -2;
+r.ss05 = -2;
 };
 f_f_i.liga = {
 asciitilde = -44;
@@ -127907,7 +127935,7 @@ idieresis = 11;
 jcircumflex = 12;
 periodcentered.loclCAT = 2;
 };
-f_f_l.liga.ss02 = {
+f_f_l.liga.ss04 = {
 periodcentered.loclCAT = -53;
 periodcentered.loclCAT.ss01 = -59;
 };
@@ -127940,7 +127968,7 @@ idieresis = 11;
 jcircumflex = 12;
 periodcentered.loclCAT = 2;
 };
-fl.ss02 = {
+fl.ss04 = {
 periodcentered.loclCAT = -53;
 periodcentered.loclCAT.ss01 = -59;
 };
@@ -128009,10 +128037,10 @@ f = -17;
 f_f.liga = -17;
 f_f_i.liga = -17;
 f_f_l.liga = -17;
-f_f_l.liga.ss02 = -17;
+f_f_l.liga.ss04 = -17;
 fi = -17;
 fl = -17;
-fl.ss02 = -17;
+fl.ss04 = -17;
 g = -2;
 o = 0;
 parenright = -62;
@@ -128062,7 +128090,7 @@ h = {
 asciitilde = -49;
 exclam = -7;
 registered = -45;
-uni1EB3.ss01 = -8;
+uni1EB3.ss02 = -8;
 };
 hyphen = {
 Hbar = -25;
@@ -128153,7 +128181,7 @@ idieresis = 12;
 j = 10;
 k = 11;
 l = 11;
-l.ss02 = 10;
+l.ss04 = 10;
 parenright = 45;
 question = 51;
 quotedbl = 62;
@@ -128173,7 +128201,7 @@ idieresis.ss01 = {
 b = 11;
 k = 11;
 l = 11;
-l.ss02 = 10;
+l.ss04 = 10;
 t = 3;
 };
 igrave = {
@@ -128183,7 +128211,7 @@ parenright = -41;
 imacron = {
 G = 76;
 I = 101;
-I.ss04 = 114;
+I.ss06 = 114;
 N = 114;
 P = 114;
 S = 105;
@@ -128202,7 +128230,7 @@ j = 11;
 j.ss01 = 11;
 k = 11;
 l = 11;
-l.ss02 = 10;
+l.ss04 = 10;
 parenright = 73;
 period.ss01 = -11;
 question = 99;
@@ -128223,7 +128251,7 @@ uni00B3 = 76;
 uni00B9 = 75;
 uni0137 = 11;
 uni013C = 11;
-uni013C.ss02 = 10;
+uni013C.ss04 = 10;
 uni2074 = 44;
 uni2075 = 101;
 uni2076 = 112;
@@ -128240,7 +128268,7 @@ parenright.case = -74;
 integral = {
 A = -88;
 a = -75;
-a.ss01 = -86;
+a.ss02 = -86;
 d = -75;
 e = -79;
 integral = -69;
@@ -128303,7 +128331,7 @@ iogonek = 12;
 lacute = 16;
 less = -18;
 logicalnot = -83;
-lslash.ss02 = -18;
+lslash.ss04 = -18;
 minus = -43;
 parenleft = -2;
 rcaron = 16;
@@ -128334,7 +128362,7 @@ quoteright = 0;
 slash = 0;
 underscore = 0;
 };
-l.ss02 = {
+l.ss04 = {
 periodcentered.loclCAT = -53;
 periodcentered.loclCAT.ss01 = -59;
 };
@@ -128343,9 +128371,9 @@ exclam = 150;
 exclam.ss01 = 150;
 scaron = 80;
 };
-lcaron.ss02 = {
+lcaron.ss04 = {
 a = 13;
-a.ss01 = 16;
+a.ss02 = 16;
 b = 41;
 ccaron = 8;
 comma = 25;
@@ -128356,7 +128384,7 @@ h = 41;
 i = 35;
 j = 36;
 k = 41;
-l.ss02 = 47;
+l.ss04 = 47;
 m = 34;
 n = 34;
 ncaron = 34;
@@ -128423,7 +128451,7 @@ w = 4;
 y = 0;
 zdotaccent = 0;
 };
-lslash.ss02 = {
+lslash.ss04 = {
 comma = 25;
 period = 17;
 zdotaccent = 12;
@@ -128521,7 +128549,7 @@ exclam = -6;
 exclam.ss01 = 0;
 germandbls = -31;
 logicalnot = -59;
-lslash.ss02 = 3;
+lslash.ss04 = 3;
 n = 0;
 parenleft = 4;
 question = -95;
@@ -128532,7 +128560,7 @@ registered = -58;
 tbar = 3;
 };
 oacute = {
-lslash.ss02 = 3;
+lslash.ss04 = 3;
 };
 odieresis = {
 germandbls = -31;
@@ -128618,7 +128646,7 @@ parenright = -59;
 period = 2;
 period.ss01 = -17;
 r = 4;
-r.ss03 = 5;
+r.ss05 = 5;
 s = 12;
 slash = -26;
 t = 0;
@@ -128627,19 +128655,19 @@ y = -4;
 };
 p = {
 exclam = -6;
-lslash.ss02 = 3;
+lslash.ss04 = 3;
 registered = -58;
 };
 parenleft = {
 Euro = -78;
 H = 0;
 Hbar = -20;
-Icircumflex.ss04 = 59;
+Icircumflex.ss06 = 59;
 Lslash = -52;
 OE = -57;
 Odieresis = -53;
 Oslash = -53;
-a.ss01 = -81;
+a.ss02 = -81;
 adieresis = -78;
 agrave = -77;
 ampersand = -46;
@@ -128673,7 +128701,7 @@ l = 0;
 less = -82;
 lessequal = -81;
 logicalnot = -133;
-lslash.ss02 = -31;
+lslash.ss04 = -31;
 minus = -95;
 multiply = -64;
 notequal = -111;
@@ -128705,7 +128733,7 @@ zcaron = -37;
 };
 parenleft.case = {
 Euro = -70;
-Icircumflex.ss04 = 74;
+Icircumflex.ss06 = 74;
 Lslash = -49;
 OE = -54;
 Oslash = -50;
@@ -128843,14 +128871,14 @@ G = -119;
 O = -119;
 Oacute = -119;
 P = -31;
-Q.ss01 = -119;
+Q.ss03 = -119;
 S = -104;
 T = -199;
 U = -124;
 V = -197;
 W = -152;
 Y = -215;
-a.ss01 = -82;
+a.ss02 = -82;
 c = -104;
 d = -101;
 e = -104;
@@ -128864,7 +128892,7 @@ s = -80;
 t = -91;
 v = -125;
 w = -113;
-y.ss01 = -93;
+y.ss02 = -93;
 };
 quotedbl = {
 A = -108;
@@ -128886,7 +128914,7 @@ period.ss01 = -99;
 questiondown = -123;
 questiondown.case = -57;
 questiondown.ss01 = -114;
-r.ss03 = -12;
+r.ss05 = -12;
 underscore = -168;
 uni1EA2 = -108;
 uni1EA4 = -109;
@@ -128964,7 +128992,7 @@ idieresis = 62;
 itilde = 80;
 questiondown = -88;
 quotedblbase = -93;
-r.ss03 = -39;
+r.ss05 = -39;
 };
 quoteright.ss01 = {
 quotedblbase.ss01 = -97;
@@ -129004,7 +129032,7 @@ period = -82;
 questiondown = -82;
 questiondown.case = -57;
 questiondown.ss01 = -78;
-r.ss03 = -12;
+r.ss05 = -12;
 slash = -82;
 };
 r = {
@@ -129013,7 +129041,7 @@ asciitilde = -55;
 germandbls = 14;
 jcircumflex = 0;
 logicalnot = -61;
-lslash.ss02 = -26;
+lslash.ss04 = -26;
 n = 0;
 uni2081 = -63;
 uni2082 = -55;
@@ -129022,8 +129050,8 @@ uni2084 = -99;
 uni2085 = -42;
 uni2086 = -56;
 };
-r.ss03 = {
-r.ss03 = 0;
+r.ss05 = {
+r.ss05 = 0;
 uni2084 = -103;
 };
 racute = {
@@ -129036,7 +129064,7 @@ period = -82;
 period.ss01 = -88;
 t = 13;
 };
-racute.ss03 = {
+racute.ss05 = {
 comma = -78;
 period = -77;
 t = 14;
@@ -129058,7 +129086,7 @@ parenright = 0;
 uni00B9 = 2;
 uni2077 = 0;
 };
-rcaron.ss03 = {
+rcaron.ss05 = {
 a = -8;
 aacute = -8;
 b = 3;
@@ -129089,7 +129117,7 @@ l = 0;
 logicalnot = -51;
 parenleft = 4;
 registered = -45;
-uni1EB5.ss01 = 0;
+uni1EB5.ss02 = 0;
 wacute = -21;
 };
 scaron = {
@@ -129339,7 +129367,7 @@ uni0145 = {
 imacron = 123;
 };
 uni0162 = {
-a.ss01 = -123;
+a.ss02 = -123;
 abreve = -69;
 acircumflex = -74;
 amacron = -45;
@@ -129350,9 +129378,9 @@ comma = 46;
 parenright = 8;
 };
 uni021A = {
-a.ss01 = -123;
+a.ss02 = -123;
 abreve = -69;
-abreve.ss01 = -64;
+abreve.ss02 = -64;
 acircumflex = -74;
 amacron = -45;
 };
@@ -129386,12 +129414,12 @@ uni00B9 = -80;
 uni1EA8 = {
 Y = -177;
 };
-uni1EA9.ss01 = {
-y.ss01 = -58;
+uni1EA9.ss02 = {
+y.ss02 = -58;
 };
-uni1EAB.ss01 = {
+uni1EAB.ss02 = {
 n = -7;
-y.ss01 = -58;
+y.ss02 = -58;
 };
 uni1EAF = {
 uni00B9 = -80;
@@ -129402,13 +129430,13 @@ uni00B9 = -80;
 uni1EB3 = {
 uni00B9 = -80;
 };
-uni1EB3.ss01 = {
+uni1EB3.ss02 = {
 n = -7;
 };
 uni1EB5 = {
 uni00B9 = -80;
 };
-uni1EB5.ss01 = {
+uni1EB5.ss02 = {
 n = -7;
 };
 uni1EB7 = {
@@ -129514,7 +129542,7 @@ period = -53;
 uni1EC7 = -17;
 uni2077 = -76;
 };
-uni1EF5.ss01 = {
+uni1EF5.ss01.ss02 = {
 comma.ss01 = -61;
 parenright = -50;
 period.ss01 = -89;
@@ -129672,12 +129700,12 @@ parenright = -9;
 v = {
 ampersand = -30;
 n = 0;
-r.ss03 = -6;
+r.ss05 = -6;
 };
 w = {
 ampersand = -29;
 asciitilde = -49;
-r.ss03 = -4;
+r.ss05 = -4;
 };
 x = {
 ampersand = -36;
@@ -129689,22 +129717,22 @@ ampersand = -30;
 asciitilde = -58;
 germandbls = 13;
 logicalnot = -66;
-lslash.ss02 = -12;
-r.ss03 = -8;
-rcaron.ss03 = -8;
+lslash.ss04 = -12;
+r.ss05 = -8;
+rcaron.ss05 = -8;
 uni2080 = -69;
 uni2082 = -68;
 };
-y.ss01 = {
+y.ss02 = {
 asciitilde = -58;
 o = -18;
-r.ss03 = -8;
+r.ss05 = -8;
 };
 yacute = {
-r.ss03 = -8;
+r.ss05 = -8;
 };
 ycircumflex = {
-r.ss03 = -8;
+r.ss05 = -8;
 };
 yen = {
 colon = -74;
@@ -129723,7 +129751,7 @@ uni2074 = -67;
 };
 z = {
 asciitilde = -48;
-lslash.ss02 = 0;
+lslash.ss04 = 0;
 };
 zcaron = {
 T = -41;
@@ -137753,10 +137781,10 @@ dollar = -70;
 equal = -42;
 germandbls = -58;
 idieresis = 0;
-l.ss02 = -33;
+l.ss04 = -33;
 less = -59;
 logicalnot = -133;
-lslash.ss02 = -60;
+lslash.ss04 = -60;
 minus = -99;
 notequal = -75;
 numbersign = -39;
@@ -137805,8 +137833,8 @@ v = 0;
 Aacute = {
 Lslash = -41;
 Tbar = -141;
-l.ss02 = -33;
-lslash.ss02 = -60;
+l.ss04 = -33;
+lslash.ss04 = -60;
 registered = -119;
 };
 Abreve = {
@@ -137902,7 +137930,7 @@ i.ss01 = 0;
 idieresis = 72;
 idieresis.ss01 = 115;
 jcircumflex = 114;
-l.ss02 = 0;
+l.ss04 = 0;
 less = 0;
 logicalnot = -110;
 minus = -47;
@@ -137953,7 +137981,7 @@ slash = -71;
 };
 F = {
 Oslash = 2;
-adieresis.ss01 = -28;
+adieresis.ss01.ss02 = -28;
 ampersand = -32;
 ellipsis.ss01 = -87;
 i.ss01 = 0;
@@ -137961,7 +137989,7 @@ iacute = 0;
 idieresis = 81;
 numbersign = 0;
 parenleft = -2;
-r.ss03 = -28;
+r.ss05 = -28;
 uni2083 = -35;
 uni2084 = -76;
 uni2085 = -48;
@@ -138006,7 +138034,7 @@ Hbar = 19;
 J = -26;
 T = 9;
 a = -24;
-a.ss01 = -43;
+a.ss02 = -43;
 d = -24;
 e = -26;
 o = -26;
@@ -138025,7 +138053,7 @@ at = -14;
 equal = 0;
 germandbls = 0;
 jcircumflex = 115;
-l.ss02 = 0;
+l.ss04 = 0;
 less = 0;
 logicalnot = -110;
 minus = -46;
@@ -138033,26 +138061,26 @@ numbersign = 0;
 parenleft = -4;
 registered = -5;
 };
-I.ss04 = {
+I.ss06 = {
 jcircumflex = 119;
 };
 Iacute = {
 Lslash = -18;
 thorn = 0;
 };
-Iacute.ss04 = {
+Iacute.ss06 = {
 Eth = 66;
 };
 Icircumflex = {
-l.ss02 = 0;
+l.ss04 = 0;
 };
-Icircumflex.ss04 = {
+Icircumflex.ss06 = {
 parenright = 108;
 };
 Idieresis = {
 idieresis = 72;
 };
-Imacron.ss04 = {
+Imacron.ss06 = {
 imacron = 109;
 parenright = 91;
 };
@@ -138097,9 +138125,9 @@ G = -80;
 Lslash = -44;
 OE = -79;
 Oslash = -81;
-adieresis.ss01 = -46;
+adieresis.ss01.ss02 = -46;
 amacron = -72;
-amacron.ss01 = -55;
+amacron.ss02 = -55;
 ampersand = -69;
 asciitilde = -127;
 at = -84;
@@ -138114,7 +138142,7 @@ equal = -56;
 i.ss01 = 0;
 less = -109;
 logicalnot = -183;
-lslash.ss02 = -44;
+lslash.ss04 = -44;
 minus = -134;
 notequal = -87;
 numbersign = -75;
@@ -138128,7 +138156,7 @@ udieresis = -72;
 umacron = -71;
 uni1EF9 = -26;
 ygrave = -26;
-ygrave.ss01 = -92;
+ygrave.ss02 = -92;
 };
 L = {
 Ecircumflex = 0;
@@ -138196,7 +138224,7 @@ U = -30;
 Uacute = -30;
 V = -39;
 a = -13;
-a.ss01 = -9;
+a.ss02 = -9;
 hyphen = -25;
 hyphen.case = -82;
 parenright = -17;
@@ -138238,7 +138266,7 @@ W = -86;
 Y = -199;
 Zdotaccent = 20;
 a = -13;
-a.ss01 = -9;
+a.ss02 = -9;
 aacute = -13;
 aogonek = -13;
 comma = 21;
@@ -138284,7 +138312,7 @@ j = 2;
 jcircumflex = 40;
 k = 2;
 l = 2;
-l.ss02 = 2;
+l.ss04 = 2;
 parenleft = 11;
 };
 Oacute = {
@@ -138329,7 +138357,7 @@ bracketright = -42;
 parenright = -46;
 u = 8;
 };
-Q.ss01 = {
+Q.ss03 = {
 Edieresis.ss01 = 29;
 };
 R = {
@@ -138364,17 +138392,17 @@ Hbar = 25;
 Lslash = -38;
 OE = 0;
 Oslash = 0;
-a.ss01 = -74;
-aacute.ss01 = -74;
+a.ss02 = -74;
+aacute.ss02 = -74;
 abreve = -58;
 acircumflex = -43;
 adieresis = -60;
 agrave = -60;
-agrave.ss01 = -69;
+agrave.ss02 = -69;
 amacron = -54;
-amacron.ss01 = -48;
+amacron.ss02 = -48;
 ampersand = -49;
-aogonek.ss01 = -74;
+aogonek.ss02 = -74;
 aring = -60;
 asciitilde = -67;
 at = -19;
@@ -138406,9 +138434,9 @@ ohungarumlaut = -79;
 omacron = -55;
 otilde = -77;
 parenleft = -9;
-r.ss03 = -43;
+r.ss05 = -43;
 racute = -8;
-racute.ss03 = -42;
+racute.ss05 = -42;
 rcaron = 62;
 registered = 0;
 scaron = -20;
@@ -138420,9 +138448,9 @@ udieresis.ss01 = -3;
 ugrave = -3;
 uhungarumlaut = -3;
 umacron = -3;
-uni1EA1.ss01 = -74;
+uni1EA1.ss01.ss02 = -74;
 uni1EA3 = -60;
-uni1EA3.ss01 = -74;
+uni1EA3.ss02 = -74;
 uni1EA5 = -54;
 uni1EA7 = -54;
 uni1EA9 = -54;
@@ -138446,9 +138474,9 @@ uni2082 = -185;
 uring = -3;
 utilde = -3;
 ycircumflex = 0;
-ycircumflex.ss01 = 0;
+ycircumflex.ss02 = 0;
 ygrave = 0;
-ygrave.ss01 = 0;
+ygrave.ss02 = 0;
 zcaron = 0;
 };
 Tbar = {
@@ -138466,7 +138494,7 @@ slash = -145;
 tbar = -2;
 };
 Tcaron = {
-a.ss01 = -74;
+a.ss02 = -74;
 udieresis = -3;
 };
 U = {
@@ -138491,13 +138519,13 @@ V = {
 OE = -36;
 Oslash = -37;
 abreve = -69;
-abreve.ss01 = -56;
+abreve.ss02 = -56;
 acircumflex = -70;
 adieresis = -80;
-adieresis.ss01 = -37;
+adieresis.ss01.ss02 = -37;
 agrave = -84;
 amacron = -64;
-amacron.ss01 = -48;
+amacron.ss02 = -48;
 ampersand = -69;
 aring = -86;
 at = -65;
@@ -138517,8 +138545,8 @@ odieresis = -73;
 ograve = -75;
 otilde = -88;
 parenleft = -48;
-r.ss03 = -81;
-racute.ss03 = -81;
+r.ss05 = -81;
+racute.ss05 = -81;
 rcaron = 77;
 registered = -30;
 scaron = -15;
@@ -138530,15 +138558,15 @@ zcaron = 0;
 W = {
 Lslash = -29;
 adieresis = -43;
-adieresis.ss01 = -31;
+adieresis.ss01.ss02 = -31;
 ampersand = -50;
 asciitilde = -63;
 i.ss01 = 12;
 idieresis = 94;
 less = -12;
-lslash.ss02 = -25;
+lslash.ss04 = -25;
 minus = -48;
-r.ss03 = -48;
+r.ss05 = -48;
 scaron = -12;
 uni2083 = -74;
 };
@@ -138562,11 +138590,11 @@ Lslash = -32;
 Oslash = -48;
 acircumflex = -78;
 adieresis = -75;
-adieresis.ss01 = -22;
+adieresis.ss01.ss02 = -22;
 agrave = -82;
-agrave.ss01 = -65;
+agrave.ss02 = -65;
 amacron = -50;
-amacron.ss01 = -28;
+amacron.ss02 = -28;
 ampersand = -69;
 asciitilde = -122;
 at = -87;
@@ -138585,7 +138613,7 @@ odieresis = -64;
 ograve = -71;
 omacron = -35;
 parenleft = -51;
-r.ss03 = -108;
+r.ss05 = -108;
 registered = -36;
 scaron = -4;
 udieresis = -73;
@@ -138623,7 +138651,7 @@ jcircumflex = 32;
 logicalnot = -73;
 notequal = -38;
 };
-a.ss01 = {
+a.ss02 = {
 T = -110;
 exclam.ss01 = 16;
 germandbls = -17;
@@ -138640,7 +138668,7 @@ parenright = -36;
 adieresis = {
 parenright = -36;
 };
-adieresis.ss01 = {
+adieresis.ss01.ss02 = {
 germandbls = -17;
 };
 amacron = {
@@ -138652,7 +138680,7 @@ comma = 3;
 j = 37;
 parenright = 0;
 };
-aogonek.ss01 = {
+aogonek.ss02 = {
 comma.ss01 = 0;
 parenright = 0;
 };
@@ -138848,9 +138876,9 @@ rcaron = 14;
 dcaron = {
 H = 23;
 a = -30;
-a.ss01 = -42;
+a.ss02 = -42;
 aacute = -30;
-aacute.ss01 = -42;
+aacute.ss02 = -42;
 colon = 0;
 comma = -147;
 comma.ss01 = -154;
@@ -138935,7 +138963,7 @@ exclam = 0;
 exclam.ss01 = 25;
 germandbls = -20;
 logicalnot = -72;
-lslash.ss02 = 10;
+lslash.ss04 = 10;
 parenleft = 0;
 quotedblleft = -34;
 registered = -59;
@@ -139016,7 +139044,7 @@ bracketright = 8;
 parenright = -7;
 };
 eogonek = {
-lslash.ss02 = 10;
+lslash.ss04 = 10;
 parenright = -49;
 };
 equal = {
@@ -139052,7 +139080,7 @@ t = -13;
 u = 4;
 v = -58;
 y = -71;
-y.ss01 = -72;
+y.ss02 = -72;
 yacute = -71;
 };
 exclam = {
@@ -139087,13 +139115,13 @@ idieresis = 15;
 l = 0;
 n = 0;
 ordmasculine = 17;
-r.ss03 = -5;
+r.ss05 = -5;
 };
 f_f.liga = {
 exclam = 22;
 idieresis = 15;
 ordmasculine = 16;
-r.ss03 = -6;
+r.ss05 = -6;
 };
 f_f_i.liga = {
 asciitilde = -18;
@@ -139110,7 +139138,7 @@ idieresis = 37;
 jcircumflex = 42;
 periodcentered.loclCAT = 7;
 };
-f_f_l.liga.ss02 = {
+f_f_l.liga.ss04 = {
 periodcentered.loclCAT = -60;
 periodcentered.loclCAT.ss01 = -70;
 };
@@ -139143,7 +139171,7 @@ idieresis = 37;
 jcircumflex = 42;
 periodcentered.loclCAT = 7;
 };
-fl.ss02 = {
+fl.ss04 = {
 periodcentered.loclCAT = -60;
 periodcentered.loclCAT.ss01 = -70;
 };
@@ -139212,10 +139240,10 @@ f = -32;
 f_f.liga = -32;
 f_f_i.liga = -32;
 f_f_l.liga = -32;
-f_f_l.liga.ss02 = -32;
+f_f_l.liga.ss04 = -32;
 fi = -32;
 fl = -32;
-fl.ss02 = -32;
+fl.ss04 = -32;
 g = -7;
 o = 0;
 parenright = -44;
@@ -139265,7 +139293,7 @@ h = {
 asciitilde = -15;
 exclam = -2;
 registered = -40;
-uni1EB3.ss01 = -11;
+uni1EB3.ss02 = -11;
 };
 hyphen = {
 Hbar = -16;
@@ -139356,7 +139384,7 @@ idieresis = 41;
 j = 37;
 k = 37;
 l = 37;
-l.ss02 = 36;
+l.ss04 = 36;
 parenright = 80;
 question = 71;
 quotedbl = 88;
@@ -139376,7 +139404,7 @@ idieresis.ss01 = {
 b = 37;
 k = 37;
 l = 37;
-l.ss02 = 36;
+l.ss04 = 36;
 t = 9;
 };
 igrave = {
@@ -139386,7 +139414,7 @@ parenright = -36;
 imacron = {
 G = 54;
 I = 93;
-I.ss04 = 86;
+I.ss06 = 86;
 N = 87;
 P = 87;
 S = 77;
@@ -139405,7 +139433,7 @@ j = 38;
 j.ss01 = 38;
 k = 37;
 l = 37;
-l.ss02 = 36;
+l.ss04 = 36;
 parenright = 105;
 period.ss01 = -6;
 question = 87;
@@ -139426,7 +139454,7 @@ uni00B3 = 86;
 uni00B9 = 105;
 uni0137 = 37;
 uni013C = 37;
-uni013C.ss02 = 36;
+uni013C.ss04 = 36;
 uni2074 = 67;
 uni2075 = 92;
 uni2076 = 104;
@@ -139443,7 +139471,7 @@ parenright.case = -42;
 integral = {
 A = -92;
 a = -67;
-a.ss01 = -82;
+a.ss02 = -82;
 d = -67;
 e = -76;
 integral = -79;
@@ -139506,7 +139534,7 @@ iogonek = 0;
 lacute = 0;
 less = 0;
 logicalnot = -96;
-lslash.ss02 = -36;
+lslash.ss04 = -36;
 minus = -42;
 parenleft = -8;
 rcaron = 0;
@@ -139537,7 +139565,7 @@ quoteright = 0;
 slash = 0;
 underscore = 0;
 };
-l.ss02 = {
+l.ss04 = {
 periodcentered.loclCAT = -60;
 periodcentered.loclCAT.ss01 = -70;
 };
@@ -139546,9 +139574,9 @@ exclam = 263;
 exclam.ss01 = 263;
 scaron = 185;
 };
-lcaron.ss02 = {
+lcaron.ss04 = {
 a = 77;
-a.ss01 = 56;
+a.ss02 = 56;
 b = 138;
 ccaron = 66;
 comma = 17;
@@ -139559,7 +139587,7 @@ h = 138;
 i = 119;
 j = 119;
 k = 138;
-l.ss02 = 138;
+l.ss04 = 138;
 m = 115;
 n = 115;
 ncaron = 115;
@@ -139626,7 +139654,7 @@ w = 13;
 y = 7;
 zdotaccent = 0;
 };
-lslash.ss02 = {
+lslash.ss04 = {
 comma = 23;
 period = 19;
 zdotaccent = 14;
@@ -139724,7 +139752,7 @@ exclam = 0;
 exclam.ss01 = 19;
 germandbls = -13;
 logicalnot = -70;
-lslash.ss02 = 11;
+lslash.ss04 = 11;
 n = 0;
 parenleft = 4;
 question = -91;
@@ -139735,7 +139763,7 @@ registered = -54;
 tbar = 2;
 };
 oacute = {
-lslash.ss02 = 11;
+lslash.ss04 = 11;
 };
 odieresis = {
 germandbls = -13;
@@ -139821,7 +139849,7 @@ parenright = -37;
 period = 8;
 period.ss01 = 0;
 r = 8;
-r.ss03 = 8;
+r.ss05 = 8;
 s = 17;
 slash = -41;
 t = -4;
@@ -139830,19 +139858,19 @@ y = -14;
 };
 p = {
 exclam = 0;
-lslash.ss02 = 7;
+lslash.ss04 = 7;
 registered = -57;
 };
 parenleft = {
 Euro = -54;
 H = 0;
 Hbar = 0;
-Icircumflex.ss04 = 100;
+Icircumflex.ss06 = 100;
 Lslash = -39;
 OE = -45;
 Odieresis = -46;
 Oslash = -46;
-a.ss01 = -59;
+a.ss02 = -59;
 adieresis = -54;
 agrave = -54;
 ampersand = -52;
@@ -139876,7 +139904,7 @@ l = 0;
 less = -58;
 lessequal = -58;
 logicalnot = -113;
-lslash.ss02 = -28;
+lslash.ss04 = -28;
 minus = -92;
 multiply = -85;
 notequal = -75;
@@ -139908,7 +139936,7 @@ zcaron = 0;
 };
 parenleft.case = {
 Euro = -44;
-Icircumflex.ss04 = 101;
+Icircumflex.ss06 = 101;
 Lslash = -33;
 OE = -39;
 Oslash = -40;
@@ -140046,14 +140074,14 @@ G = -118;
 O = -117;
 Oacute = -117;
 P = -9;
-Q.ss01 = -117;
+Q.ss03 = -117;
 S = -96;
 T = -153;
 U = -116;
 V = -196;
 W = -120;
 Y = -211;
-a.ss01 = -64;
+a.ss02 = -64;
 c = -95;
 d = -94;
 e = -94;
@@ -140067,7 +140095,7 @@ s = -66;
 t = -100;
 v = -136;
 w = -109;
-y.ss01 = -112;
+y.ss02 = -112;
 };
 quotedbl = {
 A = -115;
@@ -140089,7 +140117,7 @@ period.ss01 = -160;
 questiondown = -121;
 questiondown.case = -56;
 questiondown.ss01 = -105;
-r.ss03 = -20;
+r.ss05 = -20;
 underscore = -232;
 uni1EA2 = -115;
 uni1EA4 = -115;
@@ -140167,7 +140195,7 @@ idieresis = 78;
 itilde = 58;
 questiondown = -132;
 quotedblbase = -147;
-r.ss03 = -53;
+r.ss05 = -53;
 };
 quoteright.ss01 = {
 quotedblbase.ss01 = -154;
@@ -140207,7 +140235,7 @@ period = -117;
 questiondown = -117;
 questiondown.case = -56;
 questiondown.ss01 = -105;
-r.ss03 = -20;
+r.ss05 = -20;
 slash = -117;
 };
 r = {
@@ -140216,7 +140244,7 @@ asciitilde = -9;
 germandbls = 15;
 jcircumflex = 2;
 logicalnot = -65;
-lslash.ss02 = 0;
+lslash.ss04 = 0;
 n = 0;
 uni2081 = -15;
 uni2082 = -21;
@@ -140225,8 +140253,8 @@ uni2084 = -87;
 uni2085 = -16;
 uni2086 = -27;
 };
-r.ss03 = {
-r.ss03 = -2;
+r.ss05 = {
+r.ss05 = -2;
 uni2084 = -89;
 };
 racute = {
@@ -140239,7 +140267,7 @@ period = -112;
 period.ss01 = -122;
 t = 10;
 };
-racute.ss03 = {
+racute.ss05 = {
 comma = -95;
 period = -95;
 t = 17;
@@ -140261,7 +140289,7 @@ parenright = 3;
 uni00B9 = 4;
 uni2077 = 0;
 };
-rcaron.ss03 = {
+rcaron.ss05 = {
 a = 8;
 aacute = 8;
 b = 10;
@@ -140292,7 +140320,7 @@ l = 0;
 logicalnot = -77;
 parenleft = -2;
 registered = -39;
-uni1EB5.ss01 = -5;
+uni1EB5.ss02 = -5;
 wacute = -33;
 };
 scaron = {
@@ -140542,7 +140570,7 @@ uni0145 = {
 imacron = 94;
 };
 uni0162 = {
-a.ss01 = -74;
+a.ss02 = -74;
 abreve = -58;
 acircumflex = -43;
 amacron = -54;
@@ -140553,9 +140581,9 @@ comma = 20;
 parenright = 28;
 };
 uni021A = {
-a.ss01 = -74;
+a.ss02 = -74;
 abreve = -58;
-abreve.ss01 = -61;
+abreve.ss02 = -61;
 acircumflex = -43;
 amacron = -54;
 };
@@ -140589,12 +140617,12 @@ uni00B9 = -76;
 uni1EA8 = {
 Y = -149;
 };
-uni1EA9.ss01 = {
-y.ss01 = -77;
+uni1EA9.ss02 = {
+y.ss02 = -77;
 };
-uni1EAB.ss01 = {
+uni1EAB.ss02 = {
 n = -5;
-y.ss01 = -77;
+y.ss02 = -77;
 };
 uni1EAF = {
 uni00B9 = -76;
@@ -140605,13 +140633,13 @@ uni00B9 = -76;
 uni1EB3 = {
 uni00B9 = -76;
 };
-uni1EB3.ss01 = {
+uni1EB3.ss02 = {
 n = -5;
 };
 uni1EB5 = {
 uni00B9 = -76;
 };
-uni1EB5.ss01 = {
+uni1EB5.ss02 = {
 n = -5;
 };
 uni1EB7 = {
@@ -140717,7 +140745,7 @@ period = -9;
 uni1EC7 = -38;
 uni2077 = -78;
 };
-uni1EF5.ss01 = {
+uni1EF5.ss01.ss02 = {
 comma.ss01 = -39;
 parenright = -11;
 period.ss01 = -123;
@@ -140875,12 +140903,12 @@ parenright = 0;
 v = {
 ampersand = -44;
 n = 0;
-r.ss03 = -18;
+r.ss05 = -18;
 };
 w = {
 ampersand = -42;
 asciitilde = -29;
-r.ss03 = -14;
+r.ss05 = -14;
 };
 x = {
 ampersand = -65;
@@ -140892,22 +140920,22 @@ ampersand = -49;
 asciitilde = -44;
 germandbls = 12;
 logicalnot = -83;
-lslash.ss02 = -27;
-r.ss03 = -28;
-rcaron.ss03 = -28;
+lslash.ss04 = -27;
+r.ss05 = -28;
+rcaron.ss05 = -28;
 uni2080 = -88;
 uni2082 = -85;
 };
-y.ss01 = {
+y.ss02 = {
 asciitilde = -44;
 o = -38;
-r.ss03 = -27;
+r.ss05 = -27;
 };
 yacute = {
-r.ss03 = -28;
+r.ss05 = -28;
 };
 ycircumflex = {
-r.ss03 = -28;
+r.ss05 = -28;
 };
 yen = {
 colon = -91;
@@ -140926,7 +140954,7 @@ uni2074 = -80;
 };
 z = {
 asciitilde = -24;
-lslash.ss02 = 0;
+lslash.ss04 = 0;
 };
 zcaron = {
 T = -11;
@@ -143112,5 +143140,5 @@ value = 1.3;
 };
 };
 versionMajor = 2;
-versionMinor = 8;
+versionMinor = 9;
 }

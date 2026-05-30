@@ -2,6 +2,12 @@
 
 ## Unreleased
 
+## 2.009 - 2026-05-30
+
+- Split stylistic sets so rounded dots, alternate lowercase forms, and the alternate Q tail are independent features.
+- Renumbered existing alternate lowercase l, alternate r, and serifless uppercase I sets to keep the public stylistic-set logic clean.
+- Bumped the Glyphs source and repository release metadata to 2.009.
+
 ## 2.008 - 2026-05-24
 
 - Bumped the Glyphs source and distribution build version to 2.008.
